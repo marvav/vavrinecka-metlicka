@@ -15,9 +15,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "pages:dev": "wrangler pages dev --compatibility-date=2023-12-18 --port 3000 -- npm start",
-    "pages:deploy": "npm run build && wrangler pages deploy ./build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -36,8 +34,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "wrangler": "^3.22.1"
   }
 }
