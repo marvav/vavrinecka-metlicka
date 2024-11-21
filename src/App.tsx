@@ -1,4 +1,3 @@
-import FrontPage from "./components/FrontPage.tsx";
 import {Box} from "@mui/material";
 
 
