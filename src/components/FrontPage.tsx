@@ -1,9 +1,10 @@
-import {Box, Button} from "@mui/material";
+import {Box} from "@mui/material";
+import MainPanel from "./MainPanel.tsx";
 
 function FrontPage() {
-    return <Box>
-        xdggggggggggggggggggggggg
-        <Button/>
+    return <Box sx={{display: "flex", flexDirection: "column", width: '100%', bgcolor: "blue"}}>
+        <MainPanel/>
+        <Box sx={{flexGrow: "1", bgcolor: "green"}}/>
     </Box>
 }
 
