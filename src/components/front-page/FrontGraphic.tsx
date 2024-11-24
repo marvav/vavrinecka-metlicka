@@ -3,7 +3,7 @@ import {Box} from "@mui/material";
 
 const FrontGraphic: React.FC = () => {
     return (
-        <Box sx={{flexgrow: "1"}}>
+        <Box sx={{width: "50%"}}>
 x
         </Box>
     );
