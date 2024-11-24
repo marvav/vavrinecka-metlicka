@@ -1,10 +1,28 @@
 import React from "react";
 import {Box} from "@mui/material";
+import Article from "../articles/Article.tsx";
 
-const FrontFeed: React.FC = () => {
+// Define the FeedProps interface
+interface FeedProps {
+    articles: ArticleData[];
+}
+
+const FrontFeed: React.FC<FeedProps> = ({articles}) => {
     return (
-        <Box position="fixed" sx={{ top: 0 , backgroundColor: "blue", width: "100%"}}>
-            text
+        <Box sx={{
+            display: "flex",
+            flexDirection: "column",
+            gap: "5em",
+            width: "100%",
+            paddingTop: "8em",
+            paddingRight: "21em",
+            paddingLeft: "21em",
+            maxHeight: "80vh",
+            overflow: "scroll",
+        }}>
+            {articles.map((article) => (
+                <Article title={article.title} date={article.date} content={article.content}/>
+            ))}
         </Box>
     );
 };

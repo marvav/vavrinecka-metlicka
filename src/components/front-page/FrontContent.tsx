@@ -1,15 +1,12 @@
 import {Box} from "@mui/material";
 import FrontGraphic from "./FrontGraphic.tsx";
 import FrontFeed from "./FrontFeed.tsx";
-import Typography from "@mui/material/Typography";
+import {predefinedArticles} from "../articles/ArticleProvider.tsx";
 
 function FrontContent() {
-    return <Box>
-        <Typography variant="body1" sx={{ marginRight: 2 }}>
-            text
-        </Typography>
-        <FrontGraphic/>
-        <FrontFeed/>
+    return <Box position="fixed" sx={{ top: 0 , display: "flex", width: "100%"}}>
+        <FrontGraphic />
+        <FrontFeed articles={predefinedArticles}/>
         <FrontGraphic />
     </Box>
 }
