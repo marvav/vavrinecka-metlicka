@@ -3,7 +3,7 @@ import { useState,} from "react";
 
 import articleTheme from "../../themes/ArticleTheme.ts";
 import theme from "../../themes/ButtonTheme.ts";
-import imageDialog from "./image_dialog.tsx";
+import imageDialog from "./ImageDialog.tsx";
 
 export interface ArticleImageProps {
     image: string | undefined

@@ -2,7 +2,6 @@ import {Box, useMediaQuery} from "@mui/material";
 import FrontGraphic from "./FrontGraphic.tsx";
 import FrontFeed from "./FrontFeed.tsx";
 import {predefinedArticles} from "../articles/ArticleProvider.tsx";
-import React from "react";
 import articleTheme from "../../themes/ArticleTheme.ts";
 
 function FrontContent() {

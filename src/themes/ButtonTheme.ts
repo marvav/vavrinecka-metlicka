@@ -8,12 +8,8 @@ const theme = createTheme({
         secondary: {
             main: '#FFFFFF',
         },
-        borderRadius: {
-            main: '12em'
-        }
     },
     spacing: 4,
-    borderRadius: 12,
     breakpoints: {
         values: {
             xs: 0,    // Mobile screens (portrait)

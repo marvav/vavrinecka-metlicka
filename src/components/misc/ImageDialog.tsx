@@ -2,7 +2,7 @@ import {Button, ImageListItem, Dialog, DialogActions, DialogContent, DialogTitle
 import {Fragment } from "react";
 import theme from "../../themes/ButtonTheme.ts";
 
-function imageDialog(img : string | undefined, open : boolean, setOpen : Function){
+function ImageDialog(img : string | undefined, open : boolean, setOpen : Function){
     const handleClickOpen = () => {
         setOpen(true);
       };
@@ -29,4 +29,4 @@ function imageDialog(img : string | undefined, open : boolean, setOpen : Functio
     </Fragment>
     );
 }
-export default imageDialog;
+export default ImageDialog;
