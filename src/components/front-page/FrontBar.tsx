@@ -10,7 +10,7 @@ const FrontBar: React.FC = () => {
         <AppBar position="fixed" sx={{ top: 0 }}>
             <Toolbar sx={{display: "flex", gap: "1em"}}>
                 <Logo/>
-                <Typography variant="h6" component="div" sx={{ }}>
+                <Typography variant="h6">
                     Vavřinecká Metlička
                 </Typography>
                 <Box sx={{flexGrow: 3, display: "flex", gap: "1em"}}/>
