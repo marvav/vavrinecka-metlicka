@@ -2,6 +2,7 @@ import React from "react";
 import {Box} from "@mui/material";
 import Article from "../articles/Article.tsx";
 import {ArticleData} from "../data/ArticeData.tsx";
+import FootNote from "../footnote/FootNote.tsx";
 
 interface FeedProps {
     articles: ArticleData[];
@@ -10,14 +11,14 @@ interface FeedProps {
 const FrontFeed: React.FC<FeedProps> = ({articles}) => {
     return (
         <Box sx={{paddingTop: "3.5em"}}>
-            <h1>Přehled akcí</h1>
+            <Box sx={{display: "flex", justifyContent: "center",}}>
+                <h1>Přehled akcí</h1>
+            </Box>
             <Box sx={{
                 display: "flex",
                 flexDirection: "column",
-                gap: "5em",
+                gap: "4em",
                 width: "100%",
-                paddingRight: "2em",
-                paddingLeft: "2em",
                 maxHeight: "80vh",
             }}>
                 {articles.map((article) => (
@@ -29,6 +30,9 @@ const FrontFeed: React.FC<FeedProps> = ({articles}) => {
                         purchasable_tickets={false}
                         image={article.image}/>
                 ))}
+                <Box>
+                    <FootNote></FootNote>
+                </Box>
             </Box>
         </Box>
     );

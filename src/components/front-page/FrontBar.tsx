@@ -2,7 +2,7 @@ import React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import {Button} from "@mui/material";
+import {Box, Button} from "@mui/material";
 import Logo from "../Logo.tsx";
 
 const FrontBar: React.FC = () => {
@@ -13,14 +13,9 @@ const FrontBar: React.FC = () => {
                 <Typography variant="h6" component="div" sx={{ }}>
                     Vavřinecká Metlička
                 </Typography>
-                <Typography variant="h6" component="div" sx={{ flexGrow: 1}}>
-                </Typography>
-                <Typography variant="h6" component="div" sx={{ }}>
-                    <Button color="inherit">Přehled Akcí</Button>
-                </Typography>
-                <Typography variant="h6" component="div" sx={{ }}>
-                    <Button color="inherit">O Metličce</Button>
-                </Typography>
+                <Box sx={{flexGrow: 3, display: "flex", gap: "1em"}}/>
+                <Button color="inherit">Přehled Akcí</Button>
+                <Button color="inherit">O Metličce</Button>
             </Toolbar>
         </AppBar>
     );
