@@ -8,7 +8,7 @@ import Logo from "../Logo.tsx";
 const FrontBar: React.FC = () => {
     return (
         <AppBar position="fixed" sx={{ top: 0 }}>
-            <Toolbar>
+            <Toolbar sx={{display: "flex", gap: "1em"}}>
                 <Logo/>
                 <Typography variant="h6" component="div" sx={{ }}>
                     Vavřinecká Metlička
@@ -17,6 +17,9 @@ const FrontBar: React.FC = () => {
                 </Typography>
                 <Typography variant="h6" component="div" sx={{ }}>
                     <Button color="inherit">Přehled Akcí</Button>
+                </Typography>
+                <Typography variant="h6" component="div" sx={{ }}>
+                    <Button color="inherit">O Metličce</Button>
                 </Typography>
             </Toolbar>
         </AppBar>

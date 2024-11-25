@@ -9,26 +9,27 @@ interface FeedProps {
 
 const FrontFeed: React.FC<FeedProps> = ({articles}) => {
     return (
-        <Box sx={{
-            display: "flex",
-            flexDirection: "column",
-            gap: "5em",
-            width: "100%",
-            paddingTop: "8em",
-            paddingRight: "2em",
-            paddingLeft: "2em",
-            maxHeight: "80vh",
-            overflow: "auto",
-        }}>
-            {articles.map((article) => (
-                <Article
-                    title={article.title}
-                    date={article.date}
-                    place={article.place}
-                    content={article.content}
-                    purchasable_tickets={false}
-                    image={article.image}/>
-            ))}
+        <Box sx={{paddingTop: "3.5em"}}>
+            <h1>Přehled akcí</h1>
+            <Box sx={{
+                display: "flex",
+                flexDirection: "column",
+                gap: "5em",
+                width: "100%",
+                paddingRight: "2em",
+                paddingLeft: "2em",
+                maxHeight: "80vh",
+            }}>
+                {articles.map((article) => (
+                    <Article
+                        title={article.title}
+                        date={article.date}
+                        place={article.place}
+                        content={article.content}
+                        purchasable_tickets={false}
+                        image={article.image}/>
+                ))}
+            </Box>
         </Box>
     );
 };

@@ -1,4 +1,4 @@
-import {Box, ImageList, ImageListItem} from "@mui/material";
+import {Box} from "@mui/material";
 import {ArticleData} from "../data/ArticeData.tsx";
 import Date from "../misc/Date.tsx";
 import Place from "../misc/Place.tsx";
@@ -25,7 +25,7 @@ function Article({content, date, title, place, image}: ArticleData) {
                 </Box>
                 {content}
             </Box>
-            <ArticleImage image={image}/>
+            {image && <ArticleImage image={image}/>}
         </Box>
     );
 }

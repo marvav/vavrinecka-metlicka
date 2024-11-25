@@ -5,14 +5,15 @@ export interface ArticleImageProps {
 }
 
 function ArticleImage({image}: ArticleImageProps) {
-    return <ImageList sx={{display: "flex", width: "25%", justifyItems: "center"}}>
-        {image ? <ImageListItem>
-            <img
-                src={image}
-                alt={""}
-                loading="lazy"/>
-        </ImageListItem> : <div/>}
-    </ImageList>;
+    return image ? <ImageList sx={{display: "flex", width: "30%", paddingRight: "2em"}}>
+            {image ? <ImageListItem>
+                <img
+                    src={image}
+                    alt={""}
+                    loading="lazy"/>
+            </ImageListItem> : <div/>}
+        </ImageList>
+        : <div/>;
 }
 
 export default ArticleImage;
