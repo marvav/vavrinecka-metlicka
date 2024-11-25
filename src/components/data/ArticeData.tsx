@@ -1,5 +1,8 @@
-interface ArticleData {
+export interface ArticleData {
     title: string
     date: string
-    content: string;
+    place: string
+    content: string
+    purchasable_tickets: boolean
+    image: string | undefined
 }
