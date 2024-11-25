@@ -27,4 +27,12 @@ export const predefinedArticles: ArticleData[] = [
         purchasable_tickets: false,
         image: "pochod2024.jpg",
     },
+    {
+        title: "Tukový večer",
+        date: "20.1.2024",
+        place: "Vavřincec pod plechem",
+        content: "",
+        purchasable_tickets: false,
+        image: "pochod2024.jpg",
+    },
 ];

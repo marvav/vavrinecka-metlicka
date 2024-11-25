@@ -1,6 +1,9 @@
-import {Button, ImageList, ImageListItem, ThemeProvider, useMediaQuery} from "@mui/material";
+import {ImageListItem, ThemeProvider, useMediaQuery,} from "@mui/material";
+import { useState,} from "react";
+
 import articleTheme from "../../themes/ArticleTheme.ts";
 import theme from "../../themes/ButtonTheme.ts";
+import imageDialog from "./image_dialog.tsx";
 
 export interface ArticleImageProps {
     image: string | undefined
@@ -8,14 +11,18 @@ export interface ArticleImageProps {
 
 function ArticleImage({image}: ArticleImageProps) {
     const isMobile = useMediaQuery(articleTheme.breakpoints.down('sm'));
+    const [open, setOpen] = useState(false);
+    
     return <ThemeProvider theme={theme}>
-        {isMobile
-            ? <Button sx={{color: theme.palette.primary.main}}>
-                Zobrazit plakát
-            </Button>
-            : <ImageListItem>
+        {isMobile 
+        ? 
+        imageDialog(image, open, setOpen) 
+        : 
+        <ImageListItem>
                 <img src={image} alt={""} loading="lazy"/>
-            </ImageListItem>}
+        </ImageListItem>
+        }
+        
     </ThemeProvider>
 }
 
