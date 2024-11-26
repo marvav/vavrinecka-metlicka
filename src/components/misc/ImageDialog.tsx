@@ -14,7 +14,7 @@ function imageDialog(img : string | undefined, open : boolean, setOpen : Functio
             open={open}
             onClose={handleClose}
         >
-        <DialogTitle>Plakát</DialogTitle>
+        <DialogTitle></DialogTitle>
             <DialogContent>
                 <ImageListItem><img src={img} alt={""} loading="lazy"/></ImageListItem>
             </DialogContent>
