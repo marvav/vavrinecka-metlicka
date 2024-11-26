@@ -2,11 +2,12 @@ import { createTheme } from '@mui/material/styles';
 
 const articleTheme = createTheme({
     palette: {
+        mode: "dark",
         primary: {
             main: "#403f3a",
         },
-        secondary: {
-            main: '#FFFFFF',
+        text: {
+            primary: '#000000',
         },
     },
     spacing: 4,
