@@ -1,6 +1,6 @@
 import React from "react";
 import {Box} from "@mui/material";
-import Article from "../articles/Article.tsx";
+import Article from "./articles/Article.tsx";
 import {ArticleData} from "../data/ArticeData.tsx";
 import FootNote from "../footnote/FootNote.tsx";
 
@@ -8,7 +8,7 @@ interface FeedProps {
     articles: ArticleData[];
 }
 
-const FrontFeed: React.FC<FeedProps> = ({articles}) => {
+const ArticleFeed: React.FC<FeedProps> = ({articles}) => {
     return <Box sx={{display: "flex", flexDirection: "column", alignItems: "center", paddingTop: "3.5em"}}>
         <h1>Přehled akcí</h1>
         <Box sx={{
@@ -35,4 +35,4 @@ const FrontFeed: React.FC<FeedProps> = ({articles}) => {
     </Box>;
 };
 
-export default FrontFeed;
+export default ArticleFeed;

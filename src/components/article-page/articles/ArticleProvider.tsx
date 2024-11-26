@@ -1,4 +1,4 @@
-import {ArticleData} from "../data/ArticeData.tsx";
+import {ArticleData} from "../../data/ArticeData.tsx";
 
 export const predefinedArticles: ArticleData[] = [
     {

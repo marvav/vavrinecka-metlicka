@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 import {Box, Button} from "@mui/material";
 import Logo from "../Logo.tsx";
 
-const FrontBar: React.FC = () => {
+const MainBar: React.FC = () => {
     return (
         <AppBar position="fixed" sx={{ top: 0 }}>
             <Toolbar sx={{display: "flex", gap: "1em"}}>
@@ -21,5 +21,5 @@ const FrontBar: React.FC = () => {
     );
 };
 
-export default FrontBar;
+export default MainBar;
 

@@ -1,6 +1,6 @@
 import Typography from "@mui/material/Typography";
 import {useMediaQuery} from "@mui/material";
-import articleTheme from "../../themes/ArticleTheme.ts";
+import articleTheme from "../../../themes/ArticleTheme.ts";
 
 interface ArticleTitleProps {
     title: string;

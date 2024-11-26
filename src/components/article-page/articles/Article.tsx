@@ -1,9 +1,9 @@
 import {Box, ThemeProvider} from "@mui/material";
-import {ArticleData} from "../data/ArticeData.tsx";
-import FieldEntry from "../misc/FieldEntry.tsx";
+import {ArticleData} from "../../data/ArticeData.tsx";
+import FieldEntry from "../../misc/FieldEntry.tsx";
 
-import ArticleImage from "../misc/Image.tsx";
-import articleTheme from "../../themes/ArticleTheme.ts";
+import ArticleImage from "../../misc/Image.tsx";
+import articleTheme from "../../../themes/ArticleTheme.ts";
 import ArticleTitle from "./ArticleTitle.tsx";
 
 export default Article;
