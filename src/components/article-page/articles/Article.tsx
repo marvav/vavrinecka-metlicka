@@ -1,4 +1,4 @@
-import {Box, Button, ThemeProvider} from "@mui/material";
+import {Box, ThemeProvider} from "@mui/material";
 import {ArticleData} from "../../data/ArticeData.tsx";
 import FieldEntry from "../../misc/FieldEntry.tsx";
 

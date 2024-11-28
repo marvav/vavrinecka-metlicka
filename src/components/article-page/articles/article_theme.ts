@@ -5,7 +5,6 @@ const article_theme = createTheme({
         mode: "dark",
         primary: {
             main: "#FFFFFF",
-            primaryText: "#FFFFFF",
         },
         background: {
             default: '#403f3a', // Background for the entire page
