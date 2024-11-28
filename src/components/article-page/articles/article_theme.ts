@@ -7,7 +7,7 @@ const article_theme = createTheme({
             main: "#FFFFFF",
         },
         background: {
-            default: '#2c2e29', // Background for the entire page
+            default: '#212325', // Background for the entire page
             paper: '#FFFFFF'
         },
     },
