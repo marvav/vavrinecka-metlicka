@@ -9,21 +9,18 @@ interface FeedProps {
 }
 
 const ArticleFeed: React.FC<FeedProps> = ({articles}) => {
-    return <Box sx={{display: "flex", flexDirection: "column", alignItems: "center", paddingTop: "3.5em"}}>
+    return <Box sx={{alignItems: "center", paddingTop: "3.5em", paddingBottom: "2em"}}>
         <h1>Přehled akcí</h1>
         <Box sx={{
             display: "flex",
             flexDirection: "column",
-            gap: "4em",
-            width: "100%",
-            maxHeight: "80vh",
+            gap: "3em",
+            maxHeight: "65vh",
         }}>
             {articles.map((article) => (
                 <Article {...article}/>
             ))}
-            <Box>
-                <FootNote></FootNote>
-            </Box>
+            <FootNote/>
         </Box>
     </Box>;
 };

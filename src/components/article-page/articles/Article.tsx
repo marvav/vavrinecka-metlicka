@@ -6,6 +6,7 @@ import ArticleImage from "../../misc/Image.tsx";
 import article_theme from "./article_theme.ts";
 import ArticleTitle from "./ArticleTitle.tsx";
 import ArticleButton from "./ArticleButton.tsx";
+import ArticleFields from "./ArticleFields.tsx";
 
 export default Article;
 
@@ -18,18 +19,18 @@ function Article({content, date, title, place, image, time, photos_url}: Article
             padding: {xs: article_theme.spacing(4), sm: article_theme.spacing(8),},
             borderRadius: article_theme.spacing(3)
         }}>
-            <Box sx={{display: "flex", width: "100%", flexDirection: "column", flexGrow: 2, gap: "1em", paddingRight: {xs: 0, sm: article_theme.spacing(8)}}}>
+            <Box sx={{
+                display: "flex",
+                width: "100%",
+                flexDirection: "column",
+                paddingRight: {xs: 0, sm: article_theme.spacing(8)}
+            }}>
                 <ArticleTitle title={title}/>
-                <Box sx={{display: "flex", gap: "2em"}}>
-                    <FieldEntry name={"Datum: "} value={date} defaultValue={"Neoznámeno"}/>
-                    <FieldEntry name={"Čas: "} value={time} defaultValue={"Dle plakátu"}/>
-                </Box>
-                <Box sx={{display: "flex"}}>
-                    <FieldEntry name={"Místo: "} value={place} defaultValue={"Neoznámeno"}/>
-                </Box>
+                <ArticleFields date={date} place={place} time={time}/>
+                <h3>Popis akce:</h3>
                 {content}
                 <Box sx={{flexGrow: 2}}/>
-                {photos_url && <ArticleButton title={"Fotky"} onClick={()=> window.open(photos_url ?? "", '_blank')}/>}
+                {photos_url && <ArticleButton title={"Fotky"} onClick={() => window.open(photos_url ?? "", '_blank')}/>}
             </Box>
             {image ? <Box sx={{
                 display: "flex",

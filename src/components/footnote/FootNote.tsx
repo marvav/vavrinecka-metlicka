@@ -7,9 +7,9 @@ const FootNote: React.FC = () => {
             paddingLeft: "1em",
             paddingRight: "1em",
             borderTopLeftRadius: "1em",
-            borderTopRightRadius: "1em"
+            borderTopRightRadius: "1em",
         }}>
-            <h6> Copyright </h6>
+            <h6> Autorstvo jež tuto stránku zhotovilo bude zde vyjmenováno řádně a abecedně.</h6>
         </Box>;
 };
 
