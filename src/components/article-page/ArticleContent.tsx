@@ -1,7 +1,7 @@
 import {Box, useMediaQuery} from "@mui/material";
 import SideGraphic from "../page/SideGraphic.tsx";
 import ArticleFeed from "./ArticleFeed.tsx";
-import {predefinedArticles} from "./articles/ArticleProvider.tsx";
+import {predefinedArticles} from "../data/ArticleProvider.tsx";
 import theme from "../../themes/theme.ts";
 
 function ArticleContent() {

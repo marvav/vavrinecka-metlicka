@@ -19,14 +19,7 @@ const ArticleFeed: React.FC<FeedProps> = ({articles}) => {
             maxHeight: "80vh",
         }}>
             {articles.map((article) => (
-                <Article
-                    title={article.title}
-                    date={article.date}
-                    place={article.place}
-                    content={article.content}
-                    purchasable_tickets={false}
-                    image={article.image}
-                    time={article.time}/>
+                <Article {...article}/>
             ))}
             <Box>
                 <FootNote></FootNote>

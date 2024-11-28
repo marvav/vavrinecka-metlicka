@@ -8,8 +8,8 @@ export interface FieldEntryProps {
 
 function FieldEntry({name, value, defaultValue}: FieldEntryProps) {
     return <Box sx={{ display: "flex", alignItems: "center" }}>
-        <h3 style={{ fontSize: "1rem", lineHeight: "1.5" }}>{name}</h3>
-        <p style={{ fontSize: "1rem", lineHeight: "1.5", paddingLeft: "0.5rem" }}>{value ?? defaultValue}</p>
+        <h3 style={{ fontSize: "1rem", lineHeight: "1" }}>{name}</h3>
+        <p style={{ fontSize: "1rem", lineHeight: "1", paddingLeft: "0.5rem" }}>{value ?? defaultValue}</p>
     </Box>
 }
 

@@ -4,13 +4,12 @@ const article_theme = createTheme({
     palette: {
         mode: "dark",
         primary: {
-            main: "#403f3a",
-        },
-        text: {
-            primary: '#000000',
+            main: "#FFFFFF",
+            primaryText: "#FFFFFF",
         },
         background: {
             default: '#403f3a', // Background for the entire page
+            paper: '#FFFFFF'
         },
     },
     spacing: 4,

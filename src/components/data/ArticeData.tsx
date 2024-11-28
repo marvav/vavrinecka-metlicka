@@ -4,6 +4,7 @@ export interface ArticleData {
     time: string | undefined
     place: string
     content: string
+    photos_url: string | undefined
     purchasable_tickets: boolean
     image: string | undefined
 }
