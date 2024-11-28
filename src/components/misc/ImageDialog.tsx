@@ -1,28 +1,19 @@
-import {Button, ImageListItem, Dialog, DialogActions, DialogContent, DialogTitle, } from "@mui/material";
-import {Fragment } from "react";
+import {Button, Dialog, DialogActions, DialogContent, ImageListItem,} from "@mui/material";
 
 
-function imageDialog(img : string | undefined, open : boolean, setOpen : Function){
+function imageDialog(img: string | undefined, open: boolean, setOpen: Function) {
     const handleClose = () => {
         setOpen(false);
     };
-    
-    return (
-    <Fragment>
-        
-        <Dialog
-            open={open}
-            onClose={handleClose}
-        >
-        <DialogTitle></DialogTitle>
-            <DialogContent>
-                <ImageListItem><img src={img} alt={""} loading="lazy"/></ImageListItem>
-            </DialogContent>
-            <DialogActions>
-                <Button onClick={handleClose}>Zavřít</Button>
-            </DialogActions>
-        </Dialog>
-    </Fragment>
-    );
+
+    return <Dialog open={open} onClose={handleClose}>
+        <DialogContent>
+            <ImageListItem><img src={img} alt={""} loading="lazy"/></ImageListItem>
+        </DialogContent>
+        <DialogActions>
+            <Button onClick={handleClose}>Zavřít</Button>
+        </DialogActions>
+    </Dialog>;
 }
+
 export default imageDialog;

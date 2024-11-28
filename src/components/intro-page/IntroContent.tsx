@@ -1,6 +1,6 @@
 import Typography from "@mui/material/Typography";
 import React from "react";
-import {Box, ThemeProvider} from "@mui/material";
+import {Box} from "@mui/material";
 import article_theme from "../article-page/articles/article_theme.ts";
 
 const IntroContents: React.FC = () => {
