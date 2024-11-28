@@ -15,7 +15,6 @@ const ArticleFeed: React.FC<FeedProps> = ({articles}) => {
             display: "flex",
             flexDirection: "column",
             gap: "3em",
-            maxHeight: "65vh",
         }}>
             {articles.map((article) => (
                 <Article {...article}/>

@@ -9,6 +9,9 @@ export const desktopTheme = createTheme({
         secondary: {
             main: '#FFFFFF',
         },
+        background:{
+            default: '#0f1010',
+        }
     },
     typography:{
         fontSize: 15
@@ -24,6 +27,9 @@ export const mobileTheme = createTheme({
         secondary: {
             main: '#FFFFFF',
         },
+        background:{
+            default: '#0f1010',
+        }
     },
     typography:{
         fontSize: 10

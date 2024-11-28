@@ -1,8 +1,11 @@
 import { createTheme } from '@mui/material/styles';
 
-const theme = createTheme({
+const page_common_theme = createTheme({
     palette: {
         mode: "dark",
+        background:{
+            default: "#181a1b"
+        }
     },
     breakpoints: {
         values: {
@@ -15,4 +18,4 @@ const theme = createTheme({
     },
 });
 
-export default theme;
+export default page_common_theme;

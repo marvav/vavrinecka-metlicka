@@ -15,7 +15,7 @@ const MainBar: React.FC = () => {
     const theme = isMobile ? mobileTheme : desktopTheme;
     return <ThemeProvider theme={theme}>
         <AppBar position="fixed" sx={{ top: 0 }}>
-            <Toolbar sx={{display: "flex", gap: "1em"}}>
+            <Toolbar sx={{display: "flex", gap: "1em", backgroundColor: "background.default"}}>
                 <Logo/>
                 <Typography variant="h6">
                     Vavřinecká Metlička
