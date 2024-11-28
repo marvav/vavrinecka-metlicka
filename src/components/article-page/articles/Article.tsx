@@ -3,21 +3,21 @@ import {ArticleData} from "../../data/ArticeData.tsx";
 import FieldEntry from "../../misc/FieldEntry.tsx";
 
 import ArticleImage from "../../misc/Image.tsx";
-import articleTheme from "../../../themes/ArticleTheme.ts";
+import article_theme from "./article_theme.ts";
 import ArticleTitle from "./ArticleTitle.tsx";
 
 export default Article;
 
 function Article({content, date, title, place, image, time}: ArticleData) {
-    return <ThemeProvider theme={articleTheme}>
+    return <ThemeProvider theme={article_theme}>
         <Box sx={{
             display: "flex",
             flexDirection: {xs: 'column', sm: 'row',},
-            bgcolor: articleTheme.palette.primary.main,
-            padding: {xs: articleTheme.spacing(4), sm: articleTheme.spacing(8),},
-            borderRadius: articleTheme.spacing(3)
+            bgcolor: 'background.default',
+            padding: {xs: article_theme.spacing(4), sm: article_theme.spacing(8),},
+            borderRadius: article_theme.spacing(3)
         }}>
-            <Box sx={{width: "100%", flexGrow: 2, paddingRight: {xs: 0, sm: articleTheme.spacing(8)}}}>
+            <Box sx={{width: "100%", flexGrow: 2, paddingRight: {xs: 0, sm: article_theme.spacing(8)}}}>
                 <ArticleTitle title={title}/>
                 <Box sx={{display: "flex", gap: "2em", width: "100%"}}>
                     <FieldEntry name={"Datum: "} value={date} defaultValue={"Neoznámeno"}/>
@@ -32,7 +32,7 @@ function Article({content, date, title, place, image, time}: ArticleData) {
                 display: "flex",
                 width: {xs: "100%", sm: "50%",},
                 justifyContent: {xs: "center", sm: "right",},
-                paddingTop: {xs: articleTheme.spacing(4), sm: 0,}
+                paddingTop: {xs: article_theme.spacing(4), sm: 0,}
             }}>
                 <ArticleImage image={image}/>
             </Box> : <div/>}

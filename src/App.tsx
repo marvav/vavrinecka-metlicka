@@ -1,6 +1,6 @@
 import {CssBaseline, ThemeProvider} from "@mui/material";
 import theme from "./themes/theme.ts";
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import {BrowserRouter as Router, Navigate, Route, Routes} from "react-router-dom";
 import ArticlePage from "./components/article-page/ArticlePage.tsx";
 import IntroPage from "./components/intro-page/IntroPage.tsx";
 

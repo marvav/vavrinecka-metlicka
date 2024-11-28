@@ -1,6 +1,5 @@
-import MainBar from "../page/AppBar";
+import MainBar from "../page/MainBar.tsx";
 import React from "react";
-import Typography from "@mui/material/Typography";
 import IntroContents from "./IntroContent";
 
 const IntroPage: React.FC = () => {
