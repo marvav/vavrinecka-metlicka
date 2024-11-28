@@ -1,6 +1,5 @@
-import {Button, styled, ThemeProvider} from "@mui/material";
+import {Button, styled} from "@mui/material";
 import {MouseEventHandler} from "react";
-import {article_button_theme} from "./article_theme.ts";
 
 interface ArticleButtonProps {
     title: string;
@@ -20,11 +19,9 @@ const StyledButton = styled(Button)(() => ({
 }));
 
 function ArticleButton({title, onClick}: ArticleButtonProps) {
-    return <ThemeProvider theme={article_button_theme}>
-        <StyledButton sx={{width:'min-content'}} onClick={onClick}>
-            {title}
-        </StyledButton>
-    </ThemeProvider>
+    return <StyledButton sx={{width:'min-content'}} onClick={onClick}>
+        {title}
+    </StyledButton>
 }
 
 export default ArticleButton;

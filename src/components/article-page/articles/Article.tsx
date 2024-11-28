@@ -1,6 +1,5 @@
 import {Box, ThemeProvider} from "@mui/material";
 import {ArticleData} from "../../data/ArticeData.tsx";
-import FieldEntry from "../../misc/FieldEntry.tsx";
 
 import ArticleImage from "../../misc/Image.tsx";
 import article_theme from "./article_theme.ts";
@@ -29,7 +28,7 @@ function Article({content, date, title, place, image, time, photos_url}: Article
                 <ArticleFields date={date} place={place} time={time}/>
                 <h3>Popis akce:</h3>
                 {content}
-                <Box sx={{flexGrow: 2}}/>
+                <Box sx={{flexGrow: 2, paddingBottom: "1em"}}/>
                 {photos_url && <ArticleButton title={"Fotky"} onClick={() => window.open(photos_url ?? "", '_blank')}/>}
             </Box>
             {image ? <Box sx={{

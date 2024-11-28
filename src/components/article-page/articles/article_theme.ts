@@ -17,21 +17,4 @@ const article_theme = createTheme({
     }
 });
 
-export let article_button_theme = createTheme({
-    palette: {
-        mode: "dark",
-        primary: {
-            main: "#FFFFFF",
-        },
-        background: {
-            default: '#4a4538', // Background for the entire page
-            paper: '#4a4538'
-        },
-    },
-    spacing: 4,
-    shape: {
-        borderRadius: 4,
-    }
-});
-
 export default article_theme;
