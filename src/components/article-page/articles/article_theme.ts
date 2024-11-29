@@ -8,7 +8,7 @@ const article_theme = createTheme({
         },
         background: {
             default: '#212325', // Background for the entire page
-            paper: '#FFFFFF'
+            paper: '#181a1b'
         },
     },
     spacing: 4,

@@ -17,15 +17,12 @@ function ArticleImage({image}: ArticleImageProps) {
         setOpen(true);
     };
     return <ThemeProvider theme={theme}>
-        {isMobile
-            ?
-            <Button onClick={handleClickOpen}>Zobrazit Plakát</Button>
-            :
-            <Button onClick={handleClickOpen}>
-                <ImageListItem>
-                    <img src={image} alt={""} loading="lazy"/>
-                </ImageListItem></Button>
-        }
+        <Button onClick={handleClickOpen}>{isMobile
+            ? "Zobrazit Plakát"
+            : <ImageListItem>
+                <img src={image} alt={""} loading="lazy"/>
+            </ImageListItem>}
+        </Button>
         {imageDialog(image, open, setOpen)}
     </ThemeProvider>
 }

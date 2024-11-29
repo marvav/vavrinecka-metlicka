@@ -1,15 +1,17 @@
-import {Box, ThemeProvider} from "@mui/material";
+import {Box, ThemeProvider, useMediaQuery} from "@mui/material";
 import {ArticleData} from "../../data/ArticeData.tsx";
 
 import ArticleImage from "../../misc/Image.tsx";
 import article_theme from "./article_theme.ts";
 import ArticleTitle from "./ArticleTitle.tsx";
-import ArticleButton from "./ArticleButton.tsx";
 import ArticleFields from "./ArticleFields.tsx";
+import ArticleButtonBar from "./ArticleButtonBar.tsx";
+import TrackChooser from "../../misc/TrackChooser.tsx";
 
 export default Article;
 
-function Article({content, date, title, place, image, time, photos_url}: ArticleData) {
+function Article({content, date, title, place, image, time, photos_url, tracks}: ArticleData) {
+    const isMobile = useMediaQuery(article_theme.breakpoints.down('sm'));
     return <ThemeProvider theme={article_theme}>
         <Box sx={{
             display: "flex",
@@ -26,19 +28,28 @@ function Article({content, date, title, place, image, time, photos_url}: Article
             }}>
                 <ArticleTitle title={title}/>
                 <ArticleFields date={date} place={place} time={time}/>
-                <h3>Popis akce:</h3>
-                {content}
+                {tracks && <Box sx={{display: "flex", gap: "0.5em", alignItems: "center"}}>
+                    <h4>Trasy: </h4>
+                    <TrackChooser tracks={tracks}/>
+                </Box>}
+                {content ?? <>
+                    <h3>Popis akce:</h3>
+                    {content}
+                </>}
                 <Box sx={{flexGrow: 2, paddingBottom: "1em"}}/>
-                {photos_url && <ArticleButton title={"Fotky"} onClick={() => window.open(photos_url ?? "", '_blank')}/>}
+                <ArticleButtonBar image={image} photos_url={photos_url}/>
             </Box>
-            {image ? <Box sx={{
-                display: "flex",
-                width: {xs: "100%", sm: "50%",},
-                justifyContent: {xs: "center", sm: "right",},
-                paddingTop: {xs: article_theme.spacing(4), sm: 0,}
-            }}>
-                <ArticleImage image={image}/>
-            </Box> : <div/>}
+            {
+                (image && !isMobile) ? <Box sx={{
+                    display: "flex",
+                    width: {xs: "100%", sm: "50%",},
+                    justifyContent: {xs: "center", sm: "right",},
+                    paddingTop: {xs: article_theme.spacing(4), sm: 0,}
+                }}>
+                    <ArticleImage image={image}/>
+                </Box> : <div/>
+            }
         </Box>
-    </ThemeProvider>;
+    </ThemeProvider>
+        ;
 }
