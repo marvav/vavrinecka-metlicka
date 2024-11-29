@@ -23,7 +23,7 @@ export const predefinedArticles: ArticleData[] = [
         purchasable_tickets: true,
         image: "rockovyvecer.jpg",
         photos_url: undefined,
-        tracks: new Map([])
+        tracks: undefined
     },
 
     {
@@ -36,7 +36,7 @@ export const predefinedArticles: ArticleData[] = [
         purchasable_tickets: false,
         image: "beh2024.jpg",
         photos_url: "https://eu.zonerama.com/vasman33/1402623",
-        tracks: new Map([])
+        tracks: undefined
     },
 
     {

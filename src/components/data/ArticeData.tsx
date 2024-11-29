@@ -7,5 +7,5 @@ export interface ArticleData {
     photos_url: string | undefined
     purchasable_tickets: boolean
     image: string | undefined
-    tracks: Map<number, string>
+    tracks: Map<number, string> | undefined
 }

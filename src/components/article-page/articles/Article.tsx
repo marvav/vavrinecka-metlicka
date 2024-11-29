@@ -32,7 +32,7 @@ function Article({content, date, title, place, image, time, photos_url, tracks}:
                     <h4>Trasy: </h4>
                     <TrackChooser tracks={tracks}/>
                 </Box>}
-                {content ?? <>
+                {content && <>
                     <h3>Popis akce:</h3>
                     {content}
                 </>}
