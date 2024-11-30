@@ -1,5 +1,6 @@
-import {Box} from "@mui/material";
+import {Box, Button} from "@mui/material";
 import FieldEntry from "../../misc/FieldEntry.tsx";
+import mapycz from "../../../../public/assets/mapycz.png"
 
 interface ArticleFieldProps {
     date: string
@@ -9,9 +10,14 @@ interface ArticleFieldProps {
 }
 
 function ArticleFields({date, time, place, placeLink}: ArticleFieldProps) {
-    const placeElement = <Box sx={{display: "flex", alignItems: "center", gap: "0.5em"}}>
+    const placeElement = <Box sx={{display: "flex", gap: "0.5em"}}>
         {place}
-        {placeLink && <a href={placeLink} target={"_blank"} style={{fontSize: 11}}> mapy.cz</a>}
+        {placeLink && <Box sx={{display: "flex", width: "15%", justifyContent: "center", borderRadius: "1em", bgcolor: "green"}}>
+            <Button
+            href={placeLink} target={"_blank"}>
+            <img src={mapycz} loading="lazy" height={'auto'} width={'100%'}/>
+        </Button>
+        </Box>}
     </Box>
     return <Box sx={{
         display: {
