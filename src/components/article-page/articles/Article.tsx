@@ -10,7 +10,7 @@ import TrackChooser from "../../misc/TrackChooser.tsx";
 
 export default Article;
 
-function Article({content, date, title, place, image, time, photos_url, tracks}: ArticleData) {
+function Article({content, date, title, place, place_map, image, time, photos_url, tracks}: ArticleData) {
     const isMobile = useMediaQuery(article_theme.breakpoints.down('sm'));
     return <ThemeProvider theme={article_theme}>
         <Box sx={{
@@ -29,7 +29,7 @@ function Article({content, date, title, place, image, time, photos_url, tracks}:
                 paddingRight: {xs: 0, sm: article_theme.spacing(8)}
             }}>
                 <ArticleTitle title={title}/>
-                <ArticleFields date={date} place={place} time={time}/>
+                <ArticleFields date={date} time={time} place={place} place_map = {place_map}/>
                 {tracks && <Box sx={{display: "flex", gap: "0.5em", alignItems: "center"}}>
                     <h4>Trasy: </h4>
                     <TrackChooser tracks={tracks}/>

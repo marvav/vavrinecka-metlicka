@@ -6,6 +6,7 @@ export const predefinedArticles: ArticleData[] = [
         date: "25.1.2025",
         time: undefined,
         place: "Vavřinec pod plechem",
+        place_map: "https://en.mapy.cz/s/bagoguzesu",
         content: "Turistická akce. Koná se 25. ledna 2025. Start / Cíl ve Vavřinci pod plechem.",
         purchasable_tickets: false,
         image: undefined,
@@ -17,6 +18,7 @@ export const predefinedArticles: ArticleData[] = [
         title: "Rockový večer",
         date: "17.1.2025",
         place: "Kulturní dům ve Žďáře.",
+        place_map: "https://en.mapy.cz/s/hokuzazecu", // doplnit kulturní dům
         time: "18:00",
         content: "Zveme vás na Rockový večer 🤟 s kapelou Kapriola, Aleš Brichta Project a Judas Priest Revival (Praha). Otevření KD: 17:00\n" +
             "- VSTUPNÉ: 599 Kč v předprodeji, 650 Kč na místě\n",
@@ -31,6 +33,7 @@ export const predefinedArticles: ArticleData[] = [
         date: "24.8.2024",
         time: undefined,
         place: "Vavřinec pod plechem",
+        place_map: "https://en.mapy.cz/s/bagoguzesu",
         content: "Vavřinecká Metlička pod záštitou SDH Vavřinec Vás zve na 1. ročník závodu VAVŘINECKÝ BĚH MORAVSKÝM KRASEM.\n" +
             "Závod bude probíhat za každého počasí. Start bude v areálu fotbalového hřiště ve Vavřinci, kde budou k dispozici i šatny a sprchy.",
         purchasable_tickets: false,
@@ -44,6 +47,7 @@ export const predefinedArticles: ArticleData[] = [
         date: "20.1.2024",
         time: undefined,
         place: "Vavřinec pod plechem",
+        place_map: "https://en.mapy.cz/s/bagoguzesu",
         content: "",
         purchasable_tickets: false,
         image: "pochod2024.jpg",

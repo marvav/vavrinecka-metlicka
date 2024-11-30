@@ -2,7 +2,7 @@ import {Box} from "@mui/material";
 
 export interface FieldEntryProps {
     name: string
-    value: string | undefined
+    value: JSX.Element | string | undefined
     defaultValue: string
 }
 

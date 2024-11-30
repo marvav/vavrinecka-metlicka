@@ -3,6 +3,7 @@ export interface ArticleData {
     date: string
     time: string | undefined
     place: string
+    place_map: string | undefined
     content: string
     photos_url: string | undefined
     purchasable_tickets: boolean
