@@ -38,6 +38,7 @@ const StyledButton = styled(Button)(() => ({
 const MapLinkStyledButton = styled(Button)(() => ({
     justifyContent: "center", 
     borderRadius: "0.3em", 
+    width: "min-content",
     backgroundColor: "#07D538",
     border: "1px solid #00A000",
     textTransform: "none",    

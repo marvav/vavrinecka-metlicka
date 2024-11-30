@@ -11,9 +11,10 @@ interface ArticleFieldProps {
 
 function ArticleFields({date, time, place, placeLink}: ArticleFieldProps) {
     const placeElement = <Box sx={{display: "flex", gap: "0.5em"}}>
-        {place}
-        {placeLink && <Box>
-            <MapLinkButton image={mapycz} onClick={() => window.open(placeLink ?? "", '_blank')}/>
+        
+        {<Box>
+            {place + " "}
+            {placeLink && <MapLinkButton image={mapycz} onClick={() => window.open(placeLink ?? "", '_blank')}/>}
         </Box>}
     </Box>
     return <Box sx={{
