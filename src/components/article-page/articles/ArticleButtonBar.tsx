@@ -25,7 +25,7 @@ function ArticleButtonBar({image, photos_url}: ArticleButtonBarProps) {
 
 const StyledButton = styled(Button)(() => ({
     backgroundColor: "#181a1b",
-    border: "1px solid #00A000", // Black border
+    border: "1px solid #00A000", // Green border
     textTransform: "none",    // Disable uppercase text
     boxShadow: "2px 2px 4px rgba(0, 0, 0, 0.2)", // Subtle shadow
     transition: "all 0.3s ease-in",
@@ -35,8 +35,28 @@ const StyledButton = styled(Button)(() => ({
     },
 }));
 
+const MapLinkStyledButton = styled(Button)(() => ({
+    justifyContent: "center", 
+    borderRadius: "0.3em", 
+    backgroundColor: "#07D538",
+    border: "1px solid #00A000",
+    textTransform: "none",    
+    boxShadow: "2px 2px 4px rgba(0, 0, 0, 0.2)", // Subtle shadow
+    transition: "all 0.3s ease-out",
+    top: "-2px",
+    "&:hover": {
+        backgroundColor: "#07D538",
+        boxShadow: "4px 4px 8px rgba(0, 0, 0, 0.3)", // Stronger shadow
+        filter: "brightness(70%)"
+    },
+}));
+
 interface ArticleButtonProps {
     title: string;
+    onClick?: MouseEventHandler | undefined;
+}
+interface ArticleMapLinkButtonProps {
+    image: string;
     onClick?: MouseEventHandler | undefined;
 }
 
@@ -45,6 +65,12 @@ export function ArticleButton({title, onClick}: ArticleButtonProps) {
     return <StyledButton sx={{width: 'min-content'}} onClick={onClick}>
         {title}
     </StyledButton>
+}
+
+export function MapLinkButton({image, onClick} : ArticleMapLinkButtonProps){
+    return <MapLinkStyledButton onClick={onClick}>
+        {<img src={image} loading="lazy" height={'auto'} width={'100%'}/>}
+    </MapLinkStyledButton>
 }
 
 export default ArticleButtonBar;

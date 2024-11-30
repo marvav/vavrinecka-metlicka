@@ -1,7 +1,7 @@
-import {Box, Button} from "@mui/material";
+import {Box} from "@mui/material";
 import FieldEntry from "../../misc/FieldEntry.tsx";
 import mapycz from "../../../../public/assets/mapycz.png"
-
+import { MapLinkButton } from "./ArticleButtonBar.tsx";
 interface ArticleFieldProps {
     date: string
     time: string | undefined
@@ -12,11 +12,8 @@ interface ArticleFieldProps {
 function ArticleFields({date, time, place, placeLink}: ArticleFieldProps) {
     const placeElement = <Box sx={{display: "flex", gap: "0.5em"}}>
         {place}
-        {placeLink && <Box sx={{display: "flex", width: "15%", justifyContent: "center", borderRadius: "1em", bgcolor: "green"}}>
-            <Button
-            href={placeLink} target={"_blank"}>
-            <img src={mapycz} loading="lazy" height={'auto'} width={'100%'}/>
-        </Button>
+        {placeLink && <Box>
+            <MapLinkButton image={mapycz} onClick={() => window.open(placeLink ?? "", '_blank')}/>
         </Box>}
     </Box>
     return <Box sx={{
