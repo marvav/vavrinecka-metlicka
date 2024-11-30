@@ -17,6 +17,8 @@ function Article({content, date, title, place, image, time, photos_url, tracks}:
             display: "flex",
             flexDirection: {xs: 'column', sm: 'row',},
             bgcolor: 'background.default',
+            borderStyle: "solid",
+            borderColor: "#00A000",
             padding: {xs: article_theme.spacing(4), sm: article_theme.spacing(8),},
             borderRadius: article_theme.spacing(3)
         }}>

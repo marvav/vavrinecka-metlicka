@@ -16,15 +16,16 @@ function ArticleButtonBar({image, photos_url}: ArticleButtonBarProps) {
         {photos_url && <ArticleButton title={"Fotky"} onClick={() => window.open(photos_url ?? "", '_blank')}/>}
         {(image && isMobile)
             ? <ArticleButton title={"Plakát"} onClick={() => {
-                imageDialog(image, open, setOpen)
+                setOpen(true);
             }}/>
             : <div/>}
+            {imageDialog(image, open, setOpen)}
     </Box>
 }
 
 const StyledButton = styled(Button)(() => ({
     backgroundColor: "#181a1b",
-    border: "1px solid #2c2e29", // Black border
+    border: "1px solid #00A000", // Black border
     textTransform: "none",    // Disable uppercase text
     boxShadow: "2px 2px 4px rgba(0, 0, 0, 0.2)", // Subtle shadow
     transition: "all 0.3s ease-in",
