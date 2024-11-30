@@ -17,7 +17,7 @@ function Article({content, date, title, place, place_map, image, time, photos_ur
             display: "flex",
             flexDirection: {xs: 'column', sm: 'row',},
             bgcolor: 'background.default',
-            borderStyle: "solid",
+            borderStyle: "outset",
             borderColor: "#00A000",
             padding: {xs: article_theme.spacing(4), sm: article_theme.spacing(8),},
         }}>
