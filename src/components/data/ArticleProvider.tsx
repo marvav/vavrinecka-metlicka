@@ -53,9 +53,9 @@ export const predefinedArticles: ArticleData[] = [
         image: "pochod2024.jpg",
         photos_url: undefined,
         tracks: new Map([
-            [30,"https://mapy.cz/s/botulekosu"],
+            [6,"https://mapy.cz/s/detacumenu"],
             [18,"https://mapy.cz/s/fovegetogu"],
-            [6,"https://mapy.cz/s/detacumenu"]
+            [30,"https://mapy.cz/s/botulekosu"]
         ])
     },
 ];
