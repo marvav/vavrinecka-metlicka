@@ -1,20 +1,18 @@
 import {Box} from "@mui/material";
 import FieldEntry from "../../misc/FieldEntry.tsx";
+
 interface ArticleFieldProps {
     date: string
     time: string | undefined
     place: string
-    place_map: string | undefined
+    placeLink: string | undefined
 }
 
-function ArticleFields({date, time, place, place_map}: ArticleFieldProps) {
-    const pplace = <p>
-        {place} 
-        {place_map 
-        ? 
-        <a href={place_map} style={{fontSize: 11}}> mapa</a> : <div/> 
-        }
-    </p>
+function ArticleFields({date, time, place, placeLink}: ArticleFieldProps) {
+    const placeElement = <Box sx={{display: "flex", alignItems: "center", gap: "0.5em"}}>
+        {place}
+        {placeLink && <a href={placeLink} target={"_blank"} style={{fontSize: 11}}> mapy.cz</a>}
+    </Box>
     return <Box sx={{
         display: {
             sm: "flex",
@@ -24,13 +22,11 @@ function ArticleFields({date, time, place, place_map}: ArticleFieldProps) {
             sm: "2em",
             xs: "0em"
         },
-        paddingTop: "1em"
-    }}
-    >
+    }}>
         <FieldEntry name={"Datum: "} value={date} defaultValue={"Neoznámeno"}/>
         <FieldEntry name={"Čas: "} value={time} defaultValue={"Dle plakátu"}/>
-        <FieldEntry name={"Místo: "} value={pplace} defaultValue={"Neoznámeno"}/>
-        
+        <FieldEntry name={"Místo: "} value={placeElement} defaultValue={"Neoznámeno"}/>
+
     </Box>
 }
 

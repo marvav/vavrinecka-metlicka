@@ -29,7 +29,7 @@ function Article({content, date, title, place, place_map, image, time, photos_ur
                 paddingRight: {xs: 0, sm: article_theme.spacing(8)}
             }}>
                 <ArticleTitle title={title}/>
-                <ArticleFields date={date} time={time} place={place} place_map = {place_map}/>
+                <ArticleFields date={date} time={time} place={place} placeLink= {place_map}/>
                 {tracks && <LinkBar title={"Trasy"} linkMap={tracks}/>}
                 {content && <>
                     <h3>Popis akce:</h3>
