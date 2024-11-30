@@ -6,12 +6,13 @@ import article_theme from "./article_theme.ts";
 import ArticleTitle from "./ArticleTitle.tsx";
 import ArticleFields from "./ArticleFields.tsx";
 import ArticleButtonBar from "./ArticleButtonBar.tsx";
-import TrackChooser from "../../misc/TrackChooser.tsx";
+import LinkBar from "../../misc/LinkBar.tsx";
 
 export default Article;
 
 function Article({content, date, title, place, place_map, image, time, photos_url, tracks}: ArticleData) {
     const isMobile = useMediaQuery(article_theme.breakpoints.down('sm'));
+    let style = getComputedStyle(document.body);
     return <ThemeProvider theme={article_theme}>
         <Box sx={{
             display: "flex",
@@ -20,7 +21,6 @@ function Article({content, date, title, place, place_map, image, time, photos_ur
             borderStyle: "solid",
             borderColor: "#00A000",
             padding: {xs: article_theme.spacing(4), sm: article_theme.spacing(8),},
-            borderRadius: article_theme.spacing(3)
         }}>
             <Box sx={{
                 display: "flex",
@@ -30,10 +30,7 @@ function Article({content, date, title, place, place_map, image, time, photos_ur
             }}>
                 <ArticleTitle title={title}/>
                 <ArticleFields date={date} time={time} place={place} place_map = {place_map}/>
-                {tracks && <Box sx={{display: "flex", gap: "0.5em", alignItems: "center"}}>
-                    <h4>Trasy: </h4>
-                    <TrackChooser tracks={tracks}/>
-                </Box>}
+                {tracks && <LinkBar title={"Trasy"} linkMap={tracks}/>}
                 {content && <>
                     <h3>Popis akce:</h3>
                     {content}
