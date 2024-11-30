@@ -22,10 +22,12 @@ function ArticleFields({date, time, place, placeLink}: ArticleFieldProps) {
             sm: "2em",
             xs: "0em"
         },
+        columns: 2,
+        paddingTop: "1em"
     }}>
-        <FieldEntry name={"Datum: "} value={date} defaultValue={"Neoznámeno"}/>
-        <FieldEntry name={"Čas: "} value={time} defaultValue={"Dle plakátu"}/>
-        <FieldEntry name={"Místo: "} value={placeElement} defaultValue={"Neoznámeno"}/>
+        <FieldEntry name={"Datum"} value={date} defaultValue={"Neoznámeno"}/>
+        <FieldEntry name={"Čas"} value={time} defaultValue={"Dle plakátu"}/>
+        <FieldEntry name={"Místo"} value={placeElement} defaultValue={"Neoznámeno"}/>
 
     </Box>
 }

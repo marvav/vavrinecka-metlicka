@@ -1,5 +1,6 @@
 import {ArticleButton} from "../article-page/articles/ArticleButtonBar.tsx";
 import {Box} from "@mui/material";
+import Typography from "@mui/material/Typography";
 
 export interface LinkBarProps {
     title: string
@@ -7,8 +8,8 @@ export interface LinkBarProps {
 }
 
 function LinkBar({title, linkMap}: LinkBarProps) {
-    return <Box sx={{display: "flex", gap: "0.5em", alignItems: "center"}}>
-        <h4>{title + ":"}</h4>
+    return <Box sx={{display: "flex", gap: "0.5em", alignItems: "center", paddingTop: "1em"}}>
+        <Typography sx={{fontWeight: "bold"}}>{title + ":"}</Typography>
         {Array.from(linkMap.entries())
             .map(([key, value]) => (
                 <ArticleButton onClick={() => window.open(value ?? "", '_blank')} title={"" + key + "km"}/>

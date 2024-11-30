@@ -1,4 +1,5 @@
 import {Box} from "@mui/material";
+import Typography from "@mui/material/Typography";
 
 export interface FieldEntryProps {
     name: string
@@ -7,9 +8,9 @@ export interface FieldEntryProps {
 }
 
 function FieldEntry({name, value, defaultValue}: FieldEntryProps) {
-    return <Box sx={{ display: "flex", alignItems: "center" }}>
-        <h3 style={{ fontSize: "1rem", lineHeight: "1" }}>{name}</h3>
-        <p style={{ fontSize: "1rem", lineHeight: "1", paddingLeft: "0.5rem" }}>{value ?? defaultValue}</p>
+    return <Box sx={{ display: "flex", alignItems: "center", gap: "0.5em"}}>
+        <Typography sx={{fontWeight: "bold"}}>{name+ ": "}</Typography>
+        {value ?? defaultValue}
     </Box>
 }
 
