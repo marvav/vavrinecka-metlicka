@@ -8,7 +8,6 @@ function ArticleContent() {
     const isMobile = useMediaQuery(page_common_theme.breakpoints.down('sm'));
     return <Box position="fixed" sx={{
         overflow: "auto",
-        bgcolor: "background.default",
         maxHeight: "100vh",
     }}>
         <Box sx={{top: 0, display: "flex", padding: "2em"}}>

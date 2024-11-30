@@ -8,8 +8,6 @@ const IntroContents: React.FC = () => {
         paddingTop: "80px",
         gap: "4em",
         paddingRight: "20px",
-        bgcolor: "background.default"
-
     }}>
         <h1>Vavřinecká Metlička</h1>
         <Typography>Metlička dělá věci..</Typography>
