@@ -1,4 +1,4 @@
-import {ArticleData} from "./ArticeData.tsx";
+import {ArticleData} from "./ArticleData.tsx";
 import rockovyvecer from "../../assets/posters/rockovyvecer.jpg"
 import pochod2025 from "../../assets/posters/pochod2025.png"
 import beh2024 from "../../assets/posters/beh2024.jpg"
@@ -12,8 +12,8 @@ export const predefinedArticles: ArticleData[] = [
         place: "Vavřinec pod plechem",
         place_link: "https://en.mapy.cz/s/bagoguzesu",
         content: "Turistická akce. Koná se 25. ledna 2025. Start / Cíl ve Vavřinci pod plechem.",
-        purchasable_tickets: false,
-        tickets_link: undefined,
+        ticket_info_message: "vstupné se zakoupí na místě konání",
+        ticket_link: undefined,
         image: pochod2025 as string,
         photos_url: undefined,
         tracks: new Map([
@@ -32,8 +32,8 @@ export const predefinedArticles: ArticleData[] = [
         time: "18:00",
         content: "Zveme vás na Rockový večer 🤟 s kapelou Kapriola, Aleš Brichta Project a Judas Priest Revival (Praha). Otevření KD: 17:00\n" +
             "- VSTUPNÉ: 599 Kč v předprodeji, 650 Kč na místě\n",
-        purchasable_tickets: true,
-        tickets_link: "https://www.ticketportal.cz/", // add correct url
+        ticket_info_message: undefined,
+        ticket_link: "https://www.ticketportal.cz/", // add correct url
         image: rockovyvecer as string,
         photos_url: undefined,
         tracks: undefined
@@ -47,8 +47,8 @@ export const predefinedArticles: ArticleData[] = [
         place_link: undefined,
         content: "Vavřinecká Metlička pod záštitou SDH Vavřinec Vás zve na 1. ročník závodu VAVŘINECKÝ BĚH MORAVSKÝM KRASEM.\n" +
             "Závod bude probíhat za každého počasí. Start bude v areálu fotbalového hřiště ve Vavřinci, kde budou k dispozici i šatny a sprchy.",
-        purchasable_tickets: false,
-        tickets_link: undefined,
+        ticket_info_message: undefined,
+        ticket_link: undefined,
         image: beh2024 as string,
         photos_url: "https://eu.zonerama.com/vasman33/1402623",
         tracks: undefined
@@ -61,8 +61,8 @@ export const predefinedArticles: ArticleData[] = [
         place: "Vavřinec pod plechem",
         place_link: "https://en.mapy.cz/s/bagoguzesu",
         content: "",
-        purchasable_tickets: false,
-        tickets_link: undefined,
+        ticket_info_message: "vstupné se kdysi kupovalo na místě",
+        ticket_link: undefined,
         image: pochod2024 as string,
         photos_url: undefined,
         tracks: new Map([

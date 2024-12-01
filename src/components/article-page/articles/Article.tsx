@@ -1,5 +1,5 @@
 import {Box, ThemeProvider, useMediaQuery} from "@mui/material";
-import {ArticleData} from "../../data/ArticeData.tsx";
+import {ArticleData} from "../../data/ArticleData.tsx";
 
 import ArticleImage from "../../misc/Image.tsx";
 import article_theme from "./article_theme.ts";
@@ -10,10 +10,9 @@ import LinkBar from "../../misc/LinkBar.tsx";
 
 export default Article;
 
-function Article({content, date, title, place, purchasable_tickets, 
-                tickets_link, place_link, image, time, photos_url, tracks}: ArticleData) {
+function Article({content, date, title, place, ticket_info_message, 
+                ticket_link, place_link, image, time, photos_url, tracks}: ArticleData) {
     const isMobile = useMediaQuery(article_theme.breakpoints.down('sm'));
-    const placeHolderTicketMessage = "lístky se zakoupí na místě konání";
     return <ThemeProvider theme={article_theme}>
         <Box sx={{
             display: "flex",
@@ -37,8 +36,7 @@ function Article({content, date, title, place, purchasable_tickets,
                 <h3>Popis akce:</h3>
                 {content || "Bude upřesněno"}
                 <Box sx={{flexGrow: 2, paddingBottom: "1em"}}/>
-                <ArticleButtonBar image={image} photos_url={photos_url} tickets_url={tickets_link} tickets_message={placeHolderTicketMessage}/>
-                
+                <ArticleButtonBar image={image} photos_url={photos_url} ticket_url={ticket_link} ticket_message={ticket_info_message}/>
             </Box>
             {
                 (image && !isMobile) ? <Box sx={{

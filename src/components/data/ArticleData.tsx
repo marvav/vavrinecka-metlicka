@@ -6,8 +6,8 @@ export interface ArticleData {
     place_link: string | undefined
     content: string
     photos_url: string | undefined
-    purchasable_tickets: boolean // change to ticket_message, which would describe where to get a ticket
-    tickets_link : string | undefined
+    ticket_info_message: string | undefined
+    ticket_link : string | undefined
     image: string | undefined
     tracks: Map<number, string> | undefined
 }

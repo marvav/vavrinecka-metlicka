@@ -1,7 +1,7 @@
 import React from "react";
 import {Box} from "@mui/material";
 import Article from "./articles/Article.tsx";
-import {ArticleData} from "../data/ArticeData.tsx";
+import {ArticleData} from "../data/ArticleData.tsx";
 import FootNote from "../footnote/FootNote.tsx";
 import Typography from "@mui/material/Typography";
 
