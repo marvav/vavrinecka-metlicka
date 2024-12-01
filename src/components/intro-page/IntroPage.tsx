@@ -2,7 +2,7 @@ import MainBar from "../page/MainBar.tsx";
 import React from "react";
 import IntroContents from "./IntroContent";
 import {Box} from "@mui/material";
-import metlicka_background from "../../../public/metlicka_background.png"
+import metlicka_background from "../../../src/assets/images/metlicka_background.png"
 
 const IntroPage: React.FC = () => {
     return <Box sx={{

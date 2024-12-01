@@ -1,6 +1,6 @@
 import {Box} from "@mui/material";
 import FieldEntry from "../../misc/FieldEntry.tsx";
-import mapycz from "../../../../public/assets/mapycz.png"
+import mapycz from "../../../../src/assets/images/mapycz.png"
 import { MapLinkButton } from "./ArticleButtonBar.tsx";
 interface ArticleFieldProps {
     date: string

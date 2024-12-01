@@ -3,7 +3,7 @@ import SideGraphic from "../page/SideGraphic.tsx";
 import ArticleFeed from "./ArticleFeed.tsx";
 import {predefinedArticles} from "../data/ArticleProvider.tsx";
 import page_common_theme from "../../themes/page_common_theme.ts";
-import metlicka_background from "../../../public/metlicka_background.png";
+import metlicka_background from "../../../src/assets/images/metlicka_background.png";
 
 function ArticleContent() {
     const isMobile = useMediaQuery(page_common_theme.breakpoints.down('sm'));
