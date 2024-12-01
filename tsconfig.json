@@ -15,5 +15,4 @@
     "allowSyntheticDefaultImports": true,
     "strict": true
   },
-  "include": ["src"]
 }
