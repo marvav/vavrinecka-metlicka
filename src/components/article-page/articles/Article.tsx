@@ -18,8 +18,10 @@ function Article({content, date, title, place, placeLink, image, time, photos_ur
             flexDirection: {xs: 'column', sm: 'row',},
             bgcolor: 'background.default',
             borderStyle: "outset",
+            borderWidth: "2px",
             borderColor: "#00A000",
-            padding: {xs: article_theme.spacing(4), sm: article_theme.spacing(8),},
+            padding: {xs: article_theme.spacing(4), sm: article_theme.spacing(8)},
+            borderRadius: "0.75em"
         }}>
             <Box sx={{
                 display: "flex",

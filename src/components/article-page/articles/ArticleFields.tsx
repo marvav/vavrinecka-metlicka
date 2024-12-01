@@ -1,7 +1,8 @@
 import {Box} from "@mui/material";
 import FieldEntry from "../../misc/FieldEntry.tsx";
 import mapycz from "../../../../src/assets/images/mapycz.png"
-import { MapLinkButton } from "./ArticleButtonBar.tsx";
+import {MapLinkButton} from "../../buttons/MapLinkButtons.tsx";
+
 interface ArticleFieldProps {
     date: string
     time: string | undefined
@@ -10,12 +11,9 @@ interface ArticleFieldProps {
 }
 
 function ArticleFields({date, time, place, placeLink}: ArticleFieldProps) {
-    const placeElement = <Box sx={{display: "flex", gap: "0.5em"}}>
-        
-        {<Box>
-            {place + " "}
-            {placeLink && <MapLinkButton image={mapycz} onClick={() => window.open(placeLink ?? "", '_blank')}/>}
-        </Box>}
+    const placeElement = <Box sx={{display: "flex", gap: "0.5em", alignItems: "center"}}>
+        {place + " "}
+        {placeLink && <MapLinkButton image={mapycz} onClick={() => window.open(placeLink ?? "", '_blank')}/>}
     </Box>
     return <Box sx={{
         display: {
@@ -24,7 +22,7 @@ function ArticleFields({date, time, place, placeLink}: ArticleFieldProps) {
         },
         gap: {
             sm: "2em",
-            xs: "0em"
+            xs: "0.5em"
         },
         columns: 2,
         paddingTop: "1em"
@@ -32,7 +30,6 @@ function ArticleFields({date, time, place, placeLink}: ArticleFieldProps) {
         <FieldEntry name={"Datum"} value={date} defaultValue={"Neoznámeno"}/>
         <FieldEntry name={"Čas"} value={time} defaultValue={"Dle plakátu"}/>
         <FieldEntry name={"Místo"} value={placeElement} defaultValue={"Neoznámeno"}/>
-
     </Box>
 }
 
