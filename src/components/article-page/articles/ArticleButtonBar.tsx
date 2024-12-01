@@ -39,15 +39,16 @@ const MapLinkStyledButton = styled(Button)(() => ({
     justifyContent: "center", 
     borderRadius: "0.3em", 
     width: "min-content",
-    backgroundColor: "#07D538",
+    padding: "0.2em",
+    backgroundColor: "#06a927",
     border: "1px solid #00A000",
     textTransform: "none",    
-    boxShadow: "2px 2px 4px rgba(0, 0, 0, 0.2)", // Subtle shadow
+    boxShadow: "2px 2px 4px rgba(0, 0, 0, 0.2)",
     transition: "all 0.3s ease-out",
     top: "-2px",
     "&:hover": {
-        backgroundColor: "#07D538",
-        boxShadow: "4px 4px 8px rgba(0, 0, 0, 0.3)", // Stronger shadow
+        backgroundColor: "#06a927",
+        boxShadow: "4px 4px 8px rgba(0, 0, 0, 0.3)",
         filter: "brightness(70%)"
     },
 }));
