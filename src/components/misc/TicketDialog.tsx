@@ -1,5 +1,5 @@
-import {Dialog, DialogActions, DialogContent, Typography,Box} from "@mui/material";
-import {ArticleButton} from "../article-page/articles/ArticleButtonBar";
+import {Dialog, DialogActions, DialogContent, Typography, Box} from "@mui/material";
+import {ArticleButton} from "../buttons/ArticleButtons";
 
 function TicketDialog(message : string | undefined, open: boolean, setOpen: Function) {
     const handleClose = () => {

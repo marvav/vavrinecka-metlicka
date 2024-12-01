@@ -1,4 +1,4 @@
-import {ArticleButton} from "../article-page/articles/ArticleButtonBar.tsx";
+import {ArticleButton} from "../buttons/ArticleButtons";
 import {Box} from "@mui/material";
 import Typography from "@mui/material/Typography";
 

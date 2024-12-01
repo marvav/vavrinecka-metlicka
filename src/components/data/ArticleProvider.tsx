@@ -12,7 +12,7 @@ export const predefinedArticles: ArticleData[] = [
         place: "Vavřinec pod plechem",
         place_link: "https://en.mapy.cz/s/bagoguzesu",
         content: "Turistická akce. Koná se 25. ledna 2025. Start / Cíl ve Vavřinci pod plechem.",
-        ticket_info_message: "vstupné se zakoupí na místě konání",
+        ticket_info_message: "vstupné se zaplatí na místě konání",
         ticket_link: undefined,
         image: pochod2025 as string,
         photos_url: undefined,

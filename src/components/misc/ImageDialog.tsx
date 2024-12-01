@@ -1,5 +1,5 @@
-import {Button, Dialog, DialogActions, DialogContent, ImageListItem, Box} from "@mui/material";
-
+import {Dialog, DialogActions, DialogContent, ImageListItem, Box} from "@mui/material";
+import {ArticleButton} from "../buttons/ArticleButtons";
 
 function ImageDialog(img: string | undefined, open: boolean, setOpen: Function) {
     const handleClose = () => {
@@ -12,7 +12,7 @@ function ImageDialog(img: string | undefined, open: boolean, setOpen: Function) 
                 <ImageListItem><img src={img} alt={""} loading="lazy"/></ImageListItem>
             </DialogContent>
             <DialogActions>
-                <Button onClick={handleClose}>Zavřít</Button>
+                <ArticleButton title="Zavřít" onClick={handleClose}/>
             </DialogActions>
         </Box>
     </Dialog>
