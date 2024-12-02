@@ -10,7 +10,7 @@ import LinkBar from "../../misc/LinkBar.tsx";
 
 export default Article;
 
-function Article({content, date, title, place, ticket_info_message, 
+function Article({content, date, title, place,
                 ticket_link, place_link, image, time, photos_url, tracks}: ArticleData) {
     const isMobile = useMediaQuery(article_theme.breakpoints.down('sm'));
     return <ThemeProvider theme={article_theme}>
@@ -36,7 +36,7 @@ function Article({content, date, title, place, ticket_info_message,
                 <h3>Popis akce:</h3>
                 {content || "Bude upřesněno"}
                 <Box sx={{flexGrow: 2, paddingBottom: "1em"}}/>
-                <ArticleButtonBar image={image} photos_url={photos_url} ticket_url={ticket_link} ticket_message={ticket_info_message}/>
+                <ArticleButtonBar image={image} photos_url={photos_url} ticket_url={ticket_link}/>
             </Box>
             {
                 (image && !isMobile) ? <Box sx={{

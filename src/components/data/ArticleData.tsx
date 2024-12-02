@@ -6,7 +6,6 @@ export interface ArticleData {
     place_link: string | undefined
     content: string
     photos_url: string | undefined
-    ticket_info_message: string | undefined
     ticket_link : string | undefined
     image: string | undefined
     tracks: Map<number, string> | undefined
