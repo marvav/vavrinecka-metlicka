@@ -11,7 +11,7 @@ export default Event;
 
 function Event({content, date, title, place, ticket_link, place_link, image,
                      time, photos_url, tracks}: EventData) {
-    const isMobile = useMediaQuery(event_theme.breakpoints.down('sm'));
+    const isMobile = useMediaQuery(event_theme.breakpoints.down('lg'));
     return <ThemeProvider theme={event_theme}>
         <Box sx={{
             display: "flex",
@@ -39,14 +39,14 @@ function Event({content, date, title, place, ticket_link, place_link, image,
                                   areTicketsAvailable={date >= new Date()}/>
             </Box>
             {
-                (image && !isMobile) ? <Box sx={{
+                (image && !isMobile) && <Box sx={{
                     display: "flex",
                     width: {xs: "100%", sm: "50%",},
                     justifyContent: {xs: "center", sm: "right",},
                     paddingTop: {xs: event_theme.spacing(4), sm: 0,}
                 }}>
                     <EventPoster image={image}/>
-                </Box> : <div/>
+                </Box>
             }
         </Box>
     </ThemeProvider>;
