@@ -1,12 +1,12 @@
 import {MouseEventHandler} from "react";
 import {Button, styled} from "@mui/material";
 
-interface ArticleButtonProps {
+interface EventButtonProps {
     title: string;
     onClick?: MouseEventHandler | undefined;
 }
 
-export function ArticleButton({title, onClick}: ArticleButtonProps) {
+export function EventButton({title, onClick}: EventButtonProps) {
     return <StyledButton sx={{width: 'min-content'}} onClick={onClick}>
         {title}
     </StyledButton>

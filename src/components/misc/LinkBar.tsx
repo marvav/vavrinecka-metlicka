@@ -1,6 +1,6 @@
-import {ArticleButton} from "../buttons/ArticleButtons";
 import {Box} from "@mui/material";
 import Typography from "@mui/material/Typography";
+import {EventButton} from "../buttons/EventButtons.tsx";
 
 export interface LinkBarProps {
     title: string
@@ -12,7 +12,7 @@ function LinkBar({title, linkMap}: LinkBarProps) {
         <Typography sx={{fontWeight: "bold"}}>{title + ":"}</Typography>
         {Array.from(linkMap.entries())
             .map(([key, value]) => (
-                <ArticleButton onClick={() => window.open(value ?? "", '_blank')} title={"" + key + "km"}/>
+                <EventButton onClick={() => window.open(value ?? "", '_blank')} title={"" + key + "km"}/>
             ))}
     </Box>
 }

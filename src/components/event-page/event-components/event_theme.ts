@@ -1,6 +1,6 @@
 import {createTheme} from '@mui/material/styles';
 
-const article_theme = createTheme({
+const event_theme = createTheme({
     palette: {
         mode: "dark",
         primary: {
@@ -18,4 +18,4 @@ const article_theme = createTheme({
 });
 
 
-export default article_theme;
+export default event_theme;

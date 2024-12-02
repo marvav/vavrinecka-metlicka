@@ -3,14 +3,14 @@ import FieldEntry from "../../misc/FieldEntry.tsx";
 import mapycz from "../../../../src/assets/images/mapycz.png"
 import {MapLinkButton} from "../../buttons/MapLinkButtons.tsx";
 
-interface ArticleFieldProps {
+interface EventFieldsProps {
     date: Date
     time: string | undefined
     place: string
     placeLink: string | undefined
 }
 
-function ArticleFields({date, time, place, placeLink}: ArticleFieldProps) {
+function EventFields({date, time, place, placeLink}: EventFieldsProps) {
     const placeElement = <Box sx={{display: "flex", gap: "0.5em", alignItems: "center"}}>
         {place + " "}
         {placeLink && <MapLinkButton image={mapycz as string}
@@ -34,4 +34,4 @@ function ArticleFields({date, time, place, placeLink}: ArticleFieldProps) {
     </Box>
 }
 
-export default ArticleFields;
+export default EventFields;

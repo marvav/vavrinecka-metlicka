@@ -1,16 +1,16 @@
 import {ImageListItem, ThemeProvider, useMediaQuery, Button} from "@mui/material";
 import {useState,} from "react";
 
-import article_theme from "../event-page/event-components/article_theme.ts";
+import event_theme from "../event-page/event-components/event_theme.ts";
 import theme from "../../themes/ButtonTheme.ts";
 import imageDialog from "./ImageDialog.tsx";
 
-export interface ArticleImageProps {
+export interface EventPosterProps {
     image: string | undefined
 }
 
-function ArticleImage({image}: ArticleImageProps) {
-    const isMobile = useMediaQuery(article_theme.breakpoints.down('sm'));
+function EventPoster({image}: EventPosterProps) {
+    const isMobile = useMediaQuery(event_theme.breakpoints.down('sm'));
     const [open, setOpen] = useState(false);
 
     const handleClickOpen = () => {
@@ -28,4 +28,4 @@ function ArticleImage({image}: ArticleImageProps) {
 }
 
 
-export default ArticleImage;
+export default EventPoster;

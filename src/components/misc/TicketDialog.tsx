@@ -1,5 +1,5 @@
 import {Dialog, DialogActions, DialogContent, Typography, Box} from "@mui/material";
-import {ArticleButton} from "../buttons/ArticleButtons";
+import {EventButton} from "../buttons/EventButtons.tsx";
 
 function TicketDialog(message : string | undefined, open: boolean, setOpen: Function) {
     const handleClose = () => {
@@ -14,7 +14,7 @@ function TicketDialog(message : string | undefined, open: boolean, setOpen: Func
             </Typography>
             </DialogContent>
             <DialogActions>
-                <ArticleButton title="Zavřít" onClick={handleClose}/>
+                <EventButton title="Zavřít" onClick={handleClose}/>
             </DialogActions>
         </Box>
     </Dialog>

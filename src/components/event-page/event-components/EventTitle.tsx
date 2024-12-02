@@ -1,13 +1,13 @@
 import Typography from "@mui/material/Typography";
 import {useMediaQuery} from "@mui/material";
-import article_theme from "./article_theme.ts";
+import event_theme from "./event_theme.ts";
 
 interface EventTitleProps {
     title: string;
 }
 
 function EventTitle({title}: EventTitleProps) {
-    const isMobile = useMediaQuery(article_theme.breakpoints.down('sm'));
+    const isMobile = useMediaQuery(event_theme.breakpoints.down('sm'));
     const variant = isMobile ? "h5" : "h3";
     return <Typography variant={variant}
                        sx={{
