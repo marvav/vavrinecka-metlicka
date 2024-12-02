@@ -9,9 +9,10 @@ interface ArticleButtonBarProps {
     image: string | undefined;
     photos_url: string | undefined;
     ticket_url : string | undefined;
+    areTicketsAvailable : boolean;
 }
 
-function ArticleButtonBar({image, photos_url, ticket_url}: ArticleButtonBarProps) {
+function ArticleButtonBar({image, photos_url, ticket_url, areTicketsAvailable}: ArticleButtonBarProps) {
     const isMobile = useMediaQuery(article_theme.breakpoints.down('sm'));
     const [imageDialogOpen, setImageDialogOpen] = useState(false);
     const [ticketDialogOpen, setTicketDialogOpen] = useState(false);
@@ -22,7 +23,7 @@ function ArticleButtonBar({image, photos_url, ticket_url}: ArticleButtonBarProps
         {
             (image && isMobile) ?? <ArticleButton title={"Plakát"} onClick={() => {setImageDialogOpen(true)}}/>
         }
-        {<ArticleButton onClick={
+        {areTicketsAvailable && <ArticleButton onClick={
             ticket_url
                 ? () => window.open(ticket_url, "_blank")
                 : () => {setTicketDialogOpen(true);}} title={"Vstupenky"}/>

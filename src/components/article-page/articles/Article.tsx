@@ -36,7 +36,8 @@ function Article({content, date, title, place, ticket_link, place_link, image,
                 <h3>Popis akce:</h3>
                 {content || "Bude upřesněno"}
                 <Box sx={{flexGrow: 2, paddingBottom: "1em"}}/>
-                <ArticleButtonBar image={image} photos_url={photos_url} ticket_url={ticket_link}/>
+                <ArticleButtonBar image={image} photos_url={photos_url} ticket_url={ticket_link}
+                                  areTicketsAvailable={date >= new Date()}/>
             </Box>
             {
                 (image && !isMobile) ? <Box sx={{
