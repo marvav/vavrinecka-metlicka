@@ -1,10 +1,10 @@
-import {ArticleData} from "./ArticleData.tsx";
+import {EventData} from "./EventData.tsx";
 import rockovyvecer from "../../assets/posters/rockovyvecer.jpg"
 import pochod2025 from "../../assets/posters/pochod2025.png"
 import beh2024 from "../../assets/posters/beh2024.jpg"
 import pochod2024 from "../../assets/posters/pochod2024.jpg"
 
-export const predefinedArticles: ArticleData[] = [
+export const predefinedEvents: EventData[] = [
     {
         title: "Vavřinecký pochod Moravským krasem 2025",
         date: new Date(2025,0,25),

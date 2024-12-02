@@ -1,4 +1,4 @@
-export interface ArticleData {
+export interface EventData {
     title: string
     date: Date
     time: string | undefined

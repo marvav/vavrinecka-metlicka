@@ -1,7 +1,7 @@
 import {ImageListItem, ThemeProvider, useMediaQuery, Button} from "@mui/material";
 import {useState,} from "react";
 
-import article_theme from "../article-page/articles/article_theme.ts";
+import article_theme from "../event-page/event-components/article_theme.ts";
 import theme from "../../themes/ButtonTheme.ts";
 import imageDialog from "./ImageDialog.tsx";
 

@@ -1,17 +1,17 @@
 import {Box, ThemeProvider, useMediaQuery} from "@mui/material";
-import {ArticleData} from "../../data/ArticleData.tsx";
+import {EventData} from "../data/EventData.tsx";
 
-import ArticleImage from "../../misc/Image.tsx";
-import article_theme from "./article_theme.ts";
-import ArticleTitle from "./ArticleTitle.tsx";
-import ArticleFields from "./ArticleFields.tsx";
-import ArticleButtonBar from "./ArticleButtonBar.tsx";
-import LinkBar from "../../misc/LinkBar.tsx";
+import ArticleImage from "../misc/Image.tsx";
+import article_theme from "./event-components/article_theme.ts";
+import EventTitle from "./event-components/EventTitle.tsx";
+import ArticleFields from "./event-components/ArticleFields.tsx";
+import ArticleButtonBar from "./event-components/ArticleButtonBar.tsx";
+import LinkBar from "../misc/LinkBar.tsx";
 
-export default Article;
+export default Event;
 
-function Article({content, date, title, place, ticket_link, place_link, image,
-                     time, photos_url, tracks}: ArticleData) {
+function Event({content, date, title, place, ticket_link, place_link, image,
+                     time, photos_url, tracks}: EventData) {
     const isMobile = useMediaQuery(article_theme.breakpoints.down('sm'));
     return <ThemeProvider theme={article_theme}>
         <Box sx={{
@@ -30,7 +30,7 @@ function Article({content, date, title, place, ticket_link, place_link, image,
                 flexDirection: "column",
                 paddingRight: {xs: 0, sm: article_theme.spacing(8)}
             }}>
-                <ArticleTitle title={title}/>
+                <EventTitle title={title}/>
                 <ArticleFields date={date} time={time} place={place} placeLink={place_link}/>
                 {tracks && <LinkBar title={"Trasy"} linkMap={tracks}/>}
                 <h3>Popis akce:</h3>

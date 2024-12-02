@@ -2,11 +2,11 @@ import Typography from "@mui/material/Typography";
 import {useMediaQuery} from "@mui/material";
 import article_theme from "./article_theme.ts";
 
-interface ArticleTitleProps {
+interface EventTitleProps {
     title: string;
 }
 
-function ArticleTitle({title}: ArticleTitleProps) {
+function EventTitle({title}: EventTitleProps) {
     const isMobile = useMediaQuery(article_theme.breakpoints.down('sm'));
     const variant = isMobile ? "h5" : "h3";
     return <Typography variant={variant}
@@ -23,4 +23,4 @@ function ArticleTitle({title}: ArticleTitleProps) {
     </Typography>;
 }
 
-export default ArticleTitle;
+export default EventTitle;

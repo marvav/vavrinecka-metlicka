@@ -1,15 +1,16 @@
 import React from "react";
 import {Box} from "@mui/material";
-import Article from "./articles/Article.tsx";
-import {ArticleData} from "../data/ArticleData.tsx";
+import {EventData} from "../data/EventData.tsx";
 import FootNote from "../footnote/FootNote.tsx";
 import Typography from "@mui/material/Typography";
+import Event from "./Event.tsx";
 
 interface FeedProps {
-    articles: ArticleData[];
+    title: string
+    events: EventData[];
 }
 
-const ArticleFeed: React.FC<FeedProps> = ({articles}) => {
+const EventFeed: React.FC<FeedProps> = ({title, events}) => {
     return <Box sx={{
         display: "flex",
         flexDirection: "column",
@@ -17,19 +18,19 @@ const ArticleFeed: React.FC<FeedProps> = ({articles}) => {
         paddingTop: "2em",
     }}
     >
-        <Typography sx={{fontWeight: "bold", fontSize: 36, padding: "1em"}}>Přehled akcí</Typography>
+        <Typography sx={{fontWeight: "bold", fontSize: 36, padding: "1em"}}>{title}</Typography>
         <Box sx={{
             display: "flex",
             flexDirection: "column",
             gap: "3em",
             paddingBottom: "1em"
         }}>
-            {articles.map((article) => (
-                <Article {...article}/>
+            {events.map((article) => (
+                <Event {...article}/>
             ))}
         </Box>
         <FootNote/>
     </Box>;
 };
 
-export default ArticleFeed;
+export default EventFeed;

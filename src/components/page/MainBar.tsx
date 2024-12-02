@@ -3,7 +3,7 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import {Box, ThemeProvider, useMediaQuery} from "@mui/material";
-import article_theme from "../article-page/articles/article_theme.ts";
+import article_theme from "../event-page/event-components/article_theme.ts";
 import Logo from "../Logo.tsx";
 import {useNavigate} from 'react-router-dom';
 import MainBarElement from "./MainBarElement.tsx";
@@ -21,7 +21,8 @@ const MainBar: React.FC = () => {
                     Vavřinecká Metlička
                 </Typography>
                 <Box sx={{flexGrow: 3, display: "flex", gap: "1em"}}/>
-                <MainBarElement title={"Přehled Akcí"} onClick={() => navigate("/akce")}/>
+                <MainBarElement title={"Nadcházející Akce"} onClick={() => navigate("/nadchazejici-akce")}/>
+                <MainBarElement title={"Historie Akcí"} onClick={() => navigate("/historie-akci")}/>
                 <MainBarElement title={"O Metličce"} onClick={() => navigate("/uvod")}/>
             </Toolbar>
         </AppBar>;
