@@ -7,7 +7,7 @@ import pochod2024 from "../../assets/posters/pochod2024.jpg"
 export const predefinedArticles: ArticleData[] = [
     {
         title: "Vavřinecký pochod Moravským krasem 2025",
-        date: "25.1.2025",
+        date: new Date(2025,0,25),
         time: undefined,
         place: "Vavřinec pod plechem",
         place_link: "https://en.mapy.cz/s/bagoguzesu",
@@ -25,7 +25,7 @@ export const predefinedArticles: ArticleData[] = [
 
     {
         title: "Rockový večer",
-        date: "17.1.2025",
+        date: new Date(2025,0,17),
         place: "Kulturní dům ve Žďáře",
         place_link: "https://en.mapy.cz/s/hokuzazecu", // add correct url
         time: "18:00",
@@ -39,7 +39,7 @@ export const predefinedArticles: ArticleData[] = [
 
     {
         title: "Vavřinecký běh Moravským krasem 2024",
-        date: "24.8.2024",
+        date: new Date(2024,7,24),
         time: undefined,
         place: "Vavřinec pod plechem",
         place_link: undefined,
@@ -53,7 +53,7 @@ export const predefinedArticles: ArticleData[] = [
 
     {
         title: "Vavřinecký pochod Moravským krasem 2024",
-        date: "20.1.2024",
+        date: new Date(2024,0,20),
         time: undefined,
         place: "Vavřinec pod plechem",
         place_link: "https://en.mapy.cz/s/bagoguzesu",

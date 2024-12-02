@@ -10,8 +10,8 @@ import LinkBar from "../../misc/LinkBar.tsx";
 
 export default Article;
 
-function Article({content, date, title, place,
-                ticket_link, place_link, image, time, photos_url, tracks}: ArticleData) {
+function Article({content, date, title, place, ticket_link, place_link, image,
+                     time, photos_url, tracks}: ArticleData) {
     const isMobile = useMediaQuery(article_theme.breakpoints.down('sm'));
     return <ThemeProvider theme={article_theme}>
         <Box sx={{

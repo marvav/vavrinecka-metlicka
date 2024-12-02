@@ -4,7 +4,7 @@ import mapycz from "../../../../src/assets/images/mapycz.png"
 import {MapLinkButton} from "../../buttons/MapLinkButtons.tsx";
 
 interface ArticleFieldProps {
-    date: string
+    date: Date
     time: string | undefined
     place: string
     placeLink: string | undefined
@@ -13,7 +13,8 @@ interface ArticleFieldProps {
 function ArticleFields({date, time, place, placeLink}: ArticleFieldProps) {
     const placeElement = <Box sx={{display: "flex", gap: "0.5em", alignItems: "center"}}>
         {place + " "}
-        {placeLink && <MapLinkButton image={mapycz} onClick={() => window.open(placeLink ?? "", '_blank')}/>}
+        {placeLink && <MapLinkButton image={mapycz as string}
+                                     onClick={() => window.open(placeLink ?? "", '_blank')}/>}
     </Box>
     return <Box sx={{
         display: {
@@ -27,7 +28,7 @@ function ArticleFields({date, time, place, placeLink}: ArticleFieldProps) {
         columns: 2,
         paddingTop: "1em"
     }}>
-        <FieldEntry name={"Datum"} value={date} defaultValue={"Neoznámeno"}/>
+        <FieldEntry name={"Datum"} value={date.toLocaleDateString('cs-CZ')} defaultValue={"Neoznámeno"}/>
         <FieldEntry name={"Čas"} value={time} defaultValue={"Dle plakátu"}/>
         <FieldEntry name={"Místo"} value={placeElement} defaultValue={"Neoznámeno"}/>
     </Box>

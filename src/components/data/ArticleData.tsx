@@ -1,6 +1,6 @@
 export interface ArticleData {
     title: string
-    date: string
+    date: Date
     time: string | undefined
     place: string
     place_link: string | undefined
