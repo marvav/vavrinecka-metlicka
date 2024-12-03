@@ -25,7 +25,6 @@ function Event({content, date, title, place, ticket_link, place_link, image,
         }}>
             <Box sx={{
                 display: "flex",
-                width: "100%",
                 flexDirection: "column",
                 paddingRight: {xs: 0, sm: event_theme.spacing(8)}
             }}>
@@ -38,16 +37,8 @@ function Event({content, date, title, place, ticket_link, place_link, image,
                 <EventButtonBar image={image} photos_url={photos_url} ticket_url={ticket_link}
                                   areTicketsAvailable={date >= new Date()}/>
             </Box>
-            {
-                (image && !isMobile) && <Box sx={{
-                    display: "flex",
-                    width: {xs: "100%", sm: "50%",},
-                    justifyContent: {xs: "center", sm: "right",},
-                    paddingTop: {xs: event_theme.spacing(4), sm: 0,}
-                }}>
-                    <EventPoster image={image}/>
-                </Box>
-            }
+            <Box sx={{flexGrow: 2, paddingBottom: "1em"}}/>
+            {(image && !isMobile) && <EventPoster image={image}/>}
         </Box>
     </ThemeProvider>;
 }
