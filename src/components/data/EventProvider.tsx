@@ -42,7 +42,7 @@ export const predefinedEvents: EventData[] = [
         date: new Date(2024,7,24),
         time: undefined,
         place: "Vavřinec pod plechem",
-        place_link: undefined,
+        place_link: "https://en.mapy.cz/s/bagoguzesu",
         content: "Vavřinecká Metlička pod záštitou SDH Vavřinec Vás zve na 1. ročník závodu VAVŘINECKÝ BĚH MORAVSKÝM KRASEM.\n" +
             "Závod bude probíhat za každého počasí. Start bude v areálu fotbalového hřiště ve Vavřinci, kde budou k dispozici i šatny a sprchy.",
         ticket_link: undefined,
