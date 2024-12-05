@@ -14,6 +14,7 @@ function Event({
                    time, photos_url, tracks
                }: EventData) {
     const isMobile = useMediaQuery(event_theme.breakpoints.down('lg'));
+    const areTicketsBeingSold = date >= new Date() && tracks === undefined;
     return <ThemeProvider theme={event_theme}>
         <Box sx={{
             display: "flex",
@@ -41,7 +42,7 @@ function Event({
                 {content || "Bude upřesněno"}
                 <Box sx={{flexGrow: 2, paddingBottom: "1em"}}/>
                 <EventButtonBar image={image} photos_url={photos_url} ticket_url={ticket_link}
-                                areTicketsAvailable={date >= new Date()}/>
+                                areTicketsAvailable={areTicketsBeingSold}/>
             </Box>
             <Box sx={{flexGrow: 2}}></Box>
             {(image && !isMobile) && <EventPoster image={image}/>}
