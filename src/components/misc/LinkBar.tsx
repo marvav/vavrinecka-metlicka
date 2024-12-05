@@ -8,7 +8,13 @@ export interface LinkBarProps {
 }
 
 function LinkBar({title, linkMap}: LinkBarProps) {
-    return <Box sx={{display: "flex", gap: "0.5em", alignItems: "center", paddingTop: "1em"}}>
+    return <Box sx={{
+        display: "flex",
+        gap: "0.5em",
+        alignItems: "center",
+        paddingTop: "1em",
+        width: "min-content"
+    }}>
         <Typography sx={{fontWeight: "bold"}}>{title + ":"}</Typography>
         {Array.from(linkMap.entries())
             .map(([key, value]) => (

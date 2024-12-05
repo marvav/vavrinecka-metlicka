@@ -7,7 +7,7 @@ interface EventButtonProps {
 }
 
 export function EventButton({title, onClick}: EventButtonProps) {
-    return <StyledButton sx={{width: 'min-content'}} onClick={onClick}>
+    return <StyledButton sx={{width: "auto"}} onClick={onClick}>
         {title}
     </StyledButton>
 }

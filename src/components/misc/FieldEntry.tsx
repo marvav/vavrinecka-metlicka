@@ -8,7 +8,7 @@ export interface FieldEntryProps {
 }
 
 function FieldEntry({name, value, defaultValue}: FieldEntryProps) {
-    return <Box sx={{ display: "flex", alignItems: "center", gap: "0.5em"}}>
+    return <Box sx={{ display: "flex", alignItems: "center", gap: "0.5em", width: "max-content"}}>
         <Typography sx={{fontWeight: "bold"}}>{name+ ": "}</Typography>
         {value ?? defaultValue}
     </Box>

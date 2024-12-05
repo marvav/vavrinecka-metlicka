@@ -26,7 +26,7 @@ function Event({content, date, title, place, ticket_link, place_link, image,
             <Box sx={{
                 display: "flex",
                 flexDirection: "column",
-                paddingRight: {xs: 0, sm: event_theme.spacing(8)}
+                paddingRight: {xs: 0, sm: event_theme.spacing(8)},
             }}>
                 <EventTitle title={title}/>
                 <EventFields date={date} time={time} place={place} placeLink={place_link}/>
@@ -37,7 +37,6 @@ function Event({content, date, title, place, ticket_link, place_link, image,
                 <EventButtonBar image={image} photos_url={photos_url} ticket_url={ticket_link}
                                   areTicketsAvailable={date >= new Date()}/>
             </Box>
-            <Box sx={{flexGrow: 2, paddingBottom: "1em"}}/>
             {(image && !isMobile) && <EventPoster image={image}/>}
         </Box>
     </ThemeProvider>;
