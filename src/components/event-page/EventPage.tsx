@@ -34,7 +34,7 @@ const EventPage: React.FC<EventPageProps> = (props) => {
         }}>
             {isMobile ? <div/> : <SideGraphic/>}
             <Box sx={{display: "flex", flexDirection: "column", alignItems: "center"}}>
-                <Typography sx={{fontWeight: "bold", fontSize: 36, padding: "1em"}}>{props.title}</Typography>
+                <Typography sx={{fontWeight: "bold", fontSize: 36, paddingTop: "2em", paddingBottom: "0.5em"}}>{props.title}</Typography>
                 <Box sx={{display: "flex", justifyContent: "right", width: "100%"}}>
                     <EventButton onClick={() => setShowPastEvents(!showPastEvents)} title={
                         showPastEvents ? "Skrýt minulé akce" : "Zahrnout minulé akce"
