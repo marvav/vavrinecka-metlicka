@@ -8,6 +8,7 @@ import {predefinedEvents} from "../data/EventProvider.tsx";
 import page_common_theme from "../../themes/page_common_theme.ts";
 import {EventButton} from "../buttons/EventButtons.tsx";
 import Typography from "@mui/material/Typography";
+import FootNote from "../footnote/FootNote.tsx";
 
 interface EventPageProps {
     includePast: boolean;
@@ -17,9 +18,8 @@ interface EventPageProps {
 const EventPage: React.FC<EventPageProps> = (props) => {
     const isMobile = useMediaQuery(page_common_theme.breakpoints.down('sm'));
     const [showPastEvents, setShowPastEvents] = useState(false);
-    const events = showPastEvents
-        ? predefinedEvents
-        : predefinedEvents.filter(event => event.date >= new Date())
+    const relevantEvents = predefinedEvents.filter(event => event.date >= new Date());
+    const oldEvents = predefinedEvents.filter(event => event.date < new Date());
 
     return <Box sx={{
         bgcolor: 'background.default',
@@ -34,13 +34,15 @@ const EventPage: React.FC<EventPageProps> = (props) => {
         }}>
             {isMobile ? <div/> : <SideGraphic/>}
             <Box sx={{display: "flex", flexDirection: "column", alignItems: "center"}}>
-                <Typography sx={{fontWeight: "bold", fontSize: 36, padding: "1em"}}>{props.title}</Typography>
-                <Box sx={{display: "flex", justifyContent: "right", width: "100%"}}>
+                <Typography sx={{fontWeight: "bold", fontSize: 36, paddingTop: "2em", paddingBottom: "0.5em"}}>{props.title}</Typography>
+                <EventFeed events={relevantEvents}/>
+                <Box sx={{marginTop: "15px", display: "flex", justifyContent: "right", width: "100%"}}>
                     <EventButton onClick={() => setShowPastEvents(!showPastEvents)} title={
-                        showPastEvents ? "Skrýt minulé akce" : "Zahrnout minulé akce"
+                        showPastEvents ? "Skrýt minulé akce" : "Zobrazit minulé akce"
                     }/>
                 </Box>
-                <EventFeed events={events}/>
+                {showPastEvents && <EventFeed events={oldEvents}></EventFeed>}
+                <FootNote/>
             </Box>
             {isMobile ? <div/> : <SideGraphic/>}
         </Box>

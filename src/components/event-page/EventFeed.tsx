@@ -1,7 +1,6 @@
 import React from "react";
 import {Box} from "@mui/material";
 import {EventData} from "../data/EventData.tsx";
-import FootNote from "../footnote/FootNote.tsx";
 import Event from "./Event.tsx";
 
 interface FeedProps {
@@ -30,7 +29,6 @@ const EventFeed: React.FC<FeedProps> = ({events}) => {
                 <Event {...article}/>
             ))}
         </Box>
-        <FootNote/>
     </Box>;
 };
 

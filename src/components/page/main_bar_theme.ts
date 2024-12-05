@@ -32,6 +32,6 @@ export const mobileTheme = createTheme({
         }
     },
     typography:{
-        fontSize: 10
+        fontSize: 13
     }
 });

@@ -14,7 +14,7 @@ export function EventButton({title, onClick}: EventButtonProps) {
 
 const StyledButton = styled(Button)(() => ({
     backgroundColor: "#181a1b",
-    border: "1px solid #00A000", // Green border
+    color: "#eee",
     textTransform: "none",    // Disable uppercase text
     boxShadow: "2px 2px 4px rgba(0, 0, 0, 0.2)", // Subtle shadow
     transition: "all 0.3s ease-in",
