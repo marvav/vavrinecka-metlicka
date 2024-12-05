@@ -17,7 +17,7 @@ function EventTitle({title}: EventTitleProps) {
                            },
                            textAlign: {
                                xs: "center", sm: "left",
-                           }
+                           },
                        }}>
         {title}
     </Typography>;

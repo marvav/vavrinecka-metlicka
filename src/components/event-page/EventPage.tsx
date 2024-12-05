@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import MainBar from "../page/MainBar.tsx";
-import {Box, Button, useMediaQuery} from "@mui/material";
+import {Box, useMediaQuery} from "@mui/material";
 import metlicka_background from "../../assets/images/metlicka_background.png";
 import SideGraphic from "../page/SideGraphic.tsx";
 import EventFeed from "./EventFeed.tsx";

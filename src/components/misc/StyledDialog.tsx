@@ -1,4 +1,4 @@
-import {Dialog, DialogActions, DialogContent, ImageListItem, Box} from "@mui/material";
+import {Box, Dialog, DialogActions, DialogContent} from "@mui/material";
 import {EventButton} from "../buttons/EventButtons.tsx";
 
 interface StyledDialogProps {

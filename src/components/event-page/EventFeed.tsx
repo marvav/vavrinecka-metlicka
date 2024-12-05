@@ -24,7 +24,7 @@ const EventFeed: React.FC<FeedProps> = ({events}) => {
             display: "flex",
             flexDirection: "column",
             gap: "3em",
-            paddingBottom: "1em"
+            paddingBottom: "1em",
         }}>
             {events.map((article) => (
                 <Event {...article}/>

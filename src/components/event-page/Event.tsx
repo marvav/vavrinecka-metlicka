@@ -9,8 +9,10 @@ import EventPoster from "../misc/Image.tsx";
 
 export default Event;
 
-function Event({content, date, title, place, ticket_link, place_link, image,
-                     time, photos_url, tracks}: EventData) {
+function Event({
+                   content, date, title, place, ticket_link, place_link, image,
+                   time, photos_url, tracks
+               }: EventData) {
     const isMobile = useMediaQuery(event_theme.breakpoints.down('lg'));
     return <ThemeProvider theme={event_theme}>
         <Box sx={{
@@ -27,7 +29,10 @@ function Event({content, date, title, place, ticket_link, place_link, image,
                 display: "flex",
                 flexDirection: "column",
                 paddingRight: {xs: 0, sm: event_theme.spacing(8)},
-                width: "min-content"
+                width: {
+                    sm: "min-content",
+                    xs: "100%"
+                },
             }}>
                 <EventTitle title={title}/>
                 <EventFields date={date} time={time} place={place} placeLink={place_link}/>
@@ -36,8 +41,9 @@ function Event({content, date, title, place, ticket_link, place_link, image,
                 {content || "Bude upřesněno"}
                 <Box sx={{flexGrow: 2, paddingBottom: "1em"}}/>
                 <EventButtonBar image={image} photos_url={photos_url} ticket_url={ticket_link}
-                                  areTicketsAvailable={date >= new Date()}/>
+                                areTicketsAvailable={date >= new Date()}/>
             </Box>
+            <Box sx={{flexGrow: 2}}></Box>
             {(image && !isMobile) && <EventPoster image={image}/>}
         </Box>
     </ThemeProvider>;
