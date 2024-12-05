@@ -31,7 +31,7 @@ export const predefinedEvents: EventData[] = [
         time: "18:00",
         content: "Zveme vás na Rockový večer 🤟 s kapelou Kapriola, Aleš Brichta Project a Judas Priest Revival (Praha). Otevření KD: 17:00\n" +
             "- VSTUPNÉ: 599 Kč v předprodeji, 650 Kč na místě\n",
-        ticket_link: "https://www.ticketportal.cz/", // add correct url
+        ticket_link: undefined,
         image: rockovyvecer as string,
         photos_url: undefined,
         tracks: undefined

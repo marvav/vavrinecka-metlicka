@@ -16,6 +16,10 @@ const EventFeed: React.FC<FeedProps> = ({title, events}) => {
         flexDirection: "column",
         alignItems: "center",
         paddingTop: "2em",
+        width: {
+            sm: "60%",
+            xs: "100%"
+        }
     }}
     >
         <Typography sx={{fontWeight: "bold", fontSize: 36, padding: "1em"}}>{title}</Typography>
