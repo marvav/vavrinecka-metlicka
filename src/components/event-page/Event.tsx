@@ -20,9 +20,6 @@ function Event({
             display: "flex",
             flexDirection: {xs: 'column', sm: 'row',},
             bgcolor: 'background.default',
-            borderStyle: "outset",
-            borderWidth: "2px",
-            borderColor: "#00A000",
             padding: {xs: event_theme.spacing(4), sm: event_theme.spacing(8)},
             borderRadius: "0.75em",
         }}>
