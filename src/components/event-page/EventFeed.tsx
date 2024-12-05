@@ -2,27 +2,24 @@ import React from "react";
 import {Box} from "@mui/material";
 import {EventData} from "../data/EventData.tsx";
 import FootNote from "../footnote/FootNote.tsx";
-import Typography from "@mui/material/Typography";
 import Event from "./Event.tsx";
 
 interface FeedProps {
-    title: string
     events: EventData[];
 }
 
-const EventFeed: React.FC<FeedProps> = ({title, events}) => {
+const EventFeed: React.FC<FeedProps> = ({events}) => {
     return <Box sx={{
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
         paddingTop: "2em",
         width: {
-            sm: "60%",
+            sm: "50%",
             xs: "100%"
         }
     }}
     >
-        <Typography sx={{fontWeight: "bold", fontSize: 36, padding: "1em"}}>{title}</Typography>
         <Box sx={{
             display: "flex",
             flexDirection: "column",

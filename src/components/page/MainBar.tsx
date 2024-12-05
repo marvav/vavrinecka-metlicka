@@ -21,8 +21,7 @@ const MainBar: React.FC = () => {
                     Vavřinecká Metlička
                 </Typography>
                 <Box sx={{flexGrow: 3, display: "flex", gap: "1em"}}/>
-                <MainBarElement title={"Nadcházející Akce"} onClick={() => navigate("/nadchazejici-akce")}/>
-                <MainBarElement title={"Historie Akcí"} onClick={() => navigate("/historie-akci")}/>
+                <MainBarElement title={"Akce"} onClick={() => navigate("/akce")}/>
                 <MainBarElement title={"O Metličce"} onClick={() => navigate("/uvod")}/>
             </Toolbar>
         </AppBar>;

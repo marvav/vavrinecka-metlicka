@@ -11,8 +11,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<Navigate to="/uvod" replace />} />
                 <Route path="/uvod" element={<IntroPage/>} />
-                <Route path="/nadchazejici-akce" element={<EventPage includePast={false} title={"Nadcházející Akce"}/>} />
-                <Route path="/historie-akci" element={<EventPage includePast={true} title={"Historie Akcí"}/>} />
+                <Route path="/akce" element={<EventPage includePast={false} title={"Akce"}/>} />
             </Routes>
         </Router>
     </ThemeProvider>

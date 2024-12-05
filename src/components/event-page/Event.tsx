@@ -21,12 +21,13 @@ function Event({content, date, title, place, ticket_link, place_link, image,
             borderWidth: "2px",
             borderColor: "#00A000",
             padding: {xs: event_theme.spacing(4), sm: event_theme.spacing(8)},
-            borderRadius: "0.75em"
+            borderRadius: "0.75em",
         }}>
             <Box sx={{
                 display: "flex",
                 flexDirection: "column",
                 paddingRight: {xs: 0, sm: event_theme.spacing(8)},
+                width: "min-content"
             }}>
                 <EventTitle title={title}/>
                 <EventFields date={date} time={time} place={place} placeLink={place_link}/>

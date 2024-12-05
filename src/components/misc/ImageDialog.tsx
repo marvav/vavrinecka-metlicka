@@ -1,5 +1,4 @@
-import {Dialog, DialogActions, DialogContent, ImageListItem, Box, Typography} from "@mui/material";
-import {EventButton} from "../buttons/EventButtons.tsx";
+import {ImageListItem, Typography} from "@mui/material";
 import StyledDialog from "./StyledDialog.tsx";
 
 function ImageDialog(img: string | undefined, open: boolean, setOpen: Function) {
