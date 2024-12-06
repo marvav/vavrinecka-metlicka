@@ -8,7 +8,7 @@ import Logo from "../Logo.tsx";
 import {useNavigate} from 'react-router-dom';
 import MainBarElement from "./MainBarElement.tsx";
 import {desktopTheme, mobileTheme} from "./main_bar_theme.ts";
-import BarItemsDropdown from '../misc/BarItemsDropdown/BarItemsDropdown.tsx';
+import PageDropdownMenu from './PageDropdownMenu.tsx';
 
 const MainBar: React.FC = () => {
     const isMobile = useMediaQuery(event_theme.breakpoints.down('sm'));
@@ -22,7 +22,7 @@ const MainBar: React.FC = () => {
                     Vavřinecká Metlička
                 </Typography>
                 <Box sx={{flexGrow: 3, display: "flex", gap: "1em"}}/>
-                {isMobile ? <BarItemsDropdown/> : <div>
+                {isMobile ? <PageDropdownMenu/> : <div>
                     <MainBarElement title={"Akce"} onClick={() => navigate("/akce")}/>
                     <MainBarElement title={"O Metličce"} onClick={() => navigate("/uvod")}/>
                 </div>
