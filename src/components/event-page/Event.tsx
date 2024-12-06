@@ -22,15 +22,13 @@ function Event({
             bgcolor: 'background.default',
             padding: {xs: event_theme.spacing(4), sm: event_theme.spacing(8)},
             borderRadius: "0.75em",
+            width: "100%",
+            justifyContent: "center",
         }}>
             <Box sx={{
                 display: "flex",
                 flexDirection: "column",
                 paddingRight: {xs: 0, sm: event_theme.spacing(8)},
-                width: {
-                    sm: "min-content",
-                    xs: "100%"
-                },
             }}>
                 <EventTitle title={title}/>
                 <EventFields date={date} time={time} place={place} placeLink={place_link}/>

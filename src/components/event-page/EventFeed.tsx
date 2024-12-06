@@ -16,7 +16,7 @@ const EventFeed: React.FC<FeedProps> = ({events}) => {
         width: {
             sm: "50%",
             xs: "100%"
-        }
+        },
     }}
     >
         <Box sx={{

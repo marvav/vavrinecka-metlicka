@@ -11,7 +11,9 @@ export const predefinedEvents: EventData[] = [
         time: undefined,
         place: "Vavřinec pod plechem",
         place_link: "https://en.mapy.cz/s/bagoguzesu",
-        content: "Rok uběhl jako voda a my s radostí navazujeme na úspěšnou akci loňské zimní sezóny – Vavřinecký pochod Moravským krasem. Tímto Vás zveme na 2. ročník, kde jsme si pro Vás připravili trasy různých délek od 6 do 50 km. V cíli se můžete těšit na vystoupení kapely ZVUKOVÁ KULISA.",
+        content: "Rok uběhl jako voda a my s radostí navazujeme na úspěšnou akci loňské zimní sezóny – Vavřinecký pochod Moravským krasem.\n" +
+            "\n" +
+            "Tímto Vás zveme na 2. ročník, kde jsme si pro Vás připravili trasy různých délek od 6 do 50 km. V cíli se můžete těšit na vystoupení kapely ZVUKOVÁ KULISA a chybět nebude ani diplom pro každého, kdo některou z tras zdárně zdolá!\n",
         ticket_link: undefined,
         image: pochod2025 as string,
         photos_url: undefined,

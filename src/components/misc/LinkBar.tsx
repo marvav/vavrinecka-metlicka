@@ -10,16 +10,28 @@ export interface LinkBarProps {
 function LinkBar({title, linkMap}: LinkBarProps) {
     return <Box sx={{
         display: "flex",
-        gap: "0.5em",
-        alignItems: "center",
-        paddingTop: "1em",
-        width: "min-content"
+        alignItems: {
+            xs: "left",
+            sm: "center"
+        },
+        width: "min-content",
+        flexDirection: {
+            xs: "column",
+            sm: "row"
+        },
+        paddingTop: {
+            xs: "0.5em",
+            sm: "1em"
+        },
+        gap: "0.5em"
     }}>
         <Typography sx={{fontWeight: "bold"}}>{title + ":"}</Typography>
-        {Array.from(linkMap.entries())
-            .map(([key, value]) => (
-                <EventButton onClick={() => window.open(value ?? "", '_blank')} title={"" + key + "km"}/>
-            ))}
+        <Box sx={{display: "flex", gap: "0.5em"}}>
+            {Array.from(linkMap.entries())
+                .map(([key, value]) => (
+                    <EventButton onClick={() => window.open(value ?? "", '_blank')} title={"" + key + "km"}/>
+                ))}
+        </Box>
     </Box>
 }
 

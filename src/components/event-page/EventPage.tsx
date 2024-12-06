@@ -29,7 +29,7 @@ const EventPage: React.FC<EventPageProps> = (props) => {
         <MainBar/>
         <Box sx={{
             display: "flex",
-            padding: "2em",
+            padding: "1em",
             backgroundImage: `url(${metlicka_background})`,
         }}>
             {isMobile ? <div/> : <SideGraphic/>}
