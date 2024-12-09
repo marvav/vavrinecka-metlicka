@@ -5,6 +5,7 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import {Box} from "@mui/material";
 import {useNavigate} from "react-router-dom";
+import {ArrowDropDown} from "@mui/icons-material";
 
 function getMenuItem(title: string, closeAndNavigate: MouseEventHandler<HTMLAnchorElement> | undefined) {
     return <MenuItem onClick={closeAndNavigate} disableRipple
@@ -40,6 +41,7 @@ export default function PageDropdownMenu() {
             color="inherit"
         >
             Menu
+            <ArrowDropDown/>
         </Button>
         <Menu
             id="page-dropdown-menu"

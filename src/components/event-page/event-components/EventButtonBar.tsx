@@ -16,7 +16,7 @@ function EventButtonBar({image, photos_url, ticket_url, areTicketsAvailable}: Ev
     const isMobile = useMediaQuery(event_theme.breakpoints.down('lg'));
     const [imageDialogOpen, setImageDialogOpen] = useState(false);
     const [ticketDialogOpen, setTicketDialogOpen] = useState(false);
-    const ticketMessage = "Vstupenky bude možné zakoupit na místě nebo na našem mailu vavrinecka.metlicka@seznam.cz"
+    const ticketMessage = "Vstupenky bude možné zakoupit na místě nebo skrze náš mail vavrinecka-metlicka@seznam.cz"
 
     return <Box sx={{display: "flex", gap: "1em"}}>
         {photos_url && <EventButton title={"Fotky"} onClick={() => window.open(photos_url ?? "", '_blank')}/>}
