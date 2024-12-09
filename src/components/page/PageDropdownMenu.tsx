@@ -7,17 +7,6 @@ import {Box} from "@mui/material";
 import {useNavigate} from "react-router-dom";
 import {ArrowDropDown} from "@mui/icons-material";
 
-function getMenuItem(title: string, closeAndNavigate: MouseEventHandler<HTMLAnchorElement> | undefined) {
-    return <MenuItem onClick={closeAndNavigate} disableRipple
-                     sx={{
-                         display: "flex",
-                         justifyContent: "center",
-                         textAlign: "center",
-                     }}>
-        {title}
-    </MenuItem>;
-}
-
 export default function PageDropdownMenu() {
     const [anchorElement, setAnchorElement] = React.useState<null | HTMLElement>(null);
     const open = Boolean(anchorElement);
@@ -48,7 +37,6 @@ export default function PageDropdownMenu() {
             anchorEl={anchorElement}
             open={open}
             onClose={() => setAnchorElement(null)}
-            sx={{"alignContent": "center"}}
         >
             {getMenuItem("Akce", () => closeAndNavigate("/akce"))}
             {getMenuItem("O Nás", () => closeAndNavigate("/uvod"))}
@@ -56,4 +44,15 @@ export default function PageDropdownMenu() {
     </Box>;
 }
 
+
+function getMenuItem(title: string, closeAndNavigate: MouseEventHandler<HTMLAnchorElement> | undefined) {
+    return <MenuItem onClick={closeAndNavigate} disableRipple
+                     sx={{
+                         display: "flex",
+                         justifyContent: "center",
+                         textAlign: "center",
+                     }}>
+        {title}
+    </MenuItem>;
+}
 
