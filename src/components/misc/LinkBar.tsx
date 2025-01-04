@@ -14,7 +14,7 @@ function LinkBar({title, linkMap}: LinkBarProps) {
             xs: "left",
             sm: "center"
         },
-        width: "min-content",
+        width: "100%",
         flexDirection: {
             xs: "column",
             sm: "row"

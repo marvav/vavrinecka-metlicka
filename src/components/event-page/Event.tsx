@@ -6,6 +6,7 @@ import EventFields from "./event-components/EventFields.tsx";
 import LinkBar from "../misc/LinkBar.tsx";
 import EventButtonBar from "./event-components/EventButtonBar.tsx";
 import EventPoster from "../misc/Image.tsx";
+import Typography from "@mui/material/Typography";
 
 export default Event;
 
@@ -32,8 +33,8 @@ function Event({
             }}>
                 <EventTitle title={title}/>
                 <EventFields date={date} time={time} place={place} placeLink={place_link}/>
-                {tracks && <LinkBar title={"Trasy"} linkMap={tracks}/>}
-                <h3>Popis akce:</h3>
+                {tracks && <LinkBar title={"Odkazy na trasy"} linkMap={tracks}/>}
+                <Typography sx={{fontWeight: "bold", fontSize: 16, paddingTop: "0.5em", paddingBottom: "0.5em"}}>Popis akce:</Typography>
                 {content || "Bude upřesněno"}
                 <Box sx={{flexGrow: 2, paddingBottom: "1em"}}/>
                 <EventButtonBar image={image} photos_url={photos_url} ticket_url={ticket_link}
