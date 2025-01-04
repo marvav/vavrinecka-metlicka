@@ -9,8 +9,8 @@ export const predefinedEvents: EventData[] = [
         title: "Vavřinecký pochod Moravským krasem 2025",
         date: new Date(2025,0,25),
         time: undefined,
-        place: "Vavřinec pod plechem",
-        place_link: "https://en.mapy.cz/s/bagoguzesu",
+        place: "Park Vavřinec",
+        place_link: "https://mapy.cz/s/bumojaloca",
         content: "Rok uběhl jako voda a my s radostí navazujeme na úspěšnou akci loňské zimní sezóny – Vavřinecký pochod Moravským krasem.\n" +
             "\n" +
             "Tímto Vás zveme na 2. ročník, kde jsme si pro Vás připravili trasy různých délek od 6 do 50 km. V cíli se můžete těšit na vystoupení kapely ZVUKOVÁ KULISA a chybět nebude ani diplom pro každého, kdo některou z tras zdárně zdolá!\n",
@@ -43,8 +43,8 @@ export const predefinedEvents: EventData[] = [
         title: "Vavřinecký běh Moravským krasem 2024",
         date: new Date(2024,7,24),
         time: undefined,
-        place: "Vavřinec pod plechem",
-        place_link: "https://en.mapy.cz/s/bagoguzesu",
+        place: "Park Vavřinec",
+        place_link: "https://mapy.cz/s/bumojaloca",
         content: "Vavřinecká Metlička pod záštitou SDH Vavřinec Vás zve na 1. ročník závodu VAVŘINECKÝ BĚH MORAVSKÝM KRASEM.\n" +
             "Závod bude probíhat za každého počasí. Start bude v areálu fotbalového hřiště ve Vavřinci, kde budou k dispozici i šatny a sprchy.",
         ticket_link: undefined,
@@ -57,8 +57,8 @@ export const predefinedEvents: EventData[] = [
         title: "Vavřinecký pochod Moravským krasem 2024",
         date: new Date(2024,0,20),
         time: undefined,
-        place: "Vavřinec pod plechem",
-        place_link: "https://en.mapy.cz/s/bagoguzesu",
+        place: "Park Vavřinec",
+        place_link: "https://mapy.cz/s/bumojaloca",
         content: "",
         ticket_link: undefined,
         image: pochod2024 as string,
