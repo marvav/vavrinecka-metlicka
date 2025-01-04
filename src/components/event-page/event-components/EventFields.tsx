@@ -2,19 +2,18 @@ import {Box} from "@mui/material";
 import FieldEntry from "../../misc/FieldEntry.tsx";
 import mapycz from "../../../../src/assets/images/mapycz.png"
 import {MapLinkButton} from "../../buttons/MapLinkButtons.tsx";
+import {PlaceData} from "../../data/PlaceData.tsx";
 
 interface EventFieldsProps {
     date: Date
     time: string | undefined
-    place: string
-    placeLink: string | undefined
+    place: PlaceData
 }
 
-function EventFields({date, time, place, placeLink}: EventFieldsProps) {
+function EventFields({date, time, place}: EventFieldsProps) {
     const placeElement = <Box sx={{display: "flex", gap: "0.5em", alignItems: "center"}}>
-        {place + " "}
-        {placeLink && <MapLinkButton image={mapycz as string}
-                                     onClick={() => window.open(placeLink ?? "", '_blank')}/>}
+        {place.name + " "}
+        <MapLinkButton image={mapycz as string} onClick={() => window.open(place.url, '_blank')}/>
     </Box>
     return <Box sx={{
         display: {

@@ -10,8 +10,7 @@ import Typography from "@mui/material/Typography";
 
 export default Event;
 
-function Event({
-                   content, date, title, place, ticket_link, place_link, image,
+function Event({content, date, title, place, ticket_link, place_link, image,
                    time, photos_url, tracks
                }: EventData) {
     const isMobile = useMediaQuery(event_theme.breakpoints.down('lg'));

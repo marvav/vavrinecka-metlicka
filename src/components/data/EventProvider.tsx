@@ -3,14 +3,14 @@ import rockovyvecer from "../../assets/posters/rockovyvecer.jpg"
 import pochod2025 from "../../assets/posters/pochod2025.png"
 import beh2024 from "../../assets/posters/beh2024.jpg"
 import pochod2024 from "../../assets/posters/pochod2024.jpg"
+import {parkVavrinec, zdarKulturak} from "./PlaceProvider.tsx";
 
 export const predefinedEvents: EventData[] = [
     {
         title: "Vavřinecký pochod Moravským krasem 2025",
         date: new Date(2025,0,25),
         time: undefined,
-        place: "Park Vavřinec",
-        place_link: "https://mapy.cz/s/bumojaloca",
+        place: parkVavrinec,
         content: "Rok uběhl jako voda a my s radostí navazujeme na úspěšnou akci loňské zimní sezóny – Vavřinecký pochod Moravským krasem.\n" +
             "\n" +
             "Tímto Vás zveme na 2. ročník, kde jsme si pro Vás připravili trasy různých délek od 6 do 50 km. V cíli se můžete těšit na vystoupení kapely ZVUKOVÁ KULISA a chybět nebude ani diplom pro každého, kdo některou z tras zdárně zdolá!\n",
@@ -28,8 +28,7 @@ export const predefinedEvents: EventData[] = [
     {
         title: "Rockový večer",
         date: new Date(2025,0,17),
-        place: "Kulturní dům ve Žďáře",
-        place_link: "https://en.mapy.cz/s/hokuzazecu", // add correct url
+        place: zdarKulturak,
         time: "18:00",
         content: "Zveme vás na Rockový večer 🤟 s kapelou Kapriola, Aleš Brichta Project a Judas Priest Revival (Praha). Otevření KD: 17:00\n" +
             "- VSTUPNÉ: 599 Kč v předprodeji, 650 Kč na místě\n",
@@ -43,8 +42,7 @@ export const predefinedEvents: EventData[] = [
         title: "Vavřinecký běh Moravským krasem 2024",
         date: new Date(2024,7,24),
         time: undefined,
-        place: "Park Vavřinec",
-        place_link: "https://mapy.cz/s/bumojaloca",
+        place: parkVavrinec,
         content: "Vavřinecká Metlička pod záštitou SDH Vavřinec Vás zve na 1. ročník závodu VAVŘINECKÝ BĚH MORAVSKÝM KRASEM.\n" +
             "Závod bude probíhat za každého počasí. Start bude v areálu fotbalového hřiště ve Vavřinci, kde budou k dispozici i šatny a sprchy.",
         ticket_link: undefined,
@@ -57,8 +55,7 @@ export const predefinedEvents: EventData[] = [
         title: "Vavřinecký pochod Moravským krasem 2024",
         date: new Date(2024,0,20),
         time: undefined,
-        place: "Park Vavřinec",
-        place_link: "https://mapy.cz/s/bumojaloca",
+        place: parkVavrinec,
         content: "",
         ticket_link: undefined,
         image: pochod2024 as string,
