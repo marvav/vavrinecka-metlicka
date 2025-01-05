@@ -4,6 +4,7 @@ import pochod2025 from "../../assets/posters/pochod2025.png"
 import beh2024 from "../../assets/posters/beh2024.jpg"
 import pochod2024 from "../../assets/posters/pochod2024.jpg"
 import {parkVavrinec, zdarKulturak} from "./PlaceProvider.tsx";
+import {kudyznudy} from "./AffiliateProvider.tsx";
 
 export const predefinedEvents: EventData[] = [
     {
@@ -22,7 +23,8 @@ export const predefinedEvents: EventData[] = [
             [18.5,"https://mapy.cz/s/lafarefopo"],
             [32.5,"https://mapy.cz/s/rasadotoda"],
             [50,"https://mapy.cz/s/gakorekape"]
-        ])
+        ]),
+        affiliates: [kudyznudy]
     },
 
     {
@@ -35,7 +37,8 @@ export const predefinedEvents: EventData[] = [
         ticket_link: undefined,
         image: rockovyvecer as string,
         photos_url: undefined,
-        tracks: undefined
+        tracks: undefined,
+        affiliates: []
     },
 
     {
@@ -48,7 +51,8 @@ export const predefinedEvents: EventData[] = [
         ticket_link: undefined,
         image: beh2024 as string,
         photos_url: "https://eu.zonerama.com/vasman33/1402623",
-        tracks: undefined
+        tracks: undefined,
+        affiliates: []
     },
 
     {
@@ -64,6 +68,7 @@ export const predefinedEvents: EventData[] = [
             [6,"https://mapy.cz/s/detacumenu"],
             [18,"https://mapy.cz/s/fovegetogu"],
             [30,"https://mapy.cz/s/botulekosu"]
-        ])
+        ]),
+        affiliates: []
     },
 ];

@@ -7,11 +7,12 @@ import LinkBar from "../misc/LinkBar.tsx";
 import EventButtonBar from "./event-components/EventButtonBar.tsx";
 import EventPoster from "../misc/Image.tsx";
 import Typography from "@mui/material/Typography";
+import EventAffiliateBar from "./event-components/EventAffiliateBar.tsx";
 
 export default Event;
 
-function Event({content, date, title, place, ticket_link, place_link, image,
-                   time, photos_url, tracks
+function Event({content, date, title, place, ticket_link, image,
+                   time, photos_url, tracks, affiliates
                }: EventData) {
     const isMobile = useMediaQuery(event_theme.breakpoints.down('lg'));
     const areTicketsBeingSold = date >= new Date() && tracks === undefined;
@@ -29,15 +30,17 @@ function Event({content, date, title, place, ticket_link, place_link, image,
                 display: "flex",
                 flexDirection: "column",
                 paddingRight: {xs: 0, sm: event_theme.spacing(8)},
+                gap: {xs: event_theme.spacing(2), sm: event_theme.spacing(0)},
             }}>
                 <EventTitle title={title}/>
-                <EventFields date={date} time={time} place={place} placeLink={place_link}/>
+                <EventFields date={date} time={time} place={place}/>
                 {tracks && <LinkBar title={"Odkazy na trasy"} linkMap={tracks}/>}
-                <Typography sx={{fontWeight: "bold", fontSize: 16, paddingTop: "0.5em", paddingBottom: "0.5em"}}>Popis akce:</Typography>
+                <Typography sx={{fontWeight: "bold", fontSize: 16, paddingTop: "0.5em"}}>Popis akce:</Typography>
                 {content || "Bude upřesněno"}
-                <Box sx={{flexGrow: 2, paddingBottom: "1em"}}/>
+                <Box sx={{flexGrow: 2}}/>
                 <EventButtonBar image={image} photos_url={photos_url} ticket_url={ticket_link}
                                 areTicketsAvailable={areTicketsBeingSold}/>
+                <EventAffiliateBar affiliates={affiliates}/>
             </Box>
             <Box sx={{flexGrow: 2}}></Box>
             {(image && !isMobile) && <EventPoster image={image}/>}

@@ -3,12 +3,19 @@ import {Button, styled} from "@mui/material";
 
 interface EventButtonProps {
     title: string;
+    image: string;
     onClick?: MouseEventHandler | undefined;
 }
 
 export function EventButton({title, onClick}: EventButtonProps) {
     return <StyledButton sx={{width: "auto"}} onClick={onClick}>
         {title}
+    </StyledButton>
+}
+
+export function EventImageButton({title, image, onClick}: EventButtonProps) {
+    return <StyledButton sx={{width: "auto", bgcolor: "white"}} onClick={onClick}>
+        <img src={image} loading="lazy" height={'auto'} width={'100%'} alt={title}/>
     </StyledButton>
 }
 
