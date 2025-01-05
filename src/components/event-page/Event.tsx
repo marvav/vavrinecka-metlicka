@@ -30,17 +30,17 @@ function Event({content, date, title, place, ticket_link, image,
                 display: "flex",
                 flexDirection: "column",
                 paddingRight: {xs: 0, sm: event_theme.spacing(8)},
-                gap: {xs: event_theme.spacing(2), sm: event_theme.spacing(0)},
+                gap: {xs: event_theme.spacing(2), sm: event_theme.spacing(2)},
             }}>
                 <EventTitle title={title}/>
                 <EventFields date={date} time={time} place={place}/>
                 {tracks && <LinkBar title={"Odkazy na trasy"} linkMap={tracks}/>}
                 <Typography sx={{fontWeight: "bold", fontSize: 16, paddingTop: "0.5em"}}>Popis akce:</Typography>
                 {content || "Bude upřesněno"}
-                <Box sx={{flexGrow: 2}}/>
+                {isMobile ? <></> : <Box sx={{flexGrow: {xs: 0, sm: 2}}}/>}
                 <EventButtonBar image={image} photos_url={photos_url} ticket_url={ticket_link}
                                 areTicketsAvailable={areTicketsBeingSold}/>
-                <EventAffiliateBar affiliates={affiliates}/>
+                {affiliates.length > 0 && <EventAffiliateBar affiliates={affiliates}/>}
             </Box>
             <Box sx={{flexGrow: 2}}></Box>
             {(image && !isMobile) && <EventPoster image={image}/>}

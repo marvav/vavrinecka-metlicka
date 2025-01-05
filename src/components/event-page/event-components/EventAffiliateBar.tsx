@@ -12,7 +12,8 @@ interface EventAffiliateBarProps {
 }
 
 function EventAffiliateBar({affiliates}: EventAffiliateBarProps) {
-    return <Box width={"25%"}>{affiliates.map((affiliate) => (
+    return <Box width={{xs: "40%", sm: "25%"}} paddingTop={"0.5em"}>
+        {affiliates.map((affiliate) => (
         <EventImageButton
             image={affiliate.logo}
             onClick={() => window.open(affiliate.url ?? "", '_blank')}
