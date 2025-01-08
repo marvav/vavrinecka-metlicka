@@ -5,7 +5,7 @@ import event_theme from "./event_theme.ts";
 import TicketDialog from "../../misc/TicketDialog.tsx";
 import {EventButton, EventImageButton} from "../../buttons/EventButtons.tsx";
 import {AffiliateData} from "../../data/AffiliateData.tsx";
-import Event from "../Event.tsx";
+import Event from "../event-feed/Event.tsx";
 
 interface EventAffiliateBarProps {
     affiliates: AffiliateData[];

@@ -1,6 +1,6 @@
 import React from "react";
 import {Box} from "@mui/material";
-import {EventData} from "../data/EventData.tsx";
+import {EventData} from "../../data/EventData.tsx";
 import Event from "./Event.tsx";
 
 interface FeedProps {

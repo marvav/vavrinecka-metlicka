@@ -1,13 +1,13 @@
 import {Box, ThemeProvider, useMediaQuery} from "@mui/material";
-import {EventData} from "../data/EventData.tsx";
-import event_theme from "./event-components/event_theme.ts";
-import EventTitle from "./event-components/EventTitle.tsx";
-import EventFields from "./event-components/EventFields.tsx";
-import LinkBar from "../misc/LinkBar.tsx";
-import EventButtonBar from "./event-components/EventButtonBar.tsx";
-import EventPoster from "../misc/Image.tsx";
+import {EventData} from "../../data/EventData.tsx";
+import event_theme from "../event-components/event_theme.ts";
+import EventTitle from "../event-components/EventTitle.tsx";
+import EventFields from "../event-components/EventFields.tsx";
+import LinkBar from "../../misc/LinkBar.tsx";
+import EventButtonBar from "../event-components/EventButtonBar.tsx";
+import EventPoster from "../../misc/Image.tsx";
 import Typography from "@mui/material/Typography";
-import EventAffiliateBar from "./event-components/EventAffiliateBar.tsx";
+import EventAffiliateBar from "../event-components/EventAffiliateBar.tsx";
 
 export default Event;
 

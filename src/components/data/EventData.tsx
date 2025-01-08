@@ -3,6 +3,7 @@ import {AffiliateData} from "./AffiliateData.tsx";
 
 export interface EventData {
     title: string
+    url_fragment: string
     date: Date
     time: string | undefined
     place: PlaceData

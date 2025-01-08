@@ -1,6 +1,6 @@
 import {Box} from "@mui/material";
 import FieldEntry from "../../misc/FieldEntry.tsx";
-import mapycz from "../../../../src/assets/images/mapycz.png"
+import mapycz from "../../../assets/images/mapycz.png"
 import {MapLinkButton} from "../../buttons/MapLinkButtons.tsx";
 import {PlaceData} from "../../data/PlaceData.tsx";
 

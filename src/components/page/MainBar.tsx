@@ -3,7 +3,7 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import {Box, ThemeProvider, useMediaQuery} from "@mui/material";
-import event_theme from "../event-page/event-components/event_theme.ts";
+import event_theme from "../event/event-components/event_theme.ts";
 import Logo from "../Logo.tsx";
 import {useNavigate} from 'react-router-dom';
 import MainBarElement from "./MainBarElement.tsx";

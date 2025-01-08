@@ -1,14 +1,14 @@
 import React, {useState} from "react";
-import MainBar from "../page/MainBar.tsx";
+import MainBar from "../../page/MainBar.tsx";
 import {Box, useMediaQuery} from "@mui/material";
-import metlicka_background from "../../assets/images/metlicka_background.png";
-import SideGraphic from "../page/SideGraphic.tsx";
+import metlicka_background from "../../../assets/images/metlicka_background.png";
+import SideGraphic from "../../page/SideGraphic.tsx";
 import EventFeed from "./EventFeed.tsx";
-import {predefinedEvents} from "../data/EventProvider.tsx";
-import page_common_theme from "../../themes/page_common_theme.ts";
-import {EventButton} from "../buttons/EventButtons.tsx";
+import {predefinedEvents} from "../../data/EventProvider.tsx";
+import page_common_theme from "../../../themes/page_common_theme.ts";
+import {EventButton} from "../../buttons/EventButtons.tsx";
 import Typography from "@mui/material/Typography";
-import FootNote from "../footnote/FootNote.tsx";
+import FootNote from "../../footnote/FootNote.tsx";
 
 interface EventPageProps {
     includePast: boolean;

@@ -9,6 +9,7 @@ import {kudyznudy} from "./AffiliateProvider.tsx";
 export const predefinedEvents: EventData[] = [
     {
         title: "Vavřinecký pochod Moravským krasem 2025",
+        url_fragment: "vavrinecky-pochod-moravskym-krasem-2025",
         date: new Date(2025,0,25),
         time: undefined,
         place: parkVavrinec,
@@ -29,6 +30,7 @@ export const predefinedEvents: EventData[] = [
 
     {
         title: "Rockový večer",
+        url_fragment: "rockovy-vecer-2025",
         date: new Date(2025,0,17),
         place: zdarKulturak,
         time: "18:00",
@@ -43,6 +45,7 @@ export const predefinedEvents: EventData[] = [
 
     {
         title: "Vavřinecký běh Moravským krasem 2024",
+        url_fragment: "vavrinecky-beh-moravskym-krasem-2024",
         date: new Date(2024,7,24),
         time: undefined,
         place: parkVavrinec,
@@ -57,6 +60,7 @@ export const predefinedEvents: EventData[] = [
 
     {
         title: "Vavřinecký pochod Moravským krasem 2024",
+        url_fragment: "vavrinecky-pochod-moravskym-krasem-2024",
         date: new Date(2024,0,20),
         time: undefined,
         place: parkVavrinec,
