@@ -4,6 +4,7 @@ import MainBar from "../../page/MainBar.tsx";
 import metlicka_background from "../../../assets/images/metlicka_background.png";
 import {EventData} from "../../data/EventData.tsx";
 import Event from "../event-feed/Event.tsx";
+import EventDetail from "./EventDetail.tsx";
 
 interface EventDetailPageProps {
     event: EventData
@@ -24,7 +25,7 @@ const EventDetailPage: React.FC<EventDetailPageProps> = (props) => {
             padding: "1em",
             backgroundImage: `url(${metlicka_background})`,
         }}>
-            <Event {...props.event}/>;
+            <EventDetail {...props.event}/>;
         </Box>
     </Box>;
 };

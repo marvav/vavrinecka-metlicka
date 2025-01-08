@@ -9,10 +9,10 @@ import EventPoster from "../../misc/Image.tsx";
 import Typography from "@mui/material/Typography";
 import EventAffiliateBar from "../event-components/EventAffiliateBar.tsx";
 
-export default Event;
+export default EventDetail;
 
-function Event({content, date, title, place, ticket_link, image,
-                   time, photos_url, tracks, affiliates, url_fragment
+function EventDetail({content, date, title, place, ticket_link, image,
+                   time, photos_url, tracks, affiliates
                }: EventData) {
     const isMobile = useMediaQuery(event_theme.breakpoints.down('lg'));
     const areTicketsBeingSold = date >= new Date() && tracks === undefined;
@@ -34,11 +34,12 @@ function Event({content, date, title, place, ticket_link, image,
             }}>
                 <EventTitle title={title}/>
                 <EventFields date={date} time={time} place={place}/>
+                {tracks && <LinkBar title={"Odkazy na trasy"} linkMap={tracks}/>}
                 <Typography sx={{fontWeight: "bold", fontSize: 16, paddingTop: "0.5em"}}>Popis akce:</Typography>
                 {content || "Bude upřesněno"}
                 {isMobile ? <></> : <Box sx={{flexGrow: {xs: 0, sm: 2}}}/>}
                 <EventButtonBar image={image} photos_url={photos_url} ticket_url={ticket_link}
-                                areTicketsAvailable={areTicketsBeingSold} url_fragment={url_fragment}/>
+                                areTicketsAvailable={areTicketsBeingSold}/>
                 {affiliates.length > 0 && <EventAffiliateBar affiliates={affiliates}/>}
             </Box>
             <Box sx={{flexGrow: 2}}></Box>
