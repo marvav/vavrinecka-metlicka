@@ -11,6 +11,7 @@ export default function PageDropdownMenu() {
     const [anchorElement, setAnchorElement] = React.useState<null | HTMLElement>(null);
     const open = Boolean(anchorElement);
     const navigate = useNavigate();
+    const fbLink = "https://www.facebook.com/profile.php?id=61554262512667";
 
     const handleClick = (event: React.MouseEvent<HTMLElement>) => {
         setAnchorElement(event.currentTarget);
@@ -40,6 +41,7 @@ export default function PageDropdownMenu() {
         >
             {getMenuItem("Akce", () => closeAndNavigate("/akce"))}
             {getMenuItem("O Nás", () => closeAndNavigate("/uvod"))}
+            {getMenuItem("Facebook", () => window.open(fbLink, '_blank'))}
         </Menu>
     </Box>;
 }

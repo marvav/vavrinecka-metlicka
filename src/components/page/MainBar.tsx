@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {MouseEventHandler} from 'react';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
@@ -14,8 +14,19 @@ const MainBar: React.FC = () => {
     const isMobile = useMediaQuery(event_theme.breakpoints.down('sm'));
     const navigate = useNavigate();
     const theme = isMobile ? mobileTheme : desktopTheme;
+
+    const mainBarContent: ({ name: string; action: MouseEventHandler})[] = [
+        {name: "Akce", action: () => navigate("/akce")},
+        {name: "O Metličce", action: () => navigate("/uvod")},
+        {
+            name: "Facebook",
+            action: () => window.open("https://www.facebook.com/profile.php?id=61554262512667", '_blank')
+        },
+    ];
+
+
     return <ThemeProvider theme={theme}>
-        <AppBar position="fixed" sx={{ top: 0 }}>
+        <AppBar position="fixed" sx={{top: 0}}>
             <Toolbar sx={{display: "flex", gap: "1em", backgroundColor: "background.default"}}>
                 <Logo/>
                 <Typography variant="h6">
@@ -23,8 +34,8 @@ const MainBar: React.FC = () => {
                 </Typography>
                 <Box sx={{flexGrow: 3, display: "flex", gap: "1em"}}/>
                 {isMobile ? <PageDropdownMenu/> : <div>
-                    <MainBarElement title={"Akce"} onClick={() => navigate("/akce")}/>
-                    <MainBarElement title={"O Metličce"} onClick={() => navigate("/uvod")}/>
+                    {mainBarContent.map((element) =>
+                        <MainBarElement title={element.name} onClick={element.action}/>)}
                 </div>
                 }
             </Toolbar>

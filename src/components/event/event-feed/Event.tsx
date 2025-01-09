@@ -3,19 +3,13 @@ import {EventData} from "../../data/EventData.tsx";
 import event_theme from "../event-components/event_theme.ts";
 import EventTitle from "../event-components/EventTitle.tsx";
 import EventFields from "../event-components/EventFields.tsx";
-import TrackLinkBar from "../../misc/TrackLinkBar.tsx";
-import EventButtonBar from "../event-components/EventButtonBar.tsx";
-import EventPoster from "../../misc/Image.tsx";
 import Typography from "@mui/material/Typography";
-import EventAffiliateBar from "../event-components/EventAffiliateBar.tsx";
 import {NavigateFunction, useNavigate} from "react-router-dom";
 import {EventButton} from "../../buttons/EventButtons.tsx";
 
 export default Event;
 
-function Event({content, date, title, place, ticket_link, image,
-                   time, photos_url, tracks, affiliates, url_fragment
-               }: EventData) {
+function Event({content, date, title, place, time, url_fragment}: EventData) {
     const isMobile = useMediaQuery(event_theme.breakpoints.down('lg'));
     const navigate = useNavigate();
     return <ThemeProvider theme={event_theme}>
