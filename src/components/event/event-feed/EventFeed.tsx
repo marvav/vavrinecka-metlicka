@@ -17,7 +17,6 @@ const EventFeed: React.FC<FeedProps> = ({events}) => {
     >
         <Box sx={{
             display: "flex",
-            flexDirection: "column",
             gap: "3em",
             paddingBottom: "1em",
         }}>

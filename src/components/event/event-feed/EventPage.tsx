@@ -23,13 +23,13 @@ const EventPage: React.FC<EventPageProps> = (props) => {
 
     return <Box sx={{
         bgcolor: 'background.default',
-        height: '100vh',
         overflow: "scroll"
     }}>
         <MainBar/>
         <Box sx={{
             display: "flex",
             padding: "1em",
+            height: '100vh',
             backgroundImage: `url(${metlicka_background})`,
         }}>
             {isMobile ? <div/> : <SideGraphic/>}

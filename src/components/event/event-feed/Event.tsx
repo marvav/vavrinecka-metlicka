@@ -3,11 +3,13 @@ import {EventData} from "../../data/EventData.tsx";
 import event_theme from "../event-components/event_theme.ts";
 import EventTitle from "../event-components/EventTitle.tsx";
 import EventFields from "../event-components/EventFields.tsx";
-import LinkBar from "../../misc/LinkBar.tsx";
+import TrackLinkBar from "../../misc/TrackLinkBar.tsx";
 import EventButtonBar from "../event-components/EventButtonBar.tsx";
 import EventPoster from "../../misc/Image.tsx";
 import Typography from "@mui/material/Typography";
 import EventAffiliateBar from "../event-components/EventAffiliateBar.tsx";
+import {NavigateFunction, useNavigate} from "react-router-dom";
+import {EventButton} from "../../buttons/EventButtons.tsx";
 
 export default Event;
 
@@ -15,7 +17,7 @@ function Event({content, date, title, place, ticket_link, image,
                    time, photos_url, tracks, affiliates, url_fragment
                }: EventData) {
     const isMobile = useMediaQuery(event_theme.breakpoints.down('lg'));
-    const areTicketsBeingSold = date >= new Date() && tracks === undefined;
+    const navigate = useNavigate();
     return <ThemeProvider theme={event_theme}>
         <Box sx={{
             display: "flex",
@@ -37,12 +39,13 @@ function Event({content, date, title, place, ticket_link, image,
                 <Typography sx={{fontWeight: "bold", fontSize: 16, paddingTop: "0.5em"}}>Popis akce:</Typography>
                 {content || "Bude upřesněno"}
                 {isMobile ? <></> : <Box sx={{flexGrow: {xs: 0, sm: 2}}}/>}
-                <EventButtonBar image={image} photos_url={photos_url} ticket_url={ticket_link}
-                                areTicketsAvailable={areTicketsBeingSold} url_fragment={url_fragment}/>
-                {affiliates.length > 0 && <EventAffiliateBar affiliates={affiliates}/>}
+                {getDetailButton(url_fragment, navigate)}
             </Box>
             <Box sx={{flexGrow: 2}}></Box>
-            {(image && !isMobile) && <EventPoster image={image}/>}
         </Box>
     </ThemeProvider>;
+}
+
+function getDetailButton(url_fragment: string, navigate: NavigateFunction) {
+    return <EventButton title={"Detaily Akce"} onClick={() => navigate("/akce/"+url_fragment)}/>;
 }

@@ -25,6 +25,7 @@ export const predefinedEvents: EventData[] = [
             [32.5,"https://mapy.cz/s/rasadotoda"],
             [50,"https://mapy.cz/s/gakorekape"]
         ]),
+        eventLinks: [{name: "Facebook", url: "https://fb.me/e/6qiAy00Va"}],
         affiliates: [kudyznudy]
     },
 
@@ -40,6 +41,7 @@ export const predefinedEvents: EventData[] = [
         image: rockovyvecer as string,
         photos_url: undefined,
         tracks: undefined,
+        eventLinks: [],
         affiliates: []
     },
 
@@ -55,6 +57,7 @@ export const predefinedEvents: EventData[] = [
         image: beh2024 as string,
         photos_url: "https://eu.zonerama.com/vasman33/1402623",
         tracks: undefined,
+        eventLinks: [],
         affiliates: []
     },
 
@@ -73,6 +76,7 @@ export const predefinedEvents: EventData[] = [
             [18,"https://mapy.cz/s/fovegetogu"],
             [30,"https://mapy.cz/s/botulekosu"]
         ]),
+        eventLinks: [],
         affiliates: []
     },
 ];

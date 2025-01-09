@@ -1,13 +1,14 @@
 import {Box} from "@mui/material";
+import {EventButton} from "../../buttons/EventButtons.tsx";
+import {LinkData} from "../../data/LinkData.tsx";
 import Typography from "@mui/material/Typography";
-import {EventButton} from "../buttons/EventButtons.tsx";
 
-export interface LinkBarProps {
-    title: string
-    linkMap: Map<number, string>
+interface LinkBarProps {
+    title: string;
+    links: LinkData[];
 }
 
-function LinkBar({title, linkMap}: LinkBarProps) {
+function LinkBar({title, links}: LinkBarProps) {
     return <Box sx={{
         display: "flex",
         alignItems: {
@@ -27,13 +28,13 @@ function LinkBar({title, linkMap}: LinkBarProps) {
     }}>
         <Typography sx={{fontWeight: "bold"}}>{title + ":"}</Typography>
         <Box sx={{display: "flex", gap: "0.5em"}}>
-            {Array.from(linkMap.entries())
-                .map(([key, value]) => (
-                    <EventButton onClick={() => window.open(value ?? "", '_blank')} title={"" + key + "km"}/>
-                ))}
+            {links.map((link) => getLinkButton(link))}
         </Box>
     </Box>
 }
 
+function getLinkButton(link: LinkData) {
+    return <EventButton title={link.name} onClick={() => window.open(link.url, '_blank')}/>;
+}
 
 export default LinkBar;
