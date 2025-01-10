@@ -3,7 +3,11 @@ import {EventData} from "../../data/EventData.tsx";
 import event_theme from "../event-components/event_theme.ts";
 import EventTitle from "../event-components/EventTitle.tsx";
 import EventFields from "../event-components/EventFields.tsx";
-import {useNavigate} from "react-router-dom";
+import Typography from "@mui/material/Typography";
+import {NavigateFunction, useNavigate} from "react-router-dom";
+import {EventButton} from "../../buttons/EventButtons.tsx";
+import EventPoster from "../../misc/Image.tsx";
+import FieldEntry from "../../misc/FieldEntry.tsx";
 
 export default Event;
 
@@ -18,22 +22,25 @@ function Event({content, date, title, place, time, url_fragment, image, banner}:
             borderRadius: "0.75em",
             padding: "0em",
             width: "100%",
+            gap: {sm: "1em", xs: "0.5em"},
             justifyContent: "center",
-        }} onClick={() => navigate("/akce/"+url_fragment)}>
+        }} onClick={() => navigate("/akce/" + url_fragment)}>
             <Box>
                 <img width={"800px"} src={banner} alt={""} loading="lazy"/>
             </Box>
+            <EventTitle title={title}/>
+            <Box sx={{flexGrow: 1}}/>
             <Box sx={{
-                display: "flex",
-                flexDirection: "column",
-                padding: {xs: event_theme.spacing(4), sm: event_theme.spacing(8)},
-                gap: {xs: event_theme.spacing(2), sm: event_theme.spacing(2)},
+                display: {sm: "flex", xs: "grid"},
+                gap: {sm: "2em", xs: "0.5em"},
+                columns: 2,
+                paddingBottom: "2em"
             }}>
-                <EventTitle title={title}/>
-                <EventFields date={date} time={time} place={place}/>
-                {isMobile ? <></> : <Box sx={{flexGrow: {xs: 0, sm: 2}}}/>}
+                <FieldEntry name={"Datum"} value={date.toLocaleDateString('cs-CZ')} defaultValue={"Neoznámeno"}/>
+                <FieldEntry name={"Čas"} value={time} defaultValue={"Dle plakátu"}/>
+                <FieldEntry name={"Místo"} value={place.name} defaultValue={"Neoznámeno"}/>
             </Box>
-            <Box sx={{flexGrow: 2}}></Box>
         </Button>
-    </ThemeProvider>;
+    </ThemeProvider>
+        ;
 }

@@ -14,7 +14,7 @@ function EventPoster({image}: EventPosterProps) {
     };
     return <Box>
         <Button onClick={handleClickOpen}>
-            <img width={"280px"} src={image} alt={""} loading="lazy"/>
+            <img width={"500px"} src={image} alt={""} loading="lazy"/>
         </Button>
         {imageDialog(image, open, setOpen)}
     </Box>

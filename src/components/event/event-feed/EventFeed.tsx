@@ -10,13 +10,19 @@ interface FeedProps {
 const EventFeed: React.FC<FeedProps> = ({events}) => {
     return <Box sx={{
         display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
+        flexDirection: {
+            xs: "column",
+            md: "column"
+        },
         paddingTop: "2em",
     }}
     >
         <Box sx={{
             display: "flex",
+            flexDirection: {
+                md: "column",
+                lg: "row"
+            },
             gap: "3em",
             paddingBottom: "1em",
         }}>

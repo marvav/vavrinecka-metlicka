@@ -13,7 +13,7 @@ import LinkBar from "../event-components/LinkBar.tsx";
 export default EventDetail;
 
 function EventDetail({content, date, title, place, ticket_link, image,
-                   time, photos_url, tracks, affiliates, eventLinks
+                   time, photos_url, tracks, affiliates, eventLinks, banner
                }: EventData) {
     const isMobile = useMediaQuery(event_theme.breakpoints.down('lg'));
     const areTicketsBeingSold = date >= new Date() && tracks === undefined;
@@ -24,7 +24,7 @@ function EventDetail({content, date, title, place, ticket_link, image,
             bgcolor: 'background.default',
             padding: {xs: event_theme.spacing(4), sm: event_theme.spacing(8)},
             borderRadius: "0.75em",
-            width: "100%",
+            width: "50%",
             justifyContent: "center",
         }}>
             <Box sx={{
@@ -33,19 +33,20 @@ function EventDetail({content, date, title, place, ticket_link, image,
                 paddingRight: {xs: 0, sm: event_theme.spacing(8)},
                 gap: {xs: event_theme.spacing(2), sm: event_theme.spacing(2)},
             }}>
+                <Box>
+                    <img width={"800px"} src={banner} alt={""} loading="lazy"/>
+                </Box>
                 <EventTitle title={title}/>
                 <EventFields date={date} time={time} place={place}/>
                 {tracks && <TrackLinkBar title={"Odkazy na trasy"} linkMap={tracks}/>}
-                <Typography sx={{fontWeight: "bold", fontSize: 16, paddingTop: "0.5em"}}>Popis akce:</Typography>
                 {content || "Bude upřesněno"}
-                {isMobile ? <></> : <Box sx={{flexGrow: {xs: 0, sm: 2}}}/>}
                 <EventButtonBar image={image} photos_url={photos_url} ticket_url={ticket_link}
                                 areTicketsAvailable={areTicketsBeingSold}/>
                 {eventLinks.length > 0 && <LinkBar title={"Akci najdete také na"} links={eventLinks}></LinkBar>}
                 {affiliates.length > 0 && <EventAffiliateBar affiliates={affiliates}/>}
             </Box>
             <Box sx={{flexGrow: 2}}></Box>
-            {(image && !isMobile) && <EventPoster image={image}/>}
+            {(false && image && !isMobile) && <EventPoster image={image}/>}
         </Box>
     </ThemeProvider>;
 }
