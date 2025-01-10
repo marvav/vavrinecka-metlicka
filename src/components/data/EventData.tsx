@@ -11,6 +11,7 @@ export interface EventData {
     photos_url: string | undefined
     ticket_link : string | undefined
     image: string | undefined
+    banner: string | undefined
     tracks: Map<number, string> | undefined
     eventLinks: LinkData[]
     affiliates: AffiliateData[]

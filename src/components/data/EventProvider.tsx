@@ -3,6 +3,8 @@ import rockovyvecer from "../../assets/posters/rockovyvecer.jpg"
 import pochod2025 from "../../assets/posters/pochod2025.png"
 import beh2024 from "../../assets/posters/beh2024.jpg"
 import pochod2024 from "../../assets/posters/pochod2024.jpg"
+import pochod2025banner from "../../assets/banners/pochod2025banner.png"
+import rockovyvecer2025banner from "../../assets/banners/rockovyvecer2025banner.jpg"
 import {parkVavrinec, zdarKulturak} from "./PlaceProvider.tsx";
 import {kudyznudy} from "./AffiliateProvider.tsx";
 
@@ -18,6 +20,7 @@ export const predefinedEvents: EventData[] = [
             "Tímto Vás zveme na 2. ročník, kde jsme si pro Vás připravili trasy různých délek od 6 do 50 km. V cíli se můžete těšit na vystoupení kapely ZVUKOVÁ KULISA a chybět nebude ani diplom pro každého, kdo některou z tras zdárně zdolá!\n",
         ticket_link: undefined,
         image: pochod2025 as string,
+        banner: pochod2025banner as string,
         photos_url: undefined,
         tracks: new Map([
             [6.5,"https://mapy.cz/s/kemunahazu"],
@@ -30,7 +33,7 @@ export const predefinedEvents: EventData[] = [
     },
 
     {
-        title: "Rockový večer",
+        title: "Rockový Večer 2025",
         url_fragment: "rockovy-vecer-2025",
         date: new Date(2025,0,17),
         place: zdarKulturak,
@@ -39,6 +42,7 @@ export const predefinedEvents: EventData[] = [
             "- VSTUPNÉ: 599 Kč v předprodeji, 650 Kč na místě\n",
         ticket_link: undefined,
         image: rockovyvecer as string,
+        banner: rockovyvecer2025banner as string,
         photos_url: undefined,
         tracks: undefined,
         eventLinks: [],
@@ -55,6 +59,7 @@ export const predefinedEvents: EventData[] = [
             "Závod bude probíhat za každého počasí. Start bude v areálu fotbalového hřiště ve Vavřinci, kde budou k dispozici i šatny a sprchy.",
         ticket_link: undefined,
         image: beh2024 as string,
+        banner: pochod2025banner as string,
         photos_url: "https://eu.zonerama.com/vasman33/1402623",
         tracks: undefined,
         eventLinks: [],
@@ -70,6 +75,7 @@ export const predefinedEvents: EventData[] = [
         content: "",
         ticket_link: undefined,
         image: pochod2024 as string,
+        banner: pochod2025banner as string,
         photos_url: undefined,
         tracks: new Map([
             [6,"https://mapy.cz/s/detacumenu"],
