@@ -11,13 +11,11 @@ function EventTitle({title}: EventTitleProps) {
     const variant = isMobile ? "h5" : "h3";
     return <Typography variant={variant}
                        sx={{
+                           paddingTop: event_theme.spacing(1),
+                           paddingBottom: event_theme.spacing(2),
                            display: "flex",
-                           justifyContent: {
-                               xs: "center", sm: "left",
-                           },
-                           textAlign: {
-                               xs: "center", sm: "left",
-                           },
+                           justifyContent: "left",
+                           textAlign: "left",
                        }}>
         {title}
     </Typography>;

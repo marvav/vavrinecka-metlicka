@@ -25,7 +25,6 @@ function EventFields({date, time, place}: EventFieldsProps) {
             xs: "0.5em"
         },
         columns: 2,
-        paddingTop: "1em",
     }}>
         <FieldEntry name={"Datum"} value={date.toLocaleDateString('cs-CZ')} defaultValue={"Neoznámeno"}/>
         <FieldEntry name={"Čas"} value={time} defaultValue={"Dle plakátu"}/>

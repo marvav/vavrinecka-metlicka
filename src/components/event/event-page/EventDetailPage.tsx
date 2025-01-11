@@ -13,16 +13,18 @@ interface EventDetailPageProps {
 const EventDetailPage: React.FC<EventDetailPageProps> = (props) => {
     return <Box sx={{
         display: "flex",
+        flexDirection: "column",
+        height: "100vh",
         bgcolor: 'background.default',
         backgroundImage: `url(${metlicka_background})`,
-        height: '100vh',
         overflow: "scroll",
         alignItems: "center",
-        justifyContent: "center"
     }}>
         <MainBar/>
-        <EventDetail {...props.event}/>;
-    </Box>;
-};
+        <Box sx={{paddingTop: "5em"}}>
+            <EventDetail {...props.event}/>
+        </Box>
+    </Box>
+}
 
 export default EventDetailPage;

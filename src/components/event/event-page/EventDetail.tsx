@@ -5,7 +5,6 @@ import EventTitle from "../event-components/EventTitle.tsx";
 import EventFields from "../event-components/EventFields.tsx";
 import TrackLinkBar from "../../misc/TrackLinkBar.tsx";
 import EventButtonBar from "../event-components/EventButtonBar.tsx";
-import EventPoster from "../../misc/Image.tsx";
 import EventAffiliateBar from "../event-components/EventAffiliateBar.tsx";
 import LinkBar from "../event-components/LinkBar.tsx";
 
@@ -14,7 +13,8 @@ export default EventDetail;
 function EventDetail({content, date, title, place, ticket_link, image,
                    time, photos_url, tracks, affiliates, eventLinks, banner
                }: EventData) {
-    const isMobile = useMediaQuery(event_theme.breakpoints.down('lg'));
+    const isMobile = useMediaQuery(event_theme.breakpoints.down('md'));
+    const screenWidth: number = window.innerWidth || document.documentElement.clientWidth;
     const areTicketsBeingSold = date >= new Date() && tracks === undefined;
     return <ThemeProvider theme={event_theme}>
         <Box sx={{
@@ -23,16 +23,16 @@ function EventDetail({content, date, title, place, ticket_link, image,
             bgcolor: 'background.default',
             borderRadius: "0.75em",
             width: "min-content",
-            paddingTop: event_theme.spacing(16),
         }}>
             <Box>
-                <img width={"800px"} src={banner} alt={""} loading="lazy"/>
+                <img width={(screenWidth < 1000 ? screenWidth : 1000) + "px"} src={banner} alt={""} loading="lazy"/>
             </Box>
             <Box sx={{
                 display: "flex",
                 flexDirection: "column",
-                gap: {xs: event_theme.spacing(2), sm: event_theme.spacing(2)},
+                gap: {xs: event_theme.spacing(3), sm: event_theme.spacing(4)},
                 padding: event_theme.spacing(4),
+                paddingTop: event_theme.spacing(2),
             }}>
                 <EventTitle title={title}/>
                 <EventFields date={date} time={time} place={place}/>
@@ -44,7 +44,6 @@ function EventDetail({content, date, title, place, ticket_link, image,
                 {affiliates.length > 0 && <EventAffiliateBar affiliates={affiliates}/>}
             </Box>
             <Box sx={{flexGrow: 2}}></Box>
-            {(false && image && !isMobile) && <EventPoster image={image}/>}
         </Box>
     </ThemeProvider>
 }
