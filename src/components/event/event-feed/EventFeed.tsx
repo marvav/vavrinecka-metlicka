@@ -24,6 +24,10 @@ const EventFeed: React.FC<FeedProps> = ({events}) => {
                 lg: "row"
             },
             gap: "3em",
+            padding: {
+                xs: "0em",
+                sm: "0em",
+            },
             paddingBottom: "1em",
         }}>
             {events.map((article) => (

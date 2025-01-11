@@ -1,4 +1,4 @@
-import {Box, Button, ThemeProvider, useMediaQuery} from "@mui/material";
+import {Box, Breadcrumbs, Button, ThemeProvider, useMediaQuery} from "@mui/material";
 import {EventData} from "../../data/EventData.tsx";
 import event_theme from "../event-components/event_theme.ts";
 import EventTitle from "../event-components/EventTitle.tsx";
@@ -12,18 +12,24 @@ function Event({content, date, title, place, time, url_fragment, image, banner}:
     const screenWidth: number = window.innerWidth || document.documentElement.clientWidth;
     const navigate = useNavigate();
     return <ThemeProvider theme={event_theme}>
-        <Button sx={{
+        <Button variant="outlined" sx={{
             display: "flex",
             flexDirection: {xs: 'column'},
             bgcolor: 'background.default',
             borderRadius: "0.75em",
+            borderWidth: '2px',
+            borderColor: 'transparent',
             padding: "0em",
             width: "100%",
             gap: {sm: "1em", xs: "0.5em"},
             justifyContent: "center",
+            '&:hover': {
+                borderColor: 'green',
+                borderWidth: '2px',
+            },
         }} onClick={() => navigate("/akce/" + url_fragment)}>
             <Box sx={{display: "flex", width: "min-content"}}>
-                <img width={(screenWidth < 800 ? screenWidth : 800) + "px"} src={banner} alt={""} loading="lazy"/>
+                <img width={(screenWidth < 800 ? screenWidth : 800) + "px"} src={banner} alt={""} loading="eager"/>
             </Box>
             <Box sx={{
                 display: "flex",

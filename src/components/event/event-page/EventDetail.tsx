@@ -13,7 +13,6 @@ export default EventDetail;
 function EventDetail({content, date, title, place, ticket_link, image,
                    time, photos_url, tracks, affiliates, eventLinks, banner
                }: EventData) {
-    const isMobile = useMediaQuery(event_theme.breakpoints.down('md'));
     const screenWidth: number = window.innerWidth || document.documentElement.clientWidth;
     const areTicketsBeingSold = date >= new Date() && tracks === undefined;
     return <ThemeProvider theme={event_theme}>
@@ -25,7 +24,7 @@ function EventDetail({content, date, title, place, ticket_link, image,
             width: "min-content",
         }}>
             <Box>
-                <img width={(screenWidth < 1000 ? screenWidth : 1000) + "px"} src={banner} alt={""} loading="lazy"/>
+                <img width={(screenWidth < 1000 ? screenWidth : 1000) + "px"} src={banner} alt={""} loading="eager"/>
             </Box>
             <Box sx={{
                 display: "flex",
