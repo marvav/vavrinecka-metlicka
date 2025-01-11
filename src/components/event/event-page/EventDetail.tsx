@@ -6,7 +6,6 @@ import EventFields from "../event-components/EventFields.tsx";
 import TrackLinkBar from "../../misc/TrackLinkBar.tsx";
 import EventButtonBar from "../event-components/EventButtonBar.tsx";
 import EventPoster from "../../misc/Image.tsx";
-import Typography from "@mui/material/Typography";
 import EventAffiliateBar from "../event-components/EventAffiliateBar.tsx";
 import LinkBar from "../event-components/LinkBar.tsx";
 
@@ -20,22 +19,21 @@ function EventDetail({content, date, title, place, ticket_link, image,
     return <ThemeProvider theme={event_theme}>
         <Box sx={{
             display: "flex",
-            flexDirection: {xs: 'column', sm: 'row',},
+            flexDirection: "column",
             bgcolor: 'background.default',
-            padding: {xs: event_theme.spacing(4), sm: event_theme.spacing(8)},
             borderRadius: "0.75em",
-            width: "50%",
-            justifyContent: "center",
+            width: "min-content",
+            paddingTop: event_theme.spacing(16),
         }}>
+            <Box>
+                <img width={"800px"} src={banner} alt={""} loading="lazy"/>
+            </Box>
             <Box sx={{
                 display: "flex",
                 flexDirection: "column",
-                paddingRight: {xs: 0, sm: event_theme.spacing(8)},
                 gap: {xs: event_theme.spacing(2), sm: event_theme.spacing(2)},
+                padding: event_theme.spacing(4),
             }}>
-                <Box>
-                    <img width={"800px"} src={banner} alt={""} loading="lazy"/>
-                </Box>
                 <EventTitle title={title}/>
                 <EventFields date={date} time={time} place={place}/>
                 {tracks && <TrackLinkBar title={"Odkazy na trasy"} linkMap={tracks}/>}
@@ -48,5 +46,5 @@ function EventDetail({content, date, title, place, ticket_link, image,
             <Box sx={{flexGrow: 2}}></Box>
             {(false && image && !isMobile) && <EventPoster image={image}/>}
         </Box>
-    </ThemeProvider>;
+    </ThemeProvider>
 }

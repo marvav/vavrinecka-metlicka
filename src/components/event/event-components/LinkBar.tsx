@@ -20,10 +20,6 @@ function LinkBar({title, links}: LinkBarProps) {
             xs: "column",
             sm: "row"
         },
-        paddingTop: {
-            xs: "0.5em",
-            sm: "1em"
-        },
         gap: "0.5em"
     }}>
         <Typography sx={{fontWeight: "bold"}}>{title + ":"}</Typography>

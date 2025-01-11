@@ -28,17 +28,23 @@ function Event({content, date, title, place, time, url_fragment, image, banner}:
             <Box>
                 <img width={"800px"} src={banner} alt={""} loading="lazy"/>
             </Box>
-            <EventTitle title={title}/>
-            <Box sx={{flexGrow: 1}}/>
             <Box sx={{
-                display: {sm: "flex", xs: "grid"},
-                gap: {sm: "2em", xs: "0.5em"},
-                columns: 2,
-                paddingBottom: "2em"
+                paddingLeft: "1em",
+                flexGrow: 1,
+                width: "100%"
             }}>
-                <FieldEntry name={"Datum"} value={date.toLocaleDateString('cs-CZ')} defaultValue={"Neoznámeno"}/>
-                <FieldEntry name={"Čas"} value={time} defaultValue={"Dle plakátu"}/>
-                <FieldEntry name={"Místo"} value={place.name} defaultValue={"Neoznámeno"}/>
+                <EventTitle title={title}/>
+                <Box sx={{flexGrow: 1}}/>
+                <Box sx={{
+                    display: {sm: "flex", xs: "grid"},
+                    gap: {sm: "2em", xs: "0.5em"},
+                    columns: 2,
+                    paddingBottom: "2em"
+                }}>
+                    <FieldEntry name={"Datum"} value={date.toLocaleDateString('cs-CZ')} defaultValue={"Neoznámeno"}/>
+                    <FieldEntry name={"Čas"} value={time} defaultValue={"Dle plakátu"}/>
+                    <FieldEntry name={"Místo"} value={place.name} defaultValue={"Neoznámeno"}/>
+                </Box>
             </Box>
         </Button>
     </ThemeProvider>

@@ -28,7 +28,7 @@ export const predefinedEvents: EventData[] = [
             [32.5,"https://mapy.cz/s/rasadotoda"],
             [50,"https://mapy.cz/s/gakorekape"]
         ]),
-        eventLinks: [{name: "Facebook", url: "https://fb.me/e/6qiAy00Va"}],
+        eventLinks: [{name: "Facebook", url: "https://fb.me/e/6qiAy00Va"}, {name: "Kudyznudy", url: "https://www.kudyznudy.cz/akce/vavrinecky-pochod-moravskym-krasem"}],
         affiliates: [kudyznudy]
     },
 
@@ -63,6 +63,31 @@ export const predefinedEvents: EventData[] = [
         photos_url: "https://eu.zonerama.com/vasman33/1402623",
         tracks: undefined,
         eventLinks: [],
+        affiliates: []
+    },
+
+    {
+        title: "Metal pod Plechem 2024",
+        url_fragment: "metal-pod-plechem-2024",
+        date: new Date(2024,3,20),
+        time: "16:00",
+        place: parkVavrinec,
+        content: "2. ročník hudební akce METAL POD PLECHEM 🤟, který se koná v sobotu 20.4.2024 v areálu parku Vavřinec. Začátek v 16:00, areál bude otevřen od 15:00, předpokládaný konec v 1:00. KAPELY & LINE-UP:\n" +
+            "• Kozí čtvrť (Drnovice u Lysic) 16:00 - 17:00,\n" +
+            "• Blastera (Blansko) 17:30 - 18:20,\n" +
+            "• Judas Priest Revival (Praha) 19:00 - 21:00,\n" +
+            "• Aliens (Velké Pavlovice) 21:30 - 23:30.\n" +
+            "VSTUPNÉ: 450 Kč\n" +
+            "OBČERSTVENÍ:\n" +
+            "• Starobrno 12° Bitr, víno z Vinařství Michna (Čejkovice), nealko\n" +
+            "• Utopenci, nakládaný sýr Camembert, uzená klobása, lipovecká sekaná\n" +
+            "Akce se koná za každého počasí (vyhřívané prostory).",
+        ticket_link: undefined,
+        image: beh2024 as string,
+        banner: pochod2025banner as string,
+        photos_url: undefined,
+        tracks: undefined,
+        eventLinks: [{name: "Facebook", url: "https://www.facebook.com/events/927713592219766/"}],
         affiliates: []
     },
 

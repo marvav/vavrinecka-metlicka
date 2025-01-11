@@ -13,7 +13,6 @@ interface EventButtonBarProps {
 }
 
 function EventButtonBar({image, photos_url, ticket_url, areTicketsAvailable}: EventButtonBarProps) {
-    const isMobile = useMediaQuery(event_theme.breakpoints.down('lg'));
     const [imageDialogOpen, setImageDialogOpen] = useState(false);
     const [ticketDialogOpen, setTicketDialogOpen] = useState(false);
     const ticketMessage = "Vstupenky bude možné zakoupit na místě nebo skrze náš mail vavrinecka-metlicka@seznam.cz"
@@ -23,7 +22,7 @@ function EventButtonBar({image, photos_url, ticket_url, areTicketsAvailable}: Ev
     const ticketsButton = getTicketsButton(ticket_url ?? "", setTicketDialogOpen);
     return <Box sx={{display: "flex", gap: "1em"}}>
         {photos_url && photosButton}
-        {(image && isMobile) && posterButton}
+        {posterButton}
         {areTicketsAvailable && ticketsButton}
         {ImageDialog(image, imageDialogOpen, setImageDialogOpen)}
         {TicketDialog(ticketMessage, ticketDialogOpen, setTicketDialogOpen)}
