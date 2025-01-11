@@ -1,7 +1,6 @@
-import {Box, useMediaQuery} from "@mui/material";
+import {Box} from "@mui/material";
 import {useState} from "react";
 import ImageDialog from "../../misc/ImageDialog.tsx";
-import event_theme from "./event_theme.ts";
 import TicketDialog from "../../misc/TicketDialog.tsx";
 import {EventButton} from "../../buttons/EventButtons.tsx";
 

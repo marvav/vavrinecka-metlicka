@@ -15,11 +15,11 @@ const EventFeed: React.FC<FeedProps> = ({events}) => {
             md: "column"
         },
         paddingTop: "2em",
-    }}
-    >
+    }}>
         <Box sx={{
             display: "flex",
             flexDirection: {
+                xs: "column",
                 md: "column",
                 lg: "row"
             },

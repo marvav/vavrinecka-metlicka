@@ -23,18 +23,27 @@ const EventPage: React.FC<EventPageProps> = (props) => {
 
     return <Box sx={{
         bgcolor: 'background.default',
-        overflow: "scroll"
+        overflow: "scroll",
+        height: '100vh',
     }}>
         <MainBar/>
         <Box sx={{
             display: "flex",
-            padding: "1em",
-            height: '100vh',
+            padding: {
+                sm: "1em",
+                xs: "0em"
+            },
+            height: '100%',
             backgroundImage: `url(${metlicka_background})`,
         }}>
             {isMobile ? <div/> : <SideGraphic/>}
             <Box sx={{display: "flex", flexDirection: "column", alignItems: "center"}}>
-                <Typography sx={{fontWeight: "bold", fontSize: 36, paddingTop: "2em", paddingBottom: "0.5em"}}>{props.title}</Typography>
+                <Typography sx={{
+                    fontWeight: "bold",
+                    fontSize: 36,
+                    paddingTop: "2em",
+                    paddingBottom: "0.5em"
+                }}>{props.title}</Typography>
                 <EventFeed events={relevantEvents}/>
                 <Box sx={{marginTop: "15px", display: "flex", justifyContent: "right", width: "100%"}}>
                     <EventButton onClick={() => setShowPastEvents(!showPastEvents)} title={
