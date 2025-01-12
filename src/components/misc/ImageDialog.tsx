@@ -7,7 +7,7 @@ function ImageDialog(img: string | undefined, open: boolean, setOpen: Function) 
     };
 
     const content = <Typography variant="h6">
-        <ImageListItem><img src={img} alt={""} loading="lazy"/></ImageListItem>
+        <ImageListItem><img src={img} alt={""} loading="eager"/></ImageListItem>
     </Typography>
 
     return <StyledDialog open={open} setOpen={handleClose} content={content}/>

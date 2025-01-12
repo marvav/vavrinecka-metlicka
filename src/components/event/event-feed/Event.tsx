@@ -7,14 +7,14 @@ import FieldEntry from "../../misc/FieldEntry.tsx";
 
 export default Event;
 
-function Event({content, date, title, place, time, url_fragment, image, banner}: EventData) {
-    const isMobile = useMediaQuery(event_theme.breakpoints.down('lg'));
+function Event({date, title, place, time, url_fragment, banner}: EventData) {
     const screenWidth: number = window.innerWidth || document.documentElement.clientWidth;
     const navigate = useNavigate();
     return <ThemeProvider theme={event_theme}>
         <Button variant="outlined" sx={{
             display: "flex",
             flexDirection: {xs: 'column'},
+            textTransform: 'none',
             bgcolor: 'background.default',
             borderRadius: "0.75em",
             borderWidth: '2px',

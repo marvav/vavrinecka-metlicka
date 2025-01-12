@@ -10,7 +10,7 @@ import LinkBar from "../event-components/LinkBar.tsx";
 
 export default EventDetail;
 
-function EventDetail({content, date, title, place, ticket_link, image,
+function EventDetail({content, date, title, place, ticket_link, additionalPictures,
                    time, photos_url, tracks, affiliates, eventLinks, banner
                }: EventData) {
     const screenWidth: number = window.innerWidth || document.documentElement.clientWidth;
@@ -37,7 +37,7 @@ function EventDetail({content, date, title, place, ticket_link, image,
                 <EventFields date={date} time={time} place={place}/>
                 {tracks && <TrackLinkBar title={"Odkazy na trasy"} linkMap={tracks}/>}
                 {content || "Bude upřesněno"}
-                <EventButtonBar image={image} photos_url={photos_url} ticket_url={ticket_link}
+                <EventButtonBar pictures={additionalPictures} photos_url={photos_url} ticket_url={ticket_link}
                                 areTicketsAvailable={areTicketsBeingSold}/>
                 {eventLinks.length > 0 && <LinkBar title={"Akci najdete také na"} links={eventLinks}></LinkBar>}
                 {affiliates.length > 0 && <EventAffiliateBar affiliates={affiliates}/>}

@@ -10,9 +10,9 @@ export interface EventData {
     content: string
     photos_url: string | undefined
     ticket_link : string | undefined
-    image: string | undefined
     banner: string | undefined
     tracks: Map<number, string> | undefined
+    additionalPictures: LinkData[]
     eventLinks: LinkData[]
     affiliates: AffiliateData[]
 }
