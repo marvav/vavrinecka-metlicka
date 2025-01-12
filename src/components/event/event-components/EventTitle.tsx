@@ -12,7 +12,7 @@ function EventTitle({title}: EventTitleProps) {
     return <Typography variant={variant}
                        sx={{
                            paddingTop: event_theme.spacing(1),
-                           paddingBottom: event_theme.spacing(2),
+                           paddingBottom: event_theme.spacing(1),
                            display: "flex",
                            justifyContent: "left",
                            textAlign: "left",

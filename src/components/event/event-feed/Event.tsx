@@ -37,7 +37,7 @@ function Event({date, title, place, time, url_fragment, banner}: EventData) {
                 paddingLeft: "1em",
                 flexGrow: 1,
                 width: "100%",
-                gap: "0.5em"
+                gap: "0.5em",
             }}>
                 <EventTitle title={title}/>
                 <Box sx={{flexGrow: 2}}/>
@@ -45,7 +45,7 @@ function Event({date, title, place, time, url_fragment, banner}: EventData) {
                     display: {sm: "flex", xs: "grid"},
                     gap: {sm: "2em", xs: "0.5em"},
                     columns: 2,
-                    paddingBottom: {sm: "1.5em", xs: "0.5em"}
+                    paddingBottom: {sm: "1.5em", xs: "1.5em"}
                 }}>
                     <FieldEntry name={"Datum"} value={date.toLocaleDateString('cs-CZ')} defaultValue={"Neoznámeno"}/>
                     <FieldEntry name={"Čas"} value={time} defaultValue={"Uveden na plakátu"}/>
