@@ -51,6 +51,7 @@ const EventPage: React.FC<EventPageProps> = (props) => {
                     }/>
                 </Box>
                 {showPastEvents && <EventFeed events={oldEvents}></EventFeed>}
+                <Box sx={{flexGrow: 1}}/>
                 <FootNote/>
             </Box>
             {isMobile ? <div/> : <SideGraphic/>}
