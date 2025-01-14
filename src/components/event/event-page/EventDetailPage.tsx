@@ -16,11 +16,12 @@ const EventDetailPage: React.FC<EventDetailPageProps> = (props) => {
     return <Box sx={{
         display: "flex",
         flexDirection: "column",
-        height: "100vh",
+        height: "110vh",
         bgcolor: 'background.default',
         backgroundImage: `url(${metlicka_background})`,
         overflow: "scroll",
         alignItems: "center",
+        width: "100%"
     }}>
         <MainBar/>
         <Box sx={{paddingLeft: "1.5em", paddingTop: "5.25em", width: "100%"}}>
@@ -33,7 +34,7 @@ const EventDetailPage: React.FC<EventDetailPageProps> = (props) => {
                 </Typography>
             </Breadcrumbs>
         </Box>
-        <Box sx={{paddingTop: "1em"}}>
+        <Box sx={{display: "flex", paddingTop: "1em", justifyContent: "center", alignItems: "center", width: "100%"}}>
             <EventDetail {...props.event}/>
         </Box>
     </Box>

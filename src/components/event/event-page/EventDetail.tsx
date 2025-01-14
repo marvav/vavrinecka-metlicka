@@ -7,13 +7,13 @@ import TrackLinkBar from "../../misc/TrackLinkBar.tsx";
 import EventButtonBar from "../event-components/EventButtonBar.tsx";
 import EventAffiliateBar from "../event-components/EventAffiliateBar.tsx";
 import LinkBar from "../event-components/LinkBar.tsx";
+import Typography from "@mui/material/Typography";
 
 export default EventDetail;
 
 function EventDetail({content, date, title, place, ticket_link, additionalPictures,
                    time, photos_url, tracks, affiliates, eventLinks, banner
                }: EventData) {
-    const screenWidth: number = window.innerWidth || document.documentElement.clientWidth;
     const areTicketsBeingSold = date >= new Date() && tracks === undefined;
     return <ThemeProvider theme={event_theme}>
         <Box sx={{
@@ -21,17 +21,16 @@ function EventDetail({content, date, title, place, ticket_link, additionalPictur
             flexDirection: "column",
             bgcolor: 'background.default',
             borderRadius: "0.75em",
-            width: "min-content",
+            width: {xl: "50%", lg: "60%", md: "85%", sm: "95%", xs: "95%"},
         }}>
-            <Box>
-                <img width={(screenWidth < 1000 ? screenWidth : 1000) + "px"} src={banner} alt={""} loading="eager"/>
-            </Box>
+            <Box component="img"
+                sx={{borderTopLeftRadius: "inherit", borderTopRightRadius: "inherit" }}
+                src={banner} loading="eager"/>
             <Box sx={{
                 display: "flex",
                 flexDirection: "column",
                 gap: {xs: event_theme.spacing(3), sm: event_theme.spacing(4)},
-                padding: event_theme.spacing(4),
-                paddingTop: event_theme.spacing(2),
+                padding: event_theme.spacing(6),
             }}>
                 <EventTitle title={title}/>
                 <EventFields date={date} time={time} place={place}/>
