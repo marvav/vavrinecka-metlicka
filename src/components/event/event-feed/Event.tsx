@@ -1,4 +1,4 @@
-import {Box, Breadcrumbs, Button, ThemeProvider, useMediaQuery} from "@mui/material";
+import {Box, Breadcrumbs, Button, ImageListItem, ThemeProvider, useMediaQuery} from "@mui/material";
 import {EventData} from "../../data/EventData.tsx";
 import event_theme from "../event-components/event_theme.ts";
 import EventTitle from "../event-components/EventTitle.tsx";
@@ -8,7 +8,6 @@ import FieldEntry from "../../misc/FieldEntry.tsx";
 export default Event;
 
 function Event({date, title, place, time, url_fragment, banner}: EventData) {
-    const screenWidth: number = window.innerWidth || document.documentElement.clientWidth;
     const navigate = useNavigate();
     return <ThemeProvider theme={event_theme}>
         <Button variant="outlined" sx={{
@@ -28,9 +27,17 @@ function Event({date, title, place, time, url_fragment, banner}: EventData) {
                 borderWidth: '2px',
             },
         }} onClick={() => navigate("/akce/" + url_fragment)}>
-            <Box sx={{display: "flex", width: "min-content"}}>
-                <img width={(screenWidth < 800 ? screenWidth : 800) + "px"} src={banner} alt={""} loading="eager"/>
-            </Box>
+            <Box
+                component="img"
+                sx={{
+                    borderTopLeftRadius: "0.75em",
+                    borderTopRightRadius: "0.75em",
+                    width: '100%',
+                    height: 'auto',
+                }}
+                src={banner}
+                loading="eager"
+            />
             <Box sx={{
                 display: "flex",
                 flexDirection: 'column',
