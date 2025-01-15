@@ -1,4 +1,4 @@
-import {Box, ThemeProvider, useMediaQuery} from "@mui/material";
+import {Box, ThemeProvider} from "@mui/material";
 import {EventData} from "../../data/EventData.tsx";
 import event_theme from "../event-components/event_theme.ts";
 import EventTitle from "../event-components/EventTitle.tsx";
@@ -7,13 +7,13 @@ import TrackLinkBar from "../../misc/TrackLinkBar.tsx";
 import EventButtonBar from "../event-components/EventButtonBar.tsx";
 import EventAffiliateBar from "../event-components/EventAffiliateBar.tsx";
 import LinkBar from "../event-components/LinkBar.tsx";
-import Typography from "@mui/material/Typography";
 
 export default EventDetail;
 
-function EventDetail({content, date, title, place, ticket_link, additionalPictures,
-                   time, photos_url, tracks, affiliates, eventLinks, banner
-               }: EventData) {
+function EventDetail({
+                         content, date, title, place, ticket_link, additionalPictures,
+                         time, photos_url, tracks, affiliates, eventLinks, banner
+                     }: EventData) {
     const areTicketsBeingSold = date >= new Date() && tracks === undefined;
     return <ThemeProvider theme={event_theme}>
         <Box sx={{
@@ -24,8 +24,8 @@ function EventDetail({content, date, title, place, ticket_link, additionalPictur
             width: {xl: "50%", lg: "60%", md: "85%", sm: "95%", xs: "95%"},
         }}>
             <Box component="img"
-                sx={{borderTopLeftRadius: "inherit", borderTopRightRadius: "inherit" }}
-                src={banner} loading="eager"/>
+                 sx={{borderTopLeftRadius: "inherit", borderTopRightRadius: "inherit"}}
+                 src={banner} loading="eager"/>
             <Box sx={{
                 display: "flex",
                 flexDirection: "column",

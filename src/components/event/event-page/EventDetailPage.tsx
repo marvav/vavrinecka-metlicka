@@ -16,7 +16,7 @@ const EventDetailPage: React.FC<EventDetailPageProps> = (props) => {
     return <Box sx={{
         display: "flex",
         flexDirection: "column",
-        height: "110vh",
+        minHeight: "100vh",
         bgcolor: 'background.default',
         backgroundImage: `url(${metlicka_background})`,
         overflow: "scroll",
