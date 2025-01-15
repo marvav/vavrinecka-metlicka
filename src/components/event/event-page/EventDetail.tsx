@@ -30,7 +30,7 @@ function EventDetail({
                 display: "flex",
                 flexDirection: "column",
                 gap: {xs: event_theme.spacing(3), sm: event_theme.spacing(4)},
-                padding: event_theme.spacing(6),
+                padding: {xs: event_theme.spacing(3), sm: event_theme.spacing(6)},
             }}>
                 <EventTitle title={title}/>
                 <EventFields date={date} time={time} place={place}/>

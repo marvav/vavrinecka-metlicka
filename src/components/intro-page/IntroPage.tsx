@@ -9,7 +9,7 @@ const IntroPage: React.FC = () => {
         backgroundImage: `url(${metlicka_background})`,
         backgroundSize: 'cover',
         bgcolor: 'background.default',
-        height: '100vh',
+        minHeight: '100vh',
     }}>
         <MainBar/>
         <IntroContents/>
