@@ -1,5 +1,5 @@
-import {Box, Dialog, DialogActions, DialogContent} from "@mui/material";
-import {EventButton} from "../buttons/EventButtons.tsx";
+import {Box, Button, Dialog} from "@mui/material";
+import CloseIcon from '@mui/icons-material/Close';
 
 interface StyledDialogProps {
     open: boolean
@@ -8,18 +8,29 @@ interface StyledDialogProps {
 }
 
 function StyledDialog({open, setOpen, content}: StyledDialogProps) {
-    const handleClose = () => {
-        setOpen(false);
-    };
-
-    return <Dialog open={open} onClose={handleClose}>
-        <Box sx={{border: "2px solid #00A000"}}>
-            <DialogContent>
-                {content}
-            </DialogContent>
-            <DialogActions>
-                <EventButton title="Zavřít" onClick={handleClose}/>
-            </DialogActions>
+    return <Dialog open={open} onClose={() => setOpen(false)}>
+        <Box style={{position: 'relative'}} sx={{position: 'relative', border: "1px solid #00A000"}}>
+            {content}
+            <Box
+                style={{
+                    position: 'absolute',
+                    top: 8,
+                    right: 8
+                }}
+            >
+                <Button style={{padding: "none"}} onClick={() => {
+                    setOpen(false)
+                }}>
+                    <CloseIcon style={{
+                        stroke: 'black',
+                        strokeWidth: 1.5,
+                        color: 'black',
+                        backgroundColor: 'white',
+                        opacity: '0.85',
+                        borderRadius: "0.25em"
+                    }}/>
+                </Button>
+            </Box>
         </Box>
     </Dialog>
 }
