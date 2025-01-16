@@ -7,7 +7,6 @@ const IntroContents: React.FC = () => {
     return <Box sx={{
         display: "flex",
         flexDirection: 'column',
-        paddingTop: "3em",
         textShadow: `
           -1px -1px 0 #000,  
           1px -1px 0 #000,
@@ -18,7 +17,6 @@ const IntroContents: React.FC = () => {
         alignItems: "center",
         textAlign: "center"
     }}>
-        <h1>Vavřinecká Metlička</h1>
         <Typography>
             Metlička dělá věci..
         </Typography>

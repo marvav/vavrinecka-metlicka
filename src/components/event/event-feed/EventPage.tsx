@@ -21,11 +21,7 @@ const EventPage: React.FC<EventPageProps> = (props) => {
     const relevantEvents = predefinedEvents.filter(event => event.date >= new Date());
     const oldEvents = predefinedEvents.filter(event => event.date < new Date());
 
-    return <Box sx={{
-        bgcolor: 'background.default',
-        overflow: "scroll",
-        height: '100vh',
-    }}>
+    return <Box>
         <MainBar/>
         <Box sx={{
             display: "flex",
@@ -34,24 +30,17 @@ const EventPage: React.FC<EventPageProps> = (props) => {
                 xs: "0em"
             },
             height: '100%',
-            backgroundImage: `url(${metlicka_background})`,
         }}>
             {isMobile ? <div/> : <SideGraphic/>}
             <Box sx={{display: "flex", flexDirection: "column", alignItems: "center"}}>
-                <Typography sx={{
-                    fontWeight: "bold",
-                    fontSize: 36,
-                    paddingTop: "2em",
-                    paddingBottom: "0.5em"
-                }}>{props.title}</Typography>
                 <EventFeed events={relevantEvents}/>
-                <Box sx={{marginTop: "15px", display: "flex", justifyContent: "right", width: "100%"}}>
+                <Box sx={{marginTop: "15px", display: "flex", justifyContent: "right", width: "100%", paddingRight: "2em"}}>
                     <EventButton onClick={() => setShowPastEvents(!showPastEvents)} title={
                         showPastEvents ? "Skrýt minulé akce" : "Zobrazit minulé akce"
                     }/>
                 </Box>
                 {showPastEvents && <EventFeed events={oldEvents}></EventFeed>}
-                <Box sx={{flexGrow: 1}}/>
+                <Box sx={{flexGrow: 1, paddingTop: "2em"}}/>
                 <FootNote/>
             </Box>
             {isMobile ? <div/> : <SideGraphic/>}

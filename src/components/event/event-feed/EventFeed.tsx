@@ -10,11 +10,7 @@ interface FeedProps {
 const EventFeed: React.FC<FeedProps> = ({events}) => {
     return <Box sx={{
         display: "flex",
-        flexDirection: {
-            xs: "column",
-            md: "column"
-        },
-        paddingTop: "2em",
+        flexDirection: "column",
     }}>
         <Box sx={{
             display: "flex",
@@ -24,10 +20,6 @@ const EventFeed: React.FC<FeedProps> = ({events}) => {
                 lg: "row"
             },
             gap: "3em",
-            padding: {
-                xs: "0em",
-                sm: "0em",
-            },
             paddingBottom: "1em",
         }}>
             {events.map((article) => (

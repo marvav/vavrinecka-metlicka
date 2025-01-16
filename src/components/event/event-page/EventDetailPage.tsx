@@ -17,12 +17,8 @@ const EventDetailPage: React.FC<EventDetailPageProps> = (props) => {
         display: "flex",
         flexDirection: "column",
         minHeight: "100vh",
-        bgcolor: 'background.default',
-        backgroundImage: `url(${metlicka_background})`,
-        overflow: "scroll",
         alignItems: "center",
-        width: "100%",
-        paddingBottom: "2em"
+        width: "100%"
     }}>
         <MainBar/>
         <Box sx={{paddingLeft: "1.5em", paddingTop: "5.25em", width: "100%"}}>
