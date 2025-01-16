@@ -1,4 +1,4 @@
-import {Typography} from "@mui/material";
+import {Box} from "@mui/material";
 import StyledDialog from "./StyledDialog.tsx";
 
 function TicketDialog(message: string | undefined, open: boolean, setOpen: Function) {
@@ -6,9 +6,10 @@ function TicketDialog(message: string | undefined, open: boolean, setOpen: Funct
         setOpen(false);
     };
 
-    const content = <Typography variant="h6">
+    const content = <Box sx={{display: "flex", flexDirection: "column", paddingBottom: "1em", textAlign: "center"}}>
+        <h3>Vstupenky</h3>
         {message}
-    </Typography>
+    </Box>
 
     return <StyledDialog open={open} setOpen={handleClose} content={content}/>
 }

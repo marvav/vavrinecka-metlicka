@@ -28,7 +28,7 @@ export const predefinedEvents: EventData[] = [
             "Vstup na Rozhlednu Podvrší a do Domu přírody Moravského krasu je pro účastníky pochodu zdarma.\n"
             ,"Startovné je 50 Kč (Registrace předem není třeba, vše řešíme na místě).\n"
             ,"Každý účastník obdrží na startu mapu všech tras.\n"
-            ,"Na startu jsou pro účastníky k dispozici 2 bezplatná parkoviště.\n"],
+            ,"Na startu budou pro účastníky k dispozici 2 bezplatná parkoviště.\n"],
         ticket_link: undefined,
         banner: pochod2025banner as string,
         photos_url: undefined,
@@ -40,7 +40,7 @@ export const predefinedEvents: EventData[] = [
         ]),
         pictures: [{name: "Plakát", url: pochod2025 as string},
             {name: "Parkování", url: pochod2025parking as string}],
-        eventLinks: [{name: "Facebooková událost", url: "https://fb.me/e/6qiAy00Va"}, {
+        eventLinks: [{name: "Facebook", url: "https://fb.me/e/6qiAy00Va"}, {
             name: "Kudyznudy",
             url: "https://www.kudyznudy.cz/akce/vavrinecky-pochod-moravskym-krasem"
         }],
