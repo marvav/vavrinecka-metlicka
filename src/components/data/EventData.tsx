@@ -7,12 +7,12 @@ export interface EventData {
     date: Date
     time: string | undefined
     place: LinkData
-    content: string
+    content: string[]
     photos_url: string | undefined
     ticket_link : string | undefined
     banner: string | undefined
     tracks: Map<number, string> | undefined
-    additionalPictures: LinkData[]
+    pictures: LinkData[]
     eventLinks: LinkData[]
     affiliates: AffiliateData[]
 }

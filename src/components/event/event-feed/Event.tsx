@@ -55,7 +55,7 @@ function Event({date, title, place, time, url_fragment, banner}: EventData) {
                     paddingBottom: {sm: "1.5em", xs: "1.5em"}
                 }}>
                     <FieldEntry name={"Datum"} value={date.toLocaleDateString('cs-CZ')} defaultValue={"Neoznámeno"}/>
-                    <FieldEntry name={"Čas"} value={time} defaultValue={"Uveden na plakátu"}/>
+                    {time && <FieldEntry name={"Čas"} value={time} defaultValue={"Uveden na plakátu"}/>}
                     <FieldEntry name={"Místo"} value={place.name} defaultValue={"Neoznámeno"}/>
                 </Box>
             </Box>

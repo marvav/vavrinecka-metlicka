@@ -27,7 +27,7 @@ function EventFields({date, time, place}: EventFieldsProps) {
         columns: 2,
     }}>
         <FieldEntry name={"Datum"} value={date.toLocaleDateString('cs-CZ')} defaultValue={"Neoznámeno"}/>
-        <FieldEntry name={"Čas"} value={time} defaultValue={"Uveden na plakátu"}/>
+        {time && <FieldEntry name={"Čas"} value={time} defaultValue={"Uveden na plakátu"}/>}
         <FieldEntry name={"Místo"} value={placeElement} defaultValue={"Neoznámeno"}/>
     </Box>
 }
