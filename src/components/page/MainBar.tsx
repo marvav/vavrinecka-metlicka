@@ -27,10 +27,6 @@ const MainBar: React.FC = () => {
         {name: "Akce", action: () => navigate("/akce")},
         {name: "O Metličce", action: () => navigate("/uvod")},
         {name: "Kontakty", action: () => navigate("/kontakty")},
-        {
-            name: "Facebook",
-            action: () => window.open("https://www.facebook.com/profile.php?id=61554262512667", '_blank')
-        },
     ];
 
     const menu = isMobile

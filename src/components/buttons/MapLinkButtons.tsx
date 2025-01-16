@@ -8,7 +8,7 @@ interface MapLinkButtonProps {
 
 export function MapLinkButton({image, onClick} : MapLinkButtonProps){
     return <MapLinkStyledButton onClick={onClick}>
-        <img src={image} loading="lazy" height={'auto'} width={'100%'} alt={"mapy.cz"}/>
+        <img src={image} loading="eager" width={'100%'} alt={"mapy.cz"}/>
     </MapLinkStyledButton>
 }
 
