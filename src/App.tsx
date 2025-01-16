@@ -5,6 +5,7 @@ import IntroPage from "./components/intro-page/IntroPage.tsx";
 import page_common_theme from "./themes/page_common_theme.ts";
 import {predefinedEvents} from "./components/data/EventProvider.tsx";
 import EventDetailPage from "./components/event/event-page/EventDetailPage.tsx";
+import StyledPage from "./components/page/StyledPage.tsx";
 
 function App() {
     return <ThemeProvider theme={page_common_theme}>
@@ -12,8 +13,8 @@ function App() {
         <Router>
             <Routes>
                 <Route path="/" element={<Navigate to="/akce" replace />} />
-                <Route path="/uvod" element={<IntroPage/>} />
-                <Route path="/akce" element={<EventPage includePast={false} title={"Akce"}/>} />
+                <Route path="/uvod" element={getIntroPage()} />
+                <Route path="/akce" element={getEventPage()}/>
                 {getEventRoutes()}
             </Routes>
         </Router>
@@ -23,8 +24,16 @@ function App() {
 function getEventRoutes(){
     return predefinedEvents.map(event => <Route
         path={"/akce/"+event.url_fragment}
-        element={<EventDetailPage event={event}/>}/>
+        element={<StyledPage content={<EventDetailPage event={event}/>}/>}/>
     )
+}
+
+function getIntroPage(){
+    return <StyledPage content={<IntroPage/>}/>
+}
+
+function getEventPage(){
+    return <StyledPage content={<EventPage includePast={false} title={"Akce"}/>}/>
 }
 
 export default App
