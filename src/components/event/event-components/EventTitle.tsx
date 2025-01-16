@@ -8,7 +8,7 @@ interface EventTitleProps {
 
 function EventTitle({title}: EventTitleProps) {
     const isMobile = useMediaQuery(event_theme.breakpoints.down('sm'));
-    const variant = isMobile ? "h5" : "h3";
+    const variant = isMobile ? "h5" : "h4";
     return <Typography variant={variant}
                        sx={{
                            paddingTop: event_theme.spacing(1),

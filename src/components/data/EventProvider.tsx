@@ -11,6 +11,7 @@ import beh2024banner from "../../assets/banners/beh2024banner.jpg"
 import pochod2024banner from "../../assets/banners/pochod2024banner.jpg"
 
 import rockovyvecer2025parkovani from "../../assets/parking/rockovyvecer2025parking.png"
+import pochod2025parking from "../../assets/parking/pochod2025_parking.png"
 
 import {parkVavrinec, zdarKulturak} from "./PlaceProvider.tsx";
 import {kudyznudy} from "./AffiliateProvider.tsx";
@@ -35,7 +36,8 @@ export const predefinedEvents: EventData[] = [
             [32.5, "https://mapy.cz/s/rasadotoda"],
             [50, "https://mapy.cz/s/gakorekape"]
         ]),
-        additionalPictures: [{name: "Plakát", url: pochod2025 as string}],
+        additionalPictures: [{name: "Plakát", url: pochod2025 as string},
+            {name: "Parkování", url: pochod2025parking as string}],
         eventLinks: [{name: "Facebook", url: "https://fb.me/e/6qiAy00Va"}, {
             name: "Kudyznudy",
             url: "https://www.kudyznudy.cz/akce/vavrinecky-pochod-moravskym-krasem"
