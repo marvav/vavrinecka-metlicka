@@ -1,4 +1,4 @@
-import {Box, Breadcrumbs, Button, ImageListItem, ThemeProvider, useMediaQuery} from "@mui/material";
+import {Box, Button, ThemeProvider} from "@mui/material";
 import {EventData} from "../../data/EventData.tsx";
 import event_theme from "../event-components/event_theme.ts";
 import EventTitle from "../event-components/EventTitle.tsx";
@@ -52,10 +52,11 @@ function Event({date, title, place, time, url_fragment, banner}: EventData) {
                     display: {sm: "flex", xs: "grid"},
                     gap: {sm: "2em", xs: "0.5em"},
                     columns: 2,
-                    paddingBottom: {sm: "1.5em", xs: "1.5em"}
+                    paddingBottom: {sm: "1.5em", xs: "1.5em"},
+                    width: '100%',
                 }}>
                     <FieldEntry name={"Datum"} value={date.toLocaleDateString('cs-CZ')} defaultValue={"Neoznámeno"}/>
-                    {time && <FieldEntry name={"Čas"} value={time} defaultValue={"Uveden na plakátu"}/>}
+                    {<FieldEntry name={"Čas"} value={time} defaultValue={"Uveden na plakátu"}/>}
                     <FieldEntry name={"Místo"} value={place.name} defaultValue={"Neoznámeno"}/>
                 </Box>
             </Box>

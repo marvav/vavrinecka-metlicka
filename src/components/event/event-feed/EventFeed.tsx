@@ -9,8 +9,8 @@ interface FeedProps {
 
 const EventFeed: React.FC<FeedProps> = ({events}) => {
     return <Box sx={{
-        display: "flex",
         flexDirection: "column",
+        display: 'flex',
     }}>
         <Box sx={{
             display: "flex",
