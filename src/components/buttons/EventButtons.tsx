@@ -11,25 +11,28 @@ interface ImageButtonProps {
 }
 
 export function EventButton({title, onClick}: EventButtonProps) {
-    return <StyledButton sx={{width: "auto"}} onClick={onClick}>
+    return <StyledButton sx={{width: "auto", paddingLeft: "1em", paddingRight: "1em"}} onClick={onClick}>
         {title}
     </StyledButton>
 }
 
 export function EventImageButton({title, image, onClick}: EventButtonProps & ImageButtonProps) {
     return <StyledButton sx={{width: "auto", bgcolor: "white"}} onClick={onClick}>
-        <img src={image} loading="lazy" height={'auto'} width={'100%'} alt={title}/>
+        <img src={image} loading="eager" height={'auto'} width={'100%'} alt={title}/>
     </StyledButton>
 }
 
 const StyledButton = styled(Button)(() => ({
-    backgroundColor: "#181a1b",
-    color: "#eee",
+    backgroundColor: "#333333",
+    color: "#ffffff",
     textTransform: "none",    // Disable uppercase text
-    boxShadow: "2px 2px 4px rgba(0, 0, 0, 0.2)", // Subtle shadow
+    fontWeight: "bold",
+    fontSize: "1em",
+    background: 'linear-gradient(to right, #181a1b, #142d12)',
+    boxShadow: "4px 4px 8px rgba(0, 0, 0, 0.3)",
     transition: "all 0.3s ease-in",
     "&:hover": {
-        backgroundColor: "#2c2e29", // Light grey on hover
+        backgroundColor: "#233e29", // Light grey on hover
         boxShadow: "4px 4px 8px rgba(0, 0, 0, 0.3)", // Stronger shadow
     },
 }));
