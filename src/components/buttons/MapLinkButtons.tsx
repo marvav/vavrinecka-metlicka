@@ -20,7 +20,6 @@ const MapLinkStyledButton = styled(Button)(() => ({
     boxShadow: "2px 2px 4px rgba(0, 0, 0, 0.2)",
     transition: "all 0.3s ease-out",
     "&:hover": {
-        backgroundColor: "#06a927",
         boxShadow: "4px 4px 8px rgba(0, 0, 0, 0.3)",
         filter: "brightness(70%)"
     },

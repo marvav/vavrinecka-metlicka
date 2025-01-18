@@ -22,7 +22,7 @@ function EventDetail({
             display: "flex",
             flexDirection: "column",
             borderRadius: "0.75em",
-            width: {xl: "50%", lg: "60%", md: "85%", sm: "95%", xs: "95%"},
+            width: {xl: "55%", lg: "65%", md: "85%", sm: "95%", xs: "95%"},
             boxShadow: '0 0 1px #000000, 0 0 1px #000000, 0 0 20px #000000, 0 0 50px #000000',
         }}>
             <Box component="img"

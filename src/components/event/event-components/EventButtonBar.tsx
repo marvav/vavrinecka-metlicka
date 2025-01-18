@@ -2,7 +2,7 @@ import {Box} from "@mui/material";
 import {useState} from "react";
 import ImageDialog from "../../misc/ImageDialog.tsx";
 import TicketDialog from "../../misc/TicketDialog.tsx";
-import {EventButton} from "../../buttons/EventButtons.tsx";
+import {ButtonStyle1} from "../../buttons/StyledButtons.tsx";
 import {LinkData} from "../../data/LinkData.tsx";
 
 interface EventButtonBarProps {
@@ -30,17 +30,17 @@ function EventButtonBar({pictures, photos_url, ticket_url, areTicketsAvailable}:
 function getButton(picture: LinkData) {
     const [pictureDialogOpen, setPictureDialogOpen] = useState(false);
     return <>
-        <EventButton title={picture.name} onClick={() => {setPictureDialogOpen(true)}}/>
+        <ButtonStyle1 title={picture.name} onClick={() => {setPictureDialogOpen(true)}}/>
         {ImageDialog(picture.url, pictureDialogOpen, setPictureDialogOpen)}
     </>;
 }
 
 function getPhotosButton(photos_url: string | undefined) {
-    return <EventButton title={"Fotky"} onClick={() => window.open(photos_url ?? "", '_blank')}/>;
+    return <ButtonStyle1 title={"Fotky"} onClick={() => window.open(photos_url ?? "", '_blank')}/>;
 }
 
 function getTicketsButton(ticket_url: string, setTicketDialogOpen: (value: (((prevState: boolean) => boolean) | boolean)) => void) {
-    return <EventButton onClick={
+    return <ButtonStyle1 onClick={
         ticket_url
             ? () => window.open(ticket_url, "_blank")
             : () => {

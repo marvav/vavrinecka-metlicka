@@ -1,6 +1,6 @@
 import {Box} from "@mui/material";
 import Typography from "@mui/material/Typography";
-import {EventButton} from "../buttons/EventButtons.tsx";
+import {ButtonStyle1} from "../buttons/StyledButtons.tsx";
 
 export interface LinkBarProps {
     title: string
@@ -29,7 +29,7 @@ function TrackLinkBar({title, linkMap}: LinkBarProps) {
         <Box sx={{display: "flex", gap: "0.5em"}}>
             {Array.from(linkMap.entries())
                 .map(([key, value]) => (
-                    <EventButton onClick={() => window.open(value ?? "", '_blank')} title={"" + key + "km"}/>
+                    <ButtonStyle1 onClick={() => window.open(value ?? "", '_blank')} title={"" + key + "km"}/>
                 ))}
         </Box>
     </Box>

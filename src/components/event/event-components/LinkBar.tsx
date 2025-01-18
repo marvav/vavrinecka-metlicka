@@ -1,5 +1,5 @@
 import {Box} from "@mui/material";
-import {EventButton} from "../../buttons/EventButtons.tsx";
+import {ButtonStyle1} from "../../buttons/StyledButtons.tsx";
 import {LinkData} from "../../data/LinkData.tsx";
 import Typography from "@mui/material/Typography";
 
@@ -30,7 +30,7 @@ function LinkBar({title, links}: LinkBarProps) {
 }
 
 function getLinkButton(link: LinkData) {
-    return <EventButton title={link.name} onClick={() => window.open(link.url, '_blank')}/>;
+    return <ButtonStyle1 title={link.name} onClick={() => window.open(link.url, '_blank')}/>;
 }
 
 export default LinkBar;

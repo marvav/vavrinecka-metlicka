@@ -1,7 +1,5 @@
 import React from "react";
-import {Box, Breadcrumbs, Button, Link} from "@mui/material";
-import MainBar from "../../page/MainBar.tsx";
-import metlicka_background from "../../../assets/images/metlicka_background.png";
+import {Box, Breadcrumbs, Link} from "@mui/material";
 import {EventData} from "../../data/EventData.tsx";
 import EventDetail from "./EventDetail.tsx";
 import Typography from "@mui/material/Typography";
@@ -18,9 +16,9 @@ const EventDetailPage: React.FC<EventDetailPageProps> = (props) => {
         flexDirection: "column",
         minHeight: "100vh",
         alignItems: "center",
-        width: "100%"
+        width: "100%",
+        paddingBottom: "4em"
     }}>
-        <MainBar/>
         <Box sx={{paddingLeft: "1.5em", paddingTop: "5.25em", width: "100%"}}>
             <Breadcrumbs>
                 <Link underline="hover" color="inherit" onClick={() => navigate("/akce")}>
@@ -31,7 +29,7 @@ const EventDetailPage: React.FC<EventDetailPageProps> = (props) => {
                 </Typography>
             </Breadcrumbs>
         </Box>
-        <Box sx={{display: "flex", paddingTop: "1em", justifyContent: "center", alignItems: "center", width: "100%"}}>
+        <Box sx={{display: "flex", paddingTop: "2em", justifyContent: "center", alignItems: "center", width: "100%"}}>
             <EventDetail {...props.event}/>
         </Box>
     </Box>
