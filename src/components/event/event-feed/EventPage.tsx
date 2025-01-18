@@ -32,7 +32,8 @@ const EventPage: React.FC<EventPageProps> = (props) => {
             md: "9em",
             lg: "15em"
         },
-        gap: "1em"
+        gap: "1em",
+        paddingBottom: "1em"
     }}>
         <Box sx={{display: "flex", justifyContent: "right", width: "100%"}}>
             <ButtonStyle1 onClick={() => setShowPastEvents(!showPastEvents)} title={

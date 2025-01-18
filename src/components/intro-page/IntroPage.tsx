@@ -15,7 +15,8 @@ const IntroPage: React.FC = () => {
         `,
         justifyContent: "center",
         alignItems: "center",
-        textAlign: "center"
+        textAlign: "center",
+        paddingBottom: "1em"
     }}>
         <Typography>
             Metlička dělá věci..
