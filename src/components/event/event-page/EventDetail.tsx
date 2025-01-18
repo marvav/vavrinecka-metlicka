@@ -7,14 +7,13 @@ import TrackLinkBar from "../../misc/TrackLinkBar.tsx";
 import EventButtonBar from "../event-components/EventButtonBar.tsx";
 import EventAffiliateBar from "../event-components/EventAffiliateBar.tsx";
 import LinkBar from "../event-components/LinkBar.tsx";
-import {TextFormat} from "@mui/icons-material";
 import Typography from "@mui/material/Typography";
 
 export default EventDetail;
 
 function EventDetail({
-                         content, date, title, place, ticket_link, pictures,
-                         time, photos_url, tracks, affiliates, eventLinks, banner
+                         content, date, title, place, links, pictures,
+                         time, tracks, affiliates, eventLinks, banner
                      }: EventData) {
     const areTicketsBeingSold = date >= new Date() && tracks === undefined;
     return <ThemeProvider theme={event_theme}>
@@ -47,8 +46,7 @@ function EventDetail({
                         ? content.map(text => <Typography>{text}</Typography>)
                         : "Bude upřesněno"}
                 </Box>
-                <EventButtonBar pictures={pictures} photos_url={photos_url} ticket_url={ticket_link}
-                                areTicketsAvailable={areTicketsBeingSold}/>
+                <EventButtonBar pictures={pictures} links={links} areTicketsAvailable={areTicketsBeingSold}/>
                 {eventLinks.length > 0 && <LinkBar title={"Akci najdete také na"} links={eventLinks}></LinkBar>}
                 {affiliates.length > 0 && <EventAffiliateBar affiliates={affiliates}/>}
             </Box>

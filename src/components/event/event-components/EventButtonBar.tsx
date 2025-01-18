@@ -7,27 +7,25 @@ import {LinkData} from "../../data/LinkData.tsx";
 
 interface EventButtonBarProps {
     pictures: LinkData[];
-    photos_url: string | undefined;
-    ticket_url: string | undefined;
+    links: LinkData[];
     areTicketsAvailable: boolean;
 }
 
-function EventButtonBar({pictures, photos_url, ticket_url, areTicketsAvailable}: EventButtonBarProps) {
+function EventButtonBar({pictures, links, areTicketsAvailable}: EventButtonBarProps) {
     const [ticketDialogOpen, setTicketDialogOpen] = useState(false);
     const ticketMessage = "Vstupenky bude možné zakoupit na místě nebo skrze náš mail vavrinecka-metlicka@seznam.cz"
 
-    const photosButton = getPhotosButton(photos_url);
-    const ticketsButton = getTicketsButton(ticket_url ?? "", setTicketDialogOpen);
+    const ticketsButton = getTicketsButton("", setTicketDialogOpen);
 
     return <Box sx={{display: "flex", gap: "1em"}}>
-        {pictures.map(picture => getButton(picture))}
-        {photos_url && photosButton}
+        {pictures.map(picture => getPictureButton(picture))}
+        {links.map(link => getLinkButton(link))}
         {areTicketsAvailable && ticketsButton}
         {TicketDialog(ticketMessage, ticketDialogOpen, setTicketDialogOpen)}
     </Box>
 }
 
-function getButton(picture: LinkData) {
+function getPictureButton(picture: LinkData) {
     const [pictureDialogOpen, setPictureDialogOpen] = useState(false);
     return <>
         <ButtonStyle1 title={picture.name} onClick={() => {setPictureDialogOpen(true)}}/>
@@ -35,8 +33,8 @@ function getButton(picture: LinkData) {
     </>;
 }
 
-function getPhotosButton(photos_url: string | undefined) {
-    return <ButtonStyle1 title={"Fotky"} onClick={() => window.open(photos_url ?? "", '_blank')}/>;
+function getLinkButton(link: LinkData) {
+    return <ButtonStyle1 title={link.name} onClick={() => window.open(link.url, '_blank')}/>;
 }
 
 function getTicketsButton(ticket_url: string, setTicketDialogOpen: (value: (((prevState: boolean) => boolean) | boolean)) => void) {

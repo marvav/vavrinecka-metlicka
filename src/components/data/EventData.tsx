@@ -7,10 +7,9 @@ export interface EventData {
     date: Date
     place: LinkData
     content: string[]
-    photos_url: string | undefined
-    ticket_link : string | undefined
     banner: string | undefined
     tracks: Map<number, string> | undefined
+    links: LinkData[]
     pictures: LinkData[]
     eventLinks: LinkData[]
     affiliates: AffiliateData[]
