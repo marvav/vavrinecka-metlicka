@@ -23,6 +23,7 @@ const StyledPage: React.FC<StyledPageProps> = (props) => {
             fontWeight: "bold",
             fontSize: 36,
             paddingTop: {sm: "3em", xs: "2em"},
+            textShadow: '0 0 5px #000000, 0 0 1px #000000, 0 0 20px #000000, 0 0 50px #000000',
         }}>{props.title}</Typography>}
         {props.content}
     </Box>

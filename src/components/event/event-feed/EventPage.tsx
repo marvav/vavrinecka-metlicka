@@ -30,7 +30,7 @@ const EventPage: React.FC = () => {
         },
         gap: "1em",
         paddingBottom: "1em",
-        height: "100%"
+        flexGrow: "2"
     }}>
         <Box sx={{display: "flex", justifyContent: "right", width: "100%"}}>
             <ButtonStyle1 onClick={() => setShowPastEvents(!showPastEvents)} title={
