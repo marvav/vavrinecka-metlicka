@@ -5,7 +5,6 @@ export interface EventData {
     title: string
     url_fragment: string
     date: Date
-    time: string | undefined
     place: LinkData
     content: string[]
     photos_url: string | undefined

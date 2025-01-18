@@ -21,7 +21,6 @@ export const predefinedEvents: EventData[] = [
         title: "Vavřinecký pochod Moravským krasem 2025",
         url_fragment: "vavrinecky-pochod-moravskym-krasem-2025",
         date: new Date(2025, 0, 25, 0, 0 , 0),
-        time: undefined,
         place: parkVavrinec,
         content: ["2. ročník úspěšné turistické akce v srdci Moravského krasu. Letos jsme si pro vás připravili trasy různých délek od 6 do 50 km, na kterých navštívíte známou propast Macocha, Dům přírody Moravského krasu, Rozhlednu Podvrší, Skalní Mlýn a další zajímavá místa této unikátní krajiny.\n"
             ,"V cíli se můžete těšit na občerstvení, vystoupení kapely ZVUKOVÁ KULISA a chybět nebude ani diplom pro každého, kdo některou z tras zdárně zdolá!\n",
@@ -52,7 +51,6 @@ export const predefinedEvents: EventData[] = [
         url_fragment: "rockovy-vecer-2025",
         date: new Date(2025, 0, 17, 18, 0, 0),
         place: zdarKulturak,
-        time: "18:00",
         content: ["Zveme vás na Rockový večer 🤟 s kapelou Kapriola, Aleš Brichta Project a Judas Priest Revival (Praha)."
             , "Otevření KD: 17:00 - VSTUPNÉ: 599 Kč v předprodeji, 650 Kč na místě\n", "LINE-UP 🎸🔥\n"
         ,"Kapriola | 18:00 - 19:00\n"
@@ -76,7 +74,6 @@ export const predefinedEvents: EventData[] = [
         title: "Vavřinecký běh Moravským krasem 2024",
         url_fragment: "vavrinecky-beh-moravskym-krasem-2024",
         date: new Date(2024, 7, 24, 0, 0, 0),
-        time: undefined,
         place: parkVavrinec,
         content: ["Vavřinecká Metlička pod záštitou SDH Vavřinec Vás zve na 1. ročník závodu VAVŘINECKÝ BĚH MORAVSKÝM KRASEM.\n" +
             "Závod bude probíhat za každého počasí. Start bude v areálu fotbalového hřiště ve Vavřinci, kde budou k dispozici i šatny a sprchy."],
@@ -93,7 +90,6 @@ export const predefinedEvents: EventData[] = [
         title: "Vavřinecký pochod Moravským krasem 2024",
         url_fragment: "vavrinecky-pochod-moravskym-krasem-2024",
         date: new Date(2024, 0, 20, 0, 0, 0),
-        time: undefined,
         place: parkVavrinec,
         content: [],
         ticket_link: undefined,
@@ -113,8 +109,7 @@ export const predefinedEvents: EventData[] = [
 const metalpodplechem = {
     title: "Metal pod Plechem 2024",
     url_fragment: "metal-pod-plechem-2024",
-    date: new Date(2024, 3, 20, 0, 0, 0),
-    time: "16:00",
+    date: new Date(2024, 3, 20, 16, 0, 0),
     place: parkVavrinec,
     content: "2. ročník hudební akce METAL POD PLECHEM 🤟, který se koná v sobotu 20.4.2024 v areálu parku Vavřinec. Začátek v 16:00, areál bude otevřen od 15:00, předpokládaný konec v 1:00. KAPELY & LINE-UP:\n" +
         "• Kozí čtvrť (Drnovice u Lysic) 16:00 - 17:00,\n" +

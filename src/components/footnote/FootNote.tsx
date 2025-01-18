@@ -5,8 +5,8 @@ const Footer: React.FC = () => {
     return <Box
         sx={{
             display: "flex",
-            flexDirection: {md: "column", lg: "row"},
-            gap: {md: "0.5em", lg: "2em"},
+            flexDirection: {xs: "column", sm: "column",md: "column", lg: "row"},
+            gap: {xs: "0.5em", sm: "0.5em", md: "0.5em", lg: "2em"},
             justifyContent: "center",
             alignItems: "center",
             width: "100%",
