@@ -7,7 +7,7 @@ interface MainBarElementProps {
 }
 
 function MainBarElement({title, onClick}: MainBarElementProps) {
-    return <Button onClick={onClick}>
+    return <Button sx={{}} onClick={onClick}>
         {title}
     </Button>
 };

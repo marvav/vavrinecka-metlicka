@@ -21,12 +21,13 @@ export interface MainBarElementType {
 const MainBar: React.FC = () => {
     const isMobile = useMediaQuery(event_theme.breakpoints.down('sm'));
     const navigate = useNavigate();
+
     const theme = isMobile ? mobileTheme : desktopTheme;
 
     const mainBarContent: MainBarElementType[] = [
+        {name: "Úvod", action: () => navigate("/uvod")},
         {name: "Akce", action: () => navigate("/akce")},
-        {name: "O Metličce", action: () => navigate("/uvod")},
-        {name: "Kontakty", action: () => navigate("/kontakty")},
+        {name: "O nás", action: () => navigate("/metlicka")},
     ];
 
     const menu = isMobile
@@ -83,7 +84,10 @@ function MobileMainBarMenu({elements}: MainBarMenuProps) {
             onClose={() => setAnchorElement(null)}
         >
             {elements.map((element) =>
-                getMenuItem(element.name, element.action))}
+                getMenuItem(element.name, () => {
+                    setAnchorElement(null);
+                    element.action(undefined); //Should be reworked later
+                }))}
         </Menu>
     </Box>;
 }

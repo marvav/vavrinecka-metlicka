@@ -1,5 +1,5 @@
 import React from "react";
-import {Box} from "@mui/material";
+import {Box, Link, Typography} from "@mui/material";
 import facebook_logo from "../../assets/images/facebook_logo.png";
 import Button from "@mui/material/Button";
 
@@ -10,9 +10,23 @@ const ContactPage: React.FC = () => {
         alignItems: "center",
         textAlign: "center",
         width: {sm: "40%", xs: "80%"},
-        gap: "3em"
+        gap: "3em",
+        paddingTop: "3em",
     }}>
-        V případě dotazů pište na email vavrinecka-metlicka@seznam.cz, případně rovnou na naše Facebookové stránky.
+        Jsme parta přátel tvrdé hudby a pořádné turistiky.
+        <Typography variant="body1">
+            Kontaktovat nás můžete na emailu  {" "}
+            <Link
+                href="mailto:vavrinecka-metlicka@seznam.cz"
+                target="_blank"
+                sx={{
+                    color: "#61dafb",
+                    textDecoration: "None"
+                }}
+            >
+                vavrinecka-metlicka@seznam.cz
+            </Link>
+        </Typography>
         <Button sx={{
             borderTopLeftRadius: "0.75em",
             borderTopRightRadius: "0.75em",

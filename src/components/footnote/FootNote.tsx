@@ -16,6 +16,7 @@ const Footer: React.FC = () => {
             Email: {" "}
             <Link
                 href="mailto:vavrinecka-metlicka@seznam.cz"
+                target="_blank"
                 sx={{
                     color: "#61dafb",
                     textDecoration: "None"
@@ -25,7 +26,7 @@ const Footer: React.FC = () => {
             </Link>
         </Typography>
         <Typography variant="body1">
-            Sledujte nás na Facebooku: {" "}
+            Sledujte nás na {" "}
             <Link
                 href="https://www.facebook.com/people/Vav%C5%99ineck%C3%A1-Metli%C4%8Dka/61554262512667/"
                 target="_blank"
@@ -35,7 +36,7 @@ const Footer: React.FC = () => {
                     textDecoration: "None"
                 }}
             >
-                Facebook
+                Facebooku
             </Link>
         </Typography>
         <Typography variant="body1">

@@ -5,17 +5,13 @@ import {ButtonStyle1} from "../../buttons/StyledButtons.tsx";
 import FootNote from "../../footnote/FootNote.tsx";
 import Event from "./Event.tsx";
 
-interface EventPageProps {
-    includePast: boolean;
-    title: string
-}
-
-const EventPage: React.FC<EventPageProps> = (props) => {
+const EventPage: React.FC = () => {
     const [showPastEvents, setShowPastEvents] = useState(false);
-    const relevantEvents = predefinedEvents.filter(event => event.date >= new Date());
-    const displayedEvents = showPastEvents ? predefinedEvents : relevantEvents;
-    return <Box>
-    <Box sx={{
+    const displayedEvents = showPastEvents
+        ? predefinedEvents
+        : predefinedEvents.filter(event => event.date >= new Date());
+
+    return <Box sx={{
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
@@ -33,7 +29,8 @@ const EventPage: React.FC<EventPageProps> = (props) => {
             lg: "15em"
         },
         gap: "1em",
-        paddingBottom: "1em"
+        paddingBottom: "1em",
+        height: "100%"
     }}>
         <Box sx={{display: "flex", justifyContent: "right", width: "100%"}}>
             <ButtonStyle1 onClick={() => setShowPastEvents(!showPastEvents)} title={
@@ -62,7 +59,6 @@ const EventPage: React.FC<EventPageProps> = (props) => {
         <Box sx={{flexGrow: 2, paddingTop: "2em"}}/>
         <FootNote/>
     </Box>
-    </Box>;
 };
 
 export default EventPage;

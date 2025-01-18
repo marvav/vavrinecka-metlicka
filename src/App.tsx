@@ -16,7 +16,7 @@ function App() {
                 <Route path="/" element={<Navigate to="/akce" replace />} />
                 <Route path="/uvod" element={getIntroPage()} />
                 <Route path="/akce" element={getEventPage()}/>
-                <Route path="/kontakty" element={<StyledPage content={<ContactPage/>} title={"Kontakty"}/>}/>
+                <Route path="/metlicka" element={<StyledPage content={<ContactPage/>} title={"O nás"}/>}/>
                 {getEventRoutes()}
             </Routes>
         </Router>
@@ -35,7 +35,7 @@ function getIntroPage(){
 }
 
 function getEventPage(){
-    return <StyledPage content={<EventPage includePast={false} />} title={"Akce"}/>
+    return <StyledPage content={<EventPage/>} title={"Akce"}/>
 }
 
 export default App

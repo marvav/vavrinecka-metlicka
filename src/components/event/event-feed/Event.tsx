@@ -57,11 +57,11 @@ function Event({date, title, place, time, url_fragment, banner}: EventData) {
                     width: '100%',
                 }}>
                     <FieldEntry name={"Datum"} value={date.toLocaleDateString('cs-CZ')} defaultValue={"Neoznámeno"}/>
-                    {date.getHours() != 0 && <FieldEntry name={"Čas"} value={date.toLocaleTimeString().substring(0, 5)} defaultValue={"Uveden na plakátu"}/>}
+                    {date.getHours() != 0 && <FieldEntry name={"Čas"} value={date.toLocaleTimeString().substring(0, 5)}
+                                                         defaultValue={"Uveden na plakátu"}/>}
                     <FieldEntry name={"Místo"} value={place.name} defaultValue={"Neoznámeno"}/>
                 </Box>
             </Box>
         </Button>
     </ThemeProvider>
-        ;
 }
