@@ -15,9 +15,7 @@ const EventPage: React.FC<EventPageProps> = (props) => {
     const [showPastEvents, setShowPastEvents] = useState(false);
     const relevantEvents = predefinedEvents.filter(event => event.date >= new Date());
     const displayedEvents = showPastEvents ? predefinedEvents : relevantEvents;
-    return <Box>
-        <MainBar/>
-        <Box sx={{
+    return <Box sx={{
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
@@ -53,7 +51,6 @@ const EventPage: React.FC<EventPageProps> = (props) => {
             </Box>
             <Box sx={{flexGrow: 2, paddingTop: "2em"}}/>
             <FootNote/>
-        </Box>
     </Box>;
 };
 

@@ -2,6 +2,7 @@ import React from "react";
 import {Box} from "@mui/material";
 import metlicka_background from "../../assets/images/metlicka_background.png";
 import Typography from "@mui/material/Typography";
+import MainBar from "./MainBar.tsx";
 
 interface StyledPageProps {
     title: string | undefined;
@@ -15,14 +16,13 @@ const StyledPage: React.FC<StyledPageProps> = (props) => {
         minHeight: "100vh",
         bgcolor: 'background.default',
         backgroundImage: `url(${metlicka_background})`,
-        paddingBottom: "2em",
         alignItems: "center",
     }}>
+        <MainBar/>
         {props.title && <Typography sx={{
             fontWeight: "bold",
             fontSize: 36,
-            paddingTop: {sm: "3.5em", xs: "2em"},
-            paddingBottom: "0.5em"
+            paddingTop: {sm: "3em", xs: "2em"},
         }}>{props.title}</Typography>}
         {props.content}
     </Box>
