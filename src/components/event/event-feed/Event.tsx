@@ -14,7 +14,7 @@ function Event({date, title, place, time, url_fragment, banner}: EventData) {
             display: "flex",
             flexDirection: {xs: 'column'},
             textTransform: 'none',
-            bgcolor: 'background.default',
+            background: '#111711',
             borderRadius: "0.75em",
             borderWidth: '2px',
             borderColor: 'transparent',
@@ -22,6 +22,7 @@ function Event({date, title, place, time, url_fragment, banner}: EventData) {
             width: "100%",
             gap: {sm: "1em", xs: "0.5em"},
             justifyContent: "center",
+            boxShadow: '0 0 1px #000000, 0 0 1px #000000, 0 0 20px #000000, 0 0 50px #000000',
             '&:hover': {
                 borderColor: 'green',
                 borderWidth: '2px',

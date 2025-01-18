@@ -32,13 +32,14 @@ const EventPage: React.FC<EventPageProps> = (props) => {
             height: '100%',
         }}>
             {isMobile ? <div/> : <SideGraphic/>}
-            <Box sx={{display: "flex", flexDirection: "column", alignItems: "center"}}>
-                <EventFeed events={[predefinedEvents[0], predefinedEvents[1]]}/>
-                <Box sx={{display: "none", marginTop: "15px", justifyContent: "right", width: "50%", paddingRight: "2em"}}>
+            <Box sx={{display: "flex", flexDirection: "column", alignItems: "center", maxWidth: "80%"}}>
+                <EventFeed events={relevantEvents}/>
+                <Box sx={{marginTop: "15px", justifyContent: "right", width: "50%", paddingRight: "2em"}}>
                     <EventButton onClick={() => setShowPastEvents(!showPastEvents)} title={
                         showPastEvents ? "Skrýt minulé akce" : "Zobrazit minulé akce"
                     }/>
                 </Box>
+                {showPastEvents && <EventFeed events={oldEvents}></EventFeed>}
                 <Box sx={{flexGrow: 1, paddingTop: "2em"}}/>
                 <FootNote/>
             </Box>
@@ -46,7 +47,5 @@ const EventPage: React.FC<EventPageProps> = (props) => {
         </Box>
     </Box>;
 };
-
-//{showPastEvents && <EventFeed events={oldEvents}></EventFeed>}
 
 export default EventPage;

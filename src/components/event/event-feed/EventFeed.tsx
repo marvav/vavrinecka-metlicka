@@ -9,23 +9,18 @@ interface FeedProps {
 
 const EventFeed: React.FC<FeedProps> = ({events}) => {
     return <Box sx={{
-        flexDirection: "column",
-        display: 'flex',
+        display: "flex",
+        flexDirection: {
+            xs: "column",
+            md: "column",
+            lg: "row"
+        },
+        gap: "3em",
+        paddingBottom: "1em",
     }}>
-        <Box sx={{
-            display: "flex",
-            flexDirection: {
-                xs: "column",
-                md: "column",
-                lg: "row"
-            },
-            gap: "3em",
-            paddingBottom: "1em",
-        }}>
-            {events.map((article) => (
-                <Event {...article}/>
-            ))}
-        </Box>
+        {events.map((article) => (
+            <Event {...article}/>
+        ))}
     </Box>;
 };
 

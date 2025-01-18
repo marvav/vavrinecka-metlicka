@@ -1,5 +1,6 @@
 import {MouseEventHandler} from "react";
 import {Button, styled} from "@mui/material";
+import Typography from "@mui/material/Typography";
 
 interface EventButtonProps {
     title: string;
@@ -12,27 +13,40 @@ interface ImageButtonProps {
 
 export function EventButton({title, onClick}: EventButtonProps) {
     return <StyledButton sx={{width: "auto", paddingLeft: "1em", paddingRight: "1em"}} onClick={onClick}>
-        {title}
+        <Typography sx={{ fontSize: "1em",}}>
+            {title}
+        </Typography>
     </StyledButton>
 }
 
-export function EventImageButton({title, image, onClick}: EventButtonProps & ImageButtonProps) {
-    return <StyledButton sx={{width: "auto", bgcolor: "white"}} onClick={onClick}>
+export function ImageButton({title, image, onClick}: EventButtonProps & ImageButtonProps) {
+    return <BlankButton sx={{width: "auto", bgcolor: "white"}} onClick={onClick}>
         <img src={image} loading="eager" height={'auto'} width={'100%'} alt={title}/>
-    </StyledButton>
+    </BlankButton>
 }
 
-const StyledButton = styled(Button)(() => ({
+const BlankButton = styled(Button)(() => ({
     backgroundColor: "#333333",
     color: "#ffffff",
     textTransform: "none",    // Disable uppercase text
+    transition: "all 0.3s ease-in",
+    '&:hover': {
+        borderColor: 'green',
+        borderWidth: '2px',
+    },
+}));
+
+const StyledButton = styled(Button)(() => ({
+    textTransform: "none",    // Disable uppercase text
     fontWeight: "bold",
     fontSize: "1em",
-    background: 'linear-gradient(to right, #181a1b, #142d12)',
+    background: 'linear-gradient(to right, #1d2922, #142d12)',
     boxShadow: "4px 4px 8px rgba(0, 0, 0, 0.3)",
     transition: "all 0.3s ease-in",
-    "&:hover": {
-        backgroundColor: "#233e29", // Light grey on hover
-        boxShadow: "4px 4px 8px rgba(0, 0, 0, 0.3)", // Stronger shadow
+    borderWidth: '2px',
+    borderColor: 'transparent',
+    '&:hover': {
+        borderColor: 'green',
+        borderWidth: '2px',
     },
 }));
