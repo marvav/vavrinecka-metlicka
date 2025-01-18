@@ -39,7 +39,7 @@ const Footer: React.FC = () => {
             </Link>
         </Typography>
         <Typography variant="body1">
-            Autoři stránek: <b>Marek Horský</b>, Oliver Horský
+            Autoři stránek: Marek Horský, Oliver Horský
         </Typography>
     </Box>;
 };
