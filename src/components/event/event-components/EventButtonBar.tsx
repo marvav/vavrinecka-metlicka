@@ -14,7 +14,7 @@ function EventButtonBar({pictures, links}: EventButtonBarProps) {
     const [ticketDialogOpen, setTicketDialogOpen] = useState(false);
     const ticketMessage = "Vstupenky bude možné zakoupit na místě nebo skrze náš mail vavrinecka-metlicka@seznam.cz"
 
-    return <Box sx={{display: "flex", gap: "1em"}}>
+    return <Box sx={{display: "flex", gap: "0.5em"}}>
         {pictures.map(picture => getPictureButton(picture))}
         {links.map(link => getLinkButton(link))}
         {TicketDialog(ticketMessage, ticketDialogOpen, setTicketDialogOpen)}

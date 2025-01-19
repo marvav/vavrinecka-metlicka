@@ -32,11 +32,6 @@ const EventPage: React.FC = () => {
         paddingBottom: "1em",
         flexGrow: "2"
     }}>
-        <Box sx={{display: "flex", justifyContent: "right", width: "100%"}}>
-            <ButtonStyle1 onClick={() => setShowPastEvents(!showPastEvents)} title={
-                showPastEvents ? "Skrýt minulé akce" : "Zobrazit minulé akce"
-            }/>
-        </Box>
         <Box
             sx={{
                 display: "grid",
@@ -50,13 +45,19 @@ const EventPage: React.FC = () => {
                     md: "100%",
                 },
                 justifyContent: "center",
-                gap: "4em"
+                gap: "4em",
+                paddingTop: "2em"
             }}>
             {displayedEvents.map((event) => (
                 <Event {...event}/>
             ))}
         </Box>
         <Box sx={{flexGrow: 2, paddingTop: "2em"}}/>
+        <Box sx={{display: "flex", justifyContent: "right", width: "100%"}}>
+            <ButtonStyle1 onClick={() => setShowPastEvents(!showPastEvents)} title={
+                showPastEvents ? "Skrýt minulé akce" : "Zobrazit minulé akce"
+            }/>
+        </Box>
         <FootNote/>
     </Box>
 };

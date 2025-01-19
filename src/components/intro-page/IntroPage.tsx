@@ -23,7 +23,7 @@ const IntroPage: React.FC = () => {
             Metlička dělá věci..
         </Typography>
         <Box component="img"
-             sx={{width: {sm: "50%", xs: "75%"}}}
+             sx={{width: {sm: "50%", xs: "95%"}}}
              src={metlicka_maskot} loading="eager"/>
         <Box sx={{flexGrow: "2"}}/>
         <Footer/>

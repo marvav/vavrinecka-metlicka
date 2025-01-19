@@ -46,7 +46,7 @@ function EventDetail({
                         ? content.map(text => <Typography>{text}</Typography>)
                         : "Bude upřesněno"}
                 </Box>
-                <EventButtonBar pictures={pictures} links={links} areTicketsAvailable={areTicketsBeingSold}/>
+                <EventButtonBar pictures={pictures} links={links}/>
                 {eventLinks.length > 0 && <LinkBar title={"Akci najdete také na"} links={eventLinks}></LinkBar>}
                 {affiliates.length > 0 && <EventAffiliateBar affiliates={affiliates}/>}
             </Box>

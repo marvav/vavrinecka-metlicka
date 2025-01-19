@@ -53,7 +53,7 @@ function Event({date, title, place, time, url_fragment, banner}: EventData) {
                     display: {sm: "flex", xs: "grid"},
                     gap: {sm: "2em", xs: "0.5em"},
                     columns: 2,
-                    paddingBottom: {sm: "1.5em", xs: "1.5em"},
+                    paddingBottom: {sm: "1.5em", xs: "1em"},
                     width: '100%',
                 }}>
                     <FieldEntry name={"Datum"} value={date.toLocaleDateString('cs-CZ')} defaultValue={"Neoznámeno"}/>
