@@ -62,7 +62,7 @@ export const predefinedEvents: EventData[] = [
             , "Aleš Brichta Project | 20:00 - 21:00\n"
             , "Judas Priest Revival (Praha) | 22:00 - 00:00"],
         banner: rockovyvecer2025banner as string,
-        links: [],
+        links: [{name: "Fotky",url: "https://eu.zonerama.com/Link/Open/678ea2c1aa78183dd8e455da"}],
         tracks: undefined,
         pictures: [
             {

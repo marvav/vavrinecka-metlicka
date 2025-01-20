@@ -19,10 +19,6 @@ function TrackLinkBar({title, linkMap}: LinkBarProps) {
             xs: "column",
             sm: "row"
         },
-        paddingTop: {
-            xs: "0.5em",
-            sm: "1em"
-        },
         gap: "0.5em"
     }}>
         <Typography sx={{fontWeight: "bold"}}>{title + ":"}</Typography>

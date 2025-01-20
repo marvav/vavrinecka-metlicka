@@ -40,7 +40,6 @@ function EventDetail({
                 <EventFields date={date} time={time} place={place}/>
                 {tracks && <TrackLinkBar title={"Odkazy na trasy"} linkMap={tracks}/>}
                 <StyledTextBlock paragraphs={content}/>
-                <Divider variant="fullWidth"/>
                 <EventButtonBar pictures={pictures} links={links}/>
                 {affiliates.length > 0 && <EventAffiliateBar affiliates={affiliates}/>}
                 {eventLinks.length > 0 && <LinkBar title={"Akci najdete také na"} links={eventLinks}></LinkBar>}
