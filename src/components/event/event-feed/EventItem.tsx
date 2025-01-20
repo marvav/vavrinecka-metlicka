@@ -1,13 +1,13 @@
 import {Box, Button, ThemeProvider} from "@mui/material";
-import {EventData} from "../../data/EventData.tsx";
+import {Event} from "../../data/Event.tsx";
 import event_theme from "../event-components/event_theme.ts";
 import EventTitle from "../event-components/EventTitle.tsx";
 import {useNavigate} from "react-router-dom";
 import FieldEntry from "../../misc/FieldEntry.tsx";
 
-export default Event;
+export default EventItem;
 
-function Event({date, title, place, time, url_fragment, banner}: EventData) {
+function EventItem({date, title, place, url_fragment, banner}: Event) {
     const navigate = useNavigate();
     return <ThemeProvider theme={event_theme}>
         <Button variant="outlined" sx={{

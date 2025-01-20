@@ -1,4 +1,4 @@
-import {EventData} from "./EventData.tsx";
+import {Event} from "./Event.tsx";
 
 import rockovyvecer from "../../assets/posters/rockovyvecer.jpg"
 import pochod2025 from "../../assets/posters/pochod2025.png"
@@ -16,7 +16,7 @@ import pochod2025parking from "../../assets/parking/pochod2025_parking.png"
 import {parkVavrinec, zdarKulturak} from "./PlaceProvider.tsx";
 import {kudyznudy} from "./AffiliateProvider.tsx";
 
-export const predefinedEvents: EventData[] = [
+export const predefinedEvents: Event[] = [
     {
         title: "Vavřinecký pochod Moravským krasem 2025",
         url_fragment: "vavrinecky-pochod-moravskym-krasem-2025",

@@ -1,7 +1,7 @@
 import {AffiliateData} from "./AffiliateData.tsx";
 import {LinkData} from "./LinkData.tsx";
 
-export interface EventData {
+export interface Event {
     title: string
     url_fragment: string
     date: Date

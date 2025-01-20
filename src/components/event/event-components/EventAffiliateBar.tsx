@@ -5,7 +5,7 @@ import event_theme from "./event_theme.ts";
 import TicketDialog from "../../misc/TicketDialog.tsx";
 import {ButtonStyle1, ImageButton} from "../../buttons/StyledButtons.tsx";
 import {AffiliateData} from "../../data/AffiliateData.tsx";
-import Event from "../event-feed/Event.tsx";
+import Event from "../event-feed/EventItem.tsx";
 import Typography from "@mui/material/Typography";
 
 interface EventAffiliateBarProps {

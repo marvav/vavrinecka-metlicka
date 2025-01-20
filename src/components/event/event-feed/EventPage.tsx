@@ -3,7 +3,8 @@ import {Box} from "@mui/material";
 import {predefinedEvents} from "../../data/EventProvider.tsx";
 import {ButtonStyle1} from "../../buttons/StyledButtons.tsx";
 import FootNote from "../../footnote/FootNote.tsx";
-import Event from "./Event.tsx";
+import Event from "./EventItem.tsx";
+import EventItem from "./EventItem.tsx";
 
 const EventPage: React.FC = () => {
     const [showPastEvents, setShowPastEvents] = useState(false);
@@ -49,7 +50,7 @@ const EventPage: React.FC = () => {
                 paddingTop: "2em"
             }}>
             {displayedEvents.map((event) => (
-                <Event {...event}/>
+                <EventItem {...event}/>
             ))}
         </Box>
         <Box sx={{flexGrow: 2, paddingTop: "2em"}}/>
