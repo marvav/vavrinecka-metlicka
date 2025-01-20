@@ -1,4 +1,4 @@
-import {Box, ThemeProvider} from "@mui/material";
+import {Box, Divider, ThemeProvider, Tooltip} from "@mui/material";
 import {EventData} from "../../data/EventData.tsx";
 import event_theme from "../event-components/event_theme.ts";
 import EventTitle from "../event-components/EventTitle.tsx";
@@ -8,6 +8,8 @@ import EventButtonBar from "../event-components/EventButtonBar.tsx";
 import EventAffiliateBar from "../event-components/EventAffiliateBar.tsx";
 import LinkBar from "../event-components/LinkBar.tsx";
 import Typography from "@mui/material/Typography";
+import {Pets} from "@mui/icons-material";
+import StyledTextBlock from "../../misc/StyledTextBlock.tsx";
 
 export default EventDetail;
 
@@ -37,18 +39,11 @@ function EventDetail({
                 <EventTitle title={title}/>
                 <EventFields date={date} time={time} place={place}/>
                 {tracks && <TrackLinkBar title={"Odkazy na trasy"} linkMap={tracks}/>}
-                <Box sx={{
-                    display: "flex",
-                    flexDirection: "column",
-                    gap: {xs: event_theme.spacing(3), sm: event_theme.spacing(4)},
-                }}>
-                    {content
-                        ? content.map(text => <Typography>{text}</Typography>)
-                        : "Bude upřesněno"}
-                </Box>
+                <StyledTextBlock paragraphs={content}/>
+                <Divider variant="fullWidth"/>
                 <EventButtonBar pictures={pictures} links={links}/>
-                {eventLinks.length > 0 && <LinkBar title={"Akci najdete také na"} links={eventLinks}></LinkBar>}
                 {affiliates.length > 0 && <EventAffiliateBar affiliates={affiliates}/>}
+                {eventLinks.length > 0 && <LinkBar title={"Akci najdete také na"} links={eventLinks}></LinkBar>}
             </Box>
             <Box sx={{flexGrow: 2}}></Box>
         </Box>
