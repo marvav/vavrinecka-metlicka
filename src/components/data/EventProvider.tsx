@@ -13,6 +13,8 @@ import pochod2024banner from "../../assets/banners/pochod2024banner.jpg"
 import rockovyvecer2025parkovani from "../../assets/parking/rockovyvecer2025parking.png"
 import pochod2025parking from "../../assets/parking/pochod2025_parking.png"
 
+import pochod2024mapa from "../../assets/parking/pochod2024mapa.png"
+
 import {parkVavrinec, zdarKulturak} from "./PlaceProvider.tsx";
 import {kudyznudy} from "./AffiliateProvider.tsx";
 
@@ -43,7 +45,8 @@ export const predefinedEvents: Event[] = [
             [50, "https://mapy.cz/s/gakorekape"]
         ]),
         pictures: [{name: "Plakát", url: pochod2025 as string},
-            {name: "Parkování", url: pochod2025parking as string}],
+            {name: "Parkování", url: pochod2025parking as string},
+        ],
         eventLinks: [{name: "Facebook", url: "https://fb.me/e/6qiAy00Va"}, {
             name: "Kudyznudy",
             url: "https://www.kudyznudy.cz/akce/vavrinecky-pochod-moravskym-krasem"
@@ -102,7 +105,9 @@ export const predefinedEvents: Event[] = [
             [18, "https://mapy.cz/s/fovegetogu"],
             [30, "https://mapy.cz/s/botulekosu"]
         ]),
-        pictures: [{name: "Plakát", url: pochod2024 as string}],
+        pictures: [{name: "Plakát", url: pochod2024 as string},
+            {name: "Mapa pochodu", url: pochod2024mapa as string}
+        ],
         eventLinks: [],
         affiliates: []
     },

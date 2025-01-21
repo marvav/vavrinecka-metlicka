@@ -1,16 +1,15 @@
 import React from "react";
-import {Box, Breadcrumbs, Link} from "@mui/material";
+import {Box, Breadcrumbs} from "@mui/material";
 import {Event} from "../../data/Event.tsx";
 import EventDetail from "./EventDetail.tsx";
 import Typography from "@mui/material/Typography";
-import {useNavigate} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 interface EventDetailPageProps {
     event: Event
 }
 
 const EventDetailPage: React.FC<EventDetailPageProps> = (props) => {
-    const navigate = useNavigate();
     return <Box sx={{
         display: "flex",
         flexDirection: "column",
@@ -22,7 +21,7 @@ const EventDetailPage: React.FC<EventDetailPageProps> = (props) => {
         paddingTop: "6em",
     }}>
         <Breadcrumbs sx={{width: "100%"}}>
-            <Link underline="hover" color="inherit" onClick={() => navigate("/akce")}>
+            <Link to={"/akce"}>
                 Akce
             </Link>
             <Typography>

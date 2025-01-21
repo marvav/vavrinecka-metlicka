@@ -16,13 +16,12 @@ function EventDetail({
                          time, tracks, affiliates, eventLinks, banner
                      }: Event) {
     const areTicketsBeingSold = date >= new Date() && tracks === undefined;
-    return <ThemeProvider theme={event_theme}>
-        <Box sx={{
+    return <Box sx={{
             display: "flex",
             flexDirection: "column",
             borderRadius: "0.75em",
             width: "100%",
-            boxShadow: '0 0 1px #000000, 0 0 1px #000000, 0 0 20px #000000, 0 0 50px #000000',
+            boxShadow: '0 0 1px #000000, 0 0 1px #000000, 0 0 20px #000000, 0 0 50px #000000'
         }}>
             <Box component="img"
                  sx={{borderTopLeftRadius: "inherit", borderTopRightRadius: "inherit"}}
@@ -44,5 +43,4 @@ function EventDetail({
             </Box>
             <Box sx={{flexGrow: 2}}></Box>
         </Box>
-    </ThemeProvider>
 }
