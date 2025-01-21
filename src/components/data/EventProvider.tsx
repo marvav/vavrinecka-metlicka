@@ -28,13 +28,15 @@ export const predefinedEvents: Event[] = [
             , "V cíli se můžete těšit na občerstvení, vystoupení kapely ZVUKOVÁ KULISA a chybět nebude ani diplom pro každého, kdo některou z tras zdárně zdolá!\n",
             "Vstup na Rozhlednu Podvrší a do Domu přírody Moravského krasu je pro účastníky pochodu zdarma.\n"
             , "Startovné je 50 Kč (Registrace předem není třeba, vše řešíme na místě). Každý účastník obdrží na startu mapu všech tras.\n"
-            , "Na startu budou pro účastníky k dispozici 2 bezplatná parkoviště. \n"
-            , "Na pochod si s sebou můžete vzít i pejsky."
-            , "Doporučené startovací časy:"
-            , " - 6,5km: 12:00-14:00"
-            , " - 18,5km: 8:00-12:00"
-            , " - 32,5km: 8:00-10:00"
-            , " - 50km: 6:00-8:00"
+        ],
+        description: [
+            {content: "2. ročník úspěšné turistické akce v srdci Moravského krasu. Letos jsme si pro vás připravili trasy různých délek od 6 do 50 km, na kterých navštívíte známou propast Macocha, Dům přírody Moravského krasu, Rozhlednu Podvrší, Skalní Mlýn a další zajímavá místa této unikátní krajiny. V cíli se můžete těšit na občerstvení, vystoupení kapely ZVUKOVÁ KULISA a chybět nebude ani diplom pro každého, kdo některou z tras zdárně zdolá!"}
+            ,{content:"Vstup na Rozhlednu Podvrší a do Domu přírody Moravského krasu je pro účastníky pochodu zdarma."}
+            ,{content:"Startovné je 50 Kč (Registrace předem není třeba, vše řešíme na místě). Každý účastník obdrží na startu mapu všech tras."}
+            ,{content:"Na startu budou pro účastníky k dispozici 2 bezplatná parkoviště."}
+            ,{content:"Na pochod si s sebou můžete vzít i pejsky."}
+            ,{title: "Doporučené startovací časy", bulletPoints: ["6,5km: 12:00-14:00", "18,5km: 8:00-12:00", "32,5km: 8:00-10:00", "50km: 6:00-8:00"]}
+            ,
         ],
         links: [],
         banner: pochod2025banner as string,
@@ -64,6 +66,7 @@ export const predefinedEvents: Event[] = [
             , "Kapriola | 18:00 - 19:00\n"
             , "Aleš Brichta Project | 20:00 - 21:00\n"
             , "Judas Priest Revival (Praha) | 22:00 - 00:00"],
+        description: [],
         banner: rockovyvecer2025banner as string,
         links: [{name: "Fotky",url: "https://eu.zonerama.com/Link/Open/678ea2c1aa78183dd8e455da"}],
         tracks: undefined,
@@ -84,6 +87,7 @@ export const predefinedEvents: Event[] = [
         place: parkVavrinec,
         content: ["Vavřinecká Metlička pod záštitou SDH Vavřinec Vás zve na 1. ročník závodu VAVŘINECKÝ BĚH MORAVSKÝM KRASEM.\n" +
         "Závod bude probíhat za každého počasí. Start bude v areálu fotbalového hřiště ve Vavřinci, kde budou k dispozici i šatny a sprchy."],
+        description: [],
         links: [{name: "Fotky", url: "https://eu.zonerama.com/vasman33/1402623"}],
         banner: beh2024banner as string,
         tracks: undefined,
@@ -98,6 +102,7 @@ export const predefinedEvents: Event[] = [
         date: new Date(2024, 0, 20, 0, 0, 0),
         place: parkVavrinec,
         content: [],
+        description: [],
         links: [],
         banner: pochod2024banner as string,
         tracks: new Map([
@@ -128,6 +133,7 @@ const metalpodplechem = {
         "• Starobrno 12° Bitr, víno z Vinařství Michna (Čejkovice), nealko\n" +
         "• Utopenci, nakládaný sýr Camembert, uzená klobása, lipovecká sekaná\n" +
         "Akce se koná za každého počasí (vyhřívané prostory).",
+    description: [],
     ticket_link: undefined,
     image: beh2024 as string,
     banner: pochod2025banner as string,

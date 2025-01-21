@@ -6,12 +6,12 @@ import EventFields from "../event-components/EventFields.tsx";
 import EventButtonBar from "../event-components/EventButtonBar.tsx";
 import EventAffiliateBar from "../event-components/EventAffiliateBar.tsx";
 import LinkBar from "../event-components/LinkBar.tsx";
-import StyledTextBlock from "../../misc/StyledTextBlock.tsx";
+import StyledDescription from "../../misc/StyledDescription.tsx";
 
 export default EventDetail;
 
 function EventDetail({content, date, title, place, links, pictures,
-                         tracks, affiliates, eventLinks, banner
+                         tracks, description, affiliates, eventLinks, banner
                      }: Event) {
     const areTicketsBeingSold = date >= new Date() && tracks === undefined;
     return <Box sx={{
@@ -33,7 +33,7 @@ function EventDetail({content, date, title, place, links, pictures,
             }}>
                 <EventTitle title={title}/>
                 <EventFields date={date} place={place} tracks={tracks}/>
-                <StyledTextBlock paragraphs={content}/>
+                <StyledDescription paragraphs={description}/>
                 <EventButtonBar pictures={pictures} links={links}/>
                 {affiliates.length > 0 && <EventAffiliateBar affiliates={affiliates}/>}
                 {eventLinks.length > 0 && <LinkBar title={"Akci najdete také na"} links={eventLinks}></LinkBar>}
