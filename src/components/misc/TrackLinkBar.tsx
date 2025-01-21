@@ -14,7 +14,6 @@ function TrackLinkBar({title, linkMap}: LinkBarProps) {
             xs: "left",
             sm: "center"
         },
-        width: "100%",
         flexDirection: {
             xs: "column",
             sm: "row"
