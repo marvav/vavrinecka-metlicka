@@ -1,6 +1,8 @@
 import {Box} from "@mui/material";
 import Typography from "@mui/material/Typography";
 import {ButtonStyle1} from "../buttons/StyledButtons.tsx";
+import {Link} from "react-router-dom";
+import {StyledLink} from "./StyledLink.tsx";
 
 export interface LinkBarProps {
     title: string
@@ -21,10 +23,10 @@ function TrackLinkBar({title, linkMap}: LinkBarProps) {
         gap: "0.5em"
     }}>
         <Typography sx={{fontWeight: "bold"}}>{title + ":"}</Typography>
-        <Box sx={{display: "flex", gap: "0.5em"}}>
+        <Box sx={{display: "flex", gap: "0.5em"}} >
             {Array.from(linkMap.entries())
-                .map(([key, value]) => (
-                    <ButtonStyle1 onClick={() => window.open(value ?? "", '_blank')} title={"" + key + "km"}/>
+                .map(([key, url]) => (
+                    <StyledLink link={{name: "" + key + "km", url: url}}/>
                 ))}
         </Box>
     </Box>
