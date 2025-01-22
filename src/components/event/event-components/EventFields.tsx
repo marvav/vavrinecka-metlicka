@@ -5,6 +5,7 @@ import {MapLinkButton} from "../../buttons/MapLinkButtons.tsx";
 import {LinkData} from "../../data/LinkData.tsx";
 import React from "react";
 import TrackLinkBar from "../../misc/TrackLinkBar.tsx";
+import {MapyCZLink} from "../../misc/StyledLink.tsx";
 
 interface EventFieldsProps {
     date: Date
@@ -15,7 +16,7 @@ interface EventFieldsProps {
 function EventFields({date, place, tracks}: EventFieldsProps) {
     const placeElement = <Box sx={{display: "flex", gap: "0.5em", alignItems: "center"}}>
         {place.name + " "}
-        <MapLinkButton image={mapycz as string} onClick={() => window.open(place.url, '_blank')}/>
+        <MapyCZLink image={mapycz as string} link={place}/>
     </Box>
     return <Box
         sx={{

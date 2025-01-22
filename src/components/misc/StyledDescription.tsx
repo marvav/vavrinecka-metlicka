@@ -15,7 +15,7 @@ export interface StyledTextBlockProps {
 }
 
 function StyledDescription({paragraphs}: StyledTextBlockProps) {
-    if(paragraphs.length == 0){
+    if (paragraphs.length == 0) {
         return <>Bude upřesněno</>;
     }
     const first = paragraphs[0];
@@ -26,27 +26,35 @@ function StyledDescription({paragraphs}: StyledTextBlockProps) {
     }}>
         {getTextBlock(first)}
         <Divider variant="fullWidth"/>
-        {paragraphs.slice(1,paragraphs.length).map(paragraph => ChooseParagraphFormat(paragraph))}
+        {paragraphs.slice(1, paragraphs.length).map(paragraph => ChooseParagraphFormat(paragraph))}
     </Box>
 }
 
 export default StyledDescription;
 
 function ChooseParagraphFormat(paragraph: Paragraph) {
-    if(paragraph.bulletPoints){
+    if (paragraph.bulletPoints) {
         return getList(paragraph);
     }
     return getTextBlock(paragraph);
 }
 
 function getList(paragraph: Paragraph) {
-    return <List sx={{padding: "none"}}>
-        <Typography sx={{fontWeight: "bold", padding: "none"}}>{paragraph.title+":"}</Typography>
-        {paragraph.bulletPoints?.map(point => <ListItem sx={{display: "flex", gap: "1em", padding: "none"}}>
-            <ChangeCircleOutlined fontSize="0.5" />
-            {point}
-        </ListItem>)}
-    </List>
+    return <Box sx={{
+        display: "flex",
+        flexDirection: "column",
+        gap: event_theme.spacing(2),
+    }}>
+        <Typography sx={{fontWeight: "bold", padding: "0.0em", gap: "0em"}}>
+            {paragraph.title + ":"}
+        </Typography>
+        <List sx={{listStyleType: 'disc', margin: 0, padding: 0, paddingLeft: "1.5em"}}>
+            {paragraph.bulletPoints?.map(point =>
+                <ListItem sx={{display: 'list-item', padding: "0.15em", pl: "0.25em"}} primary="Item with padding">
+                    <ListItemText primary={point} />
+                </ListItem>)}
+        </List>
+    </Box>
 }
 
 function getTextBlock(paragraph: Paragraph) {
