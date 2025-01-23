@@ -22,7 +22,7 @@ const EventDetailPage: React.FC<EventDetailPageProps> = (props) => {
     }}>
         <Breadcrumbs sx={{width: "100%"}}>
             <Link to={"/akce"}>
-                Akce
+                🤘Akce
             </Link>
             <Typography>
                 {props.event.title}

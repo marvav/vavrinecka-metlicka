@@ -29,7 +29,6 @@ function EventFields({date, place, tracks}: EventFieldsProps) {
         {date.getHours() != 0 && <FieldEntry name={"Čas"} value={date.toLocaleTimeString().substring(0, 5)}
                                              defaultValue={"Uveden na plakátu"}/>}
         <FieldEntry name={"Místo"} value={placeElement} defaultValue={"Neoznámeno"}/>
-        {tracks && <TrackLinkBar title={"Odkazy na trasy"} linkMap={tracks}/>}
     </Box>
 }
 

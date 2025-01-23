@@ -7,6 +7,8 @@ import EventButtonBar from "../event-components/EventButtonBar.tsx";
 import EventAffiliateBar from "../event-components/EventAffiliateBar.tsx";
 import LinkBar from "../event-components/LinkBar.tsx";
 import StyledDescription from "../../misc/StyledDescription.tsx";
+import TrackLinkBar from "../../misc/TrackLinkBar.tsx";
+import React from "react";
 
 export default EventDetail;
 
@@ -33,6 +35,7 @@ function EventDetail({content, date, title, place, links, pictures,
             }}>
                 <EventTitle title={title}/>
                 <EventFields date={date} place={place} tracks={tracks}/>
+                {tracks && <TrackLinkBar title={"Odkazy na trasy"} linkMap={tracks}/>}
                 <StyledDescription paragraphs={description}/>
                 <EventButtonBar pictures={pictures} links={links}/>
                 {affiliates.length > 0 && <EventAffiliateBar affiliates={affiliates}/>}
