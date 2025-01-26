@@ -14,6 +14,7 @@ import rockovyvecer2025parkovani from "../../assets/parking/rockovyvecer2025park
 import pochod2025parking from "../../assets/parking/pochod2025_parking.png"
 
 import pochod2024mapa from "../../assets/parking/pochod2024mapa.png"
+import pochod2025mapa from "../../assets/parking/Pochod2025mapa.png"
 
 import {parkVavrinec, zdarKulturak} from "./PlaceProvider.tsx";
 import {kudyznudy} from "./AffiliateProvider.tsx";
@@ -31,11 +32,14 @@ export const predefinedEvents: Event[] = [
         ],
         description: [
             {content: "2. ročník úspěšné turistické akce v srdci Moravského krasu. Letos jsme si pro vás připravili trasy různých délek od 6 do 50 km, na kterých navštívíte známou propast Macocha, Dům přírody Moravského krasu, Rozhlednu Podvrší, Skalní Mlýn a další zajímavá místa této unikátní krajiny. V cíli se můžete těšit na občerstvení, vystoupení kapely ZVUKOVÁ KULISA a chybět nebude ani diplom pro každého, kdo některou z tras zdárně zdolá!"}
-            ,{content:"Vstup na Rozhlednu Podvrší a do Domu přírody Moravského krasu je pro účastníky pochodu zdarma."}
-            ,{content:"Startovné je 50 Kč (Registrace předem není třeba, vše řešíme na místě). Každý účastník obdrží na startu mapu všech tras."}
-            ,{content:"Na startu budou pro účastníky k dispozici 2 bezplatná parkoviště."}
-            ,{content:"Na pochod si s sebou můžete vzít i pejsky."}
-            ,{title: "Doporučené startovací časy", bulletPoints: ["6,5km: 12:00-14:00", "18,5km: 8:00-12:00", "32,5km: 8:00-10:00", "50km: 6:00-8:00"]}
+            , {content: "Vstup na Rozhlednu Podvrší a do Domu přírody Moravského krasu je pro účastníky pochodu zdarma."}
+            , {content: "Startovné je 50 Kč (Registrace předem není třeba, vše řešíme na místě). Každý účastník obdrží na startu mapu všech tras."}
+            , {content: "Na startu budou pro účastníky k dispozici 2 bezplatná parkoviště."}
+            , {content: "Na pochod si s sebou můžete vzít i pejsky."}
+            , {
+                title: "Doporučené startovací časy",
+                bulletPoints: ["6,5km: 12:00-14:00", "18,5km: 8:00-12:00", "32,5km: 8:00-10:00", "50km: 6:00-8:00"]
+            }
             ,
         ],
         links: [],
@@ -48,6 +52,7 @@ export const predefinedEvents: Event[] = [
         ]),
         pictures: [{name: "Plakát", url: pochod2025 as string},
             {name: "Parkování", url: pochod2025parking as string},
+            {name: "Mapa pochodu", url: pochod2025mapa as string},
         ],
         eventLinks: [{name: "Facebook", url: "https://fb.me/e/6qiAy00Va"}, {
             name: "Kudyznudy",
@@ -66,9 +71,19 @@ export const predefinedEvents: Event[] = [
             , "Kapriola | 18:00 - 19:00\n"
             , "Aleš Brichta Project | 20:00 - 21:00\n"
             , "Judas Priest Revival (Praha) | 22:00 - 00:00"],
-        description: [],
+        description: [
+            {content: "Zveme vás na Rockový večer 🤟 s kapelou Kapriola, Aleš Brichta Project a Judas Priest Revival (Praha)."},
+            {content: "Otevření KD: 17:00 - VSTUPNÉ: 599 Kč v předprodeji, 650 Kč na místě"},
+            {
+                title: "LINE-UP 🎸🔥", bulletPoints: [
+                    "Kapriola | 18:00 - 19:00"
+                    , "Aleš Brichta Project | 20:00 - 21:00"
+                    , "Judas Priest Revival (Praha) | 22:00 - 00:00",
+                ]
+            }
+        ],
         banner: rockovyvecer2025banner as string,
-        links: [{name: "Fotky",url: "https://eu.zonerama.com/Link/Open/678ea2c1aa78183dd8e455da"}],
+        links: [{name: "Fotky", url: "https://eu.zonerama.com/Link/Open/678ea2c1aa78183dd8e455da"}],
         tracks: undefined,
         pictures: [
             {
