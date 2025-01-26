@@ -23,7 +23,7 @@ function EventFields({date, place, tracks}: EventFieldsProps) {
             display: "flex",
             flexWrap: "wrap",
             justifyContent: "left",
-            gap: "1em"
+            gap: {sm: "1em", xs: "0.5em"}
         }}>
         <FieldEntry name={"Datum"} value={date.toLocaleDateString('cs-CZ')} defaultValue={"Neoznámeno"}/>
         {date.getHours() != 0 && <FieldEntry name={"Čas"} value={date.toLocaleTimeString().substring(0, 5)}
