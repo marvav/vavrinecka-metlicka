@@ -12,13 +12,13 @@ const ContactPage: React.FC = () => {
         alignItems: "center",
         textAlign: "center",
         width: {sm: "40%", xs: "80%"},
-        gap: "3em",
-        paddingTop: "3em",
+        gap: "2em",
+        paddingTop: "2em",
     }}>
         <Box
             component="img"
             sx={{
-                borderRadius: "0.75em",
+                borderRadius: "0.5em",
                 width: '100%',
                 height: 'auto',
             }}
@@ -26,7 +26,8 @@ const ContactPage: React.FC = () => {
             loading="eager"
         />
         <Typography sx={TypographyStyle1}>
-            Jsme parta přátel tvrdé hudby a pořádné turistiky.
+            Vítejte na stránkách Vavřinecké Metličky! Jsme parta kamarádů, které spojují společné zájmy – rocková a metalová hudba, turistika, cyklovýlety, běh, ale i ochutnávání dobrého vína, piva a jídla.
+            Ať už nás potkáte v lese, na horských stezkách, na kole, nebo pod pódiem na koncertě, vždycky nás žene dopředu nadšení pro sport, dobrodružství, dobrou hudbu a radost ze společných zážitků. Rádi vás uvidíme na našich akcích a společně si to užijeme!
         </Typography>
         <Typography sx={TypographyStyle1} variant="body1">
             Kontaktovat nás můžete na emailu  {" "}

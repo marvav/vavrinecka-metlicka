@@ -1,10 +1,13 @@
 import React from "react";
-import {Box} from "@mui/material";
+import {Box, useMediaQuery} from "@mui/material";
 import Typography from "@mui/material/Typography";
 import metlicka_maskot from "../../assets/images/metlicka_maskot.png";
 import Footer from "../footnote/FootNote"
 import {TypographyStyle1} from "../../styles/TypographyStyles.tsx";
+import event_theme from "../event/event-components/event_theme.ts";
+import {StyledLink} from "../misc/StyledLink.tsx";
 const IntroPage: React.FC = () => {
+    const isMobile = useMediaQuery(event_theme.breakpoints.down('sm'));
     return <Box sx={{
         display: "flex",
         flexDirection: 'column',
@@ -17,6 +20,7 @@ const IntroPage: React.FC = () => {
         <Typography sx={TypographyStyle1}>
             Metlička dělá věci..
         </Typography>
+        {isMobile && getCrossroad()}
         <Box component="img"
              sx={{width: {sm: "50%", xs: "95%"}}}
              src={metlicka_maskot} loading="eager"/>
@@ -25,3 +29,10 @@ const IntroPage: React.FC = () => {
     </Box>
 }
 export default IntroPage;
+
+function getCrossroad(){
+    return <Box sx={{display: "flex", flexDirection: "column", paddingTop: "2em",gap: "2em"}}>
+        <StyledLink link={{name: "Akce", url: "/akce"}}/>
+        <StyledLink link={{name: "O nás", url: "/metlicka"}}/>
+    </Box>
+}
