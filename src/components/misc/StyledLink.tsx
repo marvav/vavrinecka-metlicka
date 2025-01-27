@@ -24,7 +24,7 @@ export function StyledLink({link}: StyledLinkProps) {
             borderColor: 'green',
         }
     }}>
-        <Link sx={{color: "white"}} to={link.url}>
+        <Link sx={{color: "white"}} to={link.url} target={"_blank"}>
             <Typography sx={{fontSize: "1em", color: "white"}}>
                 {link.name}
             </Typography>

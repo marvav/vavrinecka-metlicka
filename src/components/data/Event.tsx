@@ -7,7 +7,6 @@ export interface Event {
     url_fragment: string
     date: Date
     place: LinkData
-    content: string[]
     description: Paragraph[]
     banner: string | undefined
     tracks: Map<number, string> | undefined
