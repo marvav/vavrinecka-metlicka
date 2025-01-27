@@ -2,6 +2,8 @@ import React from "react";
 import {Box, Link, Typography} from "@mui/material";
 import facebook_logo from "../../assets/images/facebook_logo.png";
 import Button from "@mui/material/Button";
+import banner from "../../assets/graphics/banner.png";
+import {TypographyStyle1, TypographyStyle2} from "../../styles/TypographyStyles.tsx";
 
 const ContactPage: React.FC = () => {
     return <Box sx={{
@@ -13,8 +15,20 @@ const ContactPage: React.FC = () => {
         gap: "3em",
         paddingTop: "3em",
     }}>
-        Jsme parta přátel tvrdé hudby a pořádné turistiky.
-        <Typography variant="body1">
+        <Box
+            component="img"
+            sx={{
+                borderRadius: "0.75em",
+                width: '100%',
+                height: 'auto',
+            }}
+            src={banner}
+            loading="eager"
+        />
+        <Typography sx={TypographyStyle1}>
+            Jsme parta přátel tvrdé hudby a pořádné turistiky.
+        </Typography>
+        <Typography sx={TypographyStyle1} variant="body1">
             Kontaktovat nás můžete na emailu  {" "}
             <Link
                 href="mailto:vavrinecka-metlicka@seznam.cz"

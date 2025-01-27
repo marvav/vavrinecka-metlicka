@@ -3,23 +3,18 @@ import {Box} from "@mui/material";
 import Typography from "@mui/material/Typography";
 import metlicka_maskot from "../../assets/images/metlicka_maskot.png";
 import Footer from "../footnote/FootNote"
+import {TypographyStyle1} from "../../styles/TypographyStyles.tsx";
 const IntroPage: React.FC = () => {
     return <Box sx={{
         display: "flex",
         flexDirection: 'column',
-        textShadow: `
-          -1px -1px 0 #000,  
-          1px -1px 0 #000,
-          -1px 1px 0 #000,
-          1px 1px 0 #000
-        `,
         justifyContent: "center",
         alignItems: "center",
         textAlign: "center",
         paddingBottom: "1em",
         flexGrow: "2"
     }}>
-        <Typography>
+        <Typography sx={TypographyStyle1}>
             Metlička dělá věci..
         </Typography>
         <Box component="img"
