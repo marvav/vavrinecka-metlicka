@@ -47,7 +47,7 @@ function EventItem({date, title, place, banner}: Event) {
             paddingRight: "0.75em",
             flexGrow: 1,
             width: "100%",
-            gap: "0.5em",
+            gap: {sm: "0.5em", xs: "0.2em"},
         }}>
             <EventTitle title={title}/>
             <Box sx={{flexGrow: 2}}/>

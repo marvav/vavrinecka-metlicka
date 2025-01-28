@@ -20,7 +20,7 @@ const IntroPage: React.FC = () => {
         <Typography sx={TypographyStyle1}>
             Metlička dělá věci..
         </Typography>
-        {isMobile && getCrossroad()}
+        {false && isMobile && getCrossroad()}
         <Box component="img"
              sx={{width: {sm: "50%", xs: "95%"}}}
              src={metlicka_maskot} loading="eager"/>
