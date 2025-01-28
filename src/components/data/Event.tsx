@@ -4,7 +4,6 @@ import {Paragraph} from "./Paragraph.tsx";
 
 export interface Event {
     title: string
-    url_fragment: string
     date: Date
     place: LinkData
     description: Paragraph[]

@@ -5,64 +5,64 @@ import EventTitle from "../event-components/EventTitle.tsx";
 import {useNavigate} from "react-router-dom";
 import FieldEntry from "../../misc/FieldEntry.tsx";
 import {translateTitleToUrl} from "../EventUtils.tsx";
+import {TypographyStyle1} from "../../../styles/TypographyStyles.tsx";
 
 export default EventItem;
 
-function EventItem({date, title, place, url_fragment, banner}: Event) {
+function EventItem({date, title, place, banner}: Event) {
     const navigate = useNavigate();
-    return <ThemeProvider theme={event_theme}>
-        <Button variant="outlined" sx={{
-            display: "flex",
-            flexDirection: {xs: 'column'},
-            textTransform: 'none',
-            background: '#111711',
-            borderRadius: "0.75em",
+    return <Button variant="outlined" sx={{
+        ...TypographyStyle1,
+        display: "flex",
+        flexDirection: {xs: 'column'},
+        textTransform: 'none',
+        background: '#111711',
+        borderRadius: "0.75em",
+        borderWidth: '2px',
+        borderColor: 'transparent',
+        padding: "0em",
+        gap: {sm: "1em", xs: "0.5em"},
+        justifyContent: "center",
+        boxShadow: '0 0 1px #000000, 0 0 1px #000000, 0 0 20px #000000, 0 0 50px #000000',
+        '&:hover': {
+            borderColor: 'green',
             borderWidth: '2px',
-            borderColor: 'transparent',
-            padding: "0em",
+        },
+    }} onClick={() => navigate("/akce/" + translateTitleToUrl(title))}>
+        <Box
+            component="img"
+            sx={{
+                borderTopLeftRadius: "0.75em",
+                borderTopRightRadius: "0.75em",
+                width: '100%',
+                height: 'auto',
+            }}
+            src={banner}
+            loading="eager"
+        />
+        <Box sx={{
+            display: "flex",
+            flexDirection: 'column',
+            paddingLeft: "0.75em",
+            paddingRight: "0.75em",
+            flexGrow: 1,
             width: "100%",
-            gap: {sm: "1em", xs: "0.5em"},
-            justifyContent: "center",
-            boxShadow: '0 0 1px #000000, 0 0 1px #000000, 0 0 20px #000000, 0 0 50px #000000',
-            '&:hover': {
-                borderColor: 'green',
-                borderWidth: '2px',
-            },
-        }} onClick={() => navigate("/akce/" + translateTitleToUrl(title))}>
-            <Box
-                component="img"
-                sx={{
-                    borderTopLeftRadius: "0.75em",
-                    borderTopRightRadius: "0.75em",
-                    width: '100%',
-                    height: 'auto',
-                }}
-                src={banner}
-                loading="eager"
-            />
+            gap: "0.5em",
+        }}>
+            <EventTitle title={title}/>
+            <Box sx={{flexGrow: 2}}/>
             <Box sx={{
-                display: "flex",
-                flexDirection: 'column',
-                paddingLeft: "1em",
-                flexGrow: 1,
-                width: "100%",
-                gap: "0.5em",
+                display: {sm: "flex", xs: "grid"},
+                gap: {sm: "2em", xs: "0.5em"},
+                columns: 2,
+                paddingBottom: {sm: "1.5em", xs: "1em"},
+                width: '100%',
             }}>
-                <EventTitle title={title}/>
-                <Box sx={{flexGrow: 2}}/>
-                <Box sx={{
-                    display: {sm: "flex", xs: "grid"},
-                    gap: {sm: "2em", xs: "0.5em"},
-                    columns: 2,
-                    paddingBottom: {sm: "1.5em", xs: "1em"},
-                    width: '100%',
-                }}>
-                    <FieldEntry name={"Datum"} value={date.toLocaleDateString('cs-CZ')} defaultValue={"Neoznámeno"}/>
-                    {date.getHours() != 0 && <FieldEntry name={"Čas"} value={date.toLocaleTimeString().substring(0, 5)}
-                                                         defaultValue={"Uveden na plakátu"}/>}
-                    <FieldEntry name={"Místo"} value={place.name} defaultValue={"Neoznámeno"}/>
-                </Box>
+                <FieldEntry name={"Datum"} value={date.toLocaleDateString('cs-CZ')} defaultValue={"Neoznámeno"}/>
+                {date.getHours() != 0 && <FieldEntry name={"Čas"} value={date.toLocaleTimeString().substring(0, 5)}
+                                                     defaultValue={"Uveden na plakátu"}/>}
+                <FieldEntry name={"Místo"} value={place.name} defaultValue={"Neoznámeno"}/>
             </Box>
-        </Button>
-    </ThemeProvider>
+        </Box>
+    </Button>;
 }
