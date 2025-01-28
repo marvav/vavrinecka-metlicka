@@ -4,6 +4,7 @@ import event_theme from "../event-components/event_theme.ts";
 import EventTitle from "../event-components/EventTitle.tsx";
 import {useNavigate} from "react-router-dom";
 import FieldEntry from "../../misc/FieldEntry.tsx";
+import {translateTitleToUrl} from "../EventUtils.tsx";
 
 export default EventItem;
 
@@ -27,7 +28,7 @@ function EventItem({date, title, place, url_fragment, banner}: Event) {
                 borderColor: 'green',
                 borderWidth: '2px',
             },
-        }} onClick={() => navigate("/akce/" + url_fragment)}>
+        }} onClick={() => navigate("/akce/" + translateTitleToUrl(title))}>
             <Box
                 component="img"
                 sx={{

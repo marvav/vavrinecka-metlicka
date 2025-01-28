@@ -18,7 +18,7 @@ const EventDetailPage: React.FC<EventDetailPageProps> = (props) => {
         gap: "1em",
         width: {xl: "55%", lg: "65%", md: "85%", sm: "95%", xs: "95%"},
         paddingBottom: "4em",
-        paddingTop: "6em",
+        paddingTop: "1em",
     }}>
         <Breadcrumbs sx={{width: "100%"}}>
             <Link to={"/akce"}>

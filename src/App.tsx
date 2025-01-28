@@ -7,6 +7,7 @@ import {predefinedEvents} from "./components/data/EventProvider.tsx";
 import EventDetailPage from "./components/event/event-page/EventDetailPage.tsx";
 import StyledPage from "./components/page/StyledPage.tsx";
 import ContactPage from "./components/contact-page/ContactPage.tsx";
+import {translateTitleToUrl} from "./components/event/EventUtils.tsx";
 
 function App() {
     return <ThemeProvider theme={page_common_theme}>
@@ -25,7 +26,7 @@ function App() {
 
 function getEventRoutes(){
     return predefinedEvents.map(event => <Route
-        path={"/akce/"+event.url_fragment}
+        path={"/akce/"+translateTitleToUrl(event.title)}
         element={<StyledPage content={<EventDetailPage event={event}/>} title={undefined}/>}/>
     )
 }

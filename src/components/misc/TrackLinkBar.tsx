@@ -1,7 +1,5 @@
 import {Box} from "@mui/material";
 import Typography from "@mui/material/Typography";
-import {ButtonStyle1} from "../buttons/StyledButtons.tsx";
-import {Link} from "react-router-dom";
 import {StyledLink} from "./StyledLink.tsx";
 
 export interface LinkBarProps {

@@ -1,10 +1,8 @@
 import {Box} from "@mui/material";
 import FieldEntry from "../../misc/FieldEntry.tsx";
 import mapycz from "../../../assets/images/mapycz.png"
-import {MapLinkButton} from "../../buttons/MapLinkButtons.tsx";
 import {LinkData} from "../../data/LinkData.tsx";
 import React from "react";
-import TrackLinkBar from "../../misc/TrackLinkBar.tsx";
 import {MapyCZLink} from "../../misc/StyledLink.tsx";
 
 interface EventFieldsProps {
