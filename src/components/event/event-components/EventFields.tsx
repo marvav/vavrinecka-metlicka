@@ -8,10 +8,9 @@ import {MapyCZLink} from "../../misc/StyledLink.tsx";
 interface EventFieldsProps {
     date: Date
     place: LinkData
-    tracks: Map<number, string> | undefined
 }
 
-function EventFields({date, place, tracks}: EventFieldsProps) {
+function EventFields({date, place}: EventFieldsProps) {
     const placeElement = <Box sx={{display: "flex", gap: "0.5em", alignItems: "center"}}>
         {place.name + " "}
         <MapyCZLink image={mapycz as string} link={place}/>

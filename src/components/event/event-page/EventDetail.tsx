@@ -13,10 +13,7 @@ import Typography from "@mui/material/Typography";
 
 export default EventDetail;
 
-function EventDetail({date, title, place, links, pictures,
-                         tracks, description, affiliates, eventLinks, banner
-                     }: Event) {
-    const areTicketsBeingSold = date >= new Date() && tracks === undefined;
+function EventDetail(event: Event) {
     return <Box sx={{
             display: "flex",
             flexDirection: "column",
@@ -26,7 +23,7 @@ function EventDetail({date, title, place, links, pictures,
         }}>
             <Box component="img"
                  sx={{borderTopLeftRadius: "inherit", borderTopRightRadius: "inherit"}}
-                 src={banner} loading="eager"/>
+                 src={event.banner} loading="eager"/>
             <Box sx={{
                 display: "flex",
                 flexDirection: "column",
@@ -35,15 +32,15 @@ function EventDetail({date, title, place, links, pictures,
                 padding: {xs: event_theme.spacing(3), sm: event_theme.spacing(6)},
             }}>
                 <Typography sx={{textAlign: "left", ...TypographyStyle2}}>
-                    {title}
+                    {event.title}
                 </Typography>
-                <EventFields date={date} place={place} tracks={tracks}/>
-                {tracks && <TrackLinkBar title={"Odkazy na trasy"} linkMap={tracks}/>}
-                <StyledDescription paragraphs={description}/>
-                <EventButtonBar pictures={pictures} links={links}/>
-                {affiliates.length > 0 && <EventAffiliateBar affiliates={affiliates}/>}
-                {eventLinks.length > 0 && <LinkBar title={"Akci najdete také na"} links={eventLinks}></LinkBar>}
+                <EventFields date={event.date} place={event.place}/>
+                {event.tracks && <TrackLinkBar title={"Odkazy na trasy"} linkMap={event.tracks}/>}
+                <StyledDescription paragraphs={event.description}/>
+                <EventButtonBar pictures={event.pictures} links={event.links}/>
+                {event.affiliates.length > 0 && <EventAffiliateBar affiliates={event.affiliates}/>}
+                {event.eventLinks.length > 0 && <LinkBar title={"Akci najdete také na"} links={event.eventLinks}></LinkBar>}
             </Box>
-            <Box sx={{flexGrow: 2}}></Box>
+            <Box sx={{flexGrow: 2}}/>
         </Box>
 }

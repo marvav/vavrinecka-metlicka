@@ -1,15 +1,16 @@
 import React, {useState} from "react";
 import {Box} from "@mui/material";
-import {predefinedEvents} from "../../data/EventProvider.tsx";
 import {ButtonStyle1} from "../../buttons/StyledButtons.tsx";
 import FootNote from "../../footnote/FootNote.tsx";
 import EventItem from "./EventItem.tsx";
-import {Event} from "../../data/Event.tsx";
+import {fetchBasicEvents} from "../../data/EventProvider.tsx";
+import {EventBase} from "../../data/EventBase.tsx";
 
 const EventPage: React.FC = () => {
-    const filteredEvents = predefinedEvents.filter(event => isEventInFuture(event));
+    const events = fetchBasicEvents();
+    const filteredEvents = events.filter(event => isEventInFuture(event));
     const [showPastEvents, setShowPastEvents] = useState(filteredEvents.length === 0);
-    const displayedEvents = showPastEvents ? predefinedEvents : filteredEvents;
+    const displayedEvents = showPastEvents ? events : filteredEvents;
 
     return <Box sx={{
         display: "flex",
@@ -64,7 +65,7 @@ const EventPage: React.FC = () => {
 
 export default EventPage;
 
-function isEventInFuture(event: Event){
+function isEventInFuture(event: EventBase){
     const today = new Date();
     return event.date.getFullYear() >= today.getFullYear()
         && event.date.getMonth() >= today.getMonth()

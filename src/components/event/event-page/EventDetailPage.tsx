@@ -1,15 +1,12 @@
 import React from "react";
 import {Box, Breadcrumbs} from "@mui/material";
-import {Event} from "../../data/Event.tsx";
 import EventDetail from "./EventDetail.tsx";
 import Typography from "@mui/material/Typography";
 import {Link} from "react-router-dom";
+import {fetchEvent} from "../../data/EventProvider.tsx";
 
-interface EventDetailPageProps {
-    event: Event
-}
-
-const EventDetailPage: React.FC<EventDetailPageProps> = (props) => {
+function EventDetailPage(id: string){
+    const event = fetchEvent(id);
     return <Box sx={{
         display: "flex",
         flexDirection: "column",
@@ -25,10 +22,10 @@ const EventDetailPage: React.FC<EventDetailPageProps> = (props) => {
                 🤘Akce
             </Link>
             <Typography>
-                {props.event.title}
+                {event.title}
             </Typography>
         </Breadcrumbs>
-        <EventDetail {...props.event}/>
+        {EventDetail(event)}
     </Box>
 }
 

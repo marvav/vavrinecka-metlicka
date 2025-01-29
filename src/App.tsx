@@ -3,11 +3,11 @@ import {BrowserRouter as Router, Navigate, Route, Routes} from "react-router-dom
 import EventPage from "./components/event/event-feed/EventPage.tsx";
 import IntroPage from "./components/intro-page/IntroPage.tsx";
 import page_common_theme from "./themes/page_common_theme.ts";
-import {predefinedEvents} from "./components/data/EventProvider.tsx";
 import EventDetailPage from "./components/event/event-page/EventDetailPage.tsx";
 import StyledPage from "./components/page/StyledPage.tsx";
 import ContactPage from "./components/contact-page/ContactPage.tsx";
 import {translateTitleToUrl} from "./components/event/EventUtils.tsx";
+import {fetchBasicEvents} from "./components/data/EventProvider.tsx";
 
 function App() {
     return <ThemeProvider theme={page_common_theme}>
@@ -25,9 +25,9 @@ function App() {
 }
 
 function getEventRoutes(){
-    return predefinedEvents.map(event => <Route
+    return fetchBasicEvents().map(event => <Route
         path={"/akce/"+translateTitleToUrl(event.title)}
-        element={<StyledPage content={<EventDetailPage event={event}/>} title={undefined}/>}/>
+        element={<StyledPage content={EventDetailPage(event.id)} title={undefined}/>}/>
     )
 }
 

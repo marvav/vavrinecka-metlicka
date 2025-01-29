@@ -18,9 +18,11 @@ import pochod2025mapa from "../../assets/parking/Pochod2025mapa.png"
 
 import {parkVavrinec, zdarKulturak} from "./PlaceProvider.tsx";
 import {kudyznudy} from "./AffiliateProvider.tsx";
+import {EventBase} from "./EventBase.tsx";
 
-export const predefinedEvents: Event[] = [
+const predefinedEvents: Event[] = [
     {
+        id: crypto.randomUUID(),
         title: "Vavřinecký pochod Moravským krasem 2025",
         date: new Date(2025, 0, 25, 0, 0, 0),
         place: parkVavrinec,
@@ -56,6 +58,7 @@ export const predefinedEvents: Event[] = [
     },
 
     {
+        id: crypto.randomUUID(),
         title: "Rockový večer 2025",
         date: new Date(2025, 0, 17, 18, 0, 0),
         place: zdarKulturak,
@@ -84,6 +87,7 @@ export const predefinedEvents: Event[] = [
     },
 
     {
+        id: crypto.randomUUID(),
         title: "Vavřinecký běh Moravským krasem 2024",
         date: new Date(2024, 7, 24, 0, 0, 0),
         place: parkVavrinec,
@@ -100,6 +104,7 @@ export const predefinedEvents: Event[] = [
     },
 
     {
+        id: crypto.randomUUID(),
         title: "Vavřinecký pochod Moravským krasem 2024",
         date: new Date(2024, 0, 20, 0, 0, 0),
         place: parkVavrinec,
@@ -142,3 +147,12 @@ const metalpodplechem = {
     eventLinks: [{name: "Facebook", url: "https://www.facebook.com/events/927713592219766/"}],
     affiliates: []
 };
+
+
+export function fetchBasicEvents(): EventBase[]{
+    return predefinedEvents;
+}
+
+export function fetchEvent(id: string): Event{
+    return predefinedEvents.find(event => event.id.match(id));
+}
