@@ -1,11 +1,10 @@
-import {Box, Button, ThemeProvider} from "@mui/material";
+import {Box, Button} from "@mui/material";
 import {Event} from "../../data/Event.tsx";
-import event_theme from "../event-components/event_theme.ts";
-import EventTitle from "../event-components/EventTitle.tsx";
 import {useNavigate} from "react-router-dom";
 import FieldEntry from "../../misc/FieldEntry.tsx";
 import {translateTitleToUrl} from "../EventUtils.tsx";
-import {TypographyStyle1} from "../../../styles/TypographyStyles.tsx";
+import {TypographyStyle1, TypographyStyle2} from "../../../styles/TypographyStyles.tsx";
+import Typography from "@mui/material/Typography";
 
 export default EventItem;
 
@@ -21,7 +20,6 @@ function EventItem({date, title, place, banner}: Event) {
         borderWidth: '2px',
         borderColor: 'transparent',
         padding: "0em",
-        gap: {sm: "1em", xs: "0.5em"},
         justifyContent: "center",
         boxShadow: '0 0 1px #000000, 0 0 1px #000000, 0 0 20px #000000, 0 0 50px #000000',
         '&:hover': {
@@ -43,24 +41,24 @@ function EventItem({date, title, place, banner}: Event) {
         <Box sx={{
             display: "flex",
             flexDirection: 'column',
-            paddingLeft: "0.75em",
-            paddingRight: "0.75em",
+            padding: "1em",
             flexGrow: 1,
             width: "100%",
-            gap: {sm: "0.5em", xs: "0.2em"},
+            gap: "0.25em",
         }}>
-            <EventTitle title={title}/>
+            <Typography sx={{textAlign: "left", ...TypographyStyle2}}>
+                {title}
+            </Typography>
             <Box sx={{flexGrow: 2}}/>
             <Box sx={{
                 display: {sm: "flex", xs: "grid"},
                 gap: {sm: "2em", xs: "0.5em"},
                 columns: 2,
-                paddingBottom: {sm: "1.5em", xs: "1em"},
                 width: '100%',
             }}>
                 <FieldEntry name={"Datum"} value={date.toLocaleDateString('cs-CZ')} defaultValue={"Neoznámeno"}/>
                 {date.getHours() != 0 && <FieldEntry name={"Čas"} value={date.toLocaleTimeString().substring(0, 5)}
-                                                     defaultValue={"Uveden na plakátu"}/>}
+                                                     defaultValue={"Neoznámeno"}/>}
                 <FieldEntry name={"Místo"} value={place.name} defaultValue={"Neoznámeno"}/>
             </Box>
         </Box>
