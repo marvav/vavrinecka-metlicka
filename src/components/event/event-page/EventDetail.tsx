@@ -35,7 +35,7 @@ function EventDetail(event: Event) {
                     {event.title}
                 </Typography>
                 <EventFields date={event.date} place={event.place}/>
-                {event.tracks && <TrackLinkBar title={"Odkazy na trasy"} linkMap={event.tracks}/>}
+                {event.tracks && <LinkBar title={"Odkazy na trasy"} links={event.tracks}/>}
                 <StyledDescription paragraphs={event.description}/>
                 <EventButtonBar pictures={event.pictures} links={event.links}/>
                 {event.affiliates.length > 0 && <EventAffiliateBar affiliates={event.affiliates}/>}

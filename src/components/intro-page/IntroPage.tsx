@@ -5,7 +5,7 @@ import metlicka_maskot from "../../assets/images/metlicka_maskot.png";
 import Footer from "../footnote/FootNote"
 import {TypographyStyle1} from "../../styles/TypographyStyles.tsx";
 import event_theme from "../event/event-components/event_theme.ts";
-import {StyledLink} from "../misc/StyledLink.tsx";
+import {ButtonLink} from "../misc/ButtonLink.tsx";
 const IntroPage: React.FC = () => {
     const isMobile = useMediaQuery(event_theme.breakpoints.down('sm'));
     return <Box sx={{
@@ -32,7 +32,7 @@ export default IntroPage;
 
 function getCrossroad(){
     return <Box sx={{display: "flex", flexDirection: "column", paddingTop: "2em",gap: "2em"}}>
-        <StyledLink link={{name: "Akce", url: "/akce"}}/>
-        <StyledLink link={{name: "O nás", url: "/metlicka"}}/>
+        <ButtonLink link={{name: "Akce", url: "/akce"}}/>
+        <ButtonLink link={{name: "O nás", url: "/metlicka"}}/>
     </Box>
 }

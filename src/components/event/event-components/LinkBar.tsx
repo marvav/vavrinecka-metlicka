@@ -1,8 +1,8 @@
 import {Box} from "@mui/material";
-import {ButtonStyle1} from "../../buttons/StyledButtons.tsx";
 import {LinkData} from "../../data/LinkData.tsx";
 import Typography from "@mui/material/Typography";
-import {StyledLink} from "../../misc/StyledLink.tsx";
+import {ButtonLink} from "../../misc/ButtonLink.tsx";
+import {ButtonStyle1} from "../../../styles/ButtonStyles.tsx";
 
 interface LinkBarProps {
     title: string;
@@ -24,8 +24,10 @@ function LinkBar({title, links}: LinkBarProps) {
         gap: "0.5em"
     }}>
         <Typography sx={{fontWeight: "bold"}}>{title + ":"}</Typography>
-        <Box sx={{display: "flex", gap: "0.5em"}}>
-            {links.map((link) => <StyledLink link={link}/>)}
+        <Box sx={{display: "flex", gap: "inherit"}}>
+            {links.map((link) => <Box sx={ButtonStyle1}>
+                <ButtonLink link={link}/>
+            </Box>)}
         </Box>
     </Box>
 }

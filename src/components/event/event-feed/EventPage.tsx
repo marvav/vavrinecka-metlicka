@@ -21,13 +21,15 @@ const EventPage: React.FC = () => {
             xs: "1em",
             sm: "3em",
             md: "9em",
-            lg: "15em"
+            lg: "9em",
+            xl: "15em"
         },
         paddingRight: {
             xs: "1em",
             sm: "3em",
             md: "9em",
-            lg: "15em"
+            lg: "9em",
+            xl: "15em"
         },
         gap: "1em",
         paddingBottom: "1em",

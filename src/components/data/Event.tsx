@@ -5,7 +5,7 @@ import {EventBase} from "./EventBase.tsx";
 
 export interface Event extends EventBase{
     description: Paragraph[]
-    tracks: Map<number, string> | undefined
+    tracks: LinkData[]
     links: LinkData[]
     pictures: LinkData[]
     eventLinks: LinkData[]

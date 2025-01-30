@@ -40,12 +40,11 @@ const predefinedEvents: Event[] = [
         ],
         links: [],
         banner: pochod2025banner as string,
-        tracks: new Map([
-            [6.5, "https://mapy.cz/s/kemunahazu"],
-            [18.5, "https://mapy.cz/s/lafarefopo"],
-            [32.5, "https://mapy.cz/s/rasadotoda"],
-            [50, "https://mapy.cz/s/gakorekape"]
-        ]),
+        tracks: [{name: "6.5km", url: "https://mapy.cz/s/kemunahazu"},
+            {name: "18.5km", url: "https://mapy.cz/s/lafarefopo"},
+            {name: "32.5km", url: "https://mapy.cz/s/rasadotoda"},
+            {name: "50km", url: "https://mapy.cz/s/gakorekape"}
+        ],
         pictures: [{name: "Plakát", url: pochod2025 as string},
             {name: "Parkování", url: pochod2025parking as string},
             {name: "Mapa pochodu", url: pochod2025mapa as string},
@@ -75,7 +74,7 @@ const predefinedEvents: Event[] = [
         ],
         banner: rockovyvecer2025banner as string,
         links: [{name: "Fotky", url: "https://eu.zonerama.com/Link/Open/678ea2c1aa78183dd8e455da"}],
-        tracks: undefined,
+        tracks: [],
         pictures: [
             {
                 name: "Plakát", url: rockovyvecer as string
@@ -97,7 +96,7 @@ const predefinedEvents: Event[] = [
         ],
         links: [{name: "Fotky", url: "https://eu.zonerama.com/vasman33/1402623"}],
         banner: beh2024banner as string,
-        tracks: undefined,
+        tracks: [],
         pictures: [{name: "Plakát", url: beh2024 as string}],
         eventLinks: [],
         affiliates: []
@@ -111,11 +110,9 @@ const predefinedEvents: Event[] = [
         description: [{content: "Již proběhlo"}],
         links: [],
         banner: pochod2024banner as string,
-        tracks: new Map([
-            [6, "https://mapy.cz/s/detacumenu"],
-            [18, "https://mapy.cz/s/fovegetogu"],
-            [30, "https://mapy.cz/s/botulekosu"]
-        ]),
+        tracks: [{name: "6km", url: "https://mapy.cz/s/detacumenu"},
+            {name: "18km", url: "https://mapy.cz/s/fovegetogu"},
+            {name: "30km", url: "https://mapy.cz/s/botulekosu"}],
         pictures: [{name: "Plakát", url: pochod2024 as string},
             {name: "Mapa pochodu", url: pochod2024mapa as string}
         ],

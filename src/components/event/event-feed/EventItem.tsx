@@ -57,8 +57,6 @@ function EventItem({date, title, place, banner}: EventBase) {
                 width: '100%',
             }}>
                 <FieldEntry name={"Datum"} value={date.toLocaleDateString('cs-CZ')} defaultValue={"Neoznámeno"}/>
-                {date.getHours() != 0 && <FieldEntry name={"Čas"} value={date.toLocaleTimeString().substring(0, 5)}
-                                                     defaultValue={"Neoznámeno"}/>}
                 <FieldEntry name={"Místo"} value={place.name} defaultValue={"Neoznámeno"}/>
             </Box>
         </Box>

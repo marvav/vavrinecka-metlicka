@@ -3,7 +3,7 @@ import FieldEntry from "../../misc/FieldEntry.tsx";
 import mapycz from "../../../assets/images/mapycz.png"
 import {LinkData} from "../../data/LinkData.tsx";
 import React from "react";
-import {MapyCZLink} from "../../misc/StyledLink.tsx";
+import {MapyCZLink} from "../../misc/ButtonLink.tsx";
 
 interface EventFieldsProps {
     date: Date
