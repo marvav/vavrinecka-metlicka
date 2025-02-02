@@ -2,7 +2,7 @@ import {Box, Button} from "@mui/material";
 import {useNavigate} from "react-router-dom";
 import FieldEntry from "../../text-components/FieldEntry.tsx";
 import {translateTitleToUrl} from "../EventUtils.tsx";
-import {TypographyStyle1, TypographyStyle2} from "../../../styles/TypographyStyles.tsx";
+import {TitleStyle3, TypographyStyle1, TypographyStyle2} from "../../../styles/TypographyStyles.tsx";
 import Typography from "@mui/material/Typography";
 import {EventBase} from "../../../data/EventBase.tsx";
 import {PrimaryBackground} from "../../../styles/ColorDefinitions.ts";
@@ -47,15 +47,13 @@ function EventItem({date, title, place, banner}: EventBase) {
             width: "100%",
             gap: "0.25em",
         }}>
-            <Typography sx={{textAlign: "left", ...TypographyStyle2}}>
+            <Typography sx={{...TitleStyle3, textAlign: "left"}}>
                 {title}
             </Typography>
             <Box sx={{flexGrow: 2}}/>
             <Box sx={{
-                display: {sm: "flex", xs: "grid"},
-                gap: {sm: "2em", xs: "0.5em"},
-                columns: 2,
-                width: '100%',
+                display: "flex",
+                flexWrap: "wrap",
             }}>
                 <FieldEntry name={"Datum"} value={date.toLocaleDateString('cs-CZ')} defaultValue={"Neoznámeno"}/>
                 <FieldEntry name={"Místo"} value={place.name} defaultValue={"Neoznámeno"}/>

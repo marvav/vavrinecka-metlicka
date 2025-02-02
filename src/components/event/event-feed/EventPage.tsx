@@ -4,10 +4,21 @@ import {ButtonStyle1} from "../../buttons/StyledButtons.tsx";
 import FootNote from "../../footnote/FootNote.tsx";
 import EventItem from "./EventItem.tsx";
 import {fetchBasicEvents} from "../../../data/EventProvider.tsx";
-import {EventBase} from "../../../data/EventBase.tsx";
+import SearchBar from "./SearchBar.tsx";
+import {isEventInFuture} from "../EventUtils.tsx";
 
 const EventPage: React.FC = () => {
     const events = fetchBasicEvents();
+
+    const [filteredItems, setFilteredItems] = useState(events);
+
+    const handleSearch = (query: string) => {
+        const results = events.filter((item) =>
+            item.title.toLowerCase().includes(query.toLowerCase())
+        );
+        setFilteredItems(results);
+    };
+
     const filteredEvents = events.filter(event => isEventInFuture(event));
     const [showPastEvents, setShowPastEvents] = useState(filteredEvents.length === 0);
     const displayedEvents = showPastEvents ? events : filteredEvents;
@@ -22,36 +33,36 @@ const EventPage: React.FC = () => {
             sm: "3em",
             md: "9em",
             lg: "9em",
-            xl: "15em"
+            xl: "12em"
         },
         paddingRight: {
             xs: "1em",
             sm: "3em",
             md: "9em",
             lg: "9em",
-            xl: "15em"
+            xl: "12em"
         },
         gap: "1em",
         paddingBottom: "1em",
         flexGrow: "2"
     }}>
+        <Box sx={{paddingTop: "1.5em", width: "100%"}}>
+            <SearchBar onSearch={handleSearch}/>
+        </Box>
         <Box
             sx={{
                 display: "grid",
                 gridTemplateColumns: {
-                    xl: displayedEvents.length > 1 ? "repeat(2, 1fr)" : "repeat(1, 1fr)",
-                    lg: 'repeat(1, 1fr)',
+                    xl: "repeat(3, 1fr)",
+                    lg: 'repeat(2, 1fr)',
+                    md: 'repeat(1, 1fr)',
                 },
-                width: {
-                    xl: displayedEvents.length > 1 ? "100%" : "50%",
-                    lg: "75%",
-                    md: "100%",
-                },
+                width: "100%",
                 justifyContent: "center",
-                gap: "4em",
+                gap: "2.5em",
                 paddingTop: "2em"
             }}>
-            {displayedEvents.map((event) => (
+            {filteredItems.map((event) => (
                 <EventItem {...event}/>
             ))}
         </Box>
@@ -66,10 +77,3 @@ const EventPage: React.FC = () => {
 };
 
 export default EventPage;
-
-function isEventInFuture(event: EventBase){
-    const today = new Date();
-    return event.date.getFullYear() >= today.getFullYear()
-        && event.date.getMonth() >= today.getMonth()
-        && event.date.getDate() >= today.getDate();
-}

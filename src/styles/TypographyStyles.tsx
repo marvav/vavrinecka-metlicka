@@ -4,6 +4,12 @@ const commonStyle = {
     color: "white"
 }
 
+export const TitleStyle3 = {
+    ...commonStyle,
+    fontSize: 20,
+    fontWeight: "bold",
+    textShadow: '0 0 5px #000000, 0 0 1px #000000, 0 0 20px #000000, 0 0 50px #000000',
+}
 
 export const TypographyStyle1 = {
     ...commonStyle,
