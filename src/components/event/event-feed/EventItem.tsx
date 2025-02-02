@@ -1,10 +1,11 @@
 import {Box, Button} from "@mui/material";
 import {useNavigate} from "react-router-dom";
-import FieldEntry from "../../misc/FieldEntry.tsx";
+import FieldEntry from "../../text-components/FieldEntry.tsx";
 import {translateTitleToUrl} from "../EventUtils.tsx";
 import {TypographyStyle1, TypographyStyle2} from "../../../styles/TypographyStyles.tsx";
 import Typography from "@mui/material/Typography";
 import {EventBase} from "../../../data/EventBase.tsx";
+import {PrimaryBackground} from "../../../styles/ColorDefinitions.ts";
 
 export default EventItem;
 
@@ -15,7 +16,7 @@ function EventItem({date, title, place, banner}: EventBase) {
         display: "flex",
         flexDirection: {xs: 'column'},
         textTransform: 'none',
-        background: '#111711',
+        background: PrimaryBackground,
         borderRadius: "0.75em",
         borderWidth: '2px',
         borderColor: 'transparent',

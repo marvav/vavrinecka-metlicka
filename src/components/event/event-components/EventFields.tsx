@@ -1,5 +1,5 @@
 import {Box} from "@mui/material";
-import FieldEntry from "../../misc/FieldEntry.tsx";
+import FieldEntry from "../../text-components/FieldEntry.tsx";
 import mapycz from "../../../assets/images/mapycz.png"
 import {LinkData} from "../../../data/LinkData.tsx";
 import React from "react";

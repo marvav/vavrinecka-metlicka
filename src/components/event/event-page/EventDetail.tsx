@@ -5,7 +5,7 @@ import EventFields from "../event-components/EventFields.tsx";
 import EventButtonBar from "../event-components/EventButtonBar.tsx";
 import EventAffiliateBar from "../event-components/EventAffiliateBar.tsx";
 import LinkBar from "../event-components/LinkBar.tsx";
-import StyledDescription from "../../misc/StyledDescription.tsx";
+import StyledDescription from "../../text-components/StyledDescription.tsx";
 import React from "react";
 import {TypographyStyle2} from "../../../styles/TypographyStyles.tsx";
 import Typography from "@mui/material/Typography";

@@ -7,7 +7,7 @@ import {isEventInFuture} from "../EventUtils.tsx";
 import {Event} from "../../../data/Event.tsx";
 import {Paragraph} from "../../../data/Paragraph.tsx";
 import StyledDialog from "../../misc/StyledDialog.tsx";
-import StyledDescription from "../../misc/StyledDescription.tsx";
+import StyledDescription from "../../text-components/StyledDescription.tsx";
 import Typography from "@mui/material/Typography";
 
 interface EventButtonBarProps {
