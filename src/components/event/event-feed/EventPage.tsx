@@ -31,16 +31,16 @@ const EventPage: React.FC = () => {
         paddingLeft: {
             xs: "1em",
             sm: "3em",
-            md: "9em",
-            lg: "9em",
-            xl: "12em"
+            md: "5em",
+            lg: "7em",
+            xl: "9em"
         },
         paddingRight: {
             xs: "1em",
             sm: "3em",
-            md: "9em",
-            lg: "9em",
-            xl: "12em"
+            md: "5em",
+            lg: "7em",
+            xl: "9em"
         },
         gap: "1em",
         paddingBottom: "1em",

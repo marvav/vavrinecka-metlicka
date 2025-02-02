@@ -3,6 +3,8 @@ import TextField from "@mui/material/TextField";
 import InputAdornment from "@mui/material/InputAdornment";
 import SearchIcon from "@mui/icons-material/Search";
 import {PrimaryColor} from "../../../styles/ColorDefinitions.ts";
+import {Button} from "@mui/material";
+import {Settings} from "@mui/icons-material";
 
 interface SearchBarProps {
     onSearch: (query: string) => void;
@@ -41,6 +43,11 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
                     <InputAdornment position="start">
                         <SearchIcon />
                     </InputAdornment>
+                ),
+                endAdornment: (
+                    <Button>
+                        <Settings/>
+                    </Button>
                 ),
             }}
         />

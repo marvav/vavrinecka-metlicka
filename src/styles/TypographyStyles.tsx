@@ -1,20 +1,19 @@
 import {LinkColor} from "./ColorDefinitions.ts";
 
 const commonStyle = {
-    color: "white"
+    color: "white",
+    textShadow: '0 0 5px #000000, 0 0 1px #000000, 0 0 20px #000000, 0 0 50px #000000',
 }
 
 export const TitleStyle3 = {
     ...commonStyle,
     fontSize: 20,
     fontWeight: "bold",
-    textShadow: '0 0 5px #000000, 0 0 1px #000000, 0 0 20px #000000, 0 0 50px #000000',
 }
 
 export const TypographyStyle1 = {
     ...commonStyle,
     fontSize: 16,
-    textShadow: '0 0 5px #000000, 0 0 1px #000000, 0 0 20px #000000, 0 0 50px #000000',
 }
 
 export const TypographyStyle2 = {
@@ -25,7 +24,6 @@ export const TypographyStyle2 = {
         sm: 28,
         xs: 26
     },
-    textShadow: '0 0 5px #000000, 0 0 1px #000000, 0 0 20px #000000, 0 0 50px #000000',
 }
 
 export const TypographyBreadCrumbStyle = {
@@ -33,7 +31,6 @@ export const TypographyBreadCrumbStyle = {
     width: "auto",
     fontWeight: "bold",
     transition: "all 0.1s ease-in",
-    textShadow: '0 0 5px #000000, 0 0 1px #000000, 0 0 20px #000000, 0 0 50px #000000',
     '&:hover': {
         color: "#727bff",
     }
@@ -44,7 +41,6 @@ export const TypographyLinkStyle = {
     width: "auto",
     textDecoration: "underline",
     transition: "all 0.1s ease-in",
-    textShadow: '0 0 5px #000000, 0 0 1px #000000, 0 0 20px #000000, 0 0 50px #000000',
     '&:hover': {
         color: "#727bff",
     }
