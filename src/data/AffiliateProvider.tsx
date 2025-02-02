@@ -1,5 +1,5 @@
 import {AffiliateData} from "./AffiliateData.tsx";
-import kudy_z_nudy from "../../assets/logos/kudy_z_nudy.png"
+import kudy_z_nudy from "../assets/logos/kudy_z_nudy.png"
 
 export const kudyznudy: AffiliateData = {
     logo: kudy_z_nudy as string,

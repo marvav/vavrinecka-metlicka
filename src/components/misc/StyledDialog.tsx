@@ -9,7 +9,7 @@ interface StyledDialogProps {
 
 function StyledDialog({open, setOpen, content}: StyledDialogProps) {
     return <Dialog maxWidth={"md"} open={open} onClose={() => setOpen(false)}>
-        <Box sx={{border: "1px solid #00A000"}}>
+        <Box sx={{border: "1px solid #00A000", backgroundColor: "#111711"}}>
             {content}
             <Box
                 style={{

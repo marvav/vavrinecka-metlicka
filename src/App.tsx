@@ -7,7 +7,7 @@ import EventDetailPage from "./components/event/event-page/EventDetailPage.tsx";
 import StyledPage from "./components/page/StyledPage.tsx";
 import ContactPage from "./components/contact-page/ContactPage.tsx";
 import {translateTitleToUrl} from "./components/event/EventUtils.tsx";
-import {fetchBasicEvents} from "./components/data/EventProvider.tsx";
+import {fetchBasicEvents} from "./data/EventProvider.tsx";
 
 function App() {
     return <ThemeProvider theme={page_common_theme}>

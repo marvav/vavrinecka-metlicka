@@ -3,7 +3,8 @@ import {Box, Breadcrumbs} from "@mui/material";
 import EventDetail from "./EventDetail.tsx";
 import Typography from "@mui/material/Typography";
 import {Link} from "react-router-dom";
-import {fetchEvent} from "../../data/EventProvider.tsx";
+import {fetchEvent} from "../../../data/EventProvider.tsx";
+import {TypographyBreadCrumbStyle} from "../../../styles/TypographyStyles.tsx";
 
 function EventDetailPage(id: string){
     const event = fetchEvent(id);
@@ -19,7 +20,7 @@ function EventDetailPage(id: string){
     }}>
         <Breadcrumbs sx={{width: "100%"}}>
             <Link to={"/akce"}>
-                🤘Akce
+                <Typography sx={TypographyBreadCrumbStyle}>🤘Akce</Typography>
             </Link>
             <Typography>
                 {event.title}

@@ -1,26 +1,55 @@
 import {Event} from "./Event.tsx";
 
-import rockovyvecer from "../../assets/posters/rockovyvecer.jpg"
-import pochod2025 from "../../assets/posters/pochod2025.png"
-import beh2024 from "../../assets/posters/beh2024.jpg"
-import pochod2024 from "../../assets/posters/pochod2024.jpg"
+import rockovyvecer from "../assets/posters/rockovyvecer.jpg"
+import pochod2025 from "../assets/posters/pochod2025.png"
+import beh2024 from "../assets/posters/beh2024.jpg"
+import pochod2024 from "../assets/posters/pochod2024.jpg"
+import metalpodplechem2025 from "../assets/posters/metalpodplechem2025.jpg"
 
-import pochod2025banner from "../../assets/banners/pochod2025banner.png"
-import rockovyvecer2025banner from "../../assets/banners/rockovyvecer2025banner.jpg"
-import beh2024banner from "../../assets/banners/beh2024banner.jpg"
-import pochod2024banner from "../../assets/banners/pochod2024banner.jpg"
+import pochod2025banner from "../assets/banners/pochod2025banner.png"
+import rockovyvecer2025banner from "../assets/banners/rockovyvecer2025banner.jpg"
+import beh2024banner from "../assets/banners/beh2024banner.jpg"
+import pochod2024banner from "../assets/banners/pochod2024banner.jpg"
+import metalpodplechem2025banner from "../assets/banners/metalpodplechem2025banner.png"
 
-import rockovyvecer2025parkovani from "../../assets/parking/rockovyvecer2025parking.png"
-import pochod2025parking from "../../assets/parking/pochod2025_parking.png"
+import rockovyvecer2025parkovani from "../assets/parking/rockovyvecer2025parking.png"
+import pochod2025parking from "../assets/parking/pochod2025_parking.png"
 
-import pochod2024mapa from "../../assets/parking/pochod2024mapa.png"
-import pochod2025mapa from "../../assets/parking/Pochod2025mapa.png"
+import pochod2024mapa from "../assets/parking/pochod2024mapa.png"
+import pochod2025mapa from "../assets/parking/Pochod2025mapa.png"
 
 import {parkVavrinec, zdarKulturak} from "./PlaceProvider.tsx";
 import {kudyznudy} from "./AffiliateProvider.tsx";
 import {EventBase} from "./EventBase.tsx";
 
 const predefinedEvents: Event[] = [
+    {
+        id: crypto.randomUUID(),
+        title: "METAL POD PLECHEM 2025",
+        date: new Date(2025, 3, 12, 0, 0, 0),
+        place: parkVavrinec,
+        description: [
+            {content: "Zveme vás na 3. ročník hudební akce METAL POD PLECHEM 🤟, která proběhne v sobotu 12. 4. 2025 v areálu parku Vavřinec! Připravte se na pořádnou dávku rocku a metalu! 🎸🔥"}
+            , {title: "⏰ ČASOVÝ HARMONOGRAM", bulletPoints: ["Otevření areálu: 15:00", "Začátek akce: 16:00"]}
+            , {
+                title: "🎤 KAPELY & LINE-UP", bulletPoints: [
+                    "la Bande - Rock (Bošovice) 16:00", "" +
+                    "Green day revival - Punk Rock (Praha) 18:00",
+                    "Accept revival - Heavy Metal (Znojmo) 20:00",
+                    "Aliens - Heavy Metal (Velké Pavlovice) 22:00"]
+            }
+            , {title: "🎟️ VSTUPNÉ", bulletPoints: ["500 Kč v předprodeji", "550 Kč na místě"]}
+            , {content: "🌦️ Akce se koná za každého počasí (vyhřívané prostory)"}
+            , {content: "🔊 Připravte se na večer plný skvělé muziky! Těšíme se na vás! 🤘🔥"}
+        ],
+        ticketMessage: {title: "🛒KDE ZAKOUPIT VSTUPENKY?", bulletPoints: ["Hospůdka na Kasárnách, Veselice", "Nová duha, prodejna Vavřinec a Sloup", "Obecní úřad Žďár (v úředních hodinách)"]},
+        links: [{name: "Facebooková událost", url: "https://fb.me/e/5JsmVt9Vz"}],
+        banner: metalpodplechem2025banner as string,
+        tracks: [],
+        pictures: [{name: "Plakát", url: metalpodplechem2025 as string}],
+        eventLinks: [],
+        affiliates: []
+    },
     {
         id: crypto.randomUUID(),
         title: "Vavřinecký pochod Moravským krasem 2025",
@@ -38,7 +67,11 @@ const predefinedEvents: Event[] = [
             }
             ,
         ],
-        links: [],
+        ticketMessage: undefined,
+        links: [{name: "Facebooková událost", url: "https://fb.me/e/6qiAy00Va"}, {
+            name: "Kudyznudy",
+            url: "https://www.kudyznudy.cz/akce/vavrinecky-pochod-moravskym-krasem"
+        }],
         banner: pochod2025banner as string,
         tracks: [{name: "6.5km", url: "https://mapy.cz/s/kemunahazu"},
             {name: "18.5km", url: "https://mapy.cz/s/lafarefopo"},
@@ -49,10 +82,7 @@ const predefinedEvents: Event[] = [
             {name: "Parkování", url: pochod2025parking as string},
             {name: "Mapa pochodu", url: pochod2025mapa as string},
         ],
-        eventLinks: [{name: "Facebook", url: "https://fb.me/e/6qiAy00Va"}, {
-            name: "Kudyznudy",
-            url: "https://www.kudyznudy.cz/akce/vavrinecky-pochod-moravskym-krasem"
-        }],
+        eventLinks: [],
         affiliates: [kudyznudy]
     },
 
@@ -72,6 +102,7 @@ const predefinedEvents: Event[] = [
                 ]
             }
         ],
+        ticketMessage: undefined,
         banner: rockovyvecer2025banner as string,
         links: [{name: "Fotky", url: "https://eu.zonerama.com/Link/Open/678ea2c1aa78183dd8e455da"}],
         tracks: [],
@@ -92,10 +123,11 @@ const predefinedEvents: Event[] = [
         place: parkVavrinec,
         description: [
             {content: "Vavřinecká Metlička pod záštitou SDH Vavřinec Vás zve na 1. ročník závodu VAVŘINECKÝ BĚH MORAVSKÝM KRASEM."}
-            ,{content: "Závod bude probíhat za každého počasí. Start bude v areálu fotbalového hřiště ve Vavřinci, kde budou k dispozici i šatny a sprchy."}
+            , {content: "Závod bude probíhat za každého počasí. Start bude v areálu fotbalového hřiště ve Vavřinci, kde budou k dispozici i šatny a sprchy."}
         ],
         links: [{name: "Fotky", url: "https://eu.zonerama.com/vasman33/1402623"}],
         banner: beh2024banner as string,
+        ticketMessage: undefined,
         tracks: [],
         pictures: [{name: "Plakát", url: beh2024 as string}],
         eventLinks: [],
@@ -108,6 +140,7 @@ const predefinedEvents: Event[] = [
         date: new Date(2024, 0, 20, 0, 0, 0),
         place: parkVavrinec,
         description: [{content: "Již proběhlo"}],
+        ticketMessage: undefined,
         links: [],
         banner: pochod2024banner as string,
         tracks: [{name: "6km", url: "https://mapy.cz/s/detacumenu"},
@@ -121,35 +154,10 @@ const predefinedEvents: Event[] = [
     },
 ];
 
-const metalpodplechem = {
-    title: "Metal pod Plechem 2024",
-    date: new Date(2024, 3, 20, 16, 0, 0),
-    place: parkVavrinec,
-    content: "2. ročník hudební akce METAL POD PLECHEM 🤟, který se koná v sobotu 20.4.2024 v areálu parku Vavřinec. Začátek v 16:00, areál bude otevřen od 15:00, předpokládaný konec v 1:00. KAPELY & LINE-UP:\n" +
-        "• Kozí čtvrť (Drnovice u Lysic) 16:00 - 17:00,\n" +
-        "• Blastera (Blansko) 17:30 - 18:20,\n" +
-        "• Judas Priest Revival (Praha) 19:00 - 21:00,\n" +
-        "• Aliens (Velké Pavlovice) 21:30 - 23:30.\n" +
-        "VSTUPNÉ: 450 Kč\n" +
-        "OBČERSTVENÍ:\n" +
-        "• Starobrno 12° Bitr, víno z Vinařství Michna (Čejkovice), nealko\n" +
-        "• Utopenci, nakládaný sýr Camembert, uzená klobása, lipovecká sekaná\n" +
-        "Akce se koná za každého počasí (vyhřívané prostory).",
-    description: [],
-    ticket_link: undefined,
-    image: beh2024 as string,
-    banner: pochod2025banner as string,
-    photos_url: undefined,
-    tracks: undefined,
-    eventLinks: [{name: "Facebook", url: "https://www.facebook.com/events/927713592219766/"}],
-    affiliates: []
-};
-
-
-export function fetchBasicEvents(): EventBase[]{
+export function fetchBasicEvents(): EventBase[] {
     return predefinedEvents;
 }
 
-export function fetchEvent(id: string): Event{
+export function fetchEvent(id: string): Event {
     return predefinedEvents.find(event => event.id.match(id));
 }

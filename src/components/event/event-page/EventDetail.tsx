@@ -1,12 +1,11 @@
 import {Box} from "@mui/material";
-import {Event} from "../../data/Event.tsx";
+import {Event} from "../../../data/Event.tsx";
 import event_theme from "../event-components/event_theme.ts";
 import EventFields from "../event-components/EventFields.tsx";
 import EventButtonBar from "../event-components/EventButtonBar.tsx";
 import EventAffiliateBar from "../event-components/EventAffiliateBar.tsx";
 import LinkBar from "../event-components/LinkBar.tsx";
 import StyledDescription from "../../misc/StyledDescription.tsx";
-import TrackLinkBar from "../../misc/TrackLinkBar.tsx";
 import React from "react";
 import {TypographyStyle2} from "../../../styles/TypographyStyles.tsx";
 import Typography from "@mui/material/Typography";
@@ -35,9 +34,9 @@ function EventDetail(event: Event) {
                     {event.title}
                 </Typography>
                 <EventFields date={event.date} place={event.place}/>
-                {event.tracks && <LinkBar title={"Odkazy na trasy"} links={event.tracks}/>}
+                {event.tracks.length > 0 && <LinkBar title={"Odkazy na trasy"} links={event.tracks}/>}
                 <StyledDescription paragraphs={event.description}/>
-                <EventButtonBar pictures={event.pictures} links={event.links}/>
+                <EventButtonBar event={event}/>
                 {event.affiliates.length > 0 && <EventAffiliateBar affiliates={event.affiliates}/>}
                 {event.eventLinks.length > 0 && <LinkBar title={"Akci najdete také na"} links={event.eventLinks}></LinkBar>}
             </Box>

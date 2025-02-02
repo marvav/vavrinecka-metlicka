@@ -3,8 +3,8 @@ import {Box} from "@mui/material";
 import {ButtonStyle1} from "../../buttons/StyledButtons.tsx";
 import FootNote from "../../footnote/FootNote.tsx";
 import EventItem from "./EventItem.tsx";
-import {fetchBasicEvents} from "../../data/EventProvider.tsx";
-import {EventBase} from "../../data/EventBase.tsx";
+import {fetchBasicEvents} from "../../../data/EventProvider.tsx";
+import {EventBase} from "../../../data/EventBase.tsx";
 
 const EventPage: React.FC = () => {
     const events = fetchBasicEvents();

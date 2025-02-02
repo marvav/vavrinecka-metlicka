@@ -1,6 +1,6 @@
 import Typography from "@mui/material/Typography";
 import {Link} from "react-router-dom";
-import {LinkData} from "../data/LinkData.tsx";
+import {LinkData} from "../../data/LinkData.tsx";
 import {Box, ImageListItem} from "@mui/material";
 
 interface StyledLinkProps {

@@ -4,7 +4,7 @@ import FieldEntry from "../../misc/FieldEntry.tsx";
 import {translateTitleToUrl} from "../EventUtils.tsx";
 import {TypographyStyle1, TypographyStyle2} from "../../../styles/TypographyStyles.tsx";
 import Typography from "@mui/material/Typography";
-import {EventBase} from "../../data/EventBase.tsx";
+import {EventBase} from "../../../data/EventBase.tsx";
 
 export default EventItem;
 
@@ -41,7 +41,7 @@ function EventItem({date, title, place, banner}: EventBase) {
         <Box sx={{
             display: "flex",
             flexDirection: 'column',
-            padding: "1em",
+            padding: "0.8em",
             flexGrow: 1,
             width: "100%",
             gap: "0.25em",

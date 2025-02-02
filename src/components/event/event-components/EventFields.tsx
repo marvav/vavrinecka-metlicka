@@ -1,9 +1,12 @@
 import {Box} from "@mui/material";
 import FieldEntry from "../../misc/FieldEntry.tsx";
 import mapycz from "../../../assets/images/mapycz.png"
-import {LinkData} from "../../data/LinkData.tsx";
+import {LinkData} from "../../../data/LinkData.tsx";
 import React from "react";
 import {MapyCZLink} from "../../misc/ButtonLink.tsx";
+import {Link} from "react-router-dom";
+import Typography from "@mui/material/Typography";
+import {TypographyLinkStyle} from "../../../styles/TypographyStyles.tsx";
 
 interface EventFieldsProps {
     date: Date
@@ -12,8 +15,9 @@ interface EventFieldsProps {
 
 function EventFields({date, place}: EventFieldsProps) {
     const placeElement = <Box sx={{display: "flex", gap: "0.5em", alignItems: "center"}}>
-        {place.name + " "}
-        <MapyCZLink image={mapycz as string} link={place}/>
+        <Link to={place.url} target={"_blank"} rel="noopener noreferrer">
+            <Typography sx={TypographyLinkStyle}>{place.name + " "}</Typography>
+        </Link>
     </Box>
     return <Box
         sx={{
