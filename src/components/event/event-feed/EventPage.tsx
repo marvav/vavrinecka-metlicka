@@ -19,7 +19,7 @@ const EventPage: React.FC = () => {
             results = results.filter((item) => isEventInFuture(item));
         }
 
-        console.log(query);
+        console.log(onlyUpcomingEvents);
         setFilteredItems(results);
     };
 

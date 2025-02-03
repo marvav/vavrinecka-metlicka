@@ -25,8 +25,9 @@ const EventSearchBar: React.FC<SearchBarProps> = ({onChange}) => {
     };
 
     const handleButtonChange = () => {
-        setOnlyUpcomingEvents(!onlyUpcomingEvents);
-        onChange(query, onlyUpcomingEvents);
+        const value = !onlyUpcomingEvents;
+        setOnlyUpcomingEvents(value);
+        onChange(query, value);
     };
 
     const handleClick = (event: React.MouseEvent<HTMLElement>) => {

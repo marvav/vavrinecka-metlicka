@@ -15,7 +15,7 @@ import MenuItem from "@mui/material/MenuItem";
 
 export interface MainBarElementType {
     name: string,
-    action: MouseEventHandler
+    action: () => void
 }
 
 const MainBar: React.FC = () => {
@@ -60,7 +60,6 @@ function DesktopMainBarMenu({elements}: MainBarMenuProps) {
 
 function MobileMainBarMenu({elements}: MainBarMenuProps) {
     const [anchorElement, setAnchorElement] = React.useState<null | HTMLElement>(null);
-    const open = Boolean(anchorElement);
 
     const handleClick = (event: React.MouseEvent<HTMLElement>) => {
         setAnchorElement(event.currentTarget);
@@ -69,8 +68,6 @@ function MobileMainBarMenu({elements}: MainBarMenuProps) {
     return <Box>
         <Button
             id="page-dropdown-menu-button"
-            variant="contained"
-            disableElevation
             onClick={handleClick}
             color="inherit"
         >
@@ -78,15 +75,14 @@ function MobileMainBarMenu({elements}: MainBarMenuProps) {
             <ArrowDropDown/>
         </Button>
         <Menu
-            id="page-dropdown-menu"
             anchorEl={anchorElement}
-            open={open}
+            open={anchorElement != null}
             onClose={() => setAnchorElement(null)}
         >
             {elements.map((element) =>
                 getMenuItem(element.name, () => {
                     setAnchorElement(null);
-                    element.action(undefined); //Should be reworked later
+                    element.action();
                 }))}
         </Menu>
     </Box>;
@@ -94,7 +90,7 @@ function MobileMainBarMenu({elements}: MainBarMenuProps) {
 
 
 function getMenuItem(title: string, closeAndNavigate: MouseEventHandler<HTMLAnchorElement> | undefined) {
-    return <MenuItem onClick={closeAndNavigate} disableRipple
+    return <MenuItem onClick={closeAndNavigate}
                      sx={{
                          display: "flex",
                          justifyContent: "center",
