@@ -1,8 +1,8 @@
 import {Request, Response} from "express";
 import eventRepository from '../repositories/event.repository.js';
-import {parseRequest} from '../utils.js';
-import {getEventRequestSchema, getEventsRequestSchema} from "../validationSchemas/validationSchemas.js";
 import {EventX} from "../types.js";
+import {getEventRequestSchema, getEventsRequestSchema} from "../validationSchemas/validationSchemas";
+import {parseRequest} from "../utils";
 
 const getEvent = async (req: Request, res: Response) => {
     const request = await parseRequest(getEventRequestSchema, req, res);

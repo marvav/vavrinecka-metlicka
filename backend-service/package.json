@@ -1,15 +1,14 @@
 {
   "name": "metlicka_backend",
   "version": "0.1.0",
-  "description": "",
-  "main": "src/index.ts",
-  "type": "module",
+  "main": "index.ts",
   "scripts": {
     "migrate": "ts-node kysely/migrator.ts",
     "schema": "kysely-codegen --out-file src/db/schema.ts",
-    "start": "ts-node src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
     "seed": "ts-node src/seed/seed.ts",
-    "watch": "nodemon src/index.ts"
+    "watch": "nodemon index.ts"
   },
   "keywords": [
     "rest",
@@ -21,7 +20,7 @@
     "@tsconfig/strictest": "^2.0.5",
     "@types/cors": "^2.8.13",
     "@types/express": "^4.17.21",
-    "@types/node": "^18.19.26",
+    "@types/node": "^18.19.74",
     "@types/pg": "^8.7.1",
     "@typescript-eslint/eslint-plugin": "^5.57.0",
     "@typescript-eslint/parser": "^5.57.0",
@@ -31,7 +30,9 @@
     "kysely-codegen": "^0.14.1",
     "nodemon": "^3.1.0",
     "ts-node": "^10.9.2",
-    "typescript": "^5.7.3"
+    "typescript": "^5.7.3",
+    "zod": "^3.22.4",
+    "zod-validation-error": "^3.0.3"
   },
   "dependencies": {
     "@badrap/result": "^0.2.13",
@@ -47,5 +48,6 @@
     "typescript-result": "^3.1.1",
     "zod": "^3.22.4",
     "zod-validation-error": "^3.0.3"
-  }
+  },
+  "description": ""
 }

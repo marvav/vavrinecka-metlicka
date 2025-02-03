@@ -1,13 +1,13 @@
 import express from 'express';
 import cors from 'cors';
 import {config} from 'dotenv';
-import {env} from 'process';
-import {eventRouter} from "./routers/event.router.js";
+import {eventRouter} from "./routers/event.router";
+import {imageRouter} from "./routers/image.router";
 
 config();
 
 const index = express();
-const port = env.PORT ?? 3000;
+const port = process.env['PORT'] || 3000;
 
 // CORS middleware
 index.use(cors());
@@ -21,20 +21,19 @@ index.use(express.urlencoded({ extended: true }));
 // DO NOT MODIFY THE PRECEDING code ^^
 
 index.use('/events', eventRouter());
+index.use('/images', imageRouter());
 
 // No route was taken - 404 - Resource (API endpoint) not found.
 // Default route returning 404
-index.use((_req, res) => {
+index.use((_req: any, res: any) => {
     res.status(404).send('Not found');
 });
 
-if (env.NODE_ENV !== 'test') {
-    index.listen(port, () => {
-        console.log(
-            `[${new Date().toISOString()}] RESTful API for iteration 02 is listening on port ${port}`,
-        );
-    });
-}
+index.listen(port, () => {
+    console.log(
+        `[${new Date().toISOString()}] RESTful API for iteration 02 is listening on port ${port}`,
+    );
+});
 
 
 

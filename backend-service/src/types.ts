@@ -5,3 +5,8 @@ export interface EventX {
 export interface EventBasic {
 
 }
+
+export interface Image {
+    id: string
+    image: string
+}
