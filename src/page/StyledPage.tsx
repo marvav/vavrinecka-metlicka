@@ -4,6 +4,7 @@ import metlicka_background from "../assets/images/metlicka_background.png";
 import Typography from "@mui/material/Typography";
 import MainBar from "./MainBar.tsx";
 import {TypographyStyle2} from "../styles/TypographyStyles.tsx";
+import {SecondaryBackground} from "../styles/ColorDefinitions.ts";
 
 interface StyledPageProps {
     title: string | undefined;
@@ -15,7 +16,7 @@ const StyledPage: React.FC<StyledPageProps> = (props) => {
         display: "flex",
         flexDirection: "column",
         minHeight: "100vh",
-        bgcolor: 'background.default',
+        bgcolor: SecondaryBackground,
         backgroundImage: `url(${metlicka_background})`,
         alignItems: "center",
     }}>

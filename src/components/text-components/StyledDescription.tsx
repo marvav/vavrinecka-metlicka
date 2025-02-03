@@ -9,6 +9,7 @@ import {
     ListAltRounded,
     RadioButtonChecked
 } from "@mui/icons-material";
+import {TypographyStyle1} from "../../styles/TypographyStyles.tsx";
 
 export interface StyledTextBlockProps {
     paragraphs: Paragraph[];
@@ -46,12 +47,12 @@ function getList(paragraph: Paragraph) {
         gap: event_theme.spacing(0.5),
         textAlign: "left",
     }}>
-        <Typography sx={{fontWeight: "bold", padding: "0.0em", gap: "0em"}}>
+        <Typography sx={{...TypographyStyle1, fontWeight: "bold", padding: "0.0em", gap: "0em"}}>
             {paragraph.title + ":"}
         </Typography>
         <List sx={{listStyleType: 'disc', margin: 0, padding: 0, paddingLeft: "1.5em"}}>
             {paragraph.bulletPoints?.map(point =>
-                <ListItem sx={{display: 'list-item', padding: "0.0em", pl: "0.25em"}} primary="Item with padding">
+                <ListItem sx={{...TypographyStyle1, display: 'list-item', padding: "0.0em", pl: "0.25em"}} primary="Item with padding">
                     <ListItemText primary={point} />
                 </ListItem>)}
         </List>
@@ -59,7 +60,7 @@ function getList(paragraph: Paragraph) {
 }
 
 function getTextBlock(paragraph: Paragraph) {
-    return <Typography>
+    return <Typography sx={TypographyStyle1}>
         {paragraph.content}
     </Typography>
 }

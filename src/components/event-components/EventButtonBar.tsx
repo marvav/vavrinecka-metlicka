@@ -9,6 +9,7 @@ import {Paragraph} from "../../data/Paragraph.tsx";
 import StyledDialog from "../misc/StyledDialog.tsx";
 import StyledDescription from "../text-components/StyledDescription.tsx";
 import Typography from "@mui/material/Typography";
+import {TypographyStyle1} from "../../styles/TypographyStyles.tsx";
 
 interface EventButtonBarProps {
     event: Event
@@ -49,7 +50,7 @@ function TicketDialog(message: Paragraph, open: boolean, setOpen: Function) {
         setOpen(false);
     };
 
-    const content = <Box sx={{display: "flex",
+    const content = <Box sx={{...TypographyStyle1, display: "flex",
         flexDirection: "column",
         padding: "1.5em",
         gap: "1em",
