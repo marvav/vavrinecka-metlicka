@@ -1,6 +1,6 @@
 import Typography from "@mui/material/Typography";
 import {Box, Divider, List, ListItem, ListItemIcon, ListItemText} from "@mui/material";
-import event_theme from "../event/event-components/event_theme.ts";
+import event_theme from "../event-components/event_theme.ts";
 import {Paragraph} from "../../data/Paragraph.tsx";
 import {
     ArrowDownwardTwoTone, ChangeCircleOutlined, ChangeCircleSharp, ChangeHistory,

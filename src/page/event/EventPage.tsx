@@ -1,10 +1,10 @@
 import React, {useState} from "react";
 import {Box} from "@mui/material";
-import FootNote from "../../footnote/FootNote.tsx";
+import FootNote from "../../components/footnote/FootNote.tsx";
 import EventItem from "./EventItem.tsx";
-import {fetchBasicEvents} from "../../../data/EventProvider.tsx";
+import {fetchBasicEvents} from "../../data/EventProvider.tsx";
 import EventSearchBar from "./EventSearchBar.tsx";
-import {isEventInFuture} from "../EventUtils.tsx";
+import {isEventInFuture} from "./EventUtils.tsx";
 
 const EventPage: React.FC = () => {
     const events = fetchBasicEvents();

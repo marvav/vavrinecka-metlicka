@@ -9,6 +9,5 @@ export interface Event extends EventBase{
     tracks: LinkData[]
     links: LinkData[]
     pictures: LinkData[]
-    eventLinks: LinkData[]
     affiliates: AffiliateData[]
 }

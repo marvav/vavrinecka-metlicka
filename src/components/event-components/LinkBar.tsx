@@ -1,8 +1,8 @@
 import {Box} from "@mui/material";
-import {LinkData} from "../../../data/LinkData.tsx";
+import {LinkData} from "../../data/LinkData.tsx";
 import Typography from "@mui/material/Typography";
-import {ButtonLink} from "../../misc/ButtonLink.tsx";
-import {ButtonStyle1} from "../../../styles/ButtonStyles.tsx";
+import {ButtonLink} from "../misc/ButtonLink.tsx";
+import {ButtonStyle1} from "../../styles/ButtonStyles.tsx";
 
 interface LinkBarProps {
     title: string;

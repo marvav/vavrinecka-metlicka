@@ -1,9 +1,9 @@
 import React from "react";
 import {Box} from "@mui/material";
-import metlicka_background from "../../assets/images/metlicka_background.png";
+import metlicka_background from "../assets/images/metlicka_background.png";
 import Typography from "@mui/material/Typography";
 import MainBar from "./MainBar.tsx";
-import {TypographyStyle2} from "../../styles/TypographyStyles.tsx";
+import {TypographyStyle2} from "../styles/TypographyStyles.tsx";
 
 interface StyledPageProps {
     title: string | undefined;

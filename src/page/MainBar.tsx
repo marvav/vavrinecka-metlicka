@@ -2,12 +2,11 @@ import React, {MouseEventHandler} from 'react';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import {Box, ThemeProvider, useMediaQuery} from "@mui/material";
-import event_theme from "../event/event-components/event_theme.ts";
-import Logo from "../Logo.tsx";
+import {Box, useMediaQuery} from "@mui/material";
+import event_theme from "../components/event-components/event_theme.ts";
+import Logo from "../components/Logo.tsx";
 import {useNavigate} from 'react-router-dom';
 import MainBarElement from "./MainBarElement.tsx";
-import {desktopTheme, mobileTheme} from "./main_bar_theme.ts";
 import Button from "@mui/material/Button";
 import {ArrowDropDown} from "@mui/icons-material";
 import Menu from "@mui/material/Menu";
@@ -22,8 +21,6 @@ const MainBar: React.FC = () => {
     const isMobile = useMediaQuery(event_theme.breakpoints.down('sm'));
     const navigate = useNavigate();
 
-    const theme = isMobile ? mobileTheme : desktopTheme;
-
     const mainBarContent: MainBarElementType[] = [
         {name: "Úvod", action: () => navigate("/uvod")},
         {name: "Akce", action: () => navigate("/akce")},
@@ -34,18 +31,16 @@ const MainBar: React.FC = () => {
         ? <MobileMainBarMenu elements={mainBarContent}/>
         : <DesktopMainBarMenu elements={mainBarContent}/>;
 
-    return <ThemeProvider theme={theme}>
-        <AppBar position="fixed" sx={{top: 0}}>
-            <Toolbar sx={{display: "flex", gap: "0.5em", backgroundColor: "background.default"}}>
-                <Logo/>
-                <Typography variant="h6">
-                    Vavřinecká Metlička
-                </Typography>
-                <Box sx={{flexGrow: 3}}/>
-                {menu}
-            </Toolbar>
-        </AppBar>
-    </ThemeProvider>
+    return <AppBar position="fixed" sx={{top: 0}}>
+        <Toolbar sx={{display: "flex", gap: "0.5em", backgroundColor: "#000000"}}>
+            <Logo/>
+            <Typography variant="h6">
+                Vavřinecká Metlička
+            </Typography>
+            <Box sx={{flexGrow: 3}}/>
+            {menu}
+        </Toolbar>
+    </AppBar>
 };
 
 export interface MainBarMenuProps {

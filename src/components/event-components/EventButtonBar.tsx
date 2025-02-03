@@ -1,13 +1,13 @@
 import {Box, Button} from "@mui/material";
 import {MouseEventHandler, useState} from "react";
-import ImageDialog from "../../misc/ImageDialog.tsx";
-import {ButtonStyle1} from "../../buttons/StyledButtons.tsx";
-import {LinkData} from "../../../data/LinkData.tsx";
-import {isEventInFuture} from "../EventUtils.tsx";
-import {Event} from "../../../data/Event.tsx";
-import {Paragraph} from "../../../data/Paragraph.tsx";
-import StyledDialog from "../../misc/StyledDialog.tsx";
-import StyledDescription from "../../text-components/StyledDescription.tsx";
+import ImageDialog from "../misc/ImageDialog.tsx";
+import {ButtonStyle1} from "../buttons/StyledButtons.tsx";
+import {LinkData} from "../../data/LinkData.tsx";
+import {isEventInFuture} from "../../page/event/EventUtils.tsx";
+import {Event} from "../../data/Event.tsx";
+import {Paragraph} from "../../data/Paragraph.tsx";
+import StyledDialog from "../misc/StyledDialog.tsx";
+import StyledDescription from "../text-components/StyledDescription.tsx";
 import Typography from "@mui/material/Typography";
 
 interface EventButtonBarProps {

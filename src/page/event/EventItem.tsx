@@ -1,11 +1,11 @@
 import {Box, Button} from "@mui/material";
 import {useNavigate} from "react-router-dom";
-import FieldEntry from "../../text-components/FieldEntry.tsx";
-import {translateTitleToUrl} from "../EventUtils.tsx";
-import {TitleStyle3, TypographyStyle1, TypographyStyle2} from "../../../styles/TypographyStyles.tsx";
+import FieldEntry from "../../components/text-components/FieldEntry.tsx";
+import {translateTitleToUrl} from "./EventUtils.tsx";
+import {TitleStyle3, TypographyStyle1, TypographyStyle2} from "../../styles/TypographyStyles.tsx";
 import Typography from "@mui/material/Typography";
-import {EventBase} from "../../../data/EventBase.tsx";
-import {PrimaryBackground} from "../../../styles/ColorDefinitions.ts";
+import {EventBase} from "../../data/EventBase.tsx";
+import {PrimaryBackground} from "../../styles/ColorDefinitions.ts";
 
 export default EventItem;
 

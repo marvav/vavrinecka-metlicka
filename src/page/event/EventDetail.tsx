@@ -1,13 +1,13 @@
 import {Box} from "@mui/material";
-import {Event} from "../../../data/Event.tsx";
-import event_theme from "../event-components/event_theme.ts";
-import EventFields from "../event-components/EventFields.tsx";
-import EventButtonBar from "../event-components/EventButtonBar.tsx";
-import EventAffiliateBar from "../event-components/EventAffiliateBar.tsx";
-import LinkBar from "../event-components/LinkBar.tsx";
-import StyledDescription from "../../text-components/StyledDescription.tsx";
+import {Event} from "../../data/Event.tsx";
+import event_theme from "../../components/event-components/event_theme.ts";
+import EventFields from "../../components/event-components/EventFields.tsx";
+import EventButtonBar from "../../components/event-components/EventButtonBar.tsx";
+import EventAffiliateBar from "../../components/event-components/EventAffiliateBar.tsx";
+import LinkBar from "../../components/event-components/LinkBar.tsx";
+import StyledDescription from "../../components/text-components/StyledDescription.tsx";
 import React from "react";
-import {TypographyStyle2} from "../../../styles/TypographyStyles.tsx";
+import {TypographyStyle2} from "../../styles/TypographyStyles.tsx";
 import Typography from "@mui/material/Typography";
 
 export default EventDetail;
@@ -38,7 +38,6 @@ function EventDetail(event: Event) {
                 <StyledDescription paragraphs={event.description}/>
                 <EventButtonBar event={event}/>
                 {event.affiliates.length > 0 && <EventAffiliateBar affiliates={event.affiliates}/>}
-                {event.eventLinks.length > 0 && <LinkBar title={"Akci najdete také na"} links={event.eventLinks}></LinkBar>}
             </Box>
             <Box sx={{flexGrow: 2}}/>
         </Box>

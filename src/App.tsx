@@ -1,12 +1,12 @@
 import {CssBaseline, ThemeProvider} from "@mui/material";
 import {BrowserRouter as Router, Navigate, Route, Routes} from "react-router-dom";
-import EventPage from "./components/event/event-feed/EventPage.tsx";
-import IntroPage from "./components/intro-page/IntroPage.tsx";
+import EventPage from "./page/event/EventPage.tsx";
+import IntroPage from "./page/intro/IntroPage.tsx";
 import page_common_theme from "./themes/page_common_theme.ts";
-import EventDetailPage from "./components/event/event-page/EventDetailPage.tsx";
-import StyledPage from "./components/page/StyledPage.tsx";
-import ContactPage from "./components/contact-page/ContactPage.tsx";
-import {translateTitleToUrl} from "./components/event/EventUtils.tsx";
+import EventDetailPage from "./page/event/EventDetailPage.tsx";
+import StyledPage from "./page/StyledPage.tsx";
+import ContactPage from "./page/contact/ContactPage.tsx";
+import {translateTitleToUrl} from "./page/event/EventUtils.tsx";
 import {fetchBasicEvents} from "./data/EventProvider.tsx";
 
 function App() {

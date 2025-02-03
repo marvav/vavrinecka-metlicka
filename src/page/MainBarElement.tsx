@@ -1,6 +1,6 @@
 import {MouseEventHandler} from 'react';
 import {Button} from "@mui/material";
-import {TypographyStyle1} from "../../styles/TypographyStyles.tsx";
+import {TypographyStyle1} from "../styles/TypographyStyles.tsx";
 
 interface MainBarElementProps {
     title: string

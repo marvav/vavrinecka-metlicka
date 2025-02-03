@@ -2,10 +2,10 @@ import React from "react";
 import {Box, useMediaQuery} from "@mui/material";
 import Typography from "@mui/material/Typography";
 import metlicka_maskot from "../../assets/images/metlicka_maskot.png";
-import Footer from "../footnote/FootNote"
+import Footer from "../../components/footnote/FootNote.tsx"
 import {TypographyStyle1} from "../../styles/TypographyStyles.tsx";
-import event_theme from "../event/event-components/event_theme.ts";
-import {ButtonLink} from "../misc/ButtonLink.tsx";
+import event_theme from "../../components/event-components/event_theme.ts";
+import {ButtonLink} from "../../components/misc/ButtonLink.tsx";
 const IntroPage: React.FC = () => {
     const isMobile = useMediaQuery(event_theme.breakpoints.down('sm'));
     return <Box sx={{

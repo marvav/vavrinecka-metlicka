@@ -1,12 +1,12 @@
 import {Box} from "@mui/material";
-import FieldEntry from "../../text-components/FieldEntry.tsx";
-import mapycz from "../../../assets/images/mapycz.png"
-import {LinkData} from "../../../data/LinkData.tsx";
+import FieldEntry from "../text-components/FieldEntry.tsx";
+import mapycz from "../../assets/images/mapycz.png"
+import {LinkData} from "../../data/LinkData.tsx";
 import React from "react";
-import {MapyCZLink} from "../../misc/ButtonLink.tsx";
+import {MapyCZLink} from "../misc/ButtonLink.tsx";
 import {Link} from "react-router-dom";
 import Typography from "@mui/material/Typography";
-import {TypographyLinkStyle} from "../../../styles/TypographyStyles.tsx";
+import {TypographyLinkStyle} from "../../styles/TypographyStyles.tsx";
 
 interface EventFieldsProps {
     date: Date

@@ -5,12 +5,14 @@ import pochod2025 from "../assets/posters/pochod2025.png"
 import beh2024 from "../assets/posters/beh2024.jpg"
 import pochod2024 from "../assets/posters/pochod2024.jpg"
 import metalpodplechem2025 from "../assets/posters/metalpodplechem2025.jpg"
+import metalpodplechem2024 from "../assets/posters/metalpodplechem2024.jpg"
 
 import pochod2025banner from "../assets/banners/pochod2025banner.png"
 import rockovyvecer2025banner from "../assets/banners/rockovyvecer2025banner.jpg"
 import beh2024banner from "../assets/banners/beh2024banner.jpg"
 import pochod2024banner from "../assets/banners/pochod2024banner.jpg"
 import metalpodplechem2025banner from "../assets/banners/metalpodplechem2025banner.png"
+import metalpodplechem2024banner from "../assets/banners/metalpodplechem2024banner.jpg"
 
 import rockovyvecer2025parkovani from "../assets/parking/rockovyvecer2025parking.png"
 import pochod2025parking from "../assets/parking/pochod2025_parking.png"
@@ -47,7 +49,6 @@ const predefinedEvents: Event[] = [
         banner: metalpodplechem2025banner as string,
         tracks: [],
         pictures: [{name: "Plakát", url: metalpodplechem2025 as string}],
-        eventLinks: [],
         affiliates: []
     },
     {
@@ -82,7 +83,6 @@ const predefinedEvents: Event[] = [
             {name: "Parkování", url: pochod2025parking as string},
             {name: "Mapa pochodu", url: pochod2025mapa as string},
         ],
-        eventLinks: [],
         affiliates: [kudyznudy]
     },
 
@@ -104,7 +104,7 @@ const predefinedEvents: Event[] = [
         ],
         ticketMessage: undefined,
         banner: rockovyvecer2025banner as string,
-        links: [{name: "Fotky", url: "https://eu.zonerama.com/Link/Open/678ea2c1aa78183dd8e455da"}],
+        links: [{name: "Fotky", url: "https://eu.zonerama.com/Link/Open/678ea2c1aa78183dd8e455da"}, {name: "Facebook", url: "https://fb.me/e/blY6KGyxN"}],
         tracks: [],
         pictures: [
             {
@@ -112,7 +112,6 @@ const predefinedEvents: Event[] = [
             }, {
                 name: "Parkování", url: rockovyvecer2025parkovani as string
             }],
-        eventLinks: [{name: "Facebook", url: "https://fb.me/e/blY6KGyxN"}],
         affiliates: []
     },
 
@@ -130,7 +129,32 @@ const predefinedEvents: Event[] = [
         ticketMessage: undefined,
         tracks: [],
         pictures: [{name: "Plakát", url: beh2024 as string}],
-        eventLinks: [],
+        affiliates: []
+    },
+
+    {
+        id: crypto.randomUUID(),
+        title: "METAL POD PLECHEM 2024",
+        date: new Date(2024, 3, 20, 0, 0, 0),
+        place: parkVavrinec,
+        description: [
+            {content: "Zveme vás na 2. ročník hudební akce METAL POD PLECHEM 🤟, který se koná v sobotu 20.4.2024 v areálu parku Vavřinec. Začátek v 16:00, areál bude otevřen od 15:00, předpokládaný konec v 1:00. "}
+            , {
+                title: "🎤 KAPELY & LINE-UP", bulletPoints: [
+                    "Kozí čtvrť (Drnovice u Lysic) 16:00 - 17:00",
+                    "Blastera (Blansko) 17:30 - 18:20",
+                    "Judas Priest Revival (Praha) 19:00 - 21:00",
+                    " Aliens (Velké Pavlovice) 21:30 - 23:30"]
+            }
+            , {title: "🎟️ VSTUPNÉ", bulletPoints: ["450 Kč"]}
+            , {title: "OBČERSTVENÍ", bulletPoints: ["Starobrno 12° Bitr, víno z Vinařství Michna (Čejkovice), nealko", "Utopenci, nakládaný sýr Camembert, uzená klobása, lipovecká sekaná"]}
+            , {content: "Akce se koná za každého počasí (vyhřívané prostory)."}
+        ],
+        ticketMessage: undefined,
+        links: [{name: "Facebooková událost", url: "https://fb.me/e/ajieAqnDz"}],
+        banner: metalpodplechem2024banner as string,
+        tracks: [],
+        pictures: [{name: "Plakát", url: metalpodplechem2024 as string}],
         affiliates: []
     },
 
@@ -149,7 +173,6 @@ const predefinedEvents: Event[] = [
         pictures: [{name: "Plakát", url: pochod2024 as string},
             {name: "Mapa pochodu", url: pochod2024mapa as string}
         ],
-        eventLinks: [],
         affiliates: []
     },
 ];

@@ -1,7 +1,7 @@
 import {Box} from "@mui/material";
 import React from "react";
-import {ImageButton} from "../../buttons/StyledButtons.tsx";
-import {AffiliateData} from "../../../data/AffiliateData.tsx";
+import {ImageButton} from "../buttons/StyledButtons.tsx";
+import {AffiliateData} from "../../data/AffiliateData.tsx";
 
 interface EventAffiliateBarProps {
     affiliates: AffiliateData[];

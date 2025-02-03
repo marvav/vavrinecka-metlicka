@@ -2,13 +2,13 @@ import React, {useState} from "react";
 import TextField from "@mui/material/TextField";
 import InputAdornment from "@mui/material/InputAdornment";
 import SearchIcon from "@mui/icons-material/Search";
-import {PrimaryColor} from "../../../styles/ColorDefinitions.ts";
+import {PrimaryColor} from "../../styles/ColorDefinitions.ts";
 import {Button} from "@mui/material";
 import {CheckBoxOutlineBlank, CheckBoxOutlined, Tune} from "@mui/icons-material";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Typography from "@mui/material/Typography";
-import {TypographyStyle1} from "../../../styles/TypographyStyles.tsx";
+import {TypographyStyle1} from "../../styles/TypographyStyles.tsx";
 
 interface SearchBarProps {
     onChange: (query: string, onlyUpcomingEvents: boolean) => void;
