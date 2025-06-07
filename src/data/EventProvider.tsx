@@ -10,6 +10,7 @@ import metalpodplechem2024 from "../assets/posters/metalpodplechem2024.jpg"
 import pochod2025banner from "../assets/banners/pochod2025banner.png"
 import rockovyvecer2025banner from "../assets/banners/rockovyvecer2025banner.jpg"
 import beh2024banner from "../assets/banners/beh2024banner.jpg"
+import beh2025banner from "../assets/banners/beh2025banner.png"
 import pochod2024banner from "../assets/banners/pochod2024banner.jpg"
 import metalpodplechem2025banner from "../assets/banners/metalpodplechem2025banner.png"
 import metalpodplechem2024banner from "../assets/banners/metalpodplechem2024banner.jpg"
@@ -25,6 +26,42 @@ import {kudyznudy} from "./AffiliateProvider.tsx";
 import {EventBase} from "./EventBase.tsx";
 
 const predefinedEvents: Event[] = [
+    {
+        id: crypto.randomUUID(),
+        title: "Vavřinecký běh Moravským krasem 2025",
+        date: new Date(2025, 7, 23, 0, 0, 0),
+        place: parkVavrinec,
+        description: [
+            {content: "Vavřinecká Metlička Vás zve na 2. ročník sportovní akce Vavřinecký běh Moravským krasem, která proběhne v sobotu 23. 8. 2025 v areálu parku Vavřinec a na přilehlém fotbalovém hřišti!"}
+            , {title: "⏰ HARMONOGRAM ZÁVODŮ",
+                bulletPoints: [
+                    "13:00 starší žákyně (2010 – 2011) – 1500m",
+                    "13:10 starší žáci (2010 – 2011) – 1500m",
+                    "13:20 mladší žákyně (2012 – 2013) – 1000m",
+                    "13:30 mladší žáci (2012 – 2013) – 1000m",
+                    "13:40 přípravka dívky (2014 – 2015) – 3 kola hřiště (600m)",
+                    "13:50 přípravka chlapci (2014 – 2015) – 3 kola hřiště (600m)",
+                    "14:00 – 1. blok vyhlášení výsledků 🥇",
+                    "14:20 mladší přípravka dívky (2016 – 2017) – 2 kola hřiště (400m)",
+                    "14:30 mladší přípravka chlapci (2016 – 2017) – 2 kola hřiště (400m)",
+                    "14:40 nejmladší přípravka dívky (2018 - 2019) – 1 kolo hřiště (200m)",
+                    "14:50 nejmladší přípravka chlapci (2018 – 2019) – 1 kolo hřiště (200m)",
+                    "15:00 předškoláci dívky (2020 a mladší) – rovinka hřiště (70m)",
+                    "15:10 předškoláci chlapci (2020 a mladší) – rovinka hřiště (70m)",
+                    "15:20 – 2. blok vyhlášení výsledků 🥇",
+                    "16:00 hlavní závod (všechny dospělé kategorie, juniorky, junioři) - 8000m",
+                ]}
+            , {title: "🎟️ Startovné", bulletPoints: ["200Kč / dospělí", "50Kč / děti"]}
+            , {content: "❗ K prezenci je nutné se dostavit minimálně 15 minut před startem dané kategorie."}
+            , {content: "🚗 Parkování zdarma pro účastníky je zajištěno v okolí areálu a hřiště."}
+            , {content: "🏃 Pro vítěze budou připraveny hodnotné ceny!"}
+        ],
+        links: [{name: "Registrace", url: "https://www.oblblansko.cz"}],
+        banner: beh2025banner as string,
+        tracks: [],
+        pictures: [],
+        affiliates: []
+    },
     {
         id: crypto.randomUUID(),
         title: "METAL POD PLECHEM 2025",
