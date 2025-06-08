@@ -34,9 +34,7 @@ const MainBar: React.FC = () => {
     return <AppBar position="fixed" sx={{top: 0}}>
         <Toolbar sx={{display: "flex", gap: "0.5em", backgroundColor: "#000000"}}>
             <Logo/>
-            <Typography variant="h6">
-                Vavřinecká Metlička
-            </Typography>
+            <MainBarElement title={"Vavřinecká Metlička"} onClick={() => navigate("/uvod")}/>
             <Box sx={{flexGrow: 3}}/>
             {menu}
         </Toolbar>

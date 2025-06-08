@@ -14,6 +14,7 @@ const ContactPage: React.FC = () => {
         width: {sm: "40%", xs: "80%"},
         gap: "2em",
         paddingTop: "2em",
+        paddingBottom: "2em",
     }}>
         <Box
             component="img"
