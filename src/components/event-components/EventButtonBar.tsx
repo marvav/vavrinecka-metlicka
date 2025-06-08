@@ -1,7 +1,6 @@
 import {Box, Button} from "@mui/material";
 import {MouseEventHandler, useState} from "react";
 import ImageDialog from "../misc/ImageDialog.tsx";
-import {ButtonStyle1} from "../buttons/StyledButtons.tsx";
 import {LinkData} from "../../data/LinkData.tsx";
 import {isEventInFuture} from "../../page/event/EventUtils.tsx";
 import {Event} from "../../data/Event.tsx";
@@ -10,6 +9,7 @@ import StyledDialog from "../misc/StyledDialog.tsx";
 import StyledDescription from "../text-components/StyledDescription.tsx";
 import Typography from "@mui/material/Typography";
 import {TypographyStyle1} from "../../styles/TypographyStyles.tsx";
+import {ButtonStyle2} from "../../styles/ButtonStyles.tsx";
 
 interface EventButtonBarProps {
     event: Event
@@ -30,19 +30,19 @@ function EventButtonBar({event}: EventButtonBarProps) {
 function getPictureButton(picture: LinkData) {
     const [pictureDialogOpen, setPictureDialogOpen] = useState(false);
     return <>
-        <ButtonStyle1 title={picture.name} onClick={() => {
-            setPictureDialogOpen(true)
-        }}/>
+    {StyledButton(picture.name, () => {
+        setPictureDialogOpen(true)
+    })}
         {ImageDialog(picture.url, pictureDialogOpen, setPictureDialogOpen)}
     </>;
 }
 
 function getLinkButton(link: LinkData) {
-    return <ButtonStyle1 title={link.name} onClick={() => window.open(link.url, '_blank')}/>;
+    return StyledButton(link.name, () => window.open(link.url, '_blank'));
 }
 
 function getTicketButton(onClick: MouseEventHandler) {
-    return <ButtonStyle1 title={"Vstupenky"} onClick={onClick}/>;
+    return StyledButton("Vstupenky", onClick);
 }
 
 function TicketDialog(message: Paragraph, open: boolean, setOpen: Function) {
@@ -61,5 +61,14 @@ function TicketDialog(message: Paragraph, open: boolean, setOpen: Function) {
 
     return <StyledDialog open={open} setOpen={handleClose} content={content}/>
 }
+
+function StyledButton(title: string, onClick: MouseEventHandler) {
+    return <Button sx={ButtonStyle2} onClick={onClick}>
+        <Typography sx={{fontSize: "1em",}}>
+            {title}
+        </Typography>
+    </Button>;
+}
+
 
 export default EventButtonBar;

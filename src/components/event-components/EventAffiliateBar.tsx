@@ -1,7 +1,7 @@
-import {Box} from "@mui/material";
+import {Box, Button} from "@mui/material";
 import React from "react";
-import {ImageButton} from "../buttons/StyledButtons.tsx";
 import {AffiliateData} from "../../data/AffiliateData.tsx";
+import {ImageButtonStyle} from "../../styles/ButtonStyles.tsx";
 
 interface EventAffiliateBarProps {
     affiliates: AffiliateData[];
@@ -10,12 +10,10 @@ interface EventAffiliateBarProps {
 function EventAffiliateBar({affiliates}: EventAffiliateBarProps) {
     return <Box width={{display: "flex", gap: "1em", xs: "40%", sm: "25%"}} paddingTop={"0.5em"}>
         {affiliates.map((affiliate) => (
-            <ImageButton
-                image={affiliate.logo}
-                onClick={() => window.open(affiliate.url ?? "", '_blank')}
-                title={"affiliate"}>
-                {affiliate.logo}
-            </ImageButton>))}
+            <Button sx={{...ImageButtonStyle, width: "auto", bgcolor: "white"}}
+                    onClick={() => window.open(affiliate.url ?? "", '_blank')}>
+                <img src={affiliate.logo} loading="eager" height={'auto'} width={'100%'} alt={"affiliate"}/>
+            </Button>))}
     </Box>;
 }
 
