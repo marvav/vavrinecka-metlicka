@@ -3,6 +3,7 @@ import {Event} from "./Event.tsx";
 import rockovyvecer from "../assets/posters/rockovyvecer.jpg"
 import pochod2025 from "../assets/posters/pochod2025.png"
 import beh2024 from "../assets/posters/beh2024.jpg"
+import beh2025 from "../assets/posters/beh2025.png"
 import pochod2024 from "../assets/posters/pochod2024.jpg"
 import metalpodplechem2025 from "../assets/posters/metalpodplechem2025.jpg"
 import metalpodplechem2024 from "../assets/posters/metalpodplechem2024.jpg"
@@ -59,7 +60,7 @@ const predefinedEvents: Event[] = [
         links: [{name: "Registrace", url: "https://www.oblblansko.cz"}],
         banner: beh2025banner as string,
         tracks: [],
-        pictures: [],
+        pictures: [{name: "Plakát", url: beh2025 as string}],
         affiliates: []
     },
     {
