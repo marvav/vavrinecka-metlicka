@@ -13,7 +13,7 @@ const ContactNote: React.FC = () => {
         }}
     >
         <Typography variant="body1">
-            V případě dotazů nás neváhejte kontaktovat na emailu: {" "}
+            V případě dotazů nás neváhejte kontaktovat na {" "}
             <Link
                 href="mailto:vavrinecka-metlicka@seznam.cz"
                 target="_blank"

@@ -4,7 +4,7 @@ import EventDetail from "./EventDetail.tsx";
 import Typography from "@mui/material/Typography";
 import {Link} from "react-router-dom";
 import {fetchEvent} from "../../data/EventProvider.tsx";
-import {TypographyBreadCrumbStyle, TypographyStyle1} from "../../styles/TypographyStyles.tsx";
+import {TypographyBreadCrumbStyle} from "../../styles/TypographyStyles.tsx";
 import ContactNote from "../../components/footnote/ContactNote.tsx";
 
 function EventDetailPage(id: string){

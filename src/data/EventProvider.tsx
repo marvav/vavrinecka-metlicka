@@ -61,7 +61,7 @@ const predefinedEvents: Event[] = [
         banner: beh2025banner as string,
         tracks: [],
         pictures: [{name: "Plakát", url: beh2025 as string}],
-        affiliates: []
+        affiliates: [kudyznudy]
     },
     {
         id: crypto.randomUUID(),
