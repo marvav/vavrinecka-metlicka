@@ -57,7 +57,11 @@ const predefinedEvents: Event[] = [
             , {content: "🚗 Parkování zdarma pro účastníky je zajištěno v okolí areálu a hřiště."}
             , {content: "🏃 Pro vítěze budou připraveny hodnotné ceny!"}
         ],
-        links: [{name: "Registrace", url: "https://www.oblblansko.cz"}],
+        links: [
+            {name: "Registrace", url: "https://www.oblblansko.cz"},
+            {name: "Facebooková událost", url: "https://fb.me/e/32NuvVqq3"},
+            {name: "Kudy z nudy", url: "https://www.kudyznudy.cz/akce/vavrinecky-beh-moravskym-krasem-2025"}
+        ],
         banner: beh2025banner as string,
         tracks: [],
         pictures: [{name: "Plakát", url: beh2025 as string}],
