@@ -13,11 +13,13 @@ import rockovyvecer2025banner from "../assets/banners/rockovyvecer2025banner.jpg
 import beh2024banner from "../assets/banners/beh2024banner.jpg"
 import beh2025banner from "../assets/banners/beh2025banner.png"
 import pochod2024banner from "../assets/banners/pochod2024banner.jpg"
+import doga2025banner from "../assets/banners/doga2025banner.png"
 import metalpodplechem2025banner from "../assets/banners/metalpodplechem2025banner.png"
 import metalpodplechem2024banner from "../assets/banners/metalpodplechem2024banner.jpg"
 
 import rockovyvecer2025parkovani from "../assets/parking/rockovyvecer2025parking.png"
 import pochod2025parking from "../assets/parking/pochod2025_parking.png"
+import beh2025parking from "../assets/parking/beh2025parking.jpg"
 
 import pochod2024mapa from "../assets/parking/pochod2024mapa.png"
 import pochod2025mapa from "../assets/parking/Pochod2025mapa.png"
@@ -27,6 +29,69 @@ import {kudyznudy} from "./AffiliateProvider.tsx";
 import {EventBase} from "./EventBase.tsx";
 
 const predefinedEvents: Event[] = [
+    {
+        id: crypto.randomUUID(),
+        title: "Vavřinecký běh Moravským krasem 2026",
+        date: new Date(2026, 7, 22, 0, 0, 0),
+        place: parkVavrinec,
+        description: [
+            {content: "Vavřinecká Metlička Vás srdečně zve na již 3. ročník naší oblíbené sportovní akce."}
+            , {content: "Připravujeme pro vás den plný sportu a skvělé atmosféry. Vítáni jsou zkušení běžci, rekreační sportovci i ti, kteří se jen chtějí přijít podívat a fandit. Závody se poběží ve všech věkových kategoriích, včetně dětských."}
+            , {content: "🥇 Pro vítěze všech kategorií budou připraveny hodnotné ceny! 🥇"}
+            , {content: "🚗Chybět nebude ani doprovodný program a občerstvení 🎵"}
+            , {content: "Veškeré podrobnosti o registracích, harmonogramu a trasách zde budeme postupně zveřejňovat."}
+            , {content: "Přijďte si s námi zasportovat, podpořit závodníky nebo jen strávit příjemné odpoledne s přáteli! ❤️"}
+        ],
+        links: [
+            {name: "Registrace", url: "https://www.oblblansko.cz"},
+            {name: "Facebooková událost", url: "https://fb.me/e/3zyrzoPIW"},
+        ],
+        banner: beh2025banner as string,
+        tracks: [],
+        pictures: [{name: "Parkování", url: beh2025parking as string}],
+        affiliates: [kudyznudy]
+    },
+    {
+        id: crypto.randomUUID(),
+        title: "Akustický večer s Dogou 2025",
+        date: new Date(2025, 10, 8, 19, 30, 0),
+        place: zdarKulturak,
+        ticketMessage: {content: "Vstupenky můžete zakoupit od středy 10.9. v Hospůdce na Kasárnách ve Veselici a na Obecním úřadě ve Žďáře (v úředních hodinách)"},
+        description: [
+            {content: "Zveme vás na unplugged koncert kapely Doga 🤟 včetně speciální projekce jedinečného dokumentárního filmu Route 66 & Rock'n'Roll (délka 60 minut), který kapela Doga natočila v roce 2023 v USA."}
+            , {content: "OTEVŘENÍ KD: 18:00"}
+            , {content: "PROMÍTÁNÍ FILMU & KONCERT: 19:30"}
+            , {content: "VSTUPNÉ: 499 Kč"}
+            , {content: "Těšíme se na vás! 🤘"}
+        ],
+        links: [
+            {name: "Facebooková událost", url: "https://fb.me/e/6xzagH1VS"},
+        ],
+        banner: doga2025banner as string,
+        tracks: [],
+        pictures: [],
+        affiliates: []
+    },
+    // {
+    //     id: crypto.randomUUID(),
+    //     title: "Vavřinecký pochod Moravským krasem 2026",
+    //     date: new Date(2026, 0, 24, 0, 0, 0),
+    //     place: parkVavrinec,
+    //     description: [
+    //         {content: "Vavřinecká Metlička Vás srdečně zve na 3. ročník úspěšné turistické akce v srdci Moravského krasu."}
+    //         ,{content: "Podrobnosti připravujeme"}
+    //     ],
+    //     ticketMessage: undefined,
+    //     links: [{name: "Facebooková událost", url: "https://fb.me/e/6qiAy00Va"}, {
+    //         name: "Kudyznudy",
+    //         url: "https://www.kudyznudy.cz/akce/vavrinecky-pochod-moravskym-krasem"
+    //     }],
+    //     banner: pochod2025banner as string,
+    //     tracks: [],
+    //     pictures: [
+    //     ],
+    //     affiliates: [kudyznudy]
+    // },
     {
         id: crypto.randomUUID(),
         title: "Vavřinecký běh Moravským krasem 2025",
@@ -58,13 +123,15 @@ const predefinedEvents: Event[] = [
             , {content: "🏃 Pro vítěze budou připraveny hodnotné ceny!"}
         ],
         links: [
+            {name: "Fotky", url: "https://eu.zonerama.com/Link/Open/68b731dcaa7817570468dac5"},
             {name: "Registrace", url: "https://www.oblblansko.cz"},
+            {name: "Trasa závodu", url: "https://mapy.com/s/homudebanu"},
             {name: "Facebooková událost", url: "https://fb.me/e/32NuvVqq3"},
             {name: "Kudy z nudy", url: "https://www.kudyznudy.cz/akce/vavrinecky-beh-moravskym-krasem-2025"}
         ],
         banner: beh2025banner as string,
         tracks: [],
-        pictures: [{name: "Plakát", url: beh2025 as string}],
+        pictures: [{name: "Plakát", url: beh2025 as string}, {name: "Parkování", url: beh2025parking as string}],
         affiliates: [kudyznudy]
     },
     {
@@ -87,7 +154,8 @@ const predefinedEvents: Event[] = [
             , {content: "🔊 Připravte se na večer plný skvělé muziky! Těšíme se na vás! 🤘🔥"}
         ],
         ticketMessage: {title: "🛒KDE ZAKOUPIT VSTUPENKY?", bulletPoints: ["Hospůdka na Kasárnách, Veselice", "Nová duha, prodejna Vavřinec a Sloup", "Obecní úřad Žďár (v úředních hodinách)"]},
-        links: [{name: "Facebooková událost", url: "https://fb.me/e/5JsmVt9Vz"}],
+        links: [{name: "Facebooková událost", url: "https://fb.me/e/5JsmVt9Vz"},
+            {name: "Fotky", url: "https://eu.zonerama.com/Link/Open/68af4d18aa78195c0c62efe9"}],
         banner: metalpodplechem2025banner as string,
         tracks: [],
         pictures: [{name: "Plakát", url: metalpodplechem2025 as string}],
