@@ -1,4 +1,4 @@
-import {Box, Button} from "@mui/material";
+import {Box, Button, Typography} from "@mui/material";
 import {MouseEventHandler, useState} from "react";
 import ImageDialog from "../misc/ImageDialog.tsx";
 import {LinkData} from "../../data/LinkData.tsx";
@@ -7,7 +7,6 @@ import {Event} from "../../data/Event.tsx";
 import {Paragraph} from "../../data/Paragraph.tsx";
 import StyledDialog from "../misc/StyledDialog.tsx";
 import StyledDescription from "../text-components/StyledDescription.tsx";
-import Typography from "@mui/material/Typography";
 import {TypographyStyle1} from "../../styles/TypographyStyles.tsx";
 import {ButtonStyle2} from "../../styles/ButtonStyles.tsx";
 
@@ -30,15 +29,27 @@ function EventButtonBar({event}: EventButtonBarProps) {
 function getPictureButton(picture: LinkData) {
     const [pictureDialogOpen, setPictureDialogOpen] = useState(false);
     return <>
-    {StyledButton(picture.name, () => {
-        setPictureDialogOpen(true)
-    })}
+        {StyledButton(picture.name, () => {
+            setPictureDialogOpen(true)
+        })}
         {ImageDialog(picture.url, pictureDialogOpen, setPictureDialogOpen)}
     </>;
 }
 
 function getLinkButton(link: LinkData) {
-    return StyledButton(link.name, () => window.open(link.url, '_blank'));
+    return (
+        <Button
+            component="a"
+            href={link.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            sx={ButtonStyle2}
+        >
+            <Typography sx={{fontSize: "1em"}}>
+                {link.name}
+            </Typography>
+        </Button>
+    );
 }
 
 function getTicketButton(onClick: MouseEventHandler) {
@@ -50,11 +61,13 @@ function TicketDialog(message: Paragraph, open: boolean, setOpen: Function) {
         setOpen(false);
     };
 
-    const content = <Box sx={{...TypographyStyle1, display: "flex",
+    const content = <Box sx={{
+        ...TypographyStyle1, display: "flex",
         flexDirection: "column",
         padding: "1.5em",
         gap: "1em",
-        textAlign: "center"}}>
+        textAlign: "center"
+    }}>
         <StyledDescription paragraphs={[message]}/>
         <Typography>Vstupenky lze také zakoupit přes náš Facebook a nebo na čísle +420 702 013 740.</Typography>
     </Box>
@@ -62,13 +75,13 @@ function TicketDialog(message: Paragraph, open: boolean, setOpen: Function) {
     return <StyledDialog open={open} setOpen={handleClose} content={content}/>
 }
 
+
 function StyledButton(title: string, onClick: MouseEventHandler) {
     return <Button sx={ButtonStyle2} onClick={onClick}>
-        <Typography sx={{fontSize: "1em",}}>
+        <Typography sx={{fontSize: "1em"}}>
             {title}
         </Typography>
     </Button>;
 }
-
 
 export default EventButtonBar;

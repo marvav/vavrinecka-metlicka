@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {Box} from "@mui/material";
+import {Box, Container, Grow, Typography} from "@mui/material";
 import FootNote from "../../components/footnote/FootNote.tsx";
 import EventItem from "./EventItem.tsx";
 import {fetchBasicEvents} from "../../data/EventProvider.tsx";
@@ -13,62 +13,61 @@ const EventPage: React.FC = () => {
     const handleSearch = (query: string, onlyUpcomingEvents: boolean) => {
         let results = events.filter((item) =>
             item.title.toLowerCase().includes(query.toLowerCase())
-        )
+        );
 
-        if(onlyUpcomingEvents){
+        if (onlyUpcomingEvents) {
             results = results.filter((item) => isEventInFuture(item));
         }
 
         setFilteredItems(results);
     };
 
-    return <Box sx={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-        paddingLeft: {
-            xs: "1em",
-            sm: "3em",
-            md: "5em",
-            lg: "7em",
-            xl: "9em"
-        },
-        paddingRight: {
-            xs: "1em",
-            sm: "3em",
-            md: "5em",
-            lg: "7em",
-            xl: "9em"
-        },
-        gap: "1em",
-        paddingBottom: "1em",
-        flexGrow: "2",
-        width: "100%"
-    }}>
-        <Box sx={{paddingTop: "1.5em", width: "100%"}}>
-            <EventSearchBar onChange={handleSearch}/>
-        </Box>
-        <Box
-            sx={{
-                display: "grid",
-                gridTemplateColumns: {
-                    xl: "repeat(3, 1fr)",
-                    lg: 'repeat(2, 1fr)',
-                    md: 'repeat(1, 1fr)',
-                },
-                width: "100%",
-                justifyContent: "center",
-                gap: "2.5em",
-                paddingTop: "2em"
+    return (
+        <Box sx={{minHeight: '100vh'}}>
+            <Container maxWidth="xl" sx={{
+                py: {xs: 3, md: 5},
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                gap: 4
             }}>
-            {filteredItems.map((event) => (
-                <EventItem {...event}/>
-            ))}
+
+                <Box sx={{width: "100%", maxWidth: "800px"}}>
+                    <EventSearchBar onChange={handleSearch}/>
+                </Box>
+
+                <Box
+                    sx={{
+                        display: "grid",
+                        gridTemplateColumns: {
+                            xs: "repeat(1, 1fr)",
+                            sm: "repeat(2, 1fr)",
+                            lg: "repeat(3, 1fr)",
+                        },
+                        width: "100%",
+                        gap: 4,
+                        mt: 2,
+                    }}>
+                    {filteredItems.length > 0 ? (
+                        filteredItems.map((event, index) => (
+                            <Grow in={true} timeout={200 * (index + 1)}>
+                                <Box sx={{ height: '100%' }}>
+                                    <EventItem key={event.id} {...event}/>
+                                </Box>
+                            </Grow>
+                        ))
+                    ) : (
+                        <Typography sx={{gridColumn: '1 / -1', textAlign: 'center', mt: 5, color: 'text.secondary'}}>
+                            Nebyly nalezeny žádné akce.
+                        </Typography>
+                    )}
+                </Box>
+
+                <Box sx={{flexGrow: 1}}/>
+                <FootNote/>
+            </Container>
         </Box>
-        <Box sx={{flexGrow: 2, paddingTop: "2em"}}/>
-        <FootNote/>
-    </Box>
+    );
 };
 
 export default EventPage;

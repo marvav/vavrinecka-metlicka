@@ -10,7 +10,10 @@ export function translateTitleToUrl(title: string): string {
 
 export function isEventInFuture(event: EventBase) {
     const today = new Date();
-    return event.date.getFullYear() >= today.getFullYear()
+    if (event.date.getFullYear() > today.getFullYear()) {
+        return true;
+    }
+    return event.date.getFullYear() == today.getFullYear()
         && (event.date.getMonth() > today.getMonth()
-            || (event.date.getMonth() == today.getMonth() && event.date.getDate() >= today.getDate()));
+        || (event.date.getMonth() == today.getMonth() && event.date.getDate() >= today.getDate()));
 }
