@@ -32,7 +32,7 @@ function getEventRoutes(){
 }
 
 function getIntroPage(){
-    return <StyledPage content={<IntroPage/>} title={"Vavřinecká Metlička"}/>
+    return <StyledPage content={<IntroPage/>} title={undefined}/>
 }
 
 function getEventPage(){

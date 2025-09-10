@@ -61,7 +61,6 @@ const EventPage: React.FC = () => {
             </Box>
 
             <Box sx={{flexGrow: 1}}/>
-            <FootNote/>
         </Container>
     );
 };
