@@ -1,96 +1,105 @@
-import React, {MouseEventHandler} from 'react';
-import AppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import {Box, useMediaQuery} from "@mui/material";
+import React from 'react';
+import { AppBar, Toolbar, Box, useMediaQuery, Container, IconButton, Menu, MenuItem, Typography } from "@mui/material";
+import { Link, NavLink } from 'react-router-dom';
 import event_theme from "../components/event-components/event_theme.ts";
 import Logo from "../components/Logo.tsx";
-import {useNavigate} from 'react-router-dom';
 import MainBarElement from "./MainBarElement.tsx";
-import Button from "@mui/material/Button";
-import {ArrowDropDown} from "@mui/icons-material";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
+import MenuIcon from '@mui/icons-material/Menu';
 
-export interface MainBarElementType {
-    name: string,
-    action: () => void
+interface MainBarElementType {
+    name: string;
+    path: string;
 }
 
 const MainBar: React.FC = () => {
     const isMobile = useMediaQuery(event_theme.breakpoints.down('sm'));
-    const navigate = useNavigate();
 
     const mainBarContent: MainBarElementType[] = [
-        {name: "Úvod", action: () => navigate("/uvod")},
-        {name: "Akce", action: () => navigate("/akce")},
-        {name: "O nás", action: () => navigate("/metlicka")},
+        { name: "Úvod", path: "/uvod" },
+        { name: "Akce", path: "/akce" },
+        { name: "O nás", path: "/metlicka" },
     ];
 
-    const menu = isMobile
-        ? <MobileMainBarMenu elements={mainBarContent}/>
-        : <DesktopMainBarMenu elements={mainBarContent}/>;
+    return (
+        <AppBar position="fixed" sx={{
+            backgroundColor: 'rgba(18, 18, 18, 0.8)',
+            backdropFilter: 'blur(10px)',
+            boxShadow: 'none',
+            borderBottom: '1px solid rgba(255, 255, 255, 0.12)'
+        }}>
+            <Container maxWidth="xl">
+                <Toolbar disableGutters sx={{ display: "flex", alignItems: 'center' }}>
+                    <Box component={Link} to="/uvod" sx={{ display: 'flex', alignItems: 'center', textDecoration: 'none', color: 'inherit' }}>
+                        <Logo />
+                        <Typography variant="h6" sx={{ ml: 2 }}>
+                            Vavřinecká Metlička
+                        </Typography>
+                    </Box>
 
-    return <AppBar position="fixed" sx={{top: 0}}>
-        <Toolbar sx={{display: "flex", gap: "0.5em", backgroundColor: "#000000"}}>
-            <Logo/>
-            <MainBarElement title={"Vavřinecká Metlička"} onClick={() => navigate("/uvod")}/>
-            <Box sx={{flexGrow: 3}}/>
-            {menu}
-        </Toolbar>
-    </AppBar>
+                    <Box sx={{ flexGrow: 1 }} />
+
+                    {isMobile ? <MobileMenu elements={mainBarContent} /> : <DesktopMenu elements={mainBarContent} />}
+                </Toolbar>
+            </Container>
+        </AppBar>
+    );
 };
 
-export interface MainBarMenuProps {
-    elements: MainBarElementType[]
+interface MainBarMenuProps {
+    elements: MainBarElementType[];
 }
 
-function DesktopMainBarMenu({elements}: MainBarMenuProps) {
-    return <>
-        {elements.map((element) => <MainBarElement title={element.name} onClick={element.action}/>)}
-    </>;
+function DesktopMenu({ elements }: MainBarMenuProps) {
+    return (
+        <Box sx={{ display: 'flex' }}>
+            {elements.map((element) => <MainBarElement key={element.name} to={element.path} title={element.name} />)}
+        </Box>
+    );
 }
 
-function MobileMainBarMenu({elements}: MainBarMenuProps) {
-    const [anchorElement, setAnchorElement] = React.useState<null | HTMLElement>(null);
+function MobileMenu({ elements }: MainBarMenuProps) {
+    const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+    const open = Boolean(anchorEl);
 
-    const handleClick = (event: React.MouseEvent<HTMLElement>) => {
-        setAnchorElement(event.currentTarget);
-    };
+    const handleMenu = (event: React.MouseEvent<HTMLElement>) => setAnchorEl(event.currentTarget);
+    const handleClose = () => setAnchorEl(null);
 
-    return <Box>
-        <Button
-            id="page-dropdown-menu-button"
-            onClick={handleClick}
-            color="inherit"
-        >
-            Menu
-            <ArrowDropDown/>
-        </Button>
-        <Menu
-            anchorEl={anchorElement}
-            open={anchorElement != null}
-            onClose={() => setAnchorElement(null)}
-        >
-            {elements.map((element) =>
-                getMenuItem(element.name, () => {
-                    setAnchorElement(null);
-                    element.action();
-                }))}
-        </Menu>
-    </Box>;
-}
-
-
-function getMenuItem(title: string, closeAndNavigate: MouseEventHandler<HTMLAnchorElement> | undefined) {
-    return <MenuItem onClick={closeAndNavigate}
-                     sx={{
-                         display: "flex",
-                         justifyContent: "center",
-                         textAlign: "center",
-                     }}>
-        {title}
-    </MenuItem>;
+    return (
+        <Box>
+            <IconButton size="large" edge="end" color="inherit" onClick={handleMenu}>
+                <MenuIcon />
+            </IconButton>
+            <Menu
+                anchorEl={anchorEl}
+                open={open}
+                onClose={handleClose}
+                MenuListProps={{ 'aria-labelledby': 'main-menu' }}
+                PaperProps={{
+                    sx: {
+                        backgroundColor: 'rgba(30, 30, 30, 0.8)',
+                        backdropFilter: 'blur(10px)',
+                        color: 'white',
+                        borderRadius: '8px',
+                    }
+                }}
+            >
+                {elements.map((element) => (
+                    <MenuItem
+                        key={element.name}
+                        component={NavLink}
+                        to={element.path}
+                        onClick={handleClose}
+                        sx={{
+                            justifyContent: 'center',
+                            '&.active': { backgroundColor: 'rgba(255, 255, 255, 0.1)' }
+                        }}
+                    >
+                        {element.name}
+                    </MenuItem>
+                ))}
+            </Menu>
+        </Box>
+    );
 }
 
 export default MainBar;

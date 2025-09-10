@@ -3,8 +3,10 @@ import {Box} from "@mui/material";
 import metlicka_background from "../assets/images/metlicka_background.png";
 import Typography from "@mui/material/Typography";
 import MainBar from "./MainBar.tsx";
+import {useLocation} from 'react-router-dom';
 import {TypographyStyle2} from "../styles/TypographyStyles.tsx";
 import {SecondaryBackground} from "../styles/ColorDefinitions.ts";
+import {useEffect} from 'react';
 
 interface StyledPageProps {
     title: string | undefined;
@@ -12,10 +14,15 @@ interface StyledPageProps {
 }
 
 const StyledPage: React.FC<StyledPageProps> = (props) => {
+    const {pathname} = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
+
     return <Box sx={{
         display: "flex",
         flexDirection: "column",
-        minHeight: "100vh",
         bgcolor: SecondaryBackground,
         backgroundImage: `url(${metlicka_background})`,
         alignItems: "center",

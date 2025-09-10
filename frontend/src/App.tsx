@@ -36,7 +36,7 @@ function getIntroPage(){
 }
 
 function getEventPage(){
-    return <StyledPage content={<EventPage/>} title={"Akce"}/>
+    return <StyledPage content={<EventPage/>} title={"Přehled akcí"}/>
 }
 
 export default App
