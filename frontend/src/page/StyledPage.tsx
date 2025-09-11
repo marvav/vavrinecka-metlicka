@@ -4,8 +4,8 @@ import metlicka_background from "../assets/images/metlicka_background.png";
 import Typography from "@mui/material/Typography";
 import MainBar from "./MainBar.tsx";
 import {useLocation} from 'react-router-dom';
-import {TypographyStyle2} from "../styles/TypographyStyles.tsx";
 import FootNote from "../components/footnote/FootNote.tsx";
+import {TypographyStyle2} from "../styles/TypographyStyles.tsx";
 
 interface StyledPageProps {
     title: string | undefined;
@@ -28,7 +28,12 @@ const StyledPage: React.FC<StyledPageProps> = (props) => {
         }}>
             <MainBar/>
             {props.title && <Box sx={{paddingTop: "10vh"}}></Box>}
-            {props.title && <Typography sx={TypographyStyle2}>
+            {props.title && <Typography sx={{
+                fontWeight: 'bold',
+                fontSize: '2em',
+                background: 'linear-gradient(45deg, #90ee90, #61dafb)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',}}>
                 {props.title}
             </Typography>}
             {props.content}
