@@ -36,7 +36,7 @@ const MainBar: React.FC = () => {
 
     return (
         <AppBar position="fixed" sx={{
-            backgroundColor: 'rgba(18, 18, 18, 0.8)',
+            backgroundColor: 'rgba(0, 0, 0, 0.83)',
             backdropFilter: 'blur(10px)',
             boxShadow: 'none',
             borderBottom: '1px solid rgba(255, 255, 255, 0.12)'

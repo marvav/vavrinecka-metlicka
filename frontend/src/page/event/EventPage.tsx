@@ -28,6 +28,7 @@ const EventPage: React.FC = () => {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
+            minHeight: "100vh",
             gap: 4
         }}>
             <Box sx={{width: "100%", maxWidth: "800px"}}>

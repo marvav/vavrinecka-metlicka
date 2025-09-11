@@ -1,4 +1,223 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PropertiesComponent">{}</component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2183c83a-be8d-48ed-a50e-5cba6ab42378" name="Changes" comment="Mobile menu redesign, intro page gradient">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/page/MainBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/page/MainBar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/page/event/EventPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/page/event/EventPage.tsx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="d645ba673a1c307d8e9f94bc7f397e2cba1f1d5d" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;marvav&quot;
+  }
+}</component>
+  <component name="GitRewordedCommitMessages">
+    <option name="commitMessagesMapping">
+      <RewordedCommitMessageMapping>
+        <option name="originalMessage" value="Mobile menu redesign, intro page gradient" />
+        <option name="rewordedMessage" value="Mobile menu redesign" />
+      </RewordedCommitMessageMapping>
+    </option>
+    <option name="currentCommit" value="1" />
+    <option name="onto" value="076361c21d07fed90d562c1253ed25d7cfc5b260" />
+  </component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/marvav/vavrinecka-metlicka.git&quot;,
+    &quot;accountId&quot;: &quot;c1d8eb23-6a3d-4be4-a030-f2a11b1c72a4&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="30WDn8o9tGUgjHFSs7CoqVkBtsd" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;development&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="\\wsl.localhost\Ubuntu\home\marvav\vavrinecka-metlicka\frontend\src\assets\parking" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-WS-243.26053.12" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2183c83a-be8d-48ed-a50e-5cba6ab42378" name="Changes" comment="" />
+      <created>1753734602162</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1753734602162</updated>
+      <workItem from="1753734603448" duration="795000" />
+      <workItem from="1755025453926" duration="1982000" />
+      <workItem from="1756318278633" duration="2194000" />
+      <workItem from="1756835960395" duration="1403000" />
+      <workItem from="1757442007243" duration="5120000" />
+      <workItem from="1757529297349" duration="4284000" />
+      <workItem from="1757620954288" duration="230000" />
+    </task>
+    <task id="LOCAL-00001" summary="Adds Doga 2025">
+      <option name="closed" value="true" />
+      <created>1757443014946</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1757443014946</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Adds better link support and fancy event animations">
+      <option name="closed" value="true" />
+      <created>1757444908176</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1757444908176</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Adds event item zoom hover effect">
+      <option name="closed" value="true" />
+      <created>1757445848529</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1757445848530</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Fix event date filtering">
+      <option name="closed" value="true" />
+      <created>1757446014159</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1757446014159</updated>
+    </task>
+    <task id="LOCAL-00005" summary="x">
+      <option name="closed" value="true" />
+      <created>1757446042439</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1757446042439</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Redesign main paage elements, reset scroll on page change">
+      <option name="closed" value="true" />
+      <created>1757530524424</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1757530524424</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Contact page redesign">
+      <option name="closed" value="true" />
+      <created>1757531143185</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1757531143185</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Intro page redesign with gradient">
+      <option name="closed" value="true" />
+      <created>1757532515017</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1757532515017</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Mobile menu redesign, intro page gradient">
+      <option name="closed" value="true" />
+      <created>1757533306145</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1757533306145</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Mobile menu redesign, intro page gradient">
+      <option name="closed" value="true" />
+      <created>1757533486836</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1757533486836</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="development" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Switch to a modular project" />
+    <MESSAGE value="Adds Doga 2025" />
+    <MESSAGE value="Adds better link support and fancy event animations" />
+    <MESSAGE value="Adds event item zoom hover effect" />
+    <MESSAGE value="Fix event date filtering" />
+    <MESSAGE value="x" />
+    <MESSAGE value="Adds better link support, event item zooming and event date filtering fix" />
+    <MESSAGE value="Redesign main paage elements, reset scroll on page change" />
+    <MESSAGE value="Contact page redesign" />
+    <MESSAGE value="Intro page redesign with gradient" />
+    <MESSAGE value="Mobile menu redesign, intro page gradient" />
+    <MESSAGE value="Mobile menu redesign" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mobile menu redesign" />
+  </component>
 </project>
