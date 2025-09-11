@@ -11,7 +11,7 @@ const ContactPage: React.FC = () => {
             flexDirection: "column",
             alignItems: "center",
             gap: "0.5em",
-            minHeight: "100vh",
+            minHeight: "78.75vh",
             textAlign: "center",
             py: { xs: 4, md: 6 },
         }}>

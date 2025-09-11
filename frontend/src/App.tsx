@@ -14,7 +14,7 @@ function App() {
         <CssBaseline/>
         <Router>
             <Routes>
-                <Route path="/" element={<Navigate to="/akce" replace />} />
+                <Route path="/" element={<Navigate to="/uvod" replace />} />
                 <Route path="/uvod" element={getIntroPage()} />
                 <Route path="/akce" element={getEventPage()}/>
                 <Route path="/metlicka" element={<StyledPage content={<ContactPage/>} title={"O nás"}/>}/>

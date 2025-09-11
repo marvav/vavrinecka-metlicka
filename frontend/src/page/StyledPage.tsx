@@ -27,7 +27,7 @@ const StyledPage: React.FC<StyledPageProps> = (props) => {
             alignItems: "center",
         }}>
             <MainBar/>
-            <Box sx={{paddingTop: "5em"}}></Box>
+            {props.title && <Box sx={{paddingTop: "10vh"}}></Box>}
             {props.title && <Typography sx={TypographyStyle2}>
                 {props.title}
             </Typography>}

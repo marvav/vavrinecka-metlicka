@@ -7,7 +7,7 @@ const IntroPage: React.FC = () => {
     return (
         <Box sx={{
             width: '100%',
-            minHeight: '100vh',
+            minHeight: '93vh',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',

@@ -14,6 +14,7 @@ const Footer: React.FC = () => {
                 color: 'rgba(255, 255, 255, 0.7)',
                 py: { xs: 2, sm: 2 },
                 mt: 'auto',
+                minHeight: '7vh',
             }}
         >
             <Container maxWidth="xl">

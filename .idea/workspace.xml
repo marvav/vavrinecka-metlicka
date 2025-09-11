@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2183c83a-be8d-48ed-a50e-5cba6ab42378" name="Changes" comment="Mobile menu redesign, intro page gradient">
+    <list default="true" id="2183c83a-be8d-48ed-a50e-5cba6ab42378" name="Changes" comment="Fixes Edit Page height">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/footnote/FootNote.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/footnote/FootNote.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/page/MainBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/page/MainBar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/page/StyledPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/page/StyledPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/page/contact/ContactPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/page/contact/ContactPage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/page/event/EventPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/page/event/EventPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/page/intro/IntroPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/page/intro/IntroPage.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +99,7 @@
       <workItem from="1756835960395" duration="1403000" />
       <workItem from="1757442007243" duration="5120000" />
       <workItem from="1757529297349" duration="4284000" />
-      <workItem from="1757620954288" duration="230000" />
+      <workItem from="1757620954288" duration="1182000" />
     </task>
     <task id="LOCAL-00001" summary="Adds Doga 2025">
       <option name="closed" value="true" />
@@ -176,7 +181,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757533486836</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Fixes Edit Page height">
+      <option name="closed" value="true" />
+      <created>1757621210654</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1757621210654</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,6 +231,7 @@
     <MESSAGE value="Intro page redesign with gradient" />
     <MESSAGE value="Mobile menu redesign, intro page gradient" />
     <MESSAGE value="Mobile menu redesign" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mobile menu redesign" />
+    <MESSAGE value="Fixes Edit Page height" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixes Edit Page height" />
   </component>
 </project>
