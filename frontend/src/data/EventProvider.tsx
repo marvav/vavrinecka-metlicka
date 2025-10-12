@@ -7,6 +7,7 @@ import beh2025 from "../assets/posters/beh2025.png"
 import pochod2024 from "../assets/posters/pochod2024.jpg"
 import metalpodplechem2025 from "../assets/posters/metalpodplechem2025.jpg"
 import metalpodplechem2024 from "../assets/posters/metalpodplechem2024.jpg"
+import rockovyvecer2026 from "../assets/posters/rockovyvecer2026.png"
 
 import pochod2025banner from "../assets/banners/pochod2025banner.png"
 import rockovyvecer2025banner from "../assets/banners/rockovyvecer2025banner.jpg"
@@ -16,6 +17,7 @@ import pochod2024banner from "../assets/banners/pochod2024banner.jpg"
 import doga2025banner from "../assets/banners/doga2025banner.png"
 import metalpodplechem2025banner from "../assets/banners/metalpodplechem2025banner.png"
 import metalpodplechem2024banner from "../assets/banners/metalpodplechem2024banner.jpg"
+import rockovyvecer2026banner from "../assets/banners/rockovyvecer2026banner.png"
 
 import rockovyvecer2025parkovani from "../assets/parking/rockovyvecer2025parking.png"
 import pochod2025parking from "../assets/parking/pochod2025_parking.png"
@@ -50,6 +52,24 @@ const predefinedEvents: Event[] = [
         tracks: [],
         pictures: [{name: "Parkování", url: beh2025parking as string}],
         affiliates: [kudyznudy]
+    },
+    {
+        id: crypto.randomUUID(),
+        title: "Rockový Večer 2026",
+        date: new Date(2026, 0, 17, 0, 0, 0),
+        place: zdarKulturak,
+        description: [
+            {content: "Zveme vás na Rockový večer s kapelami Alžběta, Roxor a Vanaheim!"}
+            , {content: "Bližší informace upřesníme později."}
+            , {content: "Těšíme se na vás! 🤘"}
+        ],
+        links: [
+            {name: "Facebooková událost", url: "https://fb.me/e/2TDj9ri2S"},
+        ],
+        banner: rockovyvecer2026banner as string,
+        tracks: [],
+        pictures: [{name: "Plakát", url: rockovyvecer2026 as string}],
+        affiliates: []
     },
     {
         id: crypto.randomUUID(),
