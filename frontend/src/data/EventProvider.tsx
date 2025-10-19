@@ -2,6 +2,7 @@ import {Event} from "./Event.tsx";
 
 import rockovyvecer from "../assets/posters/rockovyvecer.jpg"
 import pochod2025 from "../assets/posters/pochod2025.png"
+import pochod2026 from "../assets/posters/pochod2026.png"
 import beh2024 from "../assets/posters/beh2024.jpg"
 import beh2025 from "../assets/posters/beh2025.png"
 import pochod2024 from "../assets/posters/pochod2024.jpg"
@@ -51,6 +52,37 @@ const predefinedEvents: Event[] = [
         banner: beh2025banner as string,
         tracks: [],
         pictures: [{name: "Parkování", url: beh2025parking as string}],
+        affiliates: [kudyznudy]
+    },
+    {
+        id: crypto.randomUUID(),
+        title: "Vavřinecký pochod Moravským krasem 2026",
+        date: new Date(2026, 0, 24, 0, 0, 0),
+        place: parkVavrinec,
+        description: [
+            {content: "Pojďte si užít den v srdci unikátní přírody Moravského krasu! Připravili jsme pro vás celkem pět tras od pohodové 7 km, vhodné i pro rodiny s kočárky, přes trasy dlouhé 12, 20 a 34 km, až po nejnáročnější 50 km okruh."}
+            , {title: "Těšit se můžete na:",
+                bulletPoints: [
+                    "Známou propast Macocha",
+                    "Zříceniny hradů Blansek a Holštějn",
+                    "Výhled do kraje z rozhledny Podvrší (účastníci mají vstup zdarma)",
+                    "V cíli pak občerstvení, zasloužený pamětní list a živá hudba v podání kapely ZVUKOVÁ KULISA!",
+                ]}
+            , {title: "Detaily",
+                bulletPoints: [
+                    "Startovné: 50 Kč (platba a registrace probíhá až na místě)",
+                    "Pro všechny účastníky je zajištěno zázemí, teplé občerstvení a bezplatné parkování v okolí startu.",
+                    "Každý pochodník na startu obdrží detailní mapu všech tras.",
+                ]}
+        ],
+        links: [
+        ],
+        banner: pochod2025banner as string,
+        tracks: [],
+        pictures: [
+            {name: "Parkování", url: pochod2025parking as string},
+            {name: "Plakát", url: pochod2026 as string}
+        ],
         affiliates: [kudyznudy]
     },
     {
