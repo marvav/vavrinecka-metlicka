@@ -61,7 +61,7 @@ const predefinedEvents: Event[] = [
         date: new Date(2026, 0, 24, 0, 0, 0),
         place: parkVavrinec,
         description: [
-            {content: "Pojďte si užít den v srdci unikátní přírody Moravského krasu! Připravili jsme pro vás celkem pět tras od pohodové 7 km, vhodné i pro rodiny s kočárky, přes trasy dlouhé 12, 20 a 34 km, až po nejnáročnější 50 km okruh."}
+            {content: "Pojďte si užít den v srdci unikátní přírody Moravského krasu! Připravili jsme pro vás celkem pět tras od pohodové 7 km, vhodné i pro rodiny s kočárky, přes trasy dlouhé 12, 20 a 33 km, až po nejnáročnější 50 km okruh."}
             , {title: "Těšit se můžete na:",
                 bulletPoints: [
                     "Známou propast Macocha",
