@@ -10,11 +10,12 @@ import metalpodplechem2025 from "../assets/posters/metalpodplechem2025.jpg"
 import metalpodplechem2024 from "../assets/posters/metalpodplechem2024.jpg"
 import rockovyvecer2026 from "../assets/posters/rockovyvecer2026.png"
 
-import pochod2025banner from "../assets/banners/pochod2025banner.png"
 import rockovyvecer2025banner from "../assets/banners/rockovyvecer2025banner.jpg"
 import beh2024banner from "../assets/banners/beh2024banner.jpg"
 import beh2025banner from "../assets/banners/beh2025banner.png"
 import pochod2024banner from "../assets/banners/pochod2024banner.jpg"
+import pochod2025banner from "../assets/banners/pochod2025banner.png"
+import pochod2026banner from "../assets/banners/pochod2026banner.png"
 import doga2025banner from "../assets/banners/doga2025banner.png"
 import metalpodplechem2025banner from "../assets/banners/metalpodplechem2025banner.png"
 import metalpodplechem2024banner from "../assets/banners/metalpodplechem2024banner.jpg"
@@ -77,7 +78,7 @@ const predefinedEvents: Event[] = [
         ],
         links: [
         ],
-        banner: pochod2025banner as string,
+        banner: pochod2026banner as string,
         tracks: [],
         pictures: [
             {name: "Parkování", url: pochod2025parking as string},

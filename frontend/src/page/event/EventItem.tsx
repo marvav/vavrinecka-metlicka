@@ -57,7 +57,6 @@ function EventItem({ id, date, title, place, banner }: EventBase) {
                     sx={{
                         width: '100%',
                         height: 'auto',
-                        aspectRatio: '16 / 9',
                         objectFit: 'cover',
                         display: 'block',
                         transition: 'transform 0.5s ease-in-out',
