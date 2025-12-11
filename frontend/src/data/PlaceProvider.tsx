@@ -6,6 +6,6 @@ export const parkVavrinec: LinkData = {
 };
 
 export const zdarKulturak: LinkData =     {
-    name: "Dělnický dům ve Žďáře",
+    name: "Dělnický dům ve Žďáře okr. Blansko",
     url: "https://mapy.cz/s/bocehugohe"
 };

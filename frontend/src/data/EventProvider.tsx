@@ -62,24 +62,33 @@ const predefinedEvents: Event[] = [
         place: parkVavrinec,
         description: [
             {content: "Pojďte si užít den v srdci unikátní přírody Moravského krasu! Připravili jsme pro vás celkem pět tras od pohodové 7 km, vhodné i pro rodiny s kočárky, přes trasy dlouhé 12, 20 a 33 km, až po nejnáročnější 50 km okruh."}
-            , {title: "Těšit se můžete na:",
+            , {
+                title: "Těšit se můžete na:",
                 bulletPoints: [
                     "Známou propast Macocha",
                     "Zříceniny hradů Blansek a Holštějn",
                     "Výhled do kraje z rozhledny Podvrší (účastníci mají vstup zdarma)",
                     "V cíli pak občerstvení, zasloužený pamětní list a živá hudba v podání kapely ZVUKOVÁ KULISA!",
-                ]}
-            , {title: "Detaily",
+                ]
+            }
+            , {
+                title: "Detaily",
                 bulletPoints: [
                     "Startovné: 50 Kč (platba a registrace probíhá až na místě)",
                     "Pro všechny účastníky je zajištěno zázemí, teplé občerstvení a bezplatné parkování v okolí startu.",
                     "Každý pochodník na startu obdrží detailní mapu všech tras.",
-                ]}
+                ]
+            }
         ],
-        links: [
-        ],
+        links: [],
         banner: pochod2026banner as string,
-        tracks: [],
+        tracks: [
+            {name: "7km", url: "https://mapy.com/s/kunufahavu"},
+            {name: "12km", url: "https://mapy.com/s/nujuzofeve"},
+            {name: "20km", url: "https://mapy.com/s/rodekapufe"},
+            {name: "33km", url: "https://mapy.com/s/fufevarolo"},
+            {name: "50km", url: "https://mapy.com/s/debutokove"},
+        ],
         pictures: [
             {name: "Parkování", url: pochod2025parking as string},
             {name: "Plakát", url: pochod2026 as string}
@@ -92,8 +101,25 @@ const predefinedEvents: Event[] = [
         date: new Date(2026, 0, 17, 0, 0, 0),
         place: zdarKulturak,
         description: [
-            {content: "Zveme vás na Rockový večer s kapelami Alžběta, Roxor a Vanaheim!"}
-            , {content: "Bližší informace upřesníme později."}
+            {content: "Zveme vás na Rockový večer s kapelami Alžběta, Roxor a Vanaheim!"},
+            {
+                title: "🎵 Program",
+                bulletPoints: [
+                    "17:00 – Otevření dělnického domu",
+                    "18:00 – Roxor",
+                    "20:00 – Vanaheim",
+                    "22:00 – Alžběta"
+                ]
+            },
+            {
+                title: "🎟 Vstupenky zakoupíte zde",
+                bulletPoints: [
+                    "Hospůdka na Kasárnách, Veselice",
+                    "Nová duha – prodejna Vavřinec a Sloup",
+                    "Obecní úřad Žďár (v úředních hodinách)"
+                ]
+            },
+            {content: "📞 Pro rezervaci vstupenek můžete také volat na 702 013 740."}
             , {content: "Těšíme se na vás! 🤘"}
         ],
         links: [
@@ -101,7 +127,8 @@ const predefinedEvents: Event[] = [
         ],
         banner: rockovyvecer2026banner as string,
         tracks: [],
-        pictures: [{name: "Plakát", url: rockovyvecer2026 as string}],
+        pictures: [{name: "Plakát", url: rockovyvecer2026 as string},
+            {name: "Parkování", url: rockovyvecer2025parkovani as string}],
         affiliates: []
     },
     {
@@ -152,7 +179,8 @@ const predefinedEvents: Event[] = [
         place: parkVavrinec,
         description: [
             {content: "Vavřinecká Metlička Vás zve na 2. ročník sportovní akce Vavřinecký běh Moravským krasem, která proběhne v sobotu 23. 8. 2025 v areálu parku Vavřinec a na přilehlém fotbalovém hřišti!"}
-            , {title: "⏰ HARMONOGRAM ZÁVODŮ",
+            , {
+                title: "⏰ HARMONOGRAM ZÁVODŮ",
                 bulletPoints: [
                     "13:00 starší žákyně (2010 – 2011) – 1500m",
                     "13:10 starší žáci (2010 – 2011) – 1500m",
@@ -169,7 +197,8 @@ const predefinedEvents: Event[] = [
                     "15:10 předškoláci chlapci (2020 a mladší) – rovinka hřiště (70m)",
                     "15:20 – 2. blok vyhlášení výsledků 🥇",
                     "16:00 hlavní závod (všechny dospělé kategorie, juniorky, junioři) - 8000m",
-                ]}
+                ]
+            }
             , {title: "🎟️ Startovné", bulletPoints: ["200Kč / dospělí", "50Kč / děti"]}
             , {content: "❗ K prezenci je nutné se dostavit minimálně 15 minut před startem dané kategorie."}
             , {content: "🚗 Parkování zdarma pro účastníky je zajištěno v okolí areálu a hřiště."}
@@ -206,7 +235,10 @@ const predefinedEvents: Event[] = [
             , {content: "🌦️ Akce se koná za každého počasí (vyhřívané prostory)"}
             , {content: "🔊 Připravte se na večer plný skvělé muziky! Těšíme se na vás! 🤘🔥"}
         ],
-        ticketMessage: {title: "🛒KDE ZAKOUPIT VSTUPENKY?", bulletPoints: ["Hospůdka na Kasárnách, Veselice", "Nová duha, prodejna Vavřinec a Sloup", "Obecní úřad Žďár (v úředních hodinách)"]},
+        ticketMessage: {
+            title: "🛒KDE ZAKOUPIT VSTUPENKY?",
+            bulletPoints: ["Hospůdka na Kasárnách, Veselice", "Nová duha, prodejna Vavřinec a Sloup", "Obecní úřad Žďár (v úředních hodinách)"]
+        },
         links: [{name: "Facebooková událost", url: "https://fb.me/e/5JsmVt9Vz"},
             {name: "Fotky", url: "https://eu.zonerama.com/Link/Open/68af4d18aa78195c0c62efe9"}],
         banner: metalpodplechem2025banner as string,
@@ -237,7 +269,8 @@ const predefinedEvents: Event[] = [
             url: "https://www.kudyznudy.cz/akce/vavrinecky-pochod-moravskym-krasem"
         }],
         banner: pochod2025banner as string,
-        tracks: [{name: "6.5km", url: "https://mapy.cz/s/kemunahazu"},
+        tracks: [
+            {name: "6.5km", url: "https://mapy.cz/s/kemunahazu"},
             {name: "18.5km", url: "https://mapy.cz/s/lafarefopo"},
             {name: "32.5km", url: "https://mapy.cz/s/rasadotoda"},
             {name: "50km", url: "https://mapy.cz/s/gakorekape"}
@@ -267,7 +300,10 @@ const predefinedEvents: Event[] = [
         ],
         ticketMessage: undefined,
         banner: rockovyvecer2025banner as string,
-        links: [{name: "Fotky", url: "https://eu.zonerama.com/Link/Open/678ea2c1aa78183dd8e455da"}, {name: "Facebook", url: "https://fb.me/e/blY6KGyxN"}],
+        links: [{name: "Fotky", url: "https://eu.zonerama.com/Link/Open/678ea2c1aa78183dd8e455da"}, {
+            name: "Facebook",
+            url: "https://fb.me/e/blY6KGyxN"
+        }],
         tracks: [],
         pictures: [
             {
@@ -310,7 +346,10 @@ const predefinedEvents: Event[] = [
                     " Aliens (Velké Pavlovice) 21:30 - 23:30"]
             }
             , {title: "🎟️ VSTUPNÉ", bulletPoints: ["450 Kč"]}
-            , {title: "OBČERSTVENÍ", bulletPoints: ["Starobrno 12° Bitr, víno z Vinařství Michna (Čejkovice), nealko", "Utopenci, nakládaný sýr Camembert, uzená klobása, lipovecká sekaná"]}
+            , {
+                title: "OBČERSTVENÍ",
+                bulletPoints: ["Starobrno 12° Bitr, víno z Vinařství Michna (Čejkovice), nealko", "Utopenci, nakládaný sýr Camembert, uzená klobása, lipovecká sekaná"]
+            }
             , {content: "Akce se koná za každého počasí (vyhřívané prostory)."}
         ],
         ticketMessage: undefined,
