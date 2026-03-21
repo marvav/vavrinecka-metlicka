@@ -4,20 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2183c83a-be8d-48ed-a50e-5cba6ab42378" name="Changes" comment="Fixes Edit Page height">
+    <list default="true" id="2183c83a-be8d-48ed-a50e-5cba6ab42378" name="Changes" comment="Adds rockovy vecer 2026 description">
+      <change afterPath="$PROJECT_DIR$/frontend/src/assets/banners/metalpodplechem2026banner.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/assets/banners/rockovyvecer2026banner.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/assets/posters/metalpodplechem2026.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/page/event/EventTracksPage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/footnote/FootNote.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/footnote/FootNote.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/page/MainBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/page/MainBar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/page/StyledPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/page/StyledPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/page/contact/ContactPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/page/contact/ContactPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/page/event/EventPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/page/event/EventPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/page/intro/IntroPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/page/intro/IntroPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/data/EventProvider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/data/EventProvider.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript JSX File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -37,12 +42,12 @@
   <component name="GitRewordedCommitMessages">
     <option name="commitMessagesMapping">
       <RewordedCommitMessageMapping>
-        <option name="originalMessage" value="Mobile menu redesign, intro page gradient" />
-        <option name="rewordedMessage" value="Mobile menu redesign" />
+        <option name="originalMessage" value="Adds pochod 2026 banner, fix banner ratio" />
+        <option name="rewordedMessage" value="Adds pochod 2026 banner, fix banner ratio" />
       </RewordedCommitMessageMapping>
     </option>
     <option name="currentCommit" value="1" />
-    <option name="onto" value="076361c21d07fed90d562c1253ed25d7cfc5b260" />
+    <option name="onto" value="1bc0f48226689ca88ab5be58643a39b2993f019f" />
   </component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
@@ -62,6 +67,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;development&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -75,6 +81,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="\\wsl.localhost\Ubuntu\home\marvav\vavrinecka-metlicka\frontend\src\assets\banners" />
+      <recent name="\\wsl.localhost\Ubuntu\home\marvav\vavrinecka-metlicka\frontend\src\assets\posters" />
       <recent name="\\wsl.localhost\Ubuntu\home\marvav\vavrinecka-metlicka\frontend\src\assets\parking" />
     </key>
   </component>
@@ -99,7 +107,21 @@
       <workItem from="1756835960395" duration="1403000" />
       <workItem from="1757442007243" duration="5120000" />
       <workItem from="1757529297349" duration="4284000" />
-      <workItem from="1757620954288" duration="1182000" />
+      <workItem from="1757620954288" duration="1600000" />
+      <workItem from="1758651044325" duration="220000" />
+      <workItem from="1759772355551" duration="1202000" />
+      <workItem from="1760296565368" duration="1157000" />
+      <workItem from="1760461796152" duration="61000" />
+      <workItem from="1760907950589" duration="1399000" />
+      <workItem from="1760991120236" duration="713000" />
+      <workItem from="1762366128225" duration="597000" />
+      <workItem from="1762448654579" duration="1317000" />
+      <workItem from="1763933969524" duration="645000" />
+      <workItem from="1763935153099" duration="237000" />
+      <workItem from="1765440382694" duration="5361000" />
+      <workItem from="1768162649088" duration="1004000" />
+      <workItem from="1772917688611" duration="1162000" />
+      <workItem from="1774095604854" duration="1684000" />
     </task>
     <task id="LOCAL-00001" summary="Adds Doga 2025">
       <option name="closed" value="true" />
@@ -189,7 +211,63 @@
       <option name="project" value="LOCAL" />
       <updated>1757621210654</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Fixes height scrolling issues">
+      <option name="closed" value="true" />
+      <created>1757622179128</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1757622179128</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Restyle page title">
+      <option name="closed" value="true" />
+      <created>1757622387607</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1757622387607</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Adds rockovy vecer 2026">
+      <option name="closed" value="true" />
+      <created>1760297310047</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1760297310047</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Adds pochod 2026">
+      <option name="closed" value="true" />
+      <created>1760908699935</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1760908699935</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Adds pochod 2026 banner, fix banner ratio">
+      <option name="closed" value="true" />
+      <created>1760991474349</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1760991474349</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Adds pochod 2026 banner, fix banner ratio">
+      <option name="closed" value="true" />
+      <created>1760991487172</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1760991487172</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Adds rockovy vecer 2026 description">
+      <option name="closed" value="true" />
+      <created>1765441263978</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1765441263978</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -232,6 +310,12 @@
     <MESSAGE value="Mobile menu redesign, intro page gradient" />
     <MESSAGE value="Mobile menu redesign" />
     <MESSAGE value="Fixes Edit Page height" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixes Edit Page height" />
+    <MESSAGE value="Fixes height scrolling issues" />
+    <MESSAGE value="Restyle page title" />
+    <MESSAGE value="Adds rockovy vecer 2026" />
+    <MESSAGE value="Adds pochod 2026" />
+    <MESSAGE value="Adds pochod 2026 banner, fix banner ratio" />
+    <MESSAGE value="Adds rockovy vecer 2026 description" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adds rockovy vecer 2026 description" />
   </component>
 </project>

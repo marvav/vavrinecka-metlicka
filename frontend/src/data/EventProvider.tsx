@@ -6,6 +6,7 @@ import pochod2026 from "../assets/posters/pochod2026.png"
 import beh2024 from "../assets/posters/beh2024.jpg"
 import beh2025 from "../assets/posters/beh2025.png"
 import pochod2024 from "../assets/posters/pochod2024.jpg"
+import metalpodplechem2026 from "../assets/posters/metalpodplechem2026.jpg"
 import metalpodplechem2025 from "../assets/posters/metalpodplechem2025.jpg"
 import metalpodplechem2024 from "../assets/posters/metalpodplechem2024.jpg"
 import rockovyvecer2026 from "../assets/posters/rockovyvecer2026.png"
@@ -19,6 +20,7 @@ import pochod2026banner from "../assets/banners/pochod2026banner.png"
 import doga2025banner from "../assets/banners/doga2025banner.png"
 import metalpodplechem2025banner from "../assets/banners/metalpodplechem2025banner.png"
 import metalpodplechem2024banner from "../assets/banners/metalpodplechem2024banner.jpg"
+import metalpodplechem2026banner from "../assets/banners/metalpodplechem2026banner.png"
 import rockovyvecer2026banner from "../assets/banners/rockovyvecer2026banner.png"
 
 import rockovyvecer2025parkovani from "../assets/parking/rockovyvecer2025parking.png"
@@ -33,6 +35,34 @@ import {kudyznudy} from "./AffiliateProvider.tsx";
 import {EventBase} from "./EventBase.tsx";
 
 const predefinedEvents: Event[] = [
+    {
+        id: crypto.randomUUID(),
+        title: "METAL POD PLECHEM 2026",
+        date: new Date(2026, 3, 18, 0, 0, 0),
+        place: parkVavrinec,
+        description: [
+            {content: "Zveme vás na 4. ročník hudební akce METAL POD PLECHEM, který proběhne v sobotu 18. 4. 2026 v areálu parku Vavřinec! Připravte se na pořádnou dávku rocku a metalu pod širým nebem! 🤟🔥"}
+            , {title: "⏰ ČASOVÝ HARMONOGRAM", bulletPoints: ["Otevření areálu: 17:00", "Začátek akce: 18:00"]}
+            , {
+                title: "🎤 KAPELY", bulletPoints: [
+                    "Ozzy Osbourne Revival Band Jihlava – hard rock / heavy metal" +
+                    "Death on Arrival (Blansko) – melodic thrash/death metal",
+                    "Aliens (Velké Pavlovice) – heavy metal"]
+            }
+            , {title: "🎟️ VSTUPNÉ", bulletPoints: ["400 Kč v předprodeji", "500 Kč na místě"]}
+            , {content: "🌦️ Akce se koná za každého počasí (vyhřívané prostory)"}
+            , {content: "🔊 Připravte se na večer plný skvělé muziky! Těšíme se na vás! 🤘🔥"}
+        ],
+        ticketMessage: {
+            title: "🛒 KDE KOUPIT VSTUPENKY?",
+            bulletPoints: ["Hospůdka na Kasárnách, Veselice", "Nová duha – prodejna Vavřinec a Sloup", "Obecní úřad Žďár (v úředních hodinách)", "Přes Messenger nebo telefon 📞 +420 702 013 740"]
+        },
+        links: [{name: "Facebooková událost", url: "https://fb.me/e/3SgxedT1G"}],
+        banner: metalpodplechem2026banner as string,
+        tracks: [],
+        pictures: [{name: "Plakát", url: metalpodplechem2026 as string}],
+        affiliates: []
+    },
     {
         id: crypto.randomUUID(),
         title: "Vavřinecký běh Moravským krasem 2026",
@@ -63,10 +93,10 @@ const predefinedEvents: Event[] = [
         description: [
             {content: "Pojďte si užít den v srdci unikátní přírody Moravského krasu! Připravili jsme pro vás celkem pět tras od pohodové 7 km, vhodné i pro rodiny s kočárky, přes trasy dlouhé 12, 20 a 33 km, až po nejnáročnější 50 km okruh."}
             , {
-                title: "Těšit se můžete na:",
+                title: "Těšit se můžete na",
                 bulletPoints: [
                     "Známou propast Macocha",
-                    "Zříceniny hradů Blansek a Holštějn",
+                    "Zříceniny hradů Blansek a Holštejn",
                     "Výhled do kraje z rozhledny Podvrší (účastníci mají vstup zdarma)",
                     "V cíli pak občerstvení, zasloužený pamětní list a živá hudba v podání kapely ZVUKOVÁ KULISA!",
                 ]
